@@ -1,0 +1,81 @@
+{
+  "manifestFormat": 4,
+  "project": "arkfile-ios",
+  "version": "3.15.0",
+  "build": "373",
+  "commit": "b2e218c4667dc4fdfeabc4c48c6fcee37b4ff992",
+  "sourceReleaseCreatedAt": "2026-09-14T20:14:22Z",
+  "publicRepo": "https://github.com/TheArkFile/arkfile-ios",
+  "releaseURL": "https://github.com/TheArkFile/arkfile-ios/releases/tag/ios-v3.15.0-build373-source",
+  "license": "GPL-3.0-or-later",
+  "binaryReleaseIdentity": {
+    "boundToExportedBinary": true,
+    "releaseIdentityFormat": 6,
+    "releaseIdentitySHA256": "54bc19f31bb790616f8520c1ce86ca007949c589948cde1cdcbb76fc1cb2dce1",
+    "ipaSHA256": "e66c81988b96d6c2d773e77893785ccced89a7fdbaf9fc0d812162968f6fe63f",
+    "archiveInfoSHA256": "4a41574f59c0269270e51f4ce086d97014887067e24ae8cd36efdd7cea46248d",
+    "swiftPackageLockSHA256": "5a0074895cf5ac9c6112f6045421edb3d08ab4b62e91e929bfe74a9f55b149a3"
+  },
+  "upstream": [
+    "Kiwix Apple",
+    "CoreKiwix / libkiwix",
+    "libzim / openZIM"
+  ],
+  "publicSourcePolicy": {
+    "privateRepoHistoryPublished": false,
+    "appleSigningConfigurationRemoved": true,
+    "contentPayloadsExcluded": true,
+    "releaseOperationsExcluded": true,
+    "privateTestSuitesExcluded": true,
+    "privateTitleResearchExcluded": true,
+    "localStoreKitSimulationExcluded": true,
+    "nonBuildRepositoryCollateralExcluded": true
+  },
+  "nativeCorrespondingSource": {
+    "mode": "complete-controlled-build",
+    "distributionEligible": true,
+    "completeControlledBuild": true,
+    "buildIdentity": "14.2.0+arkfile.1",
+    "evidencePolicy": "arkfile-corekiwix-native-evidence-v1",
+    "buildManifest": {
+      "path": "Dependencies/CoreKiwixNativeBuildManifest.json",
+      "sha256": "e2094827160904d5b2aa9d586e0496be25ae5033d5e6d81664e7e41e7981959b"
+    },
+    "sourceLock": {
+      "path": "Dependencies/CoreKiwixNativeSource.lock.json",
+      "sha256": "e49c6848a7d30ccbed1f1abee6e8f3a3ffe421554a47d3a09a7e65d2469140c8"
+    },
+    "spdxSBOM": {
+      "path": "Dependencies/CoreKiwixNativeSBOM.spdx.json",
+      "sha256": "635624d0b0d396223becfbe88d5e0555359323d65b353b43689ed21c9751eae4"
+    },
+    "objectMap": {
+      "path": "Dependencies/CoreKiwixNativeObjectMap.jsonl",
+      "sha256": "00447d824d64c0cd188605cc214744af63b266dae5dcbb444be7927577ade006"
+    },
+    "secretScanPolicy": {
+      "path": "Dependencies/CoreKiwixNativeSecretScanPolicy.json",
+      "sha256": "89235cbb6d2f6a521b70063dd0d9402767531cc734b1a6362dc42452ac9946d9"
+    },
+    "sourceAndRelinkArchive": {
+      "sha256": "e1a2268c2fc2c60dee194c75f4f91588a83a819a0456e2df86866a8eec7a531c",
+      "url": "https://github.com/TheArkFile/arkfile-ios/releases/download/corekiwix-v14.2.0-arkfile.1/CoreKiwix-14.2.0+arkfile.1-source-and-relink.tar.gz"
+    },
+    "distributedIOSObjectInventoryComplete": true,
+    "distributedIOSCandidateSourceCoverageComplete": false,
+    "distributedIOSUniqueSourceAttributionComplete": false,
+    "unattributedObjectCount": 1,
+    "ambiguousSourceAttributionCount": 14,
+    "reviewOnlyUnbound": false
+  },
+  "excluded": [
+    "Apple credentials, signing material, provisioning profiles, IPAs, archives, and dSYMs",
+    "App Store Connect and TestFlight automation",
+    "local StoreKit simulation products, prices, and internal identifiers",
+    "repository lint, contribution, changelog, security-process, and funding collateral",
+    "paid content packs and generated content payloads",
+    "local AI/model/index packages and fixture certificates",
+    "generated Xcode projects and binary frameworks",
+    "private test suites, title research, legal posture, local, agent, and operational files"
+  ]
+}

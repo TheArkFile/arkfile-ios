@@ -1,0 +1,90 @@
+// This file is part of Kiwix for iOS & macOS.
+//
+// Kiwix is free software; you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// any later version.
+//
+// Kiwix is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Kiwix; If not, see https://www.gnu.org/licenses/.
+
+#if os(macOS)
+import SwiftUI
+import PassKit
+import Combine
+
+struct PaymentSummary: View {
+
+    @Environment(\.dismiss) var dismiss
+
+    private let selectedAmount: SelectedAmount
+    private let payment: Payment
+    private let onComplete: @MainActor () -> Void
+    @State private var paymentDetermined: Bool = false
+    @State private var paymentButtonLabel: PayWithApplePayButtonLabel?
+
+    init(selectedAmount: SelectedAmount,
+         onComplete: @escaping @MainActor () -> Void) {
+        self.selectedAmount = selectedAmount
+        self.onComplete = onComplete
+        payment = Payment()
+    }
+
+    var body: some View {
+        VStack {
+            Text(LocalString.payment_summary_page_title)
+                .font(.largeTitle)
+                .padding()
+            if selectedAmount.isMonthly {
+                Text(LocalString.payment_selection_option_monthly).font(.title)
+                    .padding()
+            } else {
+                Text(LocalString.payment_selection_option_one_time).font(.title)
+                    .padding()
+            }
+            Text(selectedAmount.value.formatted(.currency(code: selectedAmount.currency))).font(.title).bold()
+            if paymentDetermined {
+                if let paymentButtonLabel {
+                    PayWithApplePayButton(
+                        paymentButtonLabel,
+                        request: payment.donationRequest(for: selectedAmount),
+                        onPaymentAuthorizationChange: { phase in
+                            payment.onPaymentAuthPhase(selectedAmount: selectedAmount,
+                                                       phase: phase)
+                        },
+                        onMerchantSessionRequested: payment.onMerchantSessionUpdate
+                    )
+                    .frame(width: 186, height: 44)
+                    .padding()
+                } else {
+                    Text(LocalString.payment_support_fallback_message)
+                        .foregroundStyle(.red)
+                        .font(.callout)
+                }
+            } else {
+                LoadingProgressView()
+            }
+        }.onReceive(payment.completeSubject) {
+            onComplete()
+        }
+        .task {
+            paymentButtonLabel = await Payment.paymentButtonTypeAsync()
+            paymentDetermined = true
+        }
+    }
+}
+
+#Preview {
+    PaymentSummary(
+        selectedAmount: SelectedAmount(value: 34,
+                                       currency: "CHF",
+                                       isMonthly: true),
+        onComplete: {}
+    )
+}
+#endif

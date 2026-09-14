@@ -1,0 +1,2307 @@
+{
+  "format": 1,
+  "policy": "arkfile-corekiwix-native-evidence-v1",
+  "product": {
+    "name": "CoreKiwix",
+    "buildIdentity": "14.2.0+arkfile.1"
+  },
+  "generator": {
+    "path": "scripts/arkfile-corekiwix-evidence.mjs",
+    "sizeBytes": 91554,
+    "sha256": "461ad86b214f13604c0563168f10b3cecc9d63a3ccfdea119e1df04b89788b0a"
+  },
+  "staleUpstreamSHA256DenyList": [
+    "54c061cc77a5c293e249356b0b99f45bc60931fad97f90d9b2c0a39489746a49",
+    "66324fa8a07e65cbbf2bd033f638c4b9002f6c89f5c4954b220e6ed20a00162f",
+    "6a7b90da01771039fc30e3ba01099bf4d4d689c050b1c69c9251eda56824a414",
+    "a28b5eb16fb6309f719b1eda0b260d9b27e8f1cac462c75ce9077b2a51af2b2a"
+  ],
+  "componentSet": [
+    "curl",
+    "icu",
+    "libkiwix",
+    "libmicrohttpd",
+    "libzim",
+    "mustache",
+    "pugixml",
+    "xapian",
+    "xz",
+    "zlib",
+    "zstd"
+  ],
+  "componentSetSHA256": "85bfe470c5ddf5892f65e99e6948feb9f7e4d308d834139f1b8d3bc6f4553207",
+  "exceptionSemantics": {
+    "format": 1,
+    "semantics": "every finding requires one exact exception and every declared exception must be used",
+    "declared": [
+      {
+        "code": "build-directory-version-mismatch",
+        "subject": "xapian:1.4.26:1.4.23",
+        "reason": "The completed build used Xapian 1.4.23 by configure.ac and archive identity; only the stale build directory label says 1.4.26."
+      },
+      {
+        "code": "generated-object-without-direct-source",
+        "subject": "ios-device-arm64:libicudata.a:0:icudt73l_dat.o",
+        "reason": "ICU generates this data-only object from the retained ICU data archive; it has no standalone compiler source record."
+      },
+      {
+        "code": "source-directory-version-mismatch",
+        "subject": "xapian:SOURCE/xapian-core-1.4.26:1.4.23",
+        "reason": "The retained upstream tree is Xapian 1.4.23 by configure.ac and archive identity; only the stale directory label says 1.4.26."
+      }
+    ],
+    "used": [
+      {
+        "code": "build-directory-version-mismatch",
+        "subject": "xapian:1.4.26:1.4.23",
+        "reason": "The completed build used Xapian 1.4.23 by configure.ac and archive identity; only the stale build directory label says 1.4.26."
+      },
+      {
+        "code": "generated-object-without-direct-source",
+        "subject": "ios-device-arm64:libicudata.a:0:icudt73l_dat.o",
+        "reason": "ICU generates this data-only object from the retained ICU data archive; it has no standalone compiler source record."
+      },
+      {
+        "code": "source-directory-version-mismatch",
+        "subject": "xapian:SOURCE/xapian-core-1.4.26:1.4.23",
+        "reason": "The retained upstream tree is Xapian 1.4.23 by configure.ac and archive identity; only the stale directory label says 1.4.26."
+      }
+    ],
+    "exactTwoSidedMatch": true
+  },
+  "outputs": {
+    "sourceLock": {
+      "path": "CoreKiwixNativeSource.lock.json",
+      "sizeBytes": 334130,
+      "sha256": "e49c6848a7d30ccbed1f1abee6e8f3a3ffe421554a47d3a09a7e65d2469140c8"
+    },
+    "sbom": {
+      "path": "CoreKiwixNativeSBOM.spdx.json",
+      "sizeBytes": 8962,
+      "sha256": "635624d0b0d396223becfbe88d5e0555359323d65b353b43689ed21c9751eae4"
+    },
+    "objectMap": {
+      "path": "CoreKiwixNativeObjectMap.jsonl",
+      "sizeBytes": 914812,
+      "sha256": "00447d824d64c0cd188605cc214744af63b266dae5dcbb444be7927577ade006",
+      "lineCount": 991
+    }
+  },
+  "licenses": [
+    {
+      "component": "curl",
+      "path": "SOURCE/libcurl/COPYING",
+      "sizeBytes": 1088,
+      "sha256": "b1d7feb949ea5023552029fbe0bf5db4f23c2f85e9b8e51e18536f0ecbf9c524"
+    },
+    {
+      "component": "icu",
+      "path": "SOURCE/icu4c-73.2/LICENSE",
+      "sizeBytes": 25505,
+      "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+    },
+    {
+      "component": "icu",
+      "path": "SOURCE/icu4c-73.2/license.html",
+      "sizeBytes": 622,
+      "sha256": "c62d7697c03979f5056d28b338fafc7a1152820f7b379adf4a9d88cd37160f96"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/AUTHORS",
+      "sizeBytes": 610,
+      "sha256": "af326dae1602e50b658a63428bab7ac8c64e5f536a41efb1bfc49e6e59f56d78"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/COPYING",
+      "sizeBytes": 35065,
+      "sha256": "2170baac1a469f107cca076f1471e1cdddf858ff3407ece7a1bfee989c8674d7"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/src/tools/base64.cpp",
+      "sizeBytes": 3834,
+      "sha256": "7df829ba7fb6f934261dd6a5e620b6e3c72751306a4ebe61818e16a95506e509"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/src/tools/lrucache.h",
+      "sizeBytes": 5528,
+      "sha256": "c3d462d6fc16e65e59e6c43b4180f9fd5ad09463baae67880b0a2bdba7ec40cd"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/static/skin/autoComplete/LICENSE",
+      "sizeBytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/static/skin/fonts/DMSans-Regular.ttf",
+      "sizeBytes": 240164,
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/static/skin/fonts/Poppins.ttf",
+      "sizeBytes": 156480,
+      "sha256": "e554db189b5d944ef0e6f98ee0e4e8c75f69e95315dc9f4ae0c616a8756a2ba4"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/static/skin/fonts/Roboto.ttf",
+      "sizeBytes": 168260,
+      "sha256": "319cff6e7a31f0f2a41c475dca42890aa5d19fe16017e2290f8c1d4e14f76481"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/static/skin/isotope.pkgd.min.js",
+      "sizeBytes": 37276,
+      "sha256": "49ec40ee61a914dba0980e0906f3589d296ab5abc836c27d1c1954b97fccb847"
+    },
+    {
+      "component": "libkiwix",
+      "path": "SOURCE/libkiwix_release/static/skin/mustache.min.js",
+      "sizeBytes": 7199,
+      "sha256": "fa4e44c6c914d71a4890ece1f75bed9c805a649a854a81c6a217fe5e427aff17"
+    },
+    {
+      "component": "libmicrohttpd",
+      "path": "SOURCE/libmicrohttpd-0.9.76/AUTHORS",
+      "sizeBytes": 2759,
+      "sha256": "24094fde89a45bc5b0a1894554923d2b921c174ff28bfc6f78aa68879d04d379"
+    },
+    {
+      "component": "libmicrohttpd",
+      "path": "SOURCE/libmicrohttpd-0.9.76/COPYING",
+      "sizeBytes": 24665,
+      "sha256": "7399547209438c93f9b90297954698773d4846cea44cde5ca982c84c45952a3b"
+    },
+    {
+      "component": "libzim",
+      "path": "SOURCE/libzim_release/AUTHORS",
+      "sizeBytes": 947,
+      "sha256": "be674160b83ce87f45d884abbc8af010e67083666f499dfe57933f90334aea28"
+    },
+    {
+      "component": "libzim",
+      "path": "SOURCE/libzim_release/COPYING",
+      "sizeBytes": 15132,
+      "sha256": "86dfcf55c2b28fc143f89c5bf66ada6eec8a2d1c64ea1fdf557b708c16177f37"
+    },
+    {
+      "component": "libzim",
+      "path": "SOURCE/libzim_release/src/lrucache.h",
+      "sizeBytes": 8850,
+      "sha256": "5f04bf12feb5dfcba50c1373642a10a96ec308834b503507049dc5ab6ee32a8a"
+    },
+    {
+      "component": "mustache",
+      "path": "SOURCE/mustache-4.1/LICENSE",
+      "sizeBytes": 1353,
+      "sha256": "03630faa63ff1049b2eaf1434f771817b7123afa2524568d57850529fae5189e"
+    },
+    {
+      "component": "pugixml",
+      "path": "SOURCE/pugixml-1.15/LICENSE.md",
+      "sizeBytes": 1079,
+      "sha256": "0d0b3772af2fa45628a548a3b34583707ebcc68bb6f83ec48ca273aab4a510f1"
+    },
+    {
+      "component": "xapian",
+      "path": "SOURCE/xapian-core-1.4.26/api/constinfo.cc",
+      "sizeBytes": 1677,
+      "sha256": "e4e195983ab11bb627b0e17d533dbc6aa7be2c54cad93c65d13ffd5c032b93d7"
+    },
+    {
+      "component": "xapian",
+      "path": "SOURCE/xapian-core-1.4.26/AUTHORS",
+      "sizeBytes": 4765,
+      "sha256": "b9427184e1666ede7b02efe63998279bde296f06dba9f69f1c8f8e8e72fa7341"
+    },
+    {
+      "component": "xapian",
+      "path": "SOURCE/xapian-core-1.4.26/COPYING",
+      "sizeBytes": 17989,
+      "sha256": "c38aee9e3c8c4d5d594ff548a1be05453023016d6286931f6512db215ec1fd42"
+    },
+    {
+      "component": "xapian",
+      "path": "SOURCE/xapian-core-1.4.26/include/xapian/intrusive_ptr.h",
+      "sizeBytes": 9660,
+      "sha256": "67ecbe51a204471765551ad311fb7e4880c4a25669569581c67bc0a82a877b89"
+    },
+    {
+      "component": "xapian",
+      "path": "SOURCE/xapian-core-1.4.26/languages/steminternal.cc",
+      "sizeBytes": 14212,
+      "sha256": "8689b4a948bdb3eafdd313d0880fcf3fc3087f98e5ec137d764ad7909de94392"
+    },
+    {
+      "component": "xapian",
+      "path": "SOURCE/xapian-core-1.4.26/unicode/UnicodeData-README.txt",
+      "sizeBytes": 3076,
+      "sha256": "943d5c88aeef7391b080cc6123e7a443c4a78d71965c10c5b215700e928019f1"
+    },
+    {
+      "component": "xz",
+      "path": "SOURCE/lzma-5.2.6/AUTHORS",
+      "sizeBytes": 1076,
+      "sha256": "c07ea89b85db044f5e4a28fcc18a1dd900541737fb5ef8a69df1e1eb603f5966"
+    },
+    {
+      "component": "xz",
+      "path": "SOURCE/lzma-5.2.6/COPYING",
+      "sizeBytes": 2775,
+      "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+    },
+    {
+      "component": "xz",
+      "path": "SOURCE/lzma-5.2.6/COPYING.GPLv2",
+      "sizeBytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "component": "xz",
+      "path": "SOURCE/lzma-5.2.6/COPYING.GPLv3",
+      "sizeBytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "component": "xz",
+      "path": "SOURCE/lzma-5.2.6/COPYING.LGPLv2.1",
+      "sizeBytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "component": "zlib",
+      "path": "SOURCE/zlib-1.3.1/LICENSE",
+      "sizeBytes": 1002,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    {
+      "component": "zstd",
+      "path": "SOURCE/zstd-1.5.7/COPYING",
+      "sizeBytes": 18091,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "component": "zstd",
+      "path": "SOURCE/zstd-1.5.7/LICENSE",
+      "sizeBytes": 1549,
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+    }
+  ],
+  "thinBuilds": [
+    {
+      "id": "ios-device-arm64",
+      "platform": "ios",
+      "architecture": "arm64",
+      "buildPath": "BUILD_aarch64-apple-ios",
+      "componentEvidence": [
+        {
+          "component": "curl",
+          "buildPath": "BUILD_aarch64-apple-ios/libcurl",
+          "compileRecords": {
+            "count": 1345,
+            "sha256": "dc3927c979dce41c1d1a2b6d54357e798be112babeff966171fa75ad17ef7ca5"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 424,
+            "sha256": "c6771448c49235719bf83fb3c69b106d84c8689a777209ed0b7fcdbfc907eb89"
+          },
+          "exception": null
+        },
+        {
+          "component": "icu",
+          "buildPath": "BUILD_aarch64-apple-ios/icu4c-73.2",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 443,
+            "sha256": "29ba3e4ee6dc01eb19c3e991d4a694a2980f302c546198508c1b04b2c5fbf01f"
+          },
+          "compiledSources": {
+            "count": 443,
+            "sha256": "2920366c65ae917e82361999302b893a48de2c4f72f5169f187d373280bb685e"
+          },
+          "exception": null
+        },
+        {
+          "component": "libkiwix",
+          "buildPath": "BUILD_aarch64-apple-ios/libkiwix-14.2.0",
+          "compileRecords": {
+            "count": 37,
+            "sha256": "4920c58b295614a196a8fdd7fa4421b37216f80a4f301c20bf7456a397874ced"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 37,
+            "sha256": "10585532304060d231739a85c677de82c00d45c4dabb53a05c9884b4616bca27"
+          },
+          "exception": null
+        },
+        {
+          "component": "libmicrohttpd",
+          "buildPath": "BUILD_aarch64-apple-ios/libmicrohttpd-0.9.76",
+          "compileRecords": {
+            "count": 14,
+            "sha256": "e1e648cf9d2fa9c68653918dfeab7e0267e313933a0a3e2b102795cda4c14709"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 14,
+            "sha256": "c41523150efd20dae96d8dfdeab1db2451b38d98e6d30b6933277c1a56ac9a85"
+          },
+          "exception": null
+        },
+        {
+          "component": "libzim",
+          "buildPath": "BUILD_aarch64-apple-ios/libzim-9.6.0",
+          "compileRecords": {
+            "count": 42,
+            "sha256": "52ea963c06a2603ef2858bcf283b5972ba88d4688d0c991279b8e97ab7b97da3"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 42,
+            "sha256": "7be867236e1c15a04c2aecebad8dd079569f8998d4d2ce96c8fd126af782c34f"
+          },
+          "exception": null
+        },
+        {
+          "component": "mustache",
+          "buildPath": "BUILD_aarch64-apple-ios/mustache-4.1",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "exception": null
+        },
+        {
+          "component": "pugixml",
+          "buildPath": "BUILD_aarch64-apple-ios/pugixml-1.15",
+          "compileRecords": {
+            "count": 1,
+            "sha256": "9526e2ea3a6c1602911d96f7a67a32ebbc5d02b9a71ee5096904ba67c3a5c020"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 1,
+            "sha256": "6eeb8f6ff3d75134aae9fdf22f43dc3de6768cbe5e94bda372e8399a42b5c8b5"
+          },
+          "exception": null
+        },
+        {
+          "component": "xapian",
+          "buildPath": "BUILD_aarch64-apple-ios/xapian-core-1.4.26",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 324,
+            "sha256": "42927b292f3ad94a0bebfe04cdd9e36b81d79cb0468f4bb0632e405fcb46a126"
+          },
+          "compiledSources": {
+            "count": 190,
+            "sha256": "931f8ecbf179f78f105cf082abda4a216350c21111f9a169a0a1bd32f565316e"
+          },
+          "exception": null
+        },
+        {
+          "component": "xz",
+          "buildPath": "BUILD_aarch64-apple-ios/lzma-5.2.6",
+          "compileRecords": {
+            "count": 81,
+            "sha256": "a4c57c45007fc6df7ff747a8da6dccaec5fa52e45ecb9043cb654b82858a055c"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 81,
+            "sha256": "ca19cfb59f92d49cf86d0edc1904714abc7bca782f9f1b977306030fb0aebfe1"
+          },
+          "exception": null
+        },
+        {
+          "component": "zlib",
+          "buildPath": "BUILD_aarch64-apple-ios/zlib-1.3.1",
+          "compileRecords": {
+            "count": 16,
+            "sha256": "b35606bf283fb765bbbd42994d8b8892e66f676fa23d887fc48ae20e221f278a"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 16,
+            "sha256": "4b0ba4b0b590cd398afbf10ea2fc8abbe84db6817cedcdb5077cc38a8d1d082d"
+          },
+          "exception": null
+        },
+        {
+          "component": "zstd",
+          "buildPath": "BUILD_aarch64-apple-ios/zstd-1.5.7",
+          "compileRecords": {
+            "count": 33,
+            "sha256": "e3df8df2dd24f4f08ab6d002fd4aa99aa5edfbfc90f201e2ad94792a4a44a282"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 33,
+            "sha256": "d5f20a4601048327144bf297f75e9cb4b7a06bca1c1717f721552099af550400"
+          },
+          "exception": null
+        }
+      ],
+      "componentArchives": [
+        {
+          "component": "curl",
+          "archive": "libcurl.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libcurl.a",
+          "sizeBytes": 807264,
+          "sha256": "2bbcf63ee175c52db41fa78f3f5db6aec1bc13489156b5b6e2546655272bfcc8",
+          "archiveMemberCount": 165,
+          "objectMemberCount": 164,
+          "orderedArchiveMembersSHA256": "6a982e0f5594964f621064c058693ec866eac6962bd434f39399f89eb020149b",
+          "orderedObjectMembersSHA256": "92f5510b51e726439d62c9e0b9423c6df9af7b1a5d47274335c4a9388dfa0962",
+          "definedSymbolCount": 656,
+          "definedSymbolSetSHA256": "cf04bab4caf05f857e010e0241a69f074ea883e9b05e960163bffaaaf96e0aa5"
+        },
+        {
+          "component": "icu",
+          "archive": "libicudata.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libicudata.a",
+          "sizeBytes": 7485760,
+          "sha256": "c7ed70265d7e692a90222352ffd088f1b8fc8e13827f5e284fcc9b93592f7358",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "0aaae4e295d9ec15889fa7f15f13c31716f1ee05ec0df7358099586d652d00d1",
+          "orderedObjectMembersSHA256": "09b302103aa6c40ad88e3bc6af38dbeda319261b96a76f6942f39db850c99273",
+          "definedSymbolCount": 1,
+          "definedSymbolSetSHA256": "7d02a0c2ccbfbf8bdc56719286544669a04cb5fc69c147e6f299fb6e3be50b99"
+        },
+        {
+          "component": "icu",
+          "archive": "libicui18n.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libicui18n.a",
+          "sizeBytes": 5465224,
+          "sha256": "411077d6b6e151009db8390596e5db0f965733ecced6a26a1eb0b1c13929d25b",
+          "archiveMemberCount": 244,
+          "objectMemberCount": 243,
+          "orderedArchiveMembersSHA256": "03276b9a68ab5508e6d81741bb0f4a40ee5686db1e8827b6643f5d1a4a3c80e3",
+          "orderedObjectMembersSHA256": "126a5cb5dad9d1c55e24628c7b7b0a609d7b1f66046cd180bc63bc3ceb8c807a",
+          "definedSymbolCount": 8928,
+          "definedSymbolSetSHA256": "a06b638fa3c9a3c4021a20be8edf3d4afd6ac89785d40e6ad7e2ff1238d1eaf2"
+        },
+        {
+          "component": "icu",
+          "archive": "libicuuc.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libicuuc.a",
+          "sizeBytes": 3040936,
+          "sha256": "721379f16144cfd7b73a4de704e79d097c2559fc7218241f9258b75e6c362fbf",
+          "archiveMemberCount": 200,
+          "objectMemberCount": 199,
+          "orderedArchiveMembersSHA256": "bf98e90c203dd13367801452407606ee3dcb97b17f6e29af29a4c7cf18592e78",
+          "orderedObjectMembersSHA256": "1bbf9e92a4f9b1dba071ed144c4e3a1072adeb1453bd4ee82faff1554899682a",
+          "definedSymbolCount": 3822,
+          "definedSymbolSetSHA256": "3cba4d86caece66ecacaf54ee5dc744bdaa2cbcaa799c1ee02b3f893497daa41"
+        },
+        {
+          "component": "libkiwix",
+          "archive": "libkiwix.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libkiwix.a",
+          "sizeBytes": 9277456,
+          "sha256": "5709a31099d238eba9a78851bae7fe8b3a6572916c1a306a9e1fe4a89bee8de0",
+          "archiveMemberCount": 38,
+          "objectMemberCount": 37,
+          "orderedArchiveMembersSHA256": "16caaaf95b092b101cbfa0d48012ef2c30240c1fe9f57596dacbcb69959264c3",
+          "orderedObjectMembersSHA256": "123be98db2ae40f5afcb6c47f44cc5a40785f6f1a88a633570c46a262936555e",
+          "definedSymbolCount": 1840,
+          "definedSymbolSetSHA256": "57a51f46abaa4e6a956feb7b7f275a036168caabcd8f88b7f655e3178d8bb817"
+        },
+        {
+          "component": "xz",
+          "archive": "liblzma.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/liblzma.a",
+          "sizeBytes": 229024,
+          "sha256": "a83bc5ea9fe11dd86efdb24c03046c08db8ffb4ef8590677fa2ced70f0d41c7b",
+          "archiveMemberCount": 65,
+          "objectMemberCount": 64,
+          "orderedArchiveMembersSHA256": "2485b6a15ed08f227b38e628b6dab10fb0bf87482a5b48bca44bf1198a2a7e55",
+          "orderedObjectMembersSHA256": "a43c25c0679505679347056abb9d82685f3550d8ba06cf7d6b40c5bc8fd150b7",
+          "definedSymbolCount": 170,
+          "definedSymbolSetSHA256": "9c66f17637abb32967c9fa9c7160930d8ee6ff353c68034feee9a48bb17897d0"
+        },
+        {
+          "component": "libmicrohttpd",
+          "archive": "libmicrohttpd.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libmicrohttpd.a",
+          "sizeBytes": 117928,
+          "sha256": "63e421d8f433bfb449d8609e9b8016123ea684f5636b86d895ffd9a5690762fe",
+          "archiveMemberCount": 15,
+          "objectMemberCount": 14,
+          "orderedArchiveMembersSHA256": "aba5565aafad47c0261ab9a521444015c7adb491b9041b053e10d2a7d41fda13",
+          "orderedObjectMembersSHA256": "2fec3f83876dc0a826c8dec47afac468641a4bafe1d02fd8ff3bd7fedb37af57",
+          "definedSymbolCount": 109,
+          "definedSymbolSetSHA256": "34d994eefe47ec505ec79e9e15cc8ec7e42b975aa8b5068eed8cc9a74a2cfe41"
+        },
+        {
+          "component": "pugixml",
+          "archive": "libpugixml.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libpugixml.a",
+          "sizeBytes": 322200,
+          "sha256": "47db107cba9cdc28e4446230af250102c46da9461144ad8878eda221c6464e02",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "a77af5c229063b2f12a6237efed6933a3805eb376c0901eb25a66f783d745e8f",
+          "orderedObjectMembersSHA256": "892da66704770c38e821017ba70b7b3dc0f34922f5842d212c58883957dbc212",
+          "definedSymbolCount": 404,
+          "definedSymbolSetSHA256": "47b3ad2777ca17b86b95c3cce91f17f38065ed2f73f2feabb968575f5deba946"
+        },
+        {
+          "component": "xapian",
+          "archive": "libxapian.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libxapian.a",
+          "sizeBytes": 11338120,
+          "sha256": "c16eb400b57ac6e10f7ee7edbca90cf2786c2c11262b795972b574562f8dc9fe",
+          "archiveMemberCount": 180,
+          "objectMemberCount": 179,
+          "orderedArchiveMembersSHA256": "1ecd1c0fa18949acbc3684de66c9ef7f0d906b7bfb855a67085afed10ef0be49",
+          "orderedObjectMembersSHA256": "d0f31cbd910e5984de870169f8c3ce1ad50504feeaf3a0bd056428a1901b7cb1",
+          "definedSymbolCount": 14280,
+          "definedSymbolSetSHA256": "1b552dc0dddcc5a4fae2de490e9623e3efe9b463abb33708ccbed758cda4bf4b"
+        },
+        {
+          "component": "zlib",
+          "archive": "libz.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libz.a",
+          "sizeBytes": 113896,
+          "sha256": "84263df800ee95b88cf1525411f7934a56ed340d96872fb2517cc6c909af5987",
+          "archiveMemberCount": 16,
+          "objectMemberCount": 15,
+          "orderedArchiveMembersSHA256": "9f98b33479713ebc4e0baa3ee22f85f3de4e78de82179063daa185dc68ecf9a8",
+          "orderedObjectMembersSHA256": "b09f60a734d0ea65e5d89066d84d0e1cc4c48d23b23cecf4d059cc8adb3c65e1",
+          "definedSymbolCount": 105,
+          "definedSymbolSetSHA256": "b60e4ed56df07b73d1a64cc78cbe5443a85c1e7df00b8dbc70a075528611d001"
+        },
+        {
+          "component": "libzim",
+          "archive": "libzim.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libzim.a",
+          "sizeBytes": 1678904,
+          "sha256": "4b33d9627a17fd13fee53d98314be95f5206d7d480de14a0349f74fe12868f2c",
+          "archiveMemberCount": 42,
+          "objectMemberCount": 41,
+          "orderedArchiveMembersSHA256": "decaf63d82468ade123b648094da33dbd43b516ee0ad79457f993cd1cd1cb618",
+          "orderedObjectMembersSHA256": "f49f85af65c982cc21736587e152d39ac130f1457aa68339c1667693a6077686",
+          "definedSymbolCount": 1545,
+          "definedSymbolSetSHA256": "683424522a450df3dc0810a5798c6beebfea80217a3ff21d7f1010ff1920667c"
+        },
+        {
+          "component": "zstd",
+          "archive": "libzstd.a",
+          "path": "BUILD_aarch64-apple-ios/INSTALL/lib/libzstd.a",
+          "sizeBytes": 820464,
+          "sha256": "394907effd90ce4d7f3e9c1bc2be1d983ddae3cdd1b54eed98af3803be8853fa",
+          "archiveMemberCount": 34,
+          "objectMemberCount": 33,
+          "orderedArchiveMembersSHA256": "edfa798bfc3f74b9407e233d4747fb50fe09a9100e5a9ec2f6864acaad61654f",
+          "orderedObjectMembersSHA256": "562c231e8b0ecc8141937981a6cdf0afbd969709daed9dd65d2e318ccd0647bc",
+          "definedSymbolCount": 553,
+          "definedSymbolSetSHA256": "f7456ef2966bcec434a08b5718b4726e0c09090938c9ebeae9290d7a775034b4"
+        }
+      ],
+      "mergedArchive": {
+        "path": "BUILD_aarch64-apple-ios/INSTALL/lib/merged.a",
+        "sizeBytes": 40696048,
+        "sha256": "c35a282d4cf1254927bb81af0c7e27c3067a680254f5cd125682888d54407bd7",
+        "archiveMemberCount": 992,
+        "objectMemberCount": 991,
+        "orderedArchiveMembersSHA256": "c0dfee2cf31488367f5cf74f6e53e18a2a13091a743b5a16eb20f30998463bd8",
+        "orderedObjectMembersSHA256": "4857fe49abc67fb7c721d5748b674676b9548797153ecc59e9425352ad316fe0",
+        "definedSymbolCount": 32162,
+        "definedSymbolSetSHA256": "610280a8e703cddae9adc800784a1e033bcfbe911841614838ec0403a58801b8",
+        "relinkProof": {
+          "method": "exact-ordered-object-member-multiset-and-defined-symbol-set",
+          "componentArchiveOrder": [
+            "libicui18n.a",
+            "libmicrohttpd.a",
+            "libicudata.a",
+            "libz.a",
+            "libxapian.a",
+            "liblzma.a",
+            "libzim.a",
+            "libkiwix.a",
+            "libicuuc.a",
+            "libzstd.a",
+            "libcurl.a",
+            "libpugixml.a"
+          ],
+          "exactOrderedObjectMemberMultiset": true,
+          "componentDefinedSymbolSetSHA256": "610280a8e703cddae9adc800784a1e033bcfbe911841614838ec0403a58801b8",
+          "mergedDefinedSymbolSetSHA256": "610280a8e703cddae9adc800784a1e033bcfbe911841614838ec0403a58801b8",
+          "exactDefinedSymbolSet": true
+        }
+      }
+    },
+    {
+      "id": "ios-simulator-arm64",
+      "platform": "ios-simulator",
+      "architecture": "arm64",
+      "buildPath": "BUILD_aarch64-apple-ios-simulator",
+      "componentEvidence": [
+        {
+          "component": "curl",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/libcurl",
+          "compileRecords": {
+            "count": 1345,
+            "sha256": "d34d6aa3b70712436531d4c5448d09f9f31fb7e9f76c0463e85f04df7fac283c"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 424,
+            "sha256": "6de7b6f165c573e3cc438194a8183cfc64e1b035e258a6be4b5bcd983db23650"
+          },
+          "exception": null
+        },
+        {
+          "component": "icu",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/icu4c-73.2",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 443,
+            "sha256": "da38617359ee5a513af07405ed02c6cb95ebbb0f753aa9ec2690174ee149ac69"
+          },
+          "compiledSources": {
+            "count": 443,
+            "sha256": "2920366c65ae917e82361999302b893a48de2c4f72f5169f187d373280bb685e"
+          },
+          "exception": null
+        },
+        {
+          "component": "libkiwix",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/libkiwix-14.2.0",
+          "compileRecords": {
+            "count": 37,
+            "sha256": "bd077d3ac96b4fd4ebfd552912cd9fda87e3b157031e2e5f5e9ed64bfbaca55d"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 37,
+            "sha256": "8abd2e0367a94334507599f1a9fad3305defede28316e748633b2db7c9a36252"
+          },
+          "exception": null
+        },
+        {
+          "component": "libmicrohttpd",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/libmicrohttpd-0.9.76",
+          "compileRecords": {
+            "count": 14,
+            "sha256": "685235eb7028a30089e6714f1755d007cdaedd924a942c20044b6a73a726a67b"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 14,
+            "sha256": "c41523150efd20dae96d8dfdeab1db2451b38d98e6d30b6933277c1a56ac9a85"
+          },
+          "exception": null
+        },
+        {
+          "component": "libzim",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/libzim-9.6.0",
+          "compileRecords": {
+            "count": 42,
+            "sha256": "8c265fe753ae7cfc011c6d7e8f3fbc469770325aa8253168fa36daff0132804c"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 42,
+            "sha256": "93b41859e5df75ee618b654aaccf9bd6ce971f77c9bcdea60c668ee1904f0be2"
+          },
+          "exception": null
+        },
+        {
+          "component": "mustache",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/mustache-4.1",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "exception": null
+        },
+        {
+          "component": "pugixml",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/pugixml-1.15",
+          "compileRecords": {
+            "count": 1,
+            "sha256": "c9a6c8b794273ba56f3a54fa86b1bf1391bc2f3c92ccdd74d5a5381ef4e7e759"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 1,
+            "sha256": "6eeb8f6ff3d75134aae9fdf22f43dc3de6768cbe5e94bda372e8399a42b5c8b5"
+          },
+          "exception": null
+        },
+        {
+          "component": "xapian",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/xapian-core-1.4.26",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 324,
+            "sha256": "6419dd412384e41cbee6574bda34a783cc51b44e542f26c27145c4bda1a7ae29"
+          },
+          "compiledSources": {
+            "count": 190,
+            "sha256": "931f8ecbf179f78f105cf082abda4a216350c21111f9a169a0a1bd32f565316e"
+          },
+          "exception": null
+        },
+        {
+          "component": "xz",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/lzma-5.2.6",
+          "compileRecords": {
+            "count": 81,
+            "sha256": "2d355ca549b13cb468f59013da44d1c73b76c4c5f34417358067c3a95c638863"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 81,
+            "sha256": "ca19cfb59f92d49cf86d0edc1904714abc7bca782f9f1b977306030fb0aebfe1"
+          },
+          "exception": null
+        },
+        {
+          "component": "zlib",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/zlib-1.3.1",
+          "compileRecords": {
+            "count": 16,
+            "sha256": "53c07fff82d165744e15b9de775f991426a58aa02f952f75c872646e13c6f555"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 16,
+            "sha256": "4b0ba4b0b590cd398afbf10ea2fc8abbe84db6817cedcdb5077cc38a8d1d082d"
+          },
+          "exception": null
+        },
+        {
+          "component": "zstd",
+          "buildPath": "BUILD_aarch64-apple-ios-simulator/zstd-1.5.7",
+          "compileRecords": {
+            "count": 33,
+            "sha256": "2a99fa67944ca8e4101527d1b113e8175968a44fc1e5f0ab563de362c2c6a058"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 33,
+            "sha256": "d5f20a4601048327144bf297f75e9cb4b7a06bca1c1717f721552099af550400"
+          },
+          "exception": null
+        }
+      ],
+      "componentArchives": [
+        {
+          "component": "curl",
+          "archive": "libcurl.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libcurl.a",
+          "sizeBytes": 807736,
+          "sha256": "765430d3b433cd0117f360d193c6deb1b0c078654ed972ec3a5c63632f4d7819",
+          "archiveMemberCount": 165,
+          "objectMemberCount": 164,
+          "orderedArchiveMembersSHA256": "6a982e0f5594964f621064c058693ec866eac6962bd434f39399f89eb020149b",
+          "orderedObjectMembersSHA256": "92f5510b51e726439d62c9e0b9423c6df9af7b1a5d47274335c4a9388dfa0962",
+          "definedSymbolCount": 656,
+          "definedSymbolSetSHA256": "cf04bab4caf05f857e010e0241a69f074ea883e9b05e960163bffaaaf96e0aa5"
+        },
+        {
+          "component": "icu",
+          "archive": "libicudata.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libicudata.a",
+          "sizeBytes": 7485760,
+          "sha256": "e10aa92b4014d5fb65cc292dfaac4968a46d737af8fcef98c872bc977da5f76f",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "0aaae4e295d9ec15889fa7f15f13c31716f1ee05ec0df7358099586d652d00d1",
+          "orderedObjectMembersSHA256": "09b302103aa6c40ad88e3bc6af38dbeda319261b96a76f6942f39db850c99273",
+          "definedSymbolCount": 1,
+          "definedSymbolSetSHA256": "7d02a0c2ccbfbf8bdc56719286544669a04cb5fc69c147e6f299fb6e3be50b99"
+        },
+        {
+          "component": "icu",
+          "archive": "libicui18n.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libicui18n.a",
+          "sizeBytes": 5465160,
+          "sha256": "a60327a7b2d7c61c7618d1109b69b250fa927f54ed3ec201c0727ad46b827998",
+          "archiveMemberCount": 244,
+          "objectMemberCount": 243,
+          "orderedArchiveMembersSHA256": "03276b9a68ab5508e6d81741bb0f4a40ee5686db1e8827b6643f5d1a4a3c80e3",
+          "orderedObjectMembersSHA256": "126a5cb5dad9d1c55e24628c7b7b0a609d7b1f66046cd180bc63bc3ceb8c807a",
+          "definedSymbolCount": 8928,
+          "definedSymbolSetSHA256": "a06b638fa3c9a3c4021a20be8edf3d4afd6ac89785d40e6ad7e2ff1238d1eaf2"
+        },
+        {
+          "component": "icu",
+          "archive": "libicuuc.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libicuuc.a",
+          "sizeBytes": 3056048,
+          "sha256": "0b26128634acd98623a4802803879854f58403fd7053c3ae0bcf0994f9f1e0c5",
+          "archiveMemberCount": 200,
+          "objectMemberCount": 199,
+          "orderedArchiveMembersSHA256": "bf98e90c203dd13367801452407606ee3dcb97b17f6e29af29a4c7cf18592e78",
+          "orderedObjectMembersSHA256": "1bbf9e92a4f9b1dba071ed144c4e3a1072adeb1453bd4ee82faff1554899682a",
+          "definedSymbolCount": 3822,
+          "definedSymbolSetSHA256": "3cba4d86caece66ecacaf54ee5dc744bdaa2cbcaa799c1ee02b3f893497daa41"
+        },
+        {
+          "component": "libkiwix",
+          "archive": "libkiwix.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libkiwix.a",
+          "sizeBytes": 9429512,
+          "sha256": "78ea993965681abe6930b5f8f01b3d4108108511350fb498041e0e517349448d",
+          "archiveMemberCount": 38,
+          "objectMemberCount": 37,
+          "orderedArchiveMembersSHA256": "16caaaf95b092b101cbfa0d48012ef2c30240c1fe9f57596dacbcb69959264c3",
+          "orderedObjectMembersSHA256": "123be98db2ae40f5afcb6c47f44cc5a40785f6f1a88a633570c46a262936555e",
+          "definedSymbolCount": 1840,
+          "definedSymbolSetSHA256": "57a51f46abaa4e6a956feb7b7f275a036168caabcd8f88b7f655e3178d8bb817"
+        },
+        {
+          "component": "xz",
+          "archive": "liblzma.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/liblzma.a",
+          "sizeBytes": 229440,
+          "sha256": "b8cf1269c597a4c14189cb5117da61e590a89acc108fb30c6e2f649c3d62088c",
+          "archiveMemberCount": 65,
+          "objectMemberCount": 64,
+          "orderedArchiveMembersSHA256": "2485b6a15ed08f227b38e628b6dab10fb0bf87482a5b48bca44bf1198a2a7e55",
+          "orderedObjectMembersSHA256": "a43c25c0679505679347056abb9d82685f3550d8ba06cf7d6b40c5bc8fd150b7",
+          "definedSymbolCount": 170,
+          "definedSymbolSetSHA256": "9c66f17637abb32967c9fa9c7160930d8ee6ff353c68034feee9a48bb17897d0"
+        },
+        {
+          "component": "libmicrohttpd",
+          "archive": "libmicrohttpd.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libmicrohttpd.a",
+          "sizeBytes": 118176,
+          "sha256": "dfed951d29a915dac26a4e2fe2ce6907fd87ee881bccb4d48cd76a7c647bf3ed",
+          "archiveMemberCount": 15,
+          "objectMemberCount": 14,
+          "orderedArchiveMembersSHA256": "aba5565aafad47c0261ab9a521444015c7adb491b9041b053e10d2a7d41fda13",
+          "orderedObjectMembersSHA256": "2fec3f83876dc0a826c8dec47afac468641a4bafe1d02fd8ff3bd7fedb37af57",
+          "definedSymbolCount": 109,
+          "definedSymbolSetSHA256": "34d994eefe47ec505ec79e9e15cc8ec7e42b975aa8b5068eed8cc9a74a2cfe41"
+        },
+        {
+          "component": "pugixml",
+          "archive": "libpugixml.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libpugixml.a",
+          "sizeBytes": 323896,
+          "sha256": "ea242807310e7555b19aa79460673bddf2bca6593310b07c50dfcb8777b0ea84",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "a77af5c229063b2f12a6237efed6933a3805eb376c0901eb25a66f783d745e8f",
+          "orderedObjectMembersSHA256": "892da66704770c38e821017ba70b7b3dc0f34922f5842d212c58883957dbc212",
+          "definedSymbolCount": 404,
+          "definedSymbolSetSHA256": "47b3ad2777ca17b86b95c3cce91f17f38065ed2f73f2feabb968575f5deba946"
+        },
+        {
+          "component": "xapian",
+          "archive": "libxapian.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libxapian.a",
+          "sizeBytes": 11336696,
+          "sha256": "3cc4142e6963c8419adac176a15f4ea334b2090623f84798b10411d3b85dac97",
+          "archiveMemberCount": 180,
+          "objectMemberCount": 179,
+          "orderedArchiveMembersSHA256": "1ecd1c0fa18949acbc3684de66c9ef7f0d906b7bfb855a67085afed10ef0be49",
+          "orderedObjectMembersSHA256": "d0f31cbd910e5984de870169f8c3ce1ad50504feeaf3a0bd056428a1901b7cb1",
+          "definedSymbolCount": 14280,
+          "definedSymbolSetSHA256": "1b552dc0dddcc5a4fae2de490e9623e3efe9b463abb33708ccbed758cda4bf4b"
+        },
+        {
+          "component": "zlib",
+          "archive": "libz.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libz.a",
+          "sizeBytes": 104736,
+          "sha256": "ba374947be8a33f35100a83499f8181e954bbb5e387870a64e7785f19edb72c9",
+          "archiveMemberCount": 16,
+          "objectMemberCount": 15,
+          "orderedArchiveMembersSHA256": "9f98b33479713ebc4e0baa3ee22f85f3de4e78de82179063daa185dc68ecf9a8",
+          "orderedObjectMembersSHA256": "b09f60a734d0ea65e5d89066d84d0e1cc4c48d23b23cecf4d059cc8adb3c65e1",
+          "definedSymbolCount": 105,
+          "definedSymbolSetSHA256": "b60e4ed56df07b73d1a64cc78cbe5443a85c1e7df00b8dbc70a075528611d001"
+        },
+        {
+          "component": "libzim",
+          "archive": "libzim.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libzim.a",
+          "sizeBytes": 1673768,
+          "sha256": "dde85ac045c2a55c63f0cefe45aa72b50906e157c572d49e22922adb69dd9e7c",
+          "archiveMemberCount": 42,
+          "objectMemberCount": 41,
+          "orderedArchiveMembersSHA256": "decaf63d82468ade123b648094da33dbd43b516ee0ad79457f993cd1cd1cb618",
+          "orderedObjectMembersSHA256": "f49f85af65c982cc21736587e152d39ac130f1457aa68339c1667693a6077686",
+          "definedSymbolCount": 1545,
+          "definedSymbolSetSHA256": "683424522a450df3dc0810a5798c6beebfea80217a3ff21d7f1010ff1920667c"
+        },
+        {
+          "component": "zstd",
+          "archive": "libzstd.a",
+          "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/libzstd.a",
+          "sizeBytes": 828016,
+          "sha256": "3461eda31bc95eecbfd92298c6ce4fc152dca8a8849cd9c3cfbdeae36f5a9a97",
+          "archiveMemberCount": 34,
+          "objectMemberCount": 33,
+          "orderedArchiveMembersSHA256": "edfa798bfc3f74b9407e233d4747fb50fe09a9100e5a9ec2f6864acaad61654f",
+          "orderedObjectMembersSHA256": "562c231e8b0ecc8141937981a6cdf0afbd969709daed9dd65d2e318ccd0647bc",
+          "definedSymbolCount": 553,
+          "definedSymbolSetSHA256": "f7456ef2966bcec434a08b5718b4726e0c09090938c9ebeae9290d7a775034b4"
+        }
+      ],
+      "mergedArchive": {
+        "path": "BUILD_aarch64-apple-ios-simulator/INSTALL/lib/merged.a",
+        "sizeBytes": 40857816,
+        "sha256": "70c88aad079b35bb778f509515f0eb35d00e016341f8786cc0ac1f9c2142d2cf",
+        "archiveMemberCount": 992,
+        "objectMemberCount": 991,
+        "orderedArchiveMembersSHA256": "c0dfee2cf31488367f5cf74f6e53e18a2a13091a743b5a16eb20f30998463bd8",
+        "orderedObjectMembersSHA256": "4857fe49abc67fb7c721d5748b674676b9548797153ecc59e9425352ad316fe0",
+        "definedSymbolCount": 32162,
+        "definedSymbolSetSHA256": "610280a8e703cddae9adc800784a1e033bcfbe911841614838ec0403a58801b8",
+        "relinkProof": {
+          "method": "exact-ordered-object-member-multiset-and-defined-symbol-set",
+          "componentArchiveOrder": [
+            "libicui18n.a",
+            "libmicrohttpd.a",
+            "libicudata.a",
+            "libz.a",
+            "libxapian.a",
+            "liblzma.a",
+            "libzim.a",
+            "libkiwix.a",
+            "libicuuc.a",
+            "libzstd.a",
+            "libcurl.a",
+            "libpugixml.a"
+          ],
+          "exactOrderedObjectMemberMultiset": true,
+          "componentDefinedSymbolSetSHA256": "610280a8e703cddae9adc800784a1e033bcfbe911841614838ec0403a58801b8",
+          "mergedDefinedSymbolSetSHA256": "610280a8e703cddae9adc800784a1e033bcfbe911841614838ec0403a58801b8",
+          "exactDefinedSymbolSet": true
+        }
+      }
+    },
+    {
+      "id": "ios-simulator-x86_64",
+      "platform": "ios-simulator",
+      "architecture": "x86_64",
+      "buildPath": "BUILD_x86-apple-ios-simulator",
+      "componentEvidence": [
+        {
+          "component": "curl",
+          "buildPath": "BUILD_x86-apple-ios-simulator/libcurl",
+          "compileRecords": {
+            "count": 1345,
+            "sha256": "dee1407441bd42ceccf0918261d15ed474fc3f16790dadbe8726c35285ce2a86"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 424,
+            "sha256": "05e257d89befa3f4205b9a3ac91c6d6628680ae44354c1a965b7637904efe300"
+          },
+          "exception": null
+        },
+        {
+          "component": "icu",
+          "buildPath": "BUILD_x86-apple-ios-simulator/icu4c-73.2",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 443,
+            "sha256": "b3671aeb8d887583159797e67ebd8d7ed80b0f244ae3aacb1725a568a1c678ee"
+          },
+          "compiledSources": {
+            "count": 443,
+            "sha256": "2920366c65ae917e82361999302b893a48de2c4f72f5169f187d373280bb685e"
+          },
+          "exception": null
+        },
+        {
+          "component": "libkiwix",
+          "buildPath": "BUILD_x86-apple-ios-simulator/libkiwix-14.2.0",
+          "compileRecords": {
+            "count": 37,
+            "sha256": "b2943086b809b566e6aca5bc30805e1254a25b7f7adfa9adaf1afc58b44d21ea"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 37,
+            "sha256": "0f560a89b20667706b013de29427728fffc67eb2f2b949e84979aa4906bc8a43"
+          },
+          "exception": null
+        },
+        {
+          "component": "libmicrohttpd",
+          "buildPath": "BUILD_x86-apple-ios-simulator/libmicrohttpd-0.9.76",
+          "compileRecords": {
+            "count": 14,
+            "sha256": "d8f712705e819f4e96dc5401b0c0d050662c1610c767f125432ffb08504dec9a"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 14,
+            "sha256": "c41523150efd20dae96d8dfdeab1db2451b38d98e6d30b6933277c1a56ac9a85"
+          },
+          "exception": null
+        },
+        {
+          "component": "libzim",
+          "buildPath": "BUILD_x86-apple-ios-simulator/libzim-9.6.0",
+          "compileRecords": {
+            "count": 42,
+            "sha256": "3b20929dbf5ce0dcd81ceaf66c79436275ce550a0754008660888b16ebfd13c8"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 42,
+            "sha256": "14e4fbdf1041c308be926057129b8474880791b6d5fc46b32331507bed3a1b95"
+          },
+          "exception": null
+        },
+        {
+          "component": "mustache",
+          "buildPath": "BUILD_x86-apple-ios-simulator/mustache-4.1",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "exception": null
+        },
+        {
+          "component": "pugixml",
+          "buildPath": "BUILD_x86-apple-ios-simulator/pugixml-1.15",
+          "compileRecords": {
+            "count": 1,
+            "sha256": "68903b51dab049e794663dfb6e802f5d237d3e9d7ab15f4f9af1fcec8430cead"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 1,
+            "sha256": "6eeb8f6ff3d75134aae9fdf22f43dc3de6768cbe5e94bda372e8399a42b5c8b5"
+          },
+          "exception": null
+        },
+        {
+          "component": "xapian",
+          "buildPath": "BUILD_x86-apple-ios-simulator/xapian-core-1.4.26",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 324,
+            "sha256": "722a6433be45feaca09da9835fd7924a2886fd3a53627bb9dc8d4511c4842188"
+          },
+          "compiledSources": {
+            "count": 190,
+            "sha256": "931f8ecbf179f78f105cf082abda4a216350c21111f9a169a0a1bd32f565316e"
+          },
+          "exception": null
+        },
+        {
+          "component": "xz",
+          "buildPath": "BUILD_x86-apple-ios-simulator/lzma-5.2.6",
+          "compileRecords": {
+            "count": 81,
+            "sha256": "5b277759c2f0714798fdb39ffd08ba1f0f399b716e746476da0f7521360e3019"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 81,
+            "sha256": "ca19cfb59f92d49cf86d0edc1904714abc7bca782f9f1b977306030fb0aebfe1"
+          },
+          "exception": null
+        },
+        {
+          "component": "zlib",
+          "buildPath": "BUILD_x86-apple-ios-simulator/zlib-1.3.1",
+          "compileRecords": {
+            "count": 16,
+            "sha256": "73f7a8fb6b72570dd971810a3a22ad7c4d1ef82add0aa9c0fa050efde324cf82"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 16,
+            "sha256": "4b0ba4b0b590cd398afbf10ea2fc8abbe84db6817cedcdb5077cc38a8d1d082d"
+          },
+          "exception": null
+        },
+        {
+          "component": "zstd",
+          "buildPath": "BUILD_x86-apple-ios-simulator/zstd-1.5.7",
+          "compileRecords": {
+            "count": 33,
+            "sha256": "7fe0efda302d394cb4f87e9362e54fec6daba33a0e1537d027dbd1016903a259"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 33,
+            "sha256": "d5f20a4601048327144bf297f75e9cb4b7a06bca1c1717f721552099af550400"
+          },
+          "exception": null
+        }
+      ],
+      "componentArchives": [
+        {
+          "component": "curl",
+          "archive": "libcurl.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libcurl.a",
+          "sizeBytes": 727416,
+          "sha256": "7ad61792b652e860ac3720cedfdf6fffd7025c640ecc556f007e76451a759262",
+          "archiveMemberCount": 165,
+          "objectMemberCount": 164,
+          "orderedArchiveMembersSHA256": "6a982e0f5594964f621064c058693ec866eac6962bd434f39399f89eb020149b",
+          "orderedObjectMembersSHA256": "92f5510b51e726439d62c9e0b9423c6df9af7b1a5d47274335c4a9388dfa0962",
+          "definedSymbolCount": 656,
+          "definedSymbolSetSHA256": "cf04bab4caf05f857e010e0241a69f074ea883e9b05e960163bffaaaf96e0aa5"
+        },
+        {
+          "component": "icu",
+          "archive": "libicudata.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libicudata.a",
+          "sizeBytes": 7485696,
+          "sha256": "1d8e4c6f94789763b3680e8eae04413d5d68b2ef70c7e98ec5182da34aa43a1e",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "0aaae4e295d9ec15889fa7f15f13c31716f1ee05ec0df7358099586d652d00d1",
+          "orderedObjectMembersSHA256": "09b302103aa6c40ad88e3bc6af38dbeda319261b96a76f6942f39db850c99273",
+          "definedSymbolCount": 1,
+          "definedSymbolSetSHA256": "7d02a0c2ccbfbf8bdc56719286544669a04cb5fc69c147e6f299fb6e3be50b99"
+        },
+        {
+          "component": "icu",
+          "archive": "libicui18n.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libicui18n.a",
+          "sizeBytes": 5240488,
+          "sha256": "5973f0fb39c186b243b53ee9e9dd241a20ad9f615f15394435a93b24aea8eb9d",
+          "archiveMemberCount": 244,
+          "objectMemberCount": 243,
+          "orderedArchiveMembersSHA256": "03276b9a68ab5508e6d81741bb0f4a40ee5686db1e8827b6643f5d1a4a3c80e3",
+          "orderedObjectMembersSHA256": "126a5cb5dad9d1c55e24628c7b7b0a609d7b1f66046cd180bc63bc3ceb8c807a",
+          "definedSymbolCount": 8931,
+          "definedSymbolSetSHA256": "eec0bb984a850825954c5f46d76f7a0e45a3bb21520dcc44f15f8aaf21f4df33"
+        },
+        {
+          "component": "icu",
+          "archive": "libicuuc.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libicuuc.a",
+          "sizeBytes": 2873856,
+          "sha256": "fd55b5a7497015f4c803c3199ba1ec77a69ce6b0cb418dd165dd8f7d2ac39b46",
+          "archiveMemberCount": 200,
+          "objectMemberCount": 199,
+          "orderedArchiveMembersSHA256": "bf98e90c203dd13367801452407606ee3dcb97b17f6e29af29a4c7cf18592e78",
+          "orderedObjectMembersSHA256": "1bbf9e92a4f9b1dba071ed144c4e3a1072adeb1453bd4ee82faff1554899682a",
+          "definedSymbolCount": 3825,
+          "definedSymbolSetSHA256": "0f71cfd06e578e2375f6c0547d52cfde06ecfb43e293248dab54036ebe0934c0"
+        },
+        {
+          "component": "libkiwix",
+          "archive": "libkiwix.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libkiwix.a",
+          "sizeBytes": 9277696,
+          "sha256": "0a51ce99cc772f67afd16036900b30b2cc4929cf3bf3ef01df491ae1907b6909",
+          "archiveMemberCount": 38,
+          "objectMemberCount": 37,
+          "orderedArchiveMembersSHA256": "16caaaf95b092b101cbfa0d48012ef2c30240c1fe9f57596dacbcb69959264c3",
+          "orderedObjectMembersSHA256": "123be98db2ae40f5afcb6c47f44cc5a40785f6f1a88a633570c46a262936555e",
+          "definedSymbolCount": 1904,
+          "definedSymbolSetSHA256": "ab7f64a18e27060df423e955b9dbef5330d92c821e1e0d87d1acdc3aab57652e"
+        },
+        {
+          "component": "xz",
+          "archive": "liblzma.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/liblzma.a",
+          "sizeBytes": 220624,
+          "sha256": "37270596a42d0b9987cbf886d03c223348ed754c0823764c8321f0fc8abe8967",
+          "archiveMemberCount": 65,
+          "objectMemberCount": 64,
+          "orderedArchiveMembersSHA256": "2485b6a15ed08f227b38e628b6dab10fb0bf87482a5b48bca44bf1198a2a7e55",
+          "orderedObjectMembersSHA256": "a43c25c0679505679347056abb9d82685f3550d8ba06cf7d6b40c5bc8fd150b7",
+          "definedSymbolCount": 170,
+          "definedSymbolSetSHA256": "9c66f17637abb32967c9fa9c7160930d8ee6ff353c68034feee9a48bb17897d0"
+        },
+        {
+          "component": "libmicrohttpd",
+          "archive": "libmicrohttpd.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libmicrohttpd.a",
+          "sizeBytes": 118824,
+          "sha256": "67e135e46d1e8c6c40c97d1ca8077b6994f4caf07fa3cd1392f7e8dcb1d7f210",
+          "archiveMemberCount": 15,
+          "objectMemberCount": 14,
+          "orderedArchiveMembersSHA256": "aba5565aafad47c0261ab9a521444015c7adb491b9041b053e10d2a7d41fda13",
+          "orderedObjectMembersSHA256": "2fec3f83876dc0a826c8dec47afac468641a4bafe1d02fd8ff3bd7fedb37af57",
+          "definedSymbolCount": 109,
+          "definedSymbolSetSHA256": "34d994eefe47ec505ec79e9e15cc8ec7e42b975aa8b5068eed8cc9a74a2cfe41"
+        },
+        {
+          "component": "pugixml",
+          "archive": "libpugixml.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libpugixml.a",
+          "sizeBytes": 302336,
+          "sha256": "335ed52569faee7866dde4cd1bb49d27397fb874e8f4f5ae8865f8bba75519a5",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "a77af5c229063b2f12a6237efed6933a3805eb376c0901eb25a66f783d745e8f",
+          "orderedObjectMembersSHA256": "892da66704770c38e821017ba70b7b3dc0f34922f5842d212c58883957dbc212",
+          "definedSymbolCount": 404,
+          "definedSymbolSetSHA256": "47b3ad2777ca17b86b95c3cce91f17f38065ed2f73f2feabb968575f5deba946"
+        },
+        {
+          "component": "xapian",
+          "archive": "libxapian.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libxapian.a",
+          "sizeBytes": 11044104,
+          "sha256": "0d5f748c599cf03012156e78686705d497145a4870aad41ad24c2ea1dbbde3c2",
+          "archiveMemberCount": 180,
+          "objectMemberCount": 179,
+          "orderedArchiveMembersSHA256": "1ecd1c0fa18949acbc3684de66c9ef7f0d906b7bfb855a67085afed10ef0be49",
+          "orderedObjectMembersSHA256": "d0f31cbd910e5984de870169f8c3ce1ad50504feeaf3a0bd056428a1901b7cb1",
+          "definedSymbolCount": 14280,
+          "definedSymbolSetSHA256": "1b552dc0dddcc5a4fae2de490e9623e3efe9b463abb33708ccbed758cda4bf4b"
+        },
+        {
+          "component": "zlib",
+          "archive": "libz.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libz.a",
+          "sizeBytes": 110536,
+          "sha256": "81fcaf6987fe09993de0f3c8006a6bafd99d384f3259dabd7364868a46c80075",
+          "archiveMemberCount": 16,
+          "objectMemberCount": 15,
+          "orderedArchiveMembersSHA256": "9f98b33479713ebc4e0baa3ee22f85f3de4e78de82179063daa185dc68ecf9a8",
+          "orderedObjectMembersSHA256": "b09f60a734d0ea65e5d89066d84d0e1cc4c48d23b23cecf4d059cc8adb3c65e1",
+          "definedSymbolCount": 105,
+          "definedSymbolSetSHA256": "b60e4ed56df07b73d1a64cc78cbe5443a85c1e7df00b8dbc70a075528611d001"
+        },
+        {
+          "component": "libzim",
+          "archive": "libzim.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libzim.a",
+          "sizeBytes": 1598600,
+          "sha256": "c64448fc733900d6480f13e2d1e6d681bc783c1dd0f2b9131dedc0d8153d0ccd",
+          "archiveMemberCount": 42,
+          "objectMemberCount": 41,
+          "orderedArchiveMembersSHA256": "decaf63d82468ade123b648094da33dbd43b516ee0ad79457f993cd1cd1cb618",
+          "orderedObjectMembersSHA256": "f49f85af65c982cc21736587e152d39ac130f1457aa68339c1667693a6077686",
+          "definedSymbolCount": 1554,
+          "definedSymbolSetSHA256": "a2a2e61db99796e489c4b04d7c2f11421bfec8e16bf725f84d6754ad5d170ea3"
+        },
+        {
+          "component": "zstd",
+          "archive": "libzstd.a",
+          "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/libzstd.a",
+          "sizeBytes": 967096,
+          "sha256": "2f9d8260e41a8e2d804e9300479f38a0a15f10c5b91d7ac2c876a25bcd8eb429",
+          "archiveMemberCount": 34,
+          "objectMemberCount": 33,
+          "orderedArchiveMembersSHA256": "edfa798bfc3f74b9407e233d4747fb50fe09a9100e5a9ec2f6864acaad61654f",
+          "orderedObjectMembersSHA256": "562c231e8b0ecc8141937981a6cdf0afbd969709daed9dd65d2e318ccd0647bc",
+          "definedSymbolCount": 557,
+          "definedSymbolSetSHA256": "88e59511956caa4e6fe85a3c79474034f0a6610215563a81f048656a6223d7bf"
+        }
+      ],
+      "mergedArchive": {
+        "path": "BUILD_x86-apple-ios-simulator/INSTALL/lib/merged.a",
+        "sizeBytes": 39966136,
+        "sha256": "352c6fd86fc1f09e5915453209c35743519aa8f7520b4933592b29f403dc2977",
+        "archiveMemberCount": 992,
+        "objectMemberCount": 991,
+        "orderedArchiveMembersSHA256": "c0dfee2cf31488367f5cf74f6e53e18a2a13091a743b5a16eb20f30998463bd8",
+        "orderedObjectMembersSHA256": "4857fe49abc67fb7c721d5748b674676b9548797153ecc59e9425352ad316fe0",
+        "definedSymbolCount": 32240,
+        "definedSymbolSetSHA256": "df8a76d7c5e60e604669a1e2a266bfcef210d69c971013ebef775da8814ab5a4",
+        "relinkProof": {
+          "method": "exact-ordered-object-member-multiset-and-defined-symbol-set",
+          "componentArchiveOrder": [
+            "libicui18n.a",
+            "libmicrohttpd.a",
+            "libicudata.a",
+            "libz.a",
+            "libxapian.a",
+            "liblzma.a",
+            "libzim.a",
+            "libkiwix.a",
+            "libicuuc.a",
+            "libzstd.a",
+            "libcurl.a",
+            "libpugixml.a"
+          ],
+          "exactOrderedObjectMemberMultiset": true,
+          "componentDefinedSymbolSetSHA256": "df8a76d7c5e60e604669a1e2a266bfcef210d69c971013ebef775da8814ab5a4",
+          "mergedDefinedSymbolSetSHA256": "df8a76d7c5e60e604669a1e2a266bfcef210d69c971013ebef775da8814ab5a4",
+          "exactDefinedSymbolSet": true
+        }
+      }
+    },
+    {
+      "id": "macos-arm64",
+      "platform": "macos",
+      "architecture": "arm64",
+      "buildPath": "BUILD_arm64-apple-macos",
+      "componentEvidence": [
+        {
+          "component": "curl",
+          "buildPath": "BUILD_arm64-apple-macos/libcurl",
+          "compileRecords": {
+            "count": 1345,
+            "sha256": "7feec08ca49babe7074b8f9380131b5d2b94838bdc02207c4fd9e9f37fb44c41"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 424,
+            "sha256": "888ef67c8c45c6ad9d018a4f4ea152b0b2f0fa402ebd61967ee9d8ec069dbf44"
+          },
+          "exception": null
+        },
+        {
+          "component": "icu",
+          "buildPath": "BUILD_arm64-apple-macos/icu4c-73.2",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 443,
+            "sha256": "7a6769205a7f1aaa14d3f93ffa312a6fbe3d334187239e0f49ec382df4db2e3e"
+          },
+          "compiledSources": {
+            "count": 443,
+            "sha256": "2920366c65ae917e82361999302b893a48de2c4f72f5169f187d373280bb685e"
+          },
+          "exception": null
+        },
+        {
+          "component": "libkiwix",
+          "buildPath": "BUILD_arm64-apple-macos/libkiwix-14.2.0",
+          "compileRecords": {
+            "count": 37,
+            "sha256": "41429dab0cdee65820ab34d24fd00dc14f04ab5712cd847b2a21881372b59d9a"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 37,
+            "sha256": "5622fa676781ee2cf4db0fc645d178860dd1a0ac3d110032e14cfd0208ddfb14"
+          },
+          "exception": null
+        },
+        {
+          "component": "libmicrohttpd",
+          "buildPath": "BUILD_arm64-apple-macos/libmicrohttpd-0.9.76",
+          "compileRecords": {
+            "count": 14,
+            "sha256": "d86505e95eb972727028f7e07a7ba47ed46498fd905804d58a3e426b2ecaafc8"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 14,
+            "sha256": "c41523150efd20dae96d8dfdeab1db2451b38d98e6d30b6933277c1a56ac9a85"
+          },
+          "exception": null
+        },
+        {
+          "component": "libzim",
+          "buildPath": "BUILD_arm64-apple-macos/libzim-9.6.0",
+          "compileRecords": {
+            "count": 42,
+            "sha256": "cb90b52c61f5c8f32db7f1e0e4ecaea8e3048d206ad253a1cd2feee218041131"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 42,
+            "sha256": "c3c04e1ebfdeddfde08949faeda94e66efa1401c80afea328464201ce0c4ccc8"
+          },
+          "exception": null
+        },
+        {
+          "component": "mustache",
+          "buildPath": "BUILD_arm64-apple-macos/mustache-4.1",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "exception": null
+        },
+        {
+          "component": "pugixml",
+          "buildPath": "BUILD_arm64-apple-macos/pugixml-1.15",
+          "compileRecords": {
+            "count": 1,
+            "sha256": "f22bbac93b2ea5b1e2b3535cbb370ef81a3fd8a17a78dce677a4dacd65ed38a1"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 1,
+            "sha256": "6eeb8f6ff3d75134aae9fdf22f43dc3de6768cbe5e94bda372e8399a42b5c8b5"
+          },
+          "exception": null
+        },
+        {
+          "component": "xapian",
+          "buildPath": "BUILD_arm64-apple-macos/xapian-core-1.4.26",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 324,
+            "sha256": "dbace1953bcbab766f999ea3ba9ea388cc3dfd42f6bff1735831418b00d5cf40"
+          },
+          "compiledSources": {
+            "count": 190,
+            "sha256": "931f8ecbf179f78f105cf082abda4a216350c21111f9a169a0a1bd32f565316e"
+          },
+          "exception": null
+        },
+        {
+          "component": "xz",
+          "buildPath": "BUILD_arm64-apple-macos/lzma-5.2.6",
+          "compileRecords": {
+            "count": 81,
+            "sha256": "e65b788dcd48601360a6d1bcb0f04a69b761700a93f9006f1f7cb25d84b8c6b8"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 81,
+            "sha256": "ca19cfb59f92d49cf86d0edc1904714abc7bca782f9f1b977306030fb0aebfe1"
+          },
+          "exception": null
+        },
+        {
+          "component": "zlib",
+          "buildPath": "BUILD_arm64-apple-macos/zlib-1.3.1",
+          "compileRecords": {
+            "count": 16,
+            "sha256": "46d1f40139dc8c7f0678ed17d8057ff37e43ecc14ab338d698cf160cacee50f4"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 16,
+            "sha256": "4b0ba4b0b590cd398afbf10ea2fc8abbe84db6817cedcdb5077cc38a8d1d082d"
+          },
+          "exception": null
+        },
+        {
+          "component": "zstd",
+          "buildPath": "BUILD_arm64-apple-macos/zstd-1.5.7",
+          "compileRecords": {
+            "count": 33,
+            "sha256": "098560014298b0c82911cf5f6d47753daa606ae08ff1d60ce1d7f9a6adec9207"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 33,
+            "sha256": "d5f20a4601048327144bf297f75e9cb4b7a06bca1c1717f721552099af550400"
+          },
+          "exception": null
+        }
+      ],
+      "componentArchives": [
+        {
+          "component": "curl",
+          "archive": "libcurl.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libcurl.a",
+          "sizeBytes": 810064,
+          "sha256": "1b82bbd20d461c26e933350a35d8931bf1aca8beea5eabf834f770bba3faf190",
+          "archiveMemberCount": 165,
+          "objectMemberCount": 164,
+          "orderedArchiveMembersSHA256": "6a982e0f5594964f621064c058693ec866eac6962bd434f39399f89eb020149b",
+          "orderedObjectMembersSHA256": "92f5510b51e726439d62c9e0b9423c6df9af7b1a5d47274335c4a9388dfa0962",
+          "definedSymbolCount": 657,
+          "definedSymbolSetSHA256": "4a744919083e225fa55b0d4782b613c30a88335bcfd4a176cadbbe79d41ba008"
+        },
+        {
+          "component": "icu",
+          "archive": "libicudata.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libicudata.a",
+          "sizeBytes": 736,
+          "sha256": "dc985eaeea2d8506a44c99861ac5de48088b92624faa7784ea3ebd885e89820f",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "7dd703880139a6f85dc11f5af710f1a3193e9d1deba4f43d51c0c6f9938857d2",
+          "orderedObjectMembersSHA256": "efdcee2a4face06b9a7ac6f12dff9b421becd948312a8528ef82e98df6564064",
+          "definedSymbolCount": 1,
+          "definedSymbolSetSHA256": "7d02a0c2ccbfbf8bdc56719286544669a04cb5fc69c147e6f299fb6e3be50b99"
+        },
+        {
+          "component": "icu",
+          "archive": "libicui18n.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libicui18n.a",
+          "sizeBytes": 5465336,
+          "sha256": "abe70d670ec18abdd1bcd63bdd1a35fc93eb75e2833c0d157776021b823d217e",
+          "archiveMemberCount": 244,
+          "objectMemberCount": 243,
+          "orderedArchiveMembersSHA256": "03276b9a68ab5508e6d81741bb0f4a40ee5686db1e8827b6643f5d1a4a3c80e3",
+          "orderedObjectMembersSHA256": "126a5cb5dad9d1c55e24628c7b7b0a609d7b1f66046cd180bc63bc3ceb8c807a",
+          "definedSymbolCount": 8928,
+          "definedSymbolSetSHA256": "a06b638fa3c9a3c4021a20be8edf3d4afd6ac89785d40e6ad7e2ff1238d1eaf2"
+        },
+        {
+          "component": "icu",
+          "archive": "libicuuc.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libicuuc.a",
+          "sizeBytes": 3060184,
+          "sha256": "6e899eec8a4c2aee6cd58813553c395c073fb43fc6f1a43aa2d6fdab051b2eab",
+          "archiveMemberCount": 200,
+          "objectMemberCount": 199,
+          "orderedArchiveMembersSHA256": "bf98e90c203dd13367801452407606ee3dcb97b17f6e29af29a4c7cf18592e78",
+          "orderedObjectMembersSHA256": "1bbf9e92a4f9b1dba071ed144c4e3a1072adeb1453bd4ee82faff1554899682a",
+          "definedSymbolCount": 3822,
+          "definedSymbolSetSHA256": "3cba4d86caece66ecacaf54ee5dc744bdaa2cbcaa799c1ee02b3f893497daa41"
+        },
+        {
+          "component": "libkiwix",
+          "archive": "libkiwix.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libkiwix.a",
+          "sizeBytes": 9450536,
+          "sha256": "d216b58d288cfc50ba04895015aae73d82d6cc8dbeca07b170a2b355968035c2",
+          "archiveMemberCount": 38,
+          "objectMemberCount": 37,
+          "orderedArchiveMembersSHA256": "16caaaf95b092b101cbfa0d48012ef2c30240c1fe9f57596dacbcb69959264c3",
+          "orderedObjectMembersSHA256": "123be98db2ae40f5afcb6c47f44cc5a40785f6f1a88a633570c46a262936555e",
+          "definedSymbolCount": 1840,
+          "definedSymbolSetSHA256": "57a51f46abaa4e6a956feb7b7f275a036168caabcd8f88b7f655e3178d8bb817"
+        },
+        {
+          "component": "xz",
+          "archive": "liblzma.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/liblzma.a",
+          "sizeBytes": 229440,
+          "sha256": "277aa411ab7c69034a5c76d44faa030b1129860a43f0573bb3a8ec4d1568abba",
+          "archiveMemberCount": 65,
+          "objectMemberCount": 64,
+          "orderedArchiveMembersSHA256": "2485b6a15ed08f227b38e628b6dab10fb0bf87482a5b48bca44bf1198a2a7e55",
+          "orderedObjectMembersSHA256": "a43c25c0679505679347056abb9d82685f3550d8ba06cf7d6b40c5bc8fd150b7",
+          "definedSymbolCount": 170,
+          "definedSymbolSetSHA256": "9c66f17637abb32967c9fa9c7160930d8ee6ff353c68034feee9a48bb17897d0"
+        },
+        {
+          "component": "libmicrohttpd",
+          "archive": "libmicrohttpd.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libmicrohttpd.a",
+          "sizeBytes": 118176,
+          "sha256": "59dd824d2070ab3184dcb5fdb77fddd4652c5ddf08d00908b6a05ddc6aa8131d",
+          "archiveMemberCount": 15,
+          "objectMemberCount": 14,
+          "orderedArchiveMembersSHA256": "aba5565aafad47c0261ab9a521444015c7adb491b9041b053e10d2a7d41fda13",
+          "orderedObjectMembersSHA256": "2fec3f83876dc0a826c8dec47afac468641a4bafe1d02fd8ff3bd7fedb37af57",
+          "definedSymbolCount": 109,
+          "definedSymbolSetSHA256": "34d994eefe47ec505ec79e9e15cc8ec7e42b975aa8b5068eed8cc9a74a2cfe41"
+        },
+        {
+          "component": "pugixml",
+          "archive": "libpugixml.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libpugixml.a",
+          "sizeBytes": 324360,
+          "sha256": "109d48e1457549d32fb18ba1a76c5751c5309f1f93e6dfaac7ed93ecbd1b2d37",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "a77af5c229063b2f12a6237efed6933a3805eb376c0901eb25a66f783d745e8f",
+          "orderedObjectMembersSHA256": "892da66704770c38e821017ba70b7b3dc0f34922f5842d212c58883957dbc212",
+          "definedSymbolCount": 404,
+          "definedSymbolSetSHA256": "47b3ad2777ca17b86b95c3cce91f17f38065ed2f73f2feabb968575f5deba946"
+        },
+        {
+          "component": "xapian",
+          "archive": "libxapian.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libxapian.a",
+          "sizeBytes": 11336880,
+          "sha256": "4d6942e60b85d6be3da3e111adece613007590152282a86003213d785e8c3a5c",
+          "archiveMemberCount": 180,
+          "objectMemberCount": 179,
+          "orderedArchiveMembersSHA256": "1ecd1c0fa18949acbc3684de66c9ef7f0d906b7bfb855a67085afed10ef0be49",
+          "orderedObjectMembersSHA256": "d0f31cbd910e5984de870169f8c3ce1ad50504feeaf3a0bd056428a1901b7cb1",
+          "definedSymbolCount": 14280,
+          "definedSymbolSetSHA256": "1b552dc0dddcc5a4fae2de490e9623e3efe9b463abb33708ccbed758cda4bf4b"
+        },
+        {
+          "component": "zlib",
+          "archive": "libz.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libz.a",
+          "sizeBytes": 104736,
+          "sha256": "75862f5dacda66648310747a0bc87a42c75e382994b78f55352075081d23686b",
+          "archiveMemberCount": 16,
+          "objectMemberCount": 15,
+          "orderedArchiveMembersSHA256": "9f98b33479713ebc4e0baa3ee22f85f3de4e78de82179063daa185dc68ecf9a8",
+          "orderedObjectMembersSHA256": "b09f60a734d0ea65e5d89066d84d0e1cc4c48d23b23cecf4d059cc8adb3c65e1",
+          "definedSymbolCount": 105,
+          "definedSymbolSetSHA256": "b60e4ed56df07b73d1a64cc78cbe5443a85c1e7df00b8dbc70a075528611d001"
+        },
+        {
+          "component": "libzim",
+          "archive": "libzim.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libzim.a",
+          "sizeBytes": 1673768,
+          "sha256": "31f3abe858104a7a9e6473c094faecc1bc8297dc71e068e742aad948ef47c42f",
+          "archiveMemberCount": 42,
+          "objectMemberCount": 41,
+          "orderedArchiveMembersSHA256": "decaf63d82468ade123b648094da33dbd43b516ee0ad79457f993cd1cd1cb618",
+          "orderedObjectMembersSHA256": "f49f85af65c982cc21736587e152d39ac130f1457aa68339c1667693a6077686",
+          "definedSymbolCount": 1545,
+          "definedSymbolSetSHA256": "683424522a450df3dc0810a5798c6beebfea80217a3ff21d7f1010ff1920667c"
+        },
+        {
+          "component": "zstd",
+          "archive": "libzstd.a",
+          "path": "BUILD_arm64-apple-macos/INSTALL/lib/libzstd.a",
+          "sizeBytes": 829048,
+          "sha256": "b04fa851d44999857e32d7e6c30f3e43765d008ae6e490735ebf3d9053657648",
+          "archiveMemberCount": 34,
+          "objectMemberCount": 33,
+          "orderedArchiveMembersSHA256": "edfa798bfc3f74b9407e233d4747fb50fe09a9100e5a9ec2f6864acaad61654f",
+          "orderedObjectMembersSHA256": "562c231e8b0ecc8141937981a6cdf0afbd969709daed9dd65d2e318ccd0647bc",
+          "definedSymbolCount": 553,
+          "definedSymbolSetSHA256": "f7456ef2966bcec434a08b5718b4726e0c09090938c9ebeae9290d7a775034b4"
+        }
+      ],
+      "mergedArchive": {
+        "path": "BUILD_arm64-apple-macos/INSTALL/lib/merged.a",
+        "sizeBytes": 33402136,
+        "sha256": "71c2f6687edd6bdb054600c0fbde84267944a10371c3599de0263dbb8ac74b33",
+        "archiveMemberCount": 992,
+        "objectMemberCount": 991,
+        "orderedArchiveMembersSHA256": "f5f0fd9abcd593b375e6bd859d553c8dc9c8b5afc962cb80962f662e46916638",
+        "orderedObjectMembersSHA256": "d4eefb4f6baca6ac845437a51e247f3cb66fc2f5b3770e0e50aa6bee0e4af9ab",
+        "definedSymbolCount": 32163,
+        "definedSymbolSetSHA256": "d223f4ab41ff888d50fa9f80d88ea8768073b89e5515712791cb878a76015466",
+        "relinkProof": {
+          "method": "exact-ordered-object-member-multiset-and-defined-symbol-set",
+          "componentArchiveOrder": [
+            "libicui18n.a",
+            "libmicrohttpd.a",
+            "libicudata.a",
+            "libz.a",
+            "libxapian.a",
+            "liblzma.a",
+            "libzim.a",
+            "libkiwix.a",
+            "libicuuc.a",
+            "libzstd.a",
+            "libcurl.a",
+            "libpugixml.a"
+          ],
+          "exactOrderedObjectMemberMultiset": true,
+          "componentDefinedSymbolSetSHA256": "d223f4ab41ff888d50fa9f80d88ea8768073b89e5515712791cb878a76015466",
+          "mergedDefinedSymbolSetSHA256": "d223f4ab41ff888d50fa9f80d88ea8768073b89e5515712791cb878a76015466",
+          "exactDefinedSymbolSet": true
+        }
+      }
+    },
+    {
+      "id": "macos-x86_64",
+      "platform": "macos",
+      "architecture": "x86_64",
+      "buildPath": "BUILD_x86_64-apple-darwin",
+      "componentEvidence": [
+        {
+          "component": "curl",
+          "buildPath": "BUILD_x86_64-apple-darwin/libcurl",
+          "compileRecords": {
+            "count": 1345,
+            "sha256": "1639a48a524ab1fb1972be624e93718d6a86c96c379c93762b0b9de0f32e5bc2"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 424,
+            "sha256": "0312d9cba56a7c884da0785997fafaff500de01cb7760c60532880aefc5b9d39"
+          },
+          "exception": null
+        },
+        {
+          "component": "icu",
+          "buildPath": "BUILD_x86_64-apple-darwin/icu4c-73.2",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 443,
+            "sha256": "35b561fff40eb0a06d62ceee1a012bc399e506beb6155f9283db657294a987e4"
+          },
+          "compiledSources": {
+            "count": 443,
+            "sha256": "2920366c65ae917e82361999302b893a48de2c4f72f5169f187d373280bb685e"
+          },
+          "exception": null
+        },
+        {
+          "component": "libkiwix",
+          "buildPath": "BUILD_x86_64-apple-darwin/libkiwix-14.2.0",
+          "compileRecords": {
+            "count": 37,
+            "sha256": "dcd57bc9b0d2ca4bd7f9489827dc471fc38009e7e2921b6105ca41c3a734e9ae"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 37,
+            "sha256": "8205874b7bf02b91a105303dbfc74c25491c8962eed07853fc8b4cfe39c6c298"
+          },
+          "exception": null
+        },
+        {
+          "component": "libmicrohttpd",
+          "buildPath": "BUILD_x86_64-apple-darwin/libmicrohttpd-0.9.76",
+          "compileRecords": {
+            "count": 14,
+            "sha256": "cab5b39ca5849a677c04ecb1d66ed3a879b69a5a46b75869ae5bcac9ac238f9f"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 14,
+            "sha256": "c41523150efd20dae96d8dfdeab1db2451b38d98e6d30b6933277c1a56ac9a85"
+          },
+          "exception": null
+        },
+        {
+          "component": "libzim",
+          "buildPath": "BUILD_x86_64-apple-darwin/libzim-9.6.0",
+          "compileRecords": {
+            "count": 42,
+            "sha256": "f08713f51c66cb7be339cd9dd7bca1f50045e7fc72e8d95e3f5c497a7afd39f6"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 42,
+            "sha256": "c376c7616e365120207d7d9a66431e2bfa22ac9f4ce2efeec9bb7cdb5285ae47"
+          },
+          "exception": null
+        },
+        {
+          "component": "mustache",
+          "buildPath": "BUILD_x86_64-apple-darwin/mustache-4.1",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "exception": null
+        },
+        {
+          "component": "pugixml",
+          "buildPath": "BUILD_x86_64-apple-darwin/pugixml-1.15",
+          "compileRecords": {
+            "count": 1,
+            "sha256": "4ad9d3443c78fcf11635c5b410b4255ba63bb683ce1423a1f01a26e53c22bc2a"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 1,
+            "sha256": "6eeb8f6ff3d75134aae9fdf22f43dc3de6768cbe5e94bda372e8399a42b5c8b5"
+          },
+          "exception": null
+        },
+        {
+          "component": "xapian",
+          "buildPath": "BUILD_x86_64-apple-darwin/xapian-core-1.4.26",
+          "compileRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "dependencyRecords": {
+            "count": 324,
+            "sha256": "cbcd4a6cd1b7736cb5f59216af6f566fcc354ad7cae2e0f467877c4fdae949ae"
+          },
+          "compiledSources": {
+            "count": 190,
+            "sha256": "931f8ecbf179f78f105cf082abda4a216350c21111f9a169a0a1bd32f565316e"
+          },
+          "exception": null
+        },
+        {
+          "component": "xz",
+          "buildPath": "BUILD_x86_64-apple-darwin/lzma-5.2.6",
+          "compileRecords": {
+            "count": 81,
+            "sha256": "d132606f32af88ee1807ef80e7b981256d6306ec2382c4f075cc310ef7bc056b"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 81,
+            "sha256": "ca19cfb59f92d49cf86d0edc1904714abc7bca782f9f1b977306030fb0aebfe1"
+          },
+          "exception": null
+        },
+        {
+          "component": "zlib",
+          "buildPath": "BUILD_x86_64-apple-darwin/zlib-1.3.1",
+          "compileRecords": {
+            "count": 16,
+            "sha256": "bbe2aa76da70ce6ee9dff1898d05e64035018a9d11888cd44e67c387c802669a"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 16,
+            "sha256": "4b0ba4b0b590cd398afbf10ea2fc8abbe84db6817cedcdb5077cc38a8d1d082d"
+          },
+          "exception": null
+        },
+        {
+          "component": "zstd",
+          "buildPath": "BUILD_x86_64-apple-darwin/zstd-1.5.7",
+          "compileRecords": {
+            "count": 33,
+            "sha256": "bfc08c748572054959d2bbe5300d7b8e86a7bd8b79b8170a6db66c96048e11fe"
+          },
+          "dependencyRecords": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "compiledSources": {
+            "count": 33,
+            "sha256": "d5f20a4601048327144bf297f75e9cb4b7a06bca1c1717f721552099af550400"
+          },
+          "exception": null
+        }
+      ],
+      "componentArchives": [
+        {
+          "component": "curl",
+          "archive": "libcurl.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libcurl.a",
+          "sizeBytes": 777128,
+          "sha256": "34bedc2bc301222308a839fa2d5e7769ede8eca7517e8dca824034372465c261",
+          "archiveMemberCount": 165,
+          "objectMemberCount": 164,
+          "orderedArchiveMembersSHA256": "6a982e0f5594964f621064c058693ec866eac6962bd434f39399f89eb020149b",
+          "orderedObjectMembersSHA256": "92f5510b51e726439d62c9e0b9423c6df9af7b1a5d47274335c4a9388dfa0962",
+          "definedSymbolCount": 657,
+          "definedSymbolSetSHA256": "4a744919083e225fa55b0d4782b613c30a88335bcfd4a176cadbbe79d41ba008"
+        },
+        {
+          "component": "icu",
+          "archive": "libicudata.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libicudata.a",
+          "sizeBytes": 7485696,
+          "sha256": "0e4ef7b3cf499829fb70ec66cca89547508b2401c94f2ee3ac2ed67e2d307fd1",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "0aaae4e295d9ec15889fa7f15f13c31716f1ee05ec0df7358099586d652d00d1",
+          "orderedObjectMembersSHA256": "09b302103aa6c40ad88e3bc6af38dbeda319261b96a76f6942f39db850c99273",
+          "definedSymbolCount": 1,
+          "definedSymbolSetSHA256": "7d02a0c2ccbfbf8bdc56719286544669a04cb5fc69c147e6f299fb6e3be50b99"
+        },
+        {
+          "component": "icu",
+          "archive": "libicui18n.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libicui18n.a",
+          "sizeBytes": 5648080,
+          "sha256": "9e09f759d03d367fa89d1df5cf67e59f654402779e0f0c1e53c8279e235636f5",
+          "archiveMemberCount": 244,
+          "objectMemberCount": 243,
+          "orderedArchiveMembersSHA256": "03276b9a68ab5508e6d81741bb0f4a40ee5686db1e8827b6643f5d1a4a3c80e3",
+          "orderedObjectMembersSHA256": "126a5cb5dad9d1c55e24628c7b7b0a609d7b1f66046cd180bc63bc3ceb8c807a",
+          "definedSymbolCount": 8931,
+          "definedSymbolSetSHA256": "eec0bb984a850825954c5f46d76f7a0e45a3bb21520dcc44f15f8aaf21f4df33"
+        },
+        {
+          "component": "icu",
+          "archive": "libicuuc.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libicuuc.a",
+          "sizeBytes": 3086720,
+          "sha256": "2c00fdcbd067eb74f2bd4803b1a9c6e2aa07f35e7e6e07746923d1fb09ac273b",
+          "archiveMemberCount": 200,
+          "objectMemberCount": 199,
+          "orderedArchiveMembersSHA256": "bf98e90c203dd13367801452407606ee3dcb97b17f6e29af29a4c7cf18592e78",
+          "orderedObjectMembersSHA256": "1bbf9e92a4f9b1dba071ed144c4e3a1072adeb1453bd4ee82faff1554899682a",
+          "definedSymbolCount": 3825,
+          "definedSymbolSetSHA256": "0f71cfd06e578e2375f6c0547d52cfde06ecfb43e293248dab54036ebe0934c0"
+        },
+        {
+          "component": "libkiwix",
+          "archive": "libkiwix.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libkiwix.a",
+          "sizeBytes": 9477864,
+          "sha256": "50b562c02a07ff68b7adc9902fe3cb62d2c433bb861f287018abc40a38e0d101",
+          "archiveMemberCount": 38,
+          "objectMemberCount": 37,
+          "orderedArchiveMembersSHA256": "16caaaf95b092b101cbfa0d48012ef2c30240c1fe9f57596dacbcb69959264c3",
+          "orderedObjectMembersSHA256": "123be98db2ae40f5afcb6c47f44cc5a40785f6f1a88a633570c46a262936555e",
+          "definedSymbolCount": 1904,
+          "definedSymbolSetSHA256": "ab7f64a18e27060df423e955b9dbef5330d92c821e1e0d87d1acdc3aab57652e"
+        },
+        {
+          "component": "xz",
+          "archive": "liblzma.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/liblzma.a",
+          "sizeBytes": 241760,
+          "sha256": "65ecbbd543047e89bb16d5a122a950116309f469cdaf22de0e5f2508e84567ca",
+          "archiveMemberCount": 65,
+          "objectMemberCount": 64,
+          "orderedArchiveMembersSHA256": "2485b6a15ed08f227b38e628b6dab10fb0bf87482a5b48bca44bf1198a2a7e55",
+          "orderedObjectMembersSHA256": "a43c25c0679505679347056abb9d82685f3550d8ba06cf7d6b40c5bc8fd150b7",
+          "definedSymbolCount": 170,
+          "definedSymbolSetSHA256": "9c66f17637abb32967c9fa9c7160930d8ee6ff353c68034feee9a48bb17897d0"
+        },
+        {
+          "component": "libmicrohttpd",
+          "archive": "libmicrohttpd.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libmicrohttpd.a",
+          "sizeBytes": 131416,
+          "sha256": "d58d2785e51069bc34dec48d6da48414ed44b6d1ad6db0a09541c6fa706bc6c0",
+          "archiveMemberCount": 15,
+          "objectMemberCount": 14,
+          "orderedArchiveMembersSHA256": "aba5565aafad47c0261ab9a521444015c7adb491b9041b053e10d2a7d41fda13",
+          "orderedObjectMembersSHA256": "2fec3f83876dc0a826c8dec47afac468641a4bafe1d02fd8ff3bd7fedb37af57",
+          "definedSymbolCount": 109,
+          "definedSymbolSetSHA256": "34d994eefe47ec505ec79e9e15cc8ec7e42b975aa8b5068eed8cc9a74a2cfe41"
+        },
+        {
+          "component": "pugixml",
+          "archive": "libpugixml.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libpugixml.a",
+          "sizeBytes": 333400,
+          "sha256": "e51e7808ab91f786aa01ffa7554e34e45c8d6f303374505821f6a90994770f3e",
+          "archiveMemberCount": 2,
+          "objectMemberCount": 1,
+          "orderedArchiveMembersSHA256": "a77af5c229063b2f12a6237efed6933a3805eb376c0901eb25a66f783d745e8f",
+          "orderedObjectMembersSHA256": "892da66704770c38e821017ba70b7b3dc0f34922f5842d212c58883957dbc212",
+          "definedSymbolCount": 404,
+          "definedSymbolSetSHA256": "47b3ad2777ca17b86b95c3cce91f17f38065ed2f73f2feabb968575f5deba946"
+        },
+        {
+          "component": "xapian",
+          "archive": "libxapian.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libxapian.a",
+          "sizeBytes": 12176368,
+          "sha256": "f1da4c5ced0a2ad56fd0e55ca3a1f1c98945e54a66a0c8dea5e4a39791f07c99",
+          "archiveMemberCount": 180,
+          "objectMemberCount": 179,
+          "orderedArchiveMembersSHA256": "1ecd1c0fa18949acbc3684de66c9ef7f0d906b7bfb855a67085afed10ef0be49",
+          "orderedObjectMembersSHA256": "d0f31cbd910e5984de870169f8c3ce1ad50504feeaf3a0bd056428a1901b7cb1",
+          "definedSymbolCount": 14280,
+          "definedSymbolSetSHA256": "1b552dc0dddcc5a4fae2de490e9623e3efe9b463abb33708ccbed758cda4bf4b"
+        },
+        {
+          "component": "zlib",
+          "archive": "libz.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libz.a",
+          "sizeBytes": 117656,
+          "sha256": "73ccc6d0ab8dc8e4c0a87e989a511297a5c9a00b3686a05e394d70ab3e7ed566",
+          "archiveMemberCount": 16,
+          "objectMemberCount": 15,
+          "orderedArchiveMembersSHA256": "9f98b33479713ebc4e0baa3ee22f85f3de4e78de82179063daa185dc68ecf9a8",
+          "orderedObjectMembersSHA256": "b09f60a734d0ea65e5d89066d84d0e1cc4c48d23b23cecf4d059cc8adb3c65e1",
+          "definedSymbolCount": 105,
+          "definedSymbolSetSHA256": "b60e4ed56df07b73d1a64cc78cbe5443a85c1e7df00b8dbc70a075528611d001"
+        },
+        {
+          "component": "libzim",
+          "archive": "libzim.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libzim.a",
+          "sizeBytes": 1699776,
+          "sha256": "9c41b5a97938744c4d9aa12473f1098769b7212486d94887bae3cd047e4d9f46",
+          "archiveMemberCount": 42,
+          "objectMemberCount": 41,
+          "orderedArchiveMembersSHA256": "decaf63d82468ade123b648094da33dbd43b516ee0ad79457f993cd1cd1cb618",
+          "orderedObjectMembersSHA256": "f49f85af65c982cc21736587e152d39ac130f1457aa68339c1667693a6077686",
+          "definedSymbolCount": 1554,
+          "definedSymbolSetSHA256": "a2a2e61db99796e489c4b04d7c2f11421bfec8e16bf725f84d6754ad5d170ea3"
+        },
+        {
+          "component": "zstd",
+          "archive": "libzstd.a",
+          "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/libzstd.a",
+          "sizeBytes": 1008136,
+          "sha256": "b893f1b5e8c68c142f26d736aeca13ab43aa5a0d71c9de2da1a3011e7287e76c",
+          "archiveMemberCount": 34,
+          "objectMemberCount": 33,
+          "orderedArchiveMembersSHA256": "edfa798bfc3f74b9407e233d4747fb50fe09a9100e5a9ec2f6864acaad61654f",
+          "orderedObjectMembersSHA256": "562c231e8b0ecc8141937981a6cdf0afbd969709daed9dd65d2e318ccd0647bc",
+          "definedSymbolCount": 557,
+          "definedSymbolSetSHA256": "88e59511956caa4e6fe85a3c79474034f0a6610215563a81f048656a6223d7bf"
+        }
+      ],
+      "mergedArchive": {
+        "path": "BUILD_x86_64-apple-darwin/INSTALL/lib/merged.a",
+        "sizeBytes": 42182864,
+        "sha256": "51a30e1a266ccc5a50c676210855f53e50aa75a02d6d652f8c81a5b97f743d37",
+        "archiveMemberCount": 992,
+        "objectMemberCount": 991,
+        "orderedArchiveMembersSHA256": "c0dfee2cf31488367f5cf74f6e53e18a2a13091a743b5a16eb20f30998463bd8",
+        "orderedObjectMembersSHA256": "4857fe49abc67fb7c721d5748b674676b9548797153ecc59e9425352ad316fe0",
+        "definedSymbolCount": 32241,
+        "definedSymbolSetSHA256": "268d4880c584fbb8ef5563c9322184fdfc44cf210fd0f767e94add6597388d4e",
+        "relinkProof": {
+          "method": "exact-ordered-object-member-multiset-and-defined-symbol-set",
+          "componentArchiveOrder": [
+            "libicui18n.a",
+            "libmicrohttpd.a",
+            "libicudata.a",
+            "libz.a",
+            "libxapian.a",
+            "liblzma.a",
+            "libzim.a",
+            "libkiwix.a",
+            "libicuuc.a",
+            "libzstd.a",
+            "libcurl.a",
+            "libpugixml.a"
+          ],
+          "exactOrderedObjectMemberMultiset": true,
+          "componentDefinedSymbolSetSHA256": "268d4880c584fbb8ef5563c9322184fdfc44cf210fd0f767e94add6597388d4e",
+          "mergedDefinedSymbolSetSHA256": "268d4880c584fbb8ef5563c9322184fdfc44cf210fd0f767e94add6597388d4e",
+          "exactDefinedSymbolSet": true
+        }
+      }
+    }
+  ],
+  "xcframework": {
+    "packageType": "XFWK",
+    "formatVersion": "1.0",
+    "infoPlist": {
+      "path": "Info.plist",
+      "sizeBytes": 1666,
+      "sha256": "d70cdb99afaed270cb9fdf8bc68b6be4f2b475c27b0b62dc1132f9096170e720"
+    },
+    "tree": {
+      "fileCount": 904,
+      "sha256": "2de0aa16a4af8bbb0fbaff966161bd48bc413b0e962349a0cd6edbca20983134"
+    },
+    "slices": [
+      {
+        "identifier": "ios-arm64",
+        "platform": "ios",
+        "variant": null,
+        "architectures": [
+          "arm64"
+        ],
+        "binary": {
+          "path": "ios-arm64/merged.a",
+          "sizeBytes": 40696048,
+          "sha256": "c35a282d4cf1254927bb81af0c7e27c3067a680254f5cd125682888d54407bd7"
+        },
+        "sliceTree": {
+          "fileCount": 301,
+          "sha256": "9801440adec3d57307cb20409bfed7433277ababd76388f9084bcbe47342d366"
+        }
+      },
+      {
+        "identifier": "ios-arm64_x86_64-simulator",
+        "platform": "ios",
+        "variant": "simulator",
+        "architectures": [
+          "arm64",
+          "x86_64"
+        ],
+        "binary": {
+          "path": "ios-arm64_x86_64-simulator/merged.a",
+          "sizeBytes": 80824000,
+          "sha256": "dd64bfbb515b020621a11a9473a87fed72063aeb9036d622f1bad2a2698ca463"
+        },
+        "sliceTree": {
+          "fileCount": 301,
+          "sha256": "543a51865155f76316a938b719d53752e29f1970ab324dbcdde1c40775c310b7"
+        }
+      },
+      {
+        "identifier": "macos-arm64_x86_64",
+        "platform": "macos",
+        "variant": null,
+        "architectures": [
+          "arm64",
+          "x86_64"
+        ],
+        "binary": {
+          "path": "macos-arm64_x86_64/merged.a",
+          "sizeBytes": 75585048,
+          "sha256": "d130f2c7009ba83f77a6a4d0da631dbf8911f2d1b024e6fc328ad9fdddf5acdf"
+        },
+        "sliceTree": {
+          "fileCount": 301,
+          "sha256": "bfc8006ca4e03e3c92cffce1467923d5aaffcb2916b861f2f789c60829193e02"
+        }
+      }
+    ],
+    "controlledDeviceThinArchiveSHA256": "c35a282d4cf1254927bb81af0c7e27c3067a680254f5cd125682888d54407bd7",
+    "distributedDeviceSliceExactArchiveIdentity": true
+  },
+  "distributedIOSCoverage": {
+    "sliceIdentifier": "ios-arm64",
+    "thinBuild": "ios-device-arm64",
+    "exactArchiveIdentity": true,
+    "mergedArchiveSHA256": "c35a282d4cf1254927bb81af0c7e27c3067a680254f5cd125682888d54407bd7",
+    "mergedArchiveMemberCount": 992,
+    "mergedObjectMemberCount": 991,
+    "mappedObjectMemberCount": 991,
+    "archiveMetadataMemberCount": 1,
+    "archiveMetadataMembersSHA256": "570144edfc34dcb0c04978ac532448bde6a597b40f057ca35645fc00f564f411",
+    "orderedObjectMapSHA256": "df756e828f35dcdf9b50a30e4541c72ebd405b824974f52a6194cf0bbab5eb99",
+    "fullObjectCoverage": true,
+    "fullArchiveMemberCoverage": true
+  }
+}

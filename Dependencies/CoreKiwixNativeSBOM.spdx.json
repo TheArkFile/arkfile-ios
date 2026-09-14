@@ -1,0 +1,290 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "CoreKiwix controlled native dependency SBOM",
+  "documentNamespace": "https://thearkfile.com/spdx/corekiwix/f6d9547ed8b3beccfd2b9edc8b65ff09c4d109220dd969c82b389ec4657e3167",
+  "creationInfo": {
+    "created": "1970-01-01T00:00:00Z",
+    "creators": [
+      "Tool: arkfile-corekiwix-evidence-v1"
+    ],
+    "comment": "Deterministic timestamp; artifact identity is carried by SHA-256 checksums."
+  },
+  "hasExtractedLicensingInfos": [
+    {
+      "licenseId": "LicenseRef-XZ-Utils-Public-Domain",
+      "extractedText": "The exact upstream XZ Utils licensing statement is retained and SHA-256 locked as the XZ component COPYING file in CoreKiwixNativeSource.lock.json.",
+      "name": "XZ Utils public-domain and permissive file licensing statement",
+      "comment": "A LicenseRef is used instead of substituting a broader standard identifier."
+    }
+  ],
+  "documentDescribes": [
+    "SPDXRef-Package-curl",
+    "SPDXRef-Package-icu",
+    "SPDXRef-Package-libkiwix",
+    "SPDXRef-Package-libmicrohttpd",
+    "SPDXRef-Package-libzim",
+    "SPDXRef-Package-mustache",
+    "SPDXRef-Package-pugixml",
+    "SPDXRef-Package-xapian",
+    "SPDXRef-Package-xz",
+    "SPDXRef-Package-zlib",
+    "SPDXRef-Package-zstd"
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-curl",
+      "name": "curl",
+      "versionInfo": "8.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5f724b6d212fb5cd301c2168819b86cbf36896d15f7e723acb48f410035ec873"
+        }
+      ],
+      "licenseConcluded": "curl",
+      "licenseDeclared": "curl",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/curl@8.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-icu",
+      "name": "ICU",
+      "versionInfo": "73.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0ed694fa9b419905f500ce91ee5fc7f1d57cba9d04858a56e1781da7f9237ab3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "ICU",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/icu@73.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-libkiwix",
+      "name": "libkiwix",
+      "versionInfo": "14.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9a4261a0d5ddccdd47bfe6e6fdba3c039e17b16f4cfef136322d09ee709db52e"
+        }
+      ],
+      "licenseConcluded": "GPL-3.0-or-later AND GPL-3.0-only AND BSD-3-Clause AND Zlib AND Apache-2.0 AND MIT AND OFL-1.1",
+      "licenseDeclared": "GPL-3.0-or-later",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libkiwix@14.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-libmicrohttpd",
+      "name": "libmicrohttpd",
+      "versionInfo": "0.9.76",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "27112e9bfe1343809b100604b308418d16bf717392741580840ecc2a66de3267"
+        }
+      ],
+      "licenseConcluded": "LGPL-2.1-or-later",
+      "licenseDeclared": "LGPL-2.1-or-later OR (GPL-2.0-or-later WITH eCos-exception-2.0)",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libmicrohttpd@0.9.76"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-libzim",
+      "name": "libzim",
+      "versionInfo": "9.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "87b90190be69c99fa1d3cf0a8dddbbb9c7870d411b060658dc928b5cfbda2ba9"
+        }
+      ],
+      "licenseConcluded": "GPL-2.0-or-later AND BSD-3-Clause",
+      "licenseDeclared": "GPL-2.0-or-later",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libzim@9.6.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-mustache",
+      "name": "Mustache",
+      "versionInfo": "4.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "742a13693b32243680390dc1150de6f63a9cc2c095f107469aee776bdcba9f8d"
+        }
+      ],
+      "licenseConcluded": "BSL-1.0",
+      "licenseDeclared": "BSL-1.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/mustache@4.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pugixml",
+      "name": "pugixml",
+      "versionInfo": "1.15",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "800e4b8e88083478cf0a782e8f6d0c4d1ba3c9f4f16bc071f49fc929ee37f3a8"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/pugixml@1.15"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-xapian",
+      "name": "Xapian",
+      "versionInfo": "1.4.23",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "92794fb8c0c003cea4577ea56408812d471de4b6a44e8d2e42a19ddb378c2f31"
+        }
+      ],
+      "licenseConcluded": "GPL-2.0-or-later AND MIT AND BSD-3-Clause AND BSL-1.0 AND Unicode-DFS-2016",
+      "licenseDeclared": "GPL-2.0-or-later",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/xapian-core@1.4.23"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-xz",
+      "name": "XZ Utils",
+      "versionInfo": "5.2.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "032498bf0d8ef048f1142f9119a42a72ad91dbc55e490e492dcfff37fa8eb444"
+        }
+      ],
+      "licenseConcluded": "LicenseRef-XZ-Utils-Public-Domain",
+      "licenseDeclared": "LicenseRef-XZ-Utils-Public-Domain",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/xz@5.2.6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-zlib",
+      "name": "zlib",
+      "versionInfo": "1.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3f5664edcf00cce38b170e385187ae2942477aff6627c6108b32ade48c112681"
+        }
+      ],
+      "licenseConcluded": "Zlib",
+      "licenseDeclared": "Zlib",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/zlib@1.3.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-zstd",
+      "name": "Zstandard",
+      "versionInfo": "1.5.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cdadc324cec60434fbcc2756f974a7f5679cc6b7064ee5809c6d2fb54a5cc6bb"
+        }
+      ],
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/zstd@1.5.7"
+        }
+      ]
+    }
+  ]
+}

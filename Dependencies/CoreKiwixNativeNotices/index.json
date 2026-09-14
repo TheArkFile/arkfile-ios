@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 1,
+  "package": {
+    "name": "CoreKiwix",
+    "version": "14.2.0+arkfile.1"
+  },
+  "coverageComplete": true,
+  "coverageBasis": "Engineering notice coverage is complete for every controlled build input and shipped embedded asset identified here. The Isotope dependency tags omit standalone license files, so their exact tagged MIT declarations, authors, and source headers are paired with the canonical MIT text from an immutable SPDX License List release. Coverage status is an inventory/provenance assertion; owner or counsel review of distribution sufficiency remains a separate release decision.",
+  "policy": "License conclusions are conservative and describe the material compiled or embedded in the ArkFile-controlled CoreKiwix build. Notice files are copied verbatim from, or are exact excerpts and metadata transcriptions of, controlled or immutable authoritative source inputs.",
+  "entries": [
+    {
+      "id": "kiwix-build",
+      "scope": "build-only",
+      "version": "r_103",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kiwix/kiwix-build.git",
+        "commit": "23200d831c6070b3c90d5da78c05887b70f0d831",
+        "tree": "c784e67ffced7579e08d2d5831fcd552560bc7f5"
+      },
+      "licenseConcluded": "GPL-3.0-only",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/kiwix-build-LICENSE-GPL-3.0.txt",
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix",
+      "scope": "shipped",
+      "version": "14.2.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "tree": "1291464180410c31547aceafcdfe20ef160ef941"
+      },
+      "licenseDeclared": "GPL-3.0-or-later",
+      "licenseConcluded": "GPL-3.0-or-later AND GPL-3.0-only AND BSD-3-Clause AND Zlib AND Apache-2.0 AND MIT AND OFL-1.1",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-COPYING-GPL-3.0.txt",
+          "sha256": "2170baac1a469f107cca076f1471e1cdddf858ff3407ece7a1bfee989c8674d7"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-AUTHORS.txt",
+          "sha256": "af326dae1602e50b658a63428bab7ac8c64e5f536a41efb1bfc49e6e59f56d78"
+        }
+      ]
+    },
+    {
+      "id": "libzim",
+      "scope": "shipped",
+      "version": "9.6.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/openzim/libzim.git",
+        "commit": "8e51607a1866f9a2ec6eb428b136c5184974afe7",
+        "tree": "ef88779a784f00840243f2d454c821208cf494a6"
+      },
+      "sourceEvidence": [
+        {
+          "path": "src/lrucache.h",
+          "sha256": "5f04bf12feb5dfcba50c1373642a10a96ec308834b503507049dc5ab6ee32a8a"
+        }
+      ],
+      "licenseConcluded": "GPL-2.0-or-later AND BSD-3-Clause",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libzim-COPYING-GPL-2.0.txt",
+          "sha256": "86dfcf55c2b28fc143f89c5bf66ada6eec8a2d1c64ea1fdf557b708c16177f37"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libzim-AUTHORS.txt",
+          "sha256": "be674160b83ce87f45d884abbc8af010e67083666f499dfe57933f90334aea28"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libzim-lrucache-BSD-3-Clause.txt",
+          "sha256": "42a31466b92a53c4510a45641def0a94e1e76d3354cc8cf1b2e93d2ecf4e1ad3"
+        }
+      ]
+    },
+    {
+      "id": "zlib",
+      "scope": "shipped",
+      "version": "1.3.1",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/zlib-1.3.1.tar.gz",
+        "archiveSha256": "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23"
+      },
+      "licenseConcluded": "Zlib",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/zlib-LICENSE-Zlib.txt",
+          "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+        }
+      ]
+    },
+    {
+      "id": "zstd",
+      "scope": "shipped",
+      "version": "1.5.7",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/zstd-1.5.7.tar.gz",
+        "archiveSha256": "eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3"
+      },
+      "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only",
+      "licenseConcluded": "BSD-3-Clause",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/zstd-LICENSE-BSD-3-Clause.txt",
+          "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/zstd-COPYING-GPL-2.0.txt",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        }
+      ]
+    },
+    {
+      "id": "xz-liblzma",
+      "scope": "shipped",
+      "version": "5.2.6",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/xz-5.2.6.tar.gz",
+        "archiveSha256": "a2105abee17bcd2ebd15ced31b4f5eda6e17efd6b10f921a01cda4a44c91b3a0"
+      },
+      "licenseConcluded": "LicenseRef-XZ-Utils-Public-Domain",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING.txt",
+          "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-AUTHORS.txt",
+          "sha256": "c07ea89b85db044f5e4a28fcc18a1dd900541737fb5ef8a69df1e1eb603f5966"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING-GPL-2.0.txt",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING-GPL-3.0.txt",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING-LGPL-2.1.txt",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        }
+      ]
+    },
+    {
+      "id": "xapian-core",
+      "scope": "shipped",
+      "version": "1.4.23",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/xapian-core-1.4.23.tar.xz",
+        "archiveSha256": "30d3518172084f310dab86d262b512718a7f9a13635aaa1a188e61dc26b2288c"
+      },
+      "sourceEvidence": [
+        {
+          "path": "api/constinfo.cc",
+          "sha256": "e4e195983ab11bb627b0e17d533dbc6aa7be2c54cad93c65d13ffd5c032b93d7"
+        },
+        {
+          "path": "languages/steminternal.cc",
+          "sha256": "8689b4a948bdb3eafdd313d0880fcf3fc3087f98e5ec137d764ad7909de94392"
+        },
+        {
+          "path": "include/xapian/intrusive_ptr.h",
+          "sha256": "67ecbe51a204471765551ad311fb7e4880c4a25669569581c67bc0a82a877b89"
+        },
+        {
+          "path": "unicode/UnicodeData-README.txt",
+          "sha256": "943d5c88aeef7391b080cc6123e7a443c4a78d71965c10c5b215700e928019f1"
+        }
+      ],
+      "licenseConcluded": "GPL-2.0-or-later AND MIT AND BSD-3-Clause AND BSL-1.0 AND Unicode-DFS-2016",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-COPYING-GPL-2.0.txt",
+          "sha256": "c38aee9e3c8c4d5d594ff548a1be05453023016d6286931f6512db215ec1fd42"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-AUTHORS.txt",
+          "sha256": "b9427184e1666ede7b02efe63998279bde296f06dba9f69f1c8f8e8e72fa7341"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-MIT-constinfo.txt",
+          "sha256": "020af2ab20611bdf83a3d0b75cf458b94c9c7022d6050588a15d3cc8caf5de8d"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-BSD-steminternal.txt",
+          "sha256": "5d4261a99736edf2b452da645d62e980c4d13e683d480f5b30cbdb77cee7ad1a"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-BSL-intrusive_ptr.txt",
+          "sha256": "56c4e77d4729e29404900cb4cc406a6befc926d851a9be543e9b7e166beb074a"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-UnicodeData-LICENSE.txt",
+          "sha256": "943d5c88aeef7391b080cc6123e7a443c4a78d71965c10c5b215700e928019f1"
+        }
+      ]
+    },
+    {
+      "id": "curl",
+      "scope": "shipped",
+      "version": "8.4.0",
+      "source": {
+        "type": "archive",
+        "url": "https://curl.se/download/curl-8.4.0.tar.xz",
+        "archiveSha256": "16c62a9c4af0f703d28bda6d7bbf37ba47055ad3414d70dec63e2e6336f2a82d"
+      },
+      "licenseConcluded": "curl",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/curl-COPYING.txt",
+          "sha256": "b1d7feb949ea5023552029fbe0bf5db4f23c2f85e9b8e51e18536f0ecbf9c524"
+        }
+      ]
+    },
+    {
+      "id": "icu",
+      "scope": "shipped",
+      "version": "73.2",
+      "source": {
+        "type": "archive-set",
+        "archives": [
+          {
+            "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz",
+            "archiveSha256": "818a80712ed3caacd9b652305e01afc7fa167e6f2e94996da44b90c2ab604ce1"
+          },
+          {
+            "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-data.zip",
+            "archiveSha256": "ca1ee076163b438461e484421a7679fc33a64cd0a54f9d4b401893fa1eb42701"
+          }
+        ]
+      },
+      "licenseDeclared": "ICU",
+      "licenseConcluded": "NOASSERTION",
+      "licenseConclusionReason": "The controlled ICU LICENSE is a composite of ICU and bundled third-party notices; it is preserved in full rather than reduced to one expression.",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/icu-LICENSE-composite.txt",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "id": "libmicrohttpd",
+      "scope": "shipped",
+      "version": "0.9.76",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/libmicrohttpd-0.9.76.tar.gz",
+        "archiveSha256": "f0b1547b5a42a6c0f724e8e1c1cb5ce9c4c35fb495e7d780b9930d35011ceb4c"
+      },
+      "licenseConcluded": "LGPL-2.1-or-later",
+      "distributionRequirement": "Preserve corresponding source plus the relinkable static-library object material and mapping required for recipients to relink a modified libmicrohttpd.",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libmicrohttpd-COPYING-LGPL-2.1.txt",
+          "sha256": "7399547209438c93f9b90297954698773d4846cea44cde5ca982c84c45952a3b"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libmicrohttpd-AUTHORS.txt",
+          "sha256": "24094fde89a45bc5b0a1894554923d2b921c174ff28bfc6f78aa68879d04d379"
+        }
+      ]
+    },
+    {
+      "id": "pugixml",
+      "scope": "shipped",
+      "version": "1.15",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/pugixml-1.15.tar.gz",
+        "archiveSha256": "2e094287f58de02047b2ef23122904de0e02e3b4e9d6b44952d087e746b25974"
+      },
+      "licenseConcluded": "MIT",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/pugixml-LICENSE-MIT.txt",
+          "sha256": "0d0b3772af2fa45628a548a3b34583707ebcc68bb6f83ec48ca273aab4a510f1"
+        }
+      ]
+    },
+    {
+      "id": "mustache-cpp",
+      "scope": "shipped",
+      "version": "4.1",
+      "source": {
+        "type": "archive",
+        "url": "https://dev.kiwix.org/kiwix-build/mustache-4.1.tar.gz",
+        "archiveSha256": "acd66359feb4318b421f9574cfc5a511133a77d916d0b13c7caa3783c0bfe167"
+      },
+      "licenseConcluded": "BSL-1.0",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/mustache-cpp-LICENSE-BSL-1.0.txt",
+          "sha256": "03630faa63ff1049b2eaf1434f771817b7123afa2524568d57850529fae5189e"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-autoComplete",
+      "scope": "shipped-embedded-asset",
+      "version": "NOASSERTION",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "static/skin/autoComplete/autoComplete.min.js",
+        "sha256": "a01853de27be951bdeb8797225e04370cdf4e6a5034e0847981c0d4f8d242275"
+      },
+      "licenseConcluded": "Apache-2.0",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/autoComplete-LICENSE-Apache-2.0.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-lrucache",
+      "scope": "shipped-compiled-source",
+      "version": "NOASSERTION",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "src/tools/lrucache.h",
+        "sha256": "c3d462d6fc16e65e59e6c43b4180f9fd5ad09463baae67880b0a2bdba7ec40cd"
+      },
+      "licenseConcluded": "BSD-3-Clause",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-lrucache-BSD-3-Clause.txt",
+          "sha256": "42a31466b92a53c4510a45641def0a94e1e76d3354cc8cf1b2e93d2ecf4e1ad3"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-base64",
+      "scope": "shipped-compiled-source",
+      "version": "NOASSERTION",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "src/tools/base64.cpp",
+        "sha256": "7df829ba7fb6f934261dd6a5e620b6e3c72751306a4ebe61818e16a95506e509"
+      },
+      "licenseConcluded": "Zlib",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-base64-Nyffenegger-Zlib.txt",
+          "sha256": "b3b80bff73d5cf6aebd149d9cd3920d22381d3a2b5b084df35461e872bf3061d"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-isotope",
+      "scope": "shipped-embedded-asset",
+      "version": "3.0.6",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "static/skin/isotope.pkgd.min.js",
+        "sha256": "49ec40ee61a914dba0980e0906f3589d296ab5abc836c27d1c1954b97fccb847"
+      },
+      "upstreamRelease": {
+        "url": "https://github.com/metafizzy/isotope.git",
+        "tag": "v3.0.6",
+        "tagObject": "18a432bb87b3a9e7729f50175198c90cc1176bae",
+        "commit": "ad008079ec0bc6387d2781b98cfd5c80a9fc0b40",
+        "packageDeclaration": {
+          "path": "package.json",
+          "gitBlob": "07cac5d270139e2315e6d6f8e5286f216bc3f01d",
+          "rawUrl": "https://raw.githubusercontent.com/metafizzy/isotope/ad008079ec0bc6387d2781b98cfd5c80a9fc0b40/package.json",
+          "sha256": "18cbae0fad5a5f7dd8db9b84f20b002797fc42a89db81941d075e7f4124b1a77",
+          "name": "isotope-layout",
+          "version": "3.0.6",
+          "author": "Metafizzy",
+          "license": "GPL-3.0"
+        }
+      },
+      "licenseConcluded": "GPL-3.0-only AND MIT",
+      "licenseNoticeBasis": "The Isotope v3.0.6 package embeds seven MIT dependencies. Their exact release tags contain no standalone license file; each tagged package declaration, author, and source header is therefore bound below and paired with the canonical MIT grant text from SPDX License List v3.28.0.",
+      "canonicalMitLicenseText": {
+        "role": "Exact canonical MIT grant text. Read together with the immutable tagged package declarations and author attribution notice below; the SPDX placeholders are intentionally not rewritten.",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/spdx/license-list-data.git",
+          "tag": "v3.28.0",
+          "tagObject": "779ef2e5dff6d4af389c53de5e97116ab0bb52e8",
+          "commit": "c4a7237ec8f4654e867546f9f409749300f1bf4c",
+          "path": "text/MIT.txt",
+          "gitBlob": "d817195dad53ec992418c28ffca5fbd1cd86502a",
+          "rawUrl": "https://raw.githubusercontent.com/spdx/license-list-data/c4a7237ec8f4654e867546f9f409749300f1bf4c/text/MIT.txt",
+          "sourceSha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5"
+        },
+        "noticePath": "Dependencies/CoreKiwixNativeNotices/spdx-MIT-template.txt",
+        "noticeSha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5"
+      },
+      "bundledMitDependencies": [
+        {
+          "id": "jquery-bridget",
+          "version": "2.0.1",
+          "upstream": {
+            "url": "https://github.com/desandro/jquery-bridget.git",
+            "tag": "v2.0.1",
+            "tagObject": "2816423f882886b7aaa8135f1ad8bd2b0a868769",
+            "commit": "bd09b859b4eac30a8c768983a5d85f307b2d2f89"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "3f157066c78cb95078fccf952a95c52ac9275236",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/jquery-bridget/bd09b859b4eac30a8c768983a5d85f307b2d2f89/package.json",
+            "sha256": "f304115b3c10d19329693535d55d166118134828a7b3439ab337f7f96448b40e",
+            "name": "jquery-bridget",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "jquery-bridget.js",
+            "gitBlob": "c676f93ef1e26983218eb5646dcdba36f2584127",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/jquery-bridget/bd09b859b4eac30a8c768983a5d85f307b2d2f89/jquery-bridget.js",
+            "sha256": "8577618bc0bd584fa481edf98d3b8ab64812d1945b61683a0e8317dc90e49dda"
+          }
+        },
+        {
+          "id": "ev-emitter",
+          "version": "1.1.0",
+          "upstream": {
+            "url": "https://github.com/metafizzy/ev-emitter.git",
+            "tag": "v1.1.0",
+            "tagObject": "5cc77048f6a16c4a82bb37ea5dc5f0e51d706953",
+            "commit": "ff7c5eba9fdf5aed95685f23988ce61689525f9a"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "c892a3287f688a81cf36810ddb7ae2f48d1760f0",
+            "rawUrl": "https://raw.githubusercontent.com/metafizzy/ev-emitter/ff7c5eba9fdf5aed95685f23988ce61689525f9a/package.json",
+            "sha256": "efd59480e0c01b14e4881926a3d4b56ae3554bcf92cc98af30e9b26fd80e2910",
+            "name": "ev-emitter",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "ev-emitter.js",
+            "gitBlob": "124e2600e0efcec3671c06200b52d36e2e59d69b",
+            "rawUrl": "https://raw.githubusercontent.com/metafizzy/ev-emitter/ff7c5eba9fdf5aed95685f23988ce61689525f9a/ev-emitter.js",
+            "sha256": "79fd5cee3d93f9b2e12e671b6924e7f1dba59ca70415a5cb857b3f6509b26478"
+          }
+        },
+        {
+          "id": "get-size",
+          "version": "2.0.3",
+          "upstream": {
+            "url": "https://github.com/desandro/get-size.git",
+            "tag": "v2.0.3",
+            "tagObject": "8b618dec9c35bcecb6c8568f6c2668a879f54e76",
+            "commit": "6879e7f15b4b6e19ca392b6955edfa8d4aa6f787"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "1e64b0876125600f057fcd2351dc7390573a080c",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/get-size/6879e7f15b4b6e19ca392b6955edfa8d4aa6f787/package.json",
+            "sha256": "dd48b4df66fbc55bc4b325710d3aeff742b888924ab3eedd43527118482ea6c8",
+            "name": "get-size",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "get-size.js",
+            "gitBlob": "0f013fc56b5c63d7fe0769d569c1569032607173",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/get-size/6879e7f15b4b6e19ca392b6955edfa8d4aa6f787/get-size.js",
+            "sha256": "b326a12ef46011b0792551c83b2cb2361990ed3507888d0a855452f01763b985"
+          }
+        },
+        {
+          "id": "matches-selector",
+          "version": "2.0.2",
+          "upstream": {
+            "url": "https://github.com/desandro/matches-selector.git",
+            "tag": "v2.0.2",
+            "tagObject": "1e7d535ee374ff0823f7232ca1fe2b4ac8e56ae9",
+            "commit": "42ee1cbab7469454d140bdab04d2ceed9c68b85e"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "d26b64b4f1fd00c5575b64bdb5945e7ee8f01373",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/matches-selector/42ee1cbab7469454d140bdab04d2ceed9c68b85e/package.json",
+            "sha256": "24b6b6a15884f3279d83dffead9b634ca62010fa8e74a706bbbb5eb172eafc4e",
+            "name": "desandro-matches-selector",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "matches-selector.js",
+            "gitBlob": "a1aa80b8c0c5594ad0407fb20c7faf8479be4cbc",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/matches-selector/42ee1cbab7469454d140bdab04d2ceed9c68b85e/matches-selector.js",
+            "sha256": "1e06dda995151f7d34124cf66a58e92ac2a8d7b1d32fa66de0b088d6effcaea4"
+          }
+        },
+        {
+          "id": "fizzy-ui-utils",
+          "version": "2.0.7",
+          "upstream": {
+            "url": "https://github.com/metafizzy/fizzy-ui-utils.git",
+            "tag": "v2.0.7",
+            "tagObject": "637aea0eb26d84d0922513d891f1d7b4157b3d4c",
+            "commit": "72feb9fc3d6de25696291941121bb3ec2db8221e"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "669644ffeb7d0291380bd0c4b2acbcc4d6e5bf83",
+            "rawUrl": "https://raw.githubusercontent.com/metafizzy/fizzy-ui-utils/72feb9fc3d6de25696291941121bb3ec2db8221e/package.json",
+            "sha256": "1e96bc26ee37d45231d4450dc884d9f4af363fc46959d1265e948cb8c3786fcf",
+            "name": "fizzy-ui-utils",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "utils.js",
+            "gitBlob": "7f2a09cc55cf1301b3517fb8efe123903a53fbae",
+            "rawUrl": "https://raw.githubusercontent.com/metafizzy/fizzy-ui-utils/72feb9fc3d6de25696291941121bb3ec2db8221e/utils.js",
+            "sha256": "36538fabad2afd24ae5ccea559bfcb5c1d0cd4e447753734d81c8d27243e09bc"
+          }
+        },
+        {
+          "id": "outlayer",
+          "version": "2.1.1",
+          "upstream": {
+            "url": "https://github.com/metafizzy/outlayer.git",
+            "tag": "v2.1.1",
+            "tagObject": "07ca54fd55ff232aec814768716a5d245a450c41",
+            "commit": "bf31c5748bf84fcc2c553d1199a6ecaf0ebd9878"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "214677006bab956362f506e2406e50479cf2d789",
+            "rawUrl": "https://raw.githubusercontent.com/metafizzy/outlayer/bf31c5748bf84fcc2c553d1199a6ecaf0ebd9878/package.json",
+            "sha256": "059c35089610b5ed3320549642d5fd85c963e3765aa4ff040a8cfea697ce15cb",
+            "name": "outlayer",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "outlayer.js",
+            "gitBlob": "6e74ef992ad2ae9f9a05b0e37d2fdcb09dad2543",
+            "rawUrl": "https://raw.githubusercontent.com/metafizzy/outlayer/bf31c5748bf84fcc2c553d1199a6ecaf0ebd9878/outlayer.js",
+            "sha256": "df4928d12417a0ac3b4c93f3c6f84fcb6ddc9eb1f0ae389afdd3e83322798ac4"
+          }
+        },
+        {
+          "id": "masonry",
+          "version": "4.2.1",
+          "upstream": {
+            "url": "https://github.com/desandro/masonry.git",
+            "tag": "v4.2.1",
+            "tagObject": "65d535f9bc1b39794f53f3d3c973145b01596aa4",
+            "commit": "31113c7ccaa4c26c50fa603ca3ad8578e03f1b66"
+          },
+          "standaloneLicenseFileInTaggedTree": false,
+          "packageDeclaration": {
+            "path": "package.json",
+            "gitBlob": "554580ede3a91e75804bbe6dc8d368226825f625",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/masonry/31113c7ccaa4c26c50fa603ca3ad8578e03f1b66/package.json",
+            "sha256": "ff71846023c366b1689bc70c7486eb9ef04fc2a0c543709a128aa58e2f9ea948",
+            "name": "masonry-layout",
+            "author": "David DeSandro",
+            "license": "MIT"
+          },
+          "sourceHeader": {
+            "path": "masonry.js",
+            "gitBlob": "0bb18ae39f9b8d99b016d10e8387f0d3e83ecbb6",
+            "rawUrl": "https://raw.githubusercontent.com/desandro/masonry/31113c7ccaa4c26c50fa603ca3ad8578e03f1b66/masonry.js",
+            "sha256": "4484a181db2bbbaf7eb5c35679ecbfd514075a8b497d21d250e27b7dc57f74f6"
+          }
+        }
+      ],
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-COPYING-GPL-3.0.txt",
+          "sha256": "2170baac1a469f107cca076f1471e1cdddf858ff3407ece7a1bfee989c8674d7"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-isotope-attributions.txt",
+          "sha256": "ba437b7be632db8dac21c4b771847ca841f5240d25adb017ea707258df28d75b"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/isotope-bundled-mit-tagged-attributions.txt",
+          "sha256": "627a4573882b6a2b9a2b12ce660afa01d98320d8b12571b11f9e1f4251b3a29e"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/spdx-MIT-template.txt",
+          "sha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-mustache-js",
+      "scope": "shipped-embedded-asset",
+      "version": "4.2.0",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "static/skin/mustache.min.js",
+        "sha256": "fa4e44c6c914d71a4890ece1f75bed9c805a649a854a81c6a217fe5e427aff17"
+      },
+      "licenseConcluded": "MIT",
+      "upstreamLicenseSource": {
+        "role": "Exact standalone license and copyright notice from the mustache.js 4.2.0 release tag.",
+        "type": "git",
+        "url": "https://github.com/janl/mustache.js.git",
+        "tag": "v4.2.0",
+        "commit": "bd29972ab8a0f4c592f35483615ab9a274396300",
+        "path": "LICENSE",
+        "gitBlob": "4df7d1aae6fbbdf501a9409827e88412d3030530",
+        "rawUrl": "https://raw.githubusercontent.com/janl/mustache.js/bd29972ab8a0f4c592f35483615ab9a274396300/LICENSE",
+        "sourceSha256": "e60b280838180a70cbb4b934f825c8119cdcf8912259ff4c6da20b284231c832"
+      },
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-mustache-js-identity.txt",
+          "sha256": "53157c85e68c3f66a01e0ee1bd480a4df65e1be4f566e127d6c748268426e02e"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/mustache-js-LICENSE-MIT.txt",
+          "sha256": "e60b280838180a70cbb4b934f825c8119cdcf8912259ff4c6da20b284231c832"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-dm-sans",
+      "scope": "shipped-embedded-asset",
+      "version": "NOASSERTION",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "static/skin/fonts/DMSans-Regular.ttf",
+        "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+      },
+      "licenseConcluded": "OFL-1.1",
+      "upstreamLicenseSource": {
+        "role": "Authoritative full OFL-1.1 terms from a pinned DM Fonts release; the exact embedded binary identity and copyright attribution remain the controlled evidence in libkiwix-font-metadata-attributions.txt.",
+        "type": "git",
+        "url": "https://github.com/googlefonts/dm-fonts.git",
+        "tag": "v1.002",
+        "commit": "a9ec422410bd9b5b0e438ef6a1355d1f1702e963",
+        "path": "Sans/LICENSE.txt",
+        "gitBlob": "6bde33e33005f405a0ac75f581a67f2a16b50878",
+        "rawUrl": "https://raw.githubusercontent.com/googlefonts/dm-fonts/a9ec422410bd9b5b0e438ef6a1355d1f1702e963/Sans/LICENSE.txt",
+        "sourceSha256": "e14588e37145ecc0350c4cc1e96452497b63e4df8413a3d3517548eb26efa8a5",
+        "noticeNormalization": "CRLF line endings normalized to LF; text and trailing spaces otherwise unchanged",
+        "noticeSha256": "61b3f97168f02ad34a748c3303d193449807534079894cc6d579eb9ba7318823"
+      },
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-font-metadata-attributions.txt",
+          "sha256": "4e8fec533603412741df22afec07ef1468b8aa5ce8600c65e158e3f54cdd28ad"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/dm-sans-LICENSE-OFL-1.1.txt",
+          "sha256": "61b3f97168f02ad34a748c3303d193449807534079894cc6d579eb9ba7318823"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-poppins",
+      "scope": "shipped-embedded-asset",
+      "version": "NOASSERTION",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "static/skin/fonts/Poppins.ttf",
+        "sha256": "e554db189b5d944ef0e6f98ee0e4e8c75f69e95315dc9f4ae0c616a8756a2ba4"
+      },
+      "licenseConcluded": "OFL-1.1",
+      "upstreamLicenseSource": {
+        "role": "Authoritative full OFL-1.1 terms from a pinned Poppins release; the exact embedded binary identity and copyright attribution remain the controlled evidence in libkiwix-font-metadata-attributions.txt.",
+        "type": "git",
+        "url": "https://github.com/itfoundry/Poppins.git",
+        "tag": "v4.003",
+        "commit": "311d7fa87bdf7cd5cc4210a91bac56d5512a3013",
+        "path": "OFL.txt",
+        "gitBlob": "fd6cf1b854ab58b2c1569c5e9a2e749442c6e6c1",
+        "rawUrl": "https://raw.githubusercontent.com/itfoundry/Poppins/311d7fa87bdf7cd5cc4210a91bac56d5512a3013/OFL.txt",
+        "sourceSha256": "fbc4c9a72266d66689621c1c438f71e214c2141a6416b667f9c5e556bbc2e7b3"
+      },
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-font-metadata-attributions.txt",
+          "sha256": "4e8fec533603412741df22afec07ef1468b8aa5ce8600c65e158e3f54cdd28ad"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/poppins-LICENSE-OFL-1.1.txt",
+          "sha256": "fbc4c9a72266d66689621c1c438f71e214c2141a6416b667f9c5e556bbc2e7b3"
+        }
+      ]
+    },
+    {
+      "id": "libkiwix-roboto",
+      "scope": "shipped-embedded-asset",
+      "version": "2.137",
+      "source": {
+        "type": "git-embedded",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "path": "static/skin/fonts/Roboto.ttf",
+        "sha256": "319cff6e7a31f0f2a41c475dca42890aa5d19fe16017e2290f8c1d4e14f76481"
+      },
+      "licenseConcluded": "Apache-2.0",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-font-metadata-attributions.txt",
+          "sha256": "4e8fec533603412741df22afec07ef1468b8aa5ce8600c65e158e3f54cdd28ad"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/autoComplete-LICENSE-Apache-2.0.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "meson-wrap-generated-build-files",
+      "scope": "build-only",
+      "version": "NOASSERTION",
+      "source": {
+        "type": "archive-set",
+        "archives": [
+          {
+            "name": "zlib_1.3.1-1_patch.zip",
+            "archiveSha256": "e79b98eb24a75392009cec6f99ca5cdca9881ff20bfa174e8b8926d5c7a47095"
+          },
+          {
+            "name": "liblzma_5.2.6-3_patch.zip",
+            "archiveSha256": "1c71536d364e1a3ce6bea61266576f89cc5cce4d3b9e11f3494417dafa29780b"
+          },
+          {
+            "name": "curl_8.4.0-2_patch.zip",
+            "archiveSha256": "bbb6ae75225c36ef9bb336cface729794c7c070c623a003fff40bd416042ff6e"
+          },
+          {
+            "name": "libmicrohttpd_0.9.16-3_patch.zip",
+            "archiveSha256": "0954c094a0d4cfe0dd799d8df8a04face6669f7b4d51a7386a9c3e2d37b9c3b3"
+          }
+        ]
+      },
+      "licenseConcluded": "MIT",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/meson-wrap-LICENSE-MIT.txt",
+          "sha256": "7939f4c45423cec4a18236ad0a88570e33508dd7462e07b1038001f90ece65fb"
+        }
+      ]
+    }
+  ],
+  "missingStandaloneLicenseTexts": []
+}

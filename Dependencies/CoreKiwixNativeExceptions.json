@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "exceptions": [
+    {
+      "code": "build-directory-version-mismatch",
+      "subject": "xapian:1.4.26:1.4.23",
+      "reason": "The completed build used Xapian 1.4.23 by configure.ac and archive identity; only the stale build directory label says 1.4.26."
+    },
+    {
+      "code": "generated-object-without-direct-source",
+      "subject": "ios-device-arm64:libicudata.a:0:icudt73l_dat.o",
+      "reason": "ICU generates this data-only object from the retained ICU data archive; it has no standalone compiler source record."
+    },
+    {
+      "code": "source-directory-version-mismatch",
+      "subject": "xapian:SOURCE/xapian-core-1.4.26:1.4.23",
+      "reason": "The retained upstream tree is Xapian 1.4.23 by configure.ac and archive identity; only the stale directory label says 1.4.26."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "policy": "arkfile-corekiwix-native-certification-v1",
+  "buildIdentity": "14.2.0+arkfile.1",
+  "proof": "full-five-target-relink",
+  "sourceArchive": {
+    "fileName": "CoreKiwix-14.2.0+arkfile.1-source-and-relink.tar.gz",
+    "sha256": "e1a2268c2fc2c60dee194c75f4f91588a83a819a0456e2df86866a8eec7a531c"
+  },
+  "inputs": {
+    "framework": {
+      "sha256": "51cfacef66613c6fbfd92e88ac7c62835b25f53ff89b9ec4ecbc9263eb21a4a5",
+      "fileCount": 904
+    },
+    "notices": {
+      "sha256": "d0e471b9dc74d950b9233610a8e5b5f1298cc1bd22b924ef88b6834a69548d9d",
+      "fileCount": 40
+    },
+    "files": {
+      "Dependencies/CoreKiwixNativeBuildManifest.json": {
+        "sha256": "e2094827160904d5b2aa9d586e0496be25ae5033d5e6d81664e7e41e7981959b",
+        "sizeBytes": 98343
+      },
+      "Dependencies/CoreKiwixNativeSource.lock.json": {
+        "sha256": "e49c6848a7d30ccbed1f1abee6e8f3a3ffe421554a47d3a09a7e65d2469140c8",
+        "sizeBytes": 334130
+      },
+      "Dependencies/CoreKiwixNativeSBOM.spdx.json": {
+        "sha256": "635624d0b0d396223becfbe88d5e0555359323d65b353b43689ed21c9751eae4",
+        "sizeBytes": 8962
+      },
+      "Dependencies/CoreKiwixNativeObjectMap.jsonl": {
+        "sha256": "00447d824d64c0cd188605cc214744af63b266dae5dcbb444be7927577ade006",
+        "sizeBytes": 914812
+      },
+      "Dependencies/CoreKiwixNativeExceptions.json": {
+        "sha256": "5f7b20a62348b716949267e1d05c6d48c021dbaebd886b1b294fa30ce8a75f0c",
+        "sizeBytes": 828
+      },
+      "Dependencies/CoreKiwixNativeBuildRecipe.lock.json": {
+        "sha256": "4b40defa42d13ac6ae102d0be822a3ab5e95f2943bfc4a09825a05568cc38cad",
+        "sizeBytes": 24536
+      },
+      "Dependencies/CoreKiwixNativeSecretScanPolicy.json": {
+        "sha256": "89235cbb6d2f6a521b70063dd0d9402767531cc734b1a6362dc42452ac9946d9",
+        "sizeBytes": 32083
+      },
+      "Support/CoreKiwix.modulemap": {
+        "sha256": "0246066fcbf71af1e3213fad21b4a567c84f6b64e582f8117bf2f5c0a791ea9b",
+        "sizeBytes": 64
+      },
+      "scripts/arkfile-corekiwix-evidence.mjs": {
+        "sha256": "461ad86b214f13604c0563168f10b3cecc9d63a3ccfdea119e1df04b89788b0a",
+        "sizeBytes": 91554
+      },
+      "scripts/arkfile-verify-corekiwix-relink.mjs": {
+        "sha256": "5846154f701e2b1f7562ed7ee02a13b22f7ce875ab048a62228aa61f05558f6f",
+        "sizeBytes": 144234
+      },
+      "scripts/arkfile-verify-corekiwix.sh": {
+        "sha256": "2c267e1eaff793353e09ada3bfac715afd41bb11b74f1fc60c3d99160104dc86",
+        "sizeBytes": 8588
+      }
+    }
+  },
+  "certifiedAt": "2026-08-20T22:30:00Z"
+}

@@ -1,0 +1,449 @@
+// This file is part of Kiwix for iOS & macOS.
+//
+// Kiwix is free software; you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// any later version.
+//
+// Kiwix is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Kiwix; If not, see https://www.gnu.org/licenses/.
+
+/* Library Refresh Error */
+"library_refresh_error.retrieve.description" = "Error retrieving catalog data.";
+/* Library Refresh Error */
+"library_refresh_error.parse.description" = "Error parsing catalog data.";
+/* Library Refresh Error */
+"library_refresh_error.process.description" = "Error processing catalog data.";
+
+"download_service.complete.title" = "Download Completed";
+"download_service.complete.description" = "%@ has been downloaded successfully.";
+"download_service.error.general.title" = "Download failed to succeed.";
+"download_service.error.zimfile.title" = "Unable to download \"%@\"";
+"download_service.error.footer" = "The download could not be completed.";
+
+"download_service.error.option_http_status" = "HTTP status code: %@";
+"download_service.error.option_directory" = "Download directory cannot be found";
+"download_service.error.option_invalid_taskid" = "Invalid downloadTask id";
+"download_service.error.option_invalid_response" = "Invalid response";
+"download_service.error.option_unable_to_move_file" = "Unable to move downloaded file";
+
+"common.dialog.button.open" = "Open";
+"common.dialog.button.open_in_new_tab" = "Open in New Tab";
+"common.dialog.button.add_bookmark" = "Add Bookmark";
+"common.dialog.button.remove_bookmark" = "Remove Bookmark";
+"common.dialog.button.show_bookmarks" = "Show Bookmarks";
+"common.dialog.button.bookmark" = "Bookmark";
+
+"common.button.go_back" = "Go Back";
+"common.button.go_forward" = "Go Forward";
+"common.button.done" = "Done";
+"common.button.cancel" = "Cancel";
+"common.button.ok" = "Ok";
+"common.button.yes" = "Yes";
+"common.button.no" = "no";
+"common.button.print" = "Print";
+"common.button.copy" = "Copy";
+"common.button.copied" = "Copied";
+"common.button.share" = "Share";
+"common.button.share_as_pdf" = "Share as PDF";
+"common.search" = "Search";
+"common.search.inpage" = "Search in page";
+"common.search.suggestion" = "Did you mean:";
+
+"common.tab.manager.title" = "Tabs Manager";
+"common.tab.navigation.title" = "Tabs";
+"common.tab.menu.new_tab" = "New Tab";
+"common.tab.menu.close_this" = "Close This Tab";
+"common.tab.menu.close_all" = "Close All Tabs";
+"common.tab.list.close" = "Close Tab";
+"common.tab.menu.library" = "Library";
+"common.tab.menu.settings" = "Settings";
+"common.export_file.alert.title" = "Export file";
+"common.export_file.alert.description" = "Do you want to export the file %@?";
+"common.export_file.alert.button.title" = "Export";
+
+"outline_button.outline.title" = "Outline";
+"outline_button.outline.help" = "Show article outline";
+"outline_button.outline.empty.message" = "No outline available";
+
+"bookmark_button.show.help" = "Show the bookmark sheet, where the current article can be added or removed from bookmarks.";
+
+"article_shortcut.main.button.title" = "Main Article";
+"article_shortcut.main.button.help" = "Show main article";
+"article_shortcut.random.button.title.mac" = "Random Article";
+"article_shortcut.random.button.title.ios" = "Random Page";
+"article_shortcut.random.button.help" = "Show random article";
+
+"alert_handler.alert.failed.title" = "Unable to load the article requested.";
+
+"bookmark_context_menu.view.title" = "View";
+"bookmark_context_menu.remove.title" = "Remove";
+
+"external_link_handler.alert.title" = "External Link";
+"external_link_handler.alert.button.load.link" = "Load the link";
+"external_link_handler.alert.ask.description" = "An external link is tapped, do you wish to load the link?";
+"external_link_handler.alert.not_loading.description" = "An external link is tapped. However, your current setting does not allow it to be loaded.";
+"file_import.alert.no_open.title" = "Unable to open file";
+"file_import.alert.no_open.message" = "%@ cannot be opened.";
+
+"attribute.detail.unknown" = "Unknown";
+
+"download_task_cell.status.failed" = "Failed";
+"download_task_cell.status.downloading" = "Downloading...";
+"download_task_cell.status.paused" = "Paused";
+"download_task_cell.status.paused.device_offline" = "Paused (device is offline)";
+"download_task_cell.status.paused.waiting_for_wifi" = "Paused (waiting for WiFi)";
+
+"download_again.question.title" = "You already have this file.";
+"download_again.question.description_part_1" = "It looks like %@ is already downloaded.";
+"download_again.question.description_part_2" = "Do you still want to download \"%@\"? Your existing file won't be deleted.";
+
+"flavor_tag.help.max" = "everything except large media files like video/audio";
+"flavor_tag.help.no_pic" = "most pictures have been removed";
+"flavor_tag.help.mini" = "only a subset of the text is available, probably the first section";
+
+"library_refresh_time.last" = "Just Now";
+"library_refresh_time.never" = "Never";
+
+"zim_file_cell.article_count.suffix" = "articles";
+
+"zim_file_missing_indicator.help" = "Zim file is missing.";
+
+"hotspot.action.start_hotspot.title" = "Start Local Sharing";
+"hotspot.action.stop_hotspot.title" = "Stop Local Sharing";
+"hotspot.settings.port_number" = "Local sharing port";
+"hotspot.settings.recommended_port_range" = "The network port used by Local Sharing should be between %@ and %@";
+"hotspot.error.port_already_used_by_another_app_title" = "Local Sharing can't start because port %@ is in use.";
+"hotspot.error.port_already_used_by_another_app_description" = "To fix this, close the app using it or change the ArkFile Local Sharing port in settings.";
+"hotspot.server_full_explanation" = "To browse this device's readable, non-retired ArkFile library on other devices, connect them to the same Wi-Fi network or this device's Personal Hotspot.";
+"hotspot.server_active_warning" = "Local Sharing stays active only while ArkFile is open and in use. Anyone on the shown local network can browse the shared library and may save what they open.";
+"hotspot.server_wifi_only_explanation" = "To browse the shared library on other devices, connect them to the same Wi-Fi network.";
+"library.zim_file_details.side_panel.message" = "Select a ZIM file to see details";
+"library.zim_file_context.main_page.label" = "Main Page";
+"library.zim_file_context.random.label" = "Random Page";
+"library.zim_file_context.copy_url" = "Copy URL";
+
+"zim_file_opened.overlay.no-opened.message" = "No opened ZIM file";
+"zim_file_opened.toolbar.open.title" = "Open...";
+"zim_file_opened.toolbar.open.help" = "Open a ZIM file";
+"zim_file_category.title" = "Category";
+
+"zim_file_catalog.fetching.message" = "Preparing Library ...";
+"zim_file_category.section.empty.message" = "No ZIM file under this category.";
+"zim_file_downloads.overlay.empty.message" = "No download tasks";
+
+"zim_file_new_overlay.empty" = "No new ZIM file";
+"zim_file_new.button.refresh" = "Refresh";
+
+"zim_file.list.name.text" = "Name";
+"zim_file.list.description.text" = "Description";
+"zim_file.list.actions.text" = "Actions";
+"zim_file.list.info.text" = "Info";
+"zim_file.action.locate.title" = "Locate";
+"zim_file.action.open_main_page.title" = "Open Main Page";
+"zim_file.action.reveal_in_finder.title" = "Reveal in Finder";
+"zim_file.action.toggle_cellular" = "Download using cellular";
+"zim_file.action.unlink.title" = "Unlink";
+"zim_file.action.unlink.message" = "All bookmarked articles linked to this ZIM file will be deleted, but the original file will remain in place.";
+"zim_file.action.unlink.multi_title" = "Unlink %@ ZIM files";
+"zim_file.action.unlink.multi_message" = "All bookmarked articles linked to these %@ ZIM files will be deleted, but the original files will remain in place.";
+"zim_file.action.unlink.button.title" = "Unlink";
+"zim_file.action.delete.title" = "Delete";
+"zim_file.action.delete.message" = "The ZIM file and all bookmarked articles linked to this ZIM file will be deleted.";
+"zim_file.action.delete.button.title" = "Delete";
+"zim_file.action.download.title" = "Download";
+"zim_file.action.download.warning.title" = "Space Warning";
+"zim_file.action.download.warning.message" = "There might not be enough space on your device for this ZIM file.";
+"zim_file.action.download.warning.message1" = "There would be less than 1GB space left after the ZIM file is downloaded.";
+"zim_file.action.download.button.anyway" = "Download Anyway";
+"zim_file.action.integrity_check.title" = "Check";
+"zim_file.action.integrity_recheck.title" = "Recheck";
+"zim_file.action.integrity_check.alert.title" = "This may take several minutes. ArkFile will be unavailable until the integrity check is complete.";
+"zim_file.integrity_check.in_progress" = "Integrity check: \"%@\" ...";
+"zim_file.base_info.attribute.language" = "Language";
+"zim_file.base_info.attribute.category" = "Category";
+"zim_file.base_info.attribute.size" = "Size";
+"zim_file.base_info.attribute.created" = "Created";
+"zim_file.bool_info.pictures" = "Pictures";
+"zim_file.bool_info.videos"  = "Videos";
+"zim_file.bool_info.details" = "Details";
+"zim_file.bool_info.require_service_workers" = "Requires Service Workers";
+"zim_file.bool_info.zim_archive_integrity" = "ZIM archive integrity";
+"zim_file.counts.article_count" = "Article Count";
+"zim_file.counts.article.media_count" = "Media Count";
+"zim_file.detail.id.title" = "ID";
+"zim_file.download_task.action.title.cancel" = "Cancel";
+"zim_file.download_task.action.try_recover" = "Try to Recover";
+"zim_file.download_task.action.failed" = "Failed";
+"zim_file.download_task.action.pause" = "Pause";
+"zim_file.download_task.action.downloading" = "Downloading...";
+"zim_file.download_task.action.resume" = "Resume";
+"service_worker_warning.label.description" = "Zim files requiring service workers are not supported.";
+"multi.zim_files_selected.sidebar_title" = "Selected";
+"multi.zim_files_selected.description_count" = "ZIM files";
+
+"theme_settings.title" = "Theme";
+"theme_settings.option.dark" = "Dark";
+"theme_settings.option.light" = "Light";
+"theme_settings.option.system" = "System";
+"reading_settings.zoom.title" = "Page zoom";
+"reading_settings.zoom.reset.button" = "Reset";
+"reading_settings.external_link.title" = "External Link";
+"reading_settings.search_snippet.title" = "Search snippet";
+"reading_settings.tab.reading" = "Reading";
+"library_settings.catalog.title" = "Catalog";
+"library_settings.button.refresh_now" = "Refresh Now";
+"library_settings.last_refresh.text" = "Last refresh";
+"library_settings.auto_refresh.toggle" = "Auto refresh";
+"library_settings.catalog_warning.text" = "When enabled, the library catalog will be refreshed automatically when outdated.";
+"library_settings.languages.title" = "Languages";
+"settings.navigation.title" = "Settings";
+"library_settings.toggle.cellular" = "Allow cellular downloads";
+"library_settings.new-download-task-description" = "This only applies to new downloads. Essentials is large, so Wi-Fi is recommended.";
+"catalog_settings.last_refresh.text" = "Last refresh";
+"catalog_settings.refreshing.text" = "Refreshing...";
+"catalog_settings.refresh_now.button" = "Refresh Now";
+"catalog_settings.auto_refresh.toggle" = "Auto refresh";
+"catalog_settings.header.text" = "Catalog";
+"catalog_settings.footer.text" = "When enabled, the library catalog will be refreshed automatically when outdated.";
+"settings.miscellaneous.title" = "Misc";
+"settings.miscellaneous.button.feedback" = "Feedback";
+"settings.miscellaneous.button.rate_app" = "Rate the App";
+"settings.miscellaneous.navigation.about" = "About";
+"settings.selected_language.title" = "Languages";
+"language_selector.name.title" = "Name";
+"language_selector.count.table.title" = "Count";
+"language_selector.no_language.title" = "No language";
+"language_selector.showing.header" = "Showing";
+"language_selector.hiding.header" = "Hiding";
+"language_selector.navitation.title" = "Language";
+"language_selector.toolbar.sorting" = "Sorting";
+
+"settings.about.title" = "About";
+"settings.about.release" = "Release";
+"settings.about.dependencies" = "Dependencies";
+"settings.about.dependencies.name" = "Name";
+"settings.about.dependencies.license" = "License";
+"settings.about.dependencies.version" = "Version";
+"settings.about.description" = "ArkFile is a portable offline library for curated knowledge packs. It is built on Kiwix Apple, CoreKiwix, and openZIM so ArkFile content can be downloaded, verified, installed, and read offline. ArkFile is an independent project and is not affiliated with or endorsed by Kiwix.";
+"settings.about.license-description" = "This app is released under the terms of the GNU General Public License version 3.";
+"settings.about.appverion.title" = "Version";
+"settings.about.build.title" = "Build";
+"settings.about.our_website.button" = "Our Website";
+"settings.about.source.title" = "Source";
+"settings.about.button.license" = "GNU General Public License v3";
+
+"download_mac_settings.tab.title" = "Downloads";
+
+"download_mac_folder.button.change" = "Change";
+"download_mac_folder.button.reset" = "Reset to default";
+"download_mac_folder.unknown" = "Unknown";
+"download_mac_folder.panel.message" = "Select a folder for ZIM downloads";
+"download_mac_folder.error.title" = "Can't use this folder.";
+"download_mac_folder.error.not_writable" = "You don't have permission to save files here.";
+"download_mac_folder.error.save_failed" = "Couldn't set the download folder. Try again.";
+
+"bookmark.navigation.title" = "Bookmarks";
+"bookmark.overlay.empty.title" = "No bookmarks";
+
+"search_result.zimfile.empty.message" = "No opened ZIM file";
+"search_result.zimfile.no_result.message" = "No result";
+"search_result.sidebar.button.remove" = "Remove";
+"search_result.header.text" = "Recent Search";
+"search_result.button.clear" = "Clear";
+"search_result.filter_hearder.text" = "Included in Search";
+"search_result.filter_hearder.button.none" = "None";
+"search_result.filter_hearder.button.all" = "All";
+
+"welcome.main_page.title" = "Main Page";
+"welcome.grid.bookmarks.title" = "Bookmarks";
+"welcome.actions.open_file" = "Open File";
+"welcome.loading.data.text" = "Loading Data...";
+"welcome.button.status.fetching_catalog.text" = "Preparing Essentials...";
+"welcome.button.status.fetch_catalog.text" = "Install Essentials";
+
+"arkfile_lite.button.install" = "Buy Essentials";
+"arkfile_lite.button.sign_in_to_install" = "Buy Essentials";
+"arkfile_lite.button.restore" = "Restore Purchases";
+"arkfile_lite.button.purchasing" = "Checking Apple Account...";
+"arkfile_lite.button.preparing" = "Preparing Essentials...";
+"arkfile_lite.button.downloading" = "Downloading Essentials...";
+"arkfile_lite.button.verifying" = "Verifying Essentials...";
+"arkfile_lite.button.installing" = "Installing Essentials...";
+"arkfile_lite.button.installed" = "Essentials Installed";
+"arkfile_lite.status.purchasing" = "Checking your Apple Account purchase. Download will start automatically after Apple confirms Essentials access.";
+"arkfile_lite.status.preparing" = "Preparing the Essentials download.";
+"arkfile_lite.status.downloading" = "Downloading Essentials.";
+"arkfile_lite.status.downloading_progress" = "%@ of %@ downloaded.";
+"arkfile_lite.status.downloading_file" = "Downloading %@.";
+"arkfile_lite.status.verifying" = "Verifying downloaded files.";
+"arkfile_lite.status.verifying_file" = "Verifying %@.";
+"arkfile_lite.status.installing" = "Registering offline library.";
+"arkfile_lite.status.installed" = "Essentials is ready offline.";
+"arkfile_lite.status.failed" = "Essentials install failed.";
+"arkfile_lite.status.interrupted" = "Essentials download stopped before it finished. Continue Download to pick up where it left off.";
+"arkfile_lite.status.paused" = "Essentials download was paused. Continue Download when you are ready.";
+
+"arkfile_account.prompt" = "No ArkFile account is needed for ArkFile Essentials. Buy once or restore through Apple in this app.";
+"arkfile_account.prompt.create" = "No ArkFile account is needed for ArkFile Essentials. Use your Apple Account in this app.";
+"arkfile_account.copy.signed_out" = "Buy once with your Apple Account. Restore Purchases if you already bought Essentials.";
+"arkfile_account.field.email" = "ArkFile account email";
+"arkfile_account.field.password" = "Password";
+"arkfile_account.picker.action" = "Account Action";
+"arkfile_account.mode.sign_in" = "Sign In";
+"arkfile_account.mode.create_account" = "Create Account";
+"arkfile_account.button.sign_in" = "Sign In";
+"arkfile_account.button.signing_in" = "Signing In...";
+"arkfile_account.button.create_account" = "Create Account";
+"arkfile_account.button.creating_account" = "Creating Account...";
+"arkfile_account.button.sign_out" = "Sign Out";
+"arkfile_account.help.password_minimum" = "Use at least 8 characters.";
+"arkfile_account.status.signed_in" = "Signed in";
+"arkfile_account.status.unlocked" = "Desktop account access is available outside the ArkFile Essentials purchase path.";
+"arkfile_account.status.purchase_needed" = "ArkFile Essentials is bought or restored through Apple.";
+"arkfile_account.error.missing_credentials" = "Enter your ArkFile account email and password.";
+
+"arkfile_content.category.general" = "General";
+"arkfile_content.category.medical" = "Medical";
+"arkfile_content.category.food_preparation" = "Food Preparation";
+"arkfile_content.category.travel" = "Travel";
+"arkfile_content.category.books_documents" = "Books & Documents";
+"arkfile_content.subcategory.other" = "Other";
+"arkfile_content.offline_map.title" = "Offline Map";
+"arkfile_content.offline_map.reference_notice" = "Offline map resources are not available in this build. Install ArkFile Essentials for map detail when available.";
+"arkfile_content.offline_map.gpx.export" = "Share places & trails";
+"arkfile_content.offline_map.gpx.import" = "Import places & trails";
+"arkfile_content.offline_map.gpx.error_read" = "ArkFile could not read this GPX file.";
+"arkfile_content.offline_map.gpx.error_parse" = "ArkFile could not parse this GPX file.";
+"arkfile_content.offline_map.gpx.error_empty" = "This GPX file does not contain any saved places or paths.";
+"arkfile_content.offline_map.gpx.imported_waypoint_name" = "Imported Place";
+"arkfile_content.offline_map.gpx.imported_trail_name" = "Imported Trail";
+"arkfile_content.offline_map.gpx.import_no_room" = "There is no room to save more places or trails.";
+"arkfile_content.offline_map.gpx.imported_notice" = "Imported %@ and %@.";
+"arkfile_content.offline_map.gpx.waypoint_count_one" = "1 place";
+"arkfile_content.offline_map.gpx.waypoint_count_many" = "%ld places";
+"arkfile_content.offline_map.gpx.trail_count_one" = "1 trail";
+"arkfile_content.offline_map.gpx.trail_count_many" = "%ld trails";
+"arkfile_content.offline_map.coordinate_entry.placeholder" = "Coordinate, UTM, or MGRS";
+"arkfile_content.offline_map.coordinate_entry.footer" = "Useful for locations given over the radio, GPS, or from a paper map.";
+"arkfile_content.offline_map.coordinate_entry.error" = "Enter decimal coordinates, UTM, or MGRS.";
+"arkfile_content.viewer.zim_message" = "Open ArkFile library content from the main page.";
+"arkfile_content.viewer.image_error" = "ArkFile could not open this image.";
+"arkfile_content.viewer.htmlbook_error" = "ArkFile could not open this HTML book.";
+
+"commands.button.actual_size" = "Actual Size";
+"comments.button.zoom_in" = "Zoom In";
+"comments.button.zoom_out" = "Zoom Out";
+
+"app_macos_commands.open_file" = "Open...";
+"app_macos_commands.new" = "New Tab";
+"app_macos_navigation.button.library" = "Library";
+
+
+"enum.category.wikipedia" = "Wikipedia";
+"enum.category.wikibooks" = "Wikibooks";
+"enum.category.wikinews" = "Wikinews";
+"enum.category.wikiquote" = "Wikiquote";
+"enum.category.wikisource" = "Wikisource";
+"enum.category.wikiversity" = "Wikiversity";
+"enum.category.wikivoyage" = "Wikivoyage";
+"enum.category.wiktionary" = "Wiktionary";
+"enum.category.ted" = "TED";
+"enum.category.vikidia" = "Vikidia";
+"enum.category.stackexchange" = "StackExchange";
+"enum.category.other" = "Other";
+"enum.external_link_loading_policy.always_ask" = "Always Ask";
+"enum.external_link_loading_policy.always_load" = "Always Load";
+"enum.external_link_loading_policy.never_load" = "Never Load";
+"enum.flavor.max" = "max";
+"enum.flavor.no_pic" = "no pic";
+"enum.flavor.mini" = "mini";
+"enum.library_language_sorting_model.a-z" = "A-Z";
+"enum.library_language_sorting_model.by_count" = "By Count";
+"enum.libray_tab_item.opened" = "Opened";
+"enum.libray_tab_item.categories" = "Categories";
+"enum.libray_tab_item.downloads" = "Downloads";
+"enum.libray_tab_item.new" = "New";
+
+"enum.navigation_item.reading" = "Reading";
+"enum.navigation_item.bookmarks" = "Bookmarks";
+"enum.navigation_item.new_tab" = "New Tab";
+"enum.navigation_item.opened" = "Opened";
+"enum.navigation_item.categories" = "Categories";
+"enum.navigation_item.new" = "New";
+"enum.navigation_item.downloads" = "Downloads";
+"enum.navigation_item.settings" = "Settings";
+"enum.navigation_item.hotspot" = "Local Sharing";
+"enum.search_result_snippet_mode.disabled" = "Disabled";
+"enum.search_result_snippet_mode.matches" = "Matches";
+
+"payment.donate.title" = "Donate";
+"payment.description.label" = "Support ArkFile";
+"payment.summary_page.title" = "Support ArkFile";
+"payment.support_button.label" = "Support ArkFile";
+"payment.monthly_support.label" = "Monthly support for ArkFile";
+"payment.summary.title" = "ArkFile";
+"payment.textfield.custom_amount.label" = "Custom amount";
+"payment.confirm.button.title" = "Confirm";
+"payment.selection.average_monthly_donation.subtitle" = "Average monthly donation";
+"payment.selection.last_year_average.subtitle" = "Last year's average";
+"payment.selection.custom_amount" = "Custom amount";
+"payment.selection.option.one_time" = "One time";
+"payment.selection.option.monthly" = "Monthly";
+"payment.support_fallback_message" = "We are sorry, your device does not support Apple Pay.";
+"payment.success.title" = "Thank you so much for your donation.";
+"payment.success.description" = "Your generosity means everything to us.";
+"payment.error.title" = "Well that's awkward.";
+"payment.error.description" = "There has been an issue with your payment. Please try again.";
+"download_service.error.client.backgroundSessionInUseByAnotherProcess" = "Could not communicate with background transfer service";
+"download_service.error.client.backgroundSessionWasDisconnected" = "Lost connection to background transfer service";
+"download_service.error.client.cancelled" = "cancelled";
+"download_service.error.client.badURL" = "bad URL";
+"download_service.error.client.timedOut" = "The request timed out.";
+"download_service.error.client.unsupportedURL" = "unsupported URL";
+"download_service.error.client.cannotFindHost" = "A server with the specified hostname could not be found.";
+"download_service.error.client.cannotConnectToHost" = "Could not connect to the server.";
+"download_service.error.client.networkConnectionLost" = "The network connection was lost.";
+"download_service.error.client.dnsLookupFailed" = "DNS lookup error";
+"download_service.error.client.httpTooManyRedirects" = "too many HTTP redirects";
+"download_service.error.client.resourceUnavailable" = "resource unavailable";
+"download_service.error.client.notConnectedToInternet" = "The Internet connection appears to be offline.";
+"download_service.error.client.redirectToNonExistentLocation" = "redirected to nowhere";
+"download_service.error.client.badServerResponse" = "There was a bad response from the server.";
+"download_service.error.client.zeroByteResource" = "zero byte resource";
+"download_service.error.client.cannotDecodeRawData" = "cannot decode raw data";
+"download_service.error.client.cannotDecodeContentData" = "cannot decode content data";
+"download_service.error.client.cannotParseResponse" = "cannot parse response";
+"download_service.error.client.internationalRoamingOff" = "International roaming is currently off.";
+"download_service.error.client.callIsActive" = "A data connection cannot be established since a call is currently active.";
+"download_service.error.client.dataNotAllowed" = "A data connection is not currently allowed.";
+"download_service.error.client.requestBodyStreamExhausted" = "request body stream exhausted";
+"download_service.error.client.fileDoesNotExist" = "The requested URL was not found on this server.";
+"download_service.error.client.fileIsDirectory" = "file is directory";
+"download_service.error.client.noPermissionsToReadFile" = "You do not have permission to access the requested resource.";
+"download_service.error.client.dataLengthExceedsMaximum" = "resource exceeds maximum size";
+"download_service.error.client.secureConnectionFailed" = "An SSL error has occurred and a secure connection to the server cannot be made.";
+"download_service.error.client.serverCertificateHasBadDate" = "The certificate for this server has expired.";
+"download_service.error.client.serverCertificateUntrusted" = "The certificate for this server is invalid.";
+"download_service.error.client.serverCertificateHasUnknownRoot" = "The certificate for this server was signed by an unknown certifying authority.";
+"download_service.error.client.serverCertificateNotYetValid" = "The certificate for this server is not yet valid.";
+"download_service.error.client.clientCertificateRejected" = "The server did not accept the certificate.";
+"download_service.error.client.clientCertificateRequired" = "The server requires a client certificate.";
+"download_service.error.client.cannotLoadFromNetwork" = "can't load from network";
+"download_service.error.client.cannotCreateFile" = "Cannot create file";
+"download_service.error.client.cannotOpenFile" = "Cannot open file";
+"download_service.error.client.cannotCloseFile" = "Failure occurred while closing file";
+"download_service.error.client.cannotWriteToFile" = "Cannot write file";
+"download_service.error.client.cannotRemoveFile" = "Cannot remove file";
+"download_service.error.client.cannotMoveFile" = "Cannot move file";
+"download_service.error.client.downloadDecodingFailedMidStream" = "Download decoding failed";
+"download_service.error.client.downloadDecodingFailedToComplete" = "Download decoding failed";
+"web_content_policy.preparing" = "Preparing the offline reader…";
+"web_content_policy.failure.title" = "Offline reader unavailable";
+"web_content_policy.failure.description" = "ArkFile could not start its offline network protections. Retry before opening offline articles.";
+"web_content_policy.failure.retry" = "Retry";

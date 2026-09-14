@@ -1,0 +1,3 @@
+# Preserve reviewed third-party notice bytes verbatim, including upstream
+# trailing whitespace and terminal blank lines bound by the native evidence.
+Dependencies/CoreKiwixNativeNotices/* -whitespace

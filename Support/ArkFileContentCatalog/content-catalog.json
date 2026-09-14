@@ -1,0 +1,3122 @@
+{
+  "schemaVersion": 1,
+  "product": "ArkFile",
+  "description": "iOS catalog metadata for showing ArkFile Essentials and Complete titles before content packs are installed. This file does not contain paid content payloads or desktop-only Standard SKUs.",
+  "tiers": {
+    "lite": "ArkFile Essentials",
+    "complete": "ArkFile Complete"
+  },
+  "source": {
+    "desktopCatalogPath": "www/catalog/content-catalog.json",
+    "desktopCatalogSHA256": "0e3c2fcb7298296b432d90d4276cd94c2718f09789eb3a4447a0c63f91391aa4",
+    "desktopCommit": "ca0e8cd5b699fb259d1b532e9cb90c1bc38f918d"
+  },
+  "contentLicenses": {
+    "ledgerVersion": "2026-07-10.1",
+    "projectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+    "coverageComplete": false
+  },
+  "categories": {
+    "general": [
+      {
+        "id": "general/encyclopedias/simple wikipedia.zim",
+        "name": "Simple Wikipedia.zim",
+        "relativePath": "general/encyclopedias/Simple Wikipedia.zim",
+        "category": "general",
+        "subcategory": "Encyclopedias",
+        "type": "zim",
+        "size": 2561230101,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/encyclopedias/wikipedia - no images, august 2025.zim",
+        "name": "Wikipedia - No Images, August 2025.zim",
+        "relativePath": "general/encyclopedias/Wikipedia - No Images, August 2025.zim",
+        "category": "general",
+        "subcategory": "Encyclopedias",
+        "type": "zim",
+        "size": 46623121155,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "variantGroup": "wikipedia-full",
+        "variantLabel": "Text only",
+        "variantDefault": true
+      },
+      {
+        "id": "general/encyclopedias/wikipedia - with images, august 2025.zim",
+        "name": "Wikipedia - With Images, August 2025.zim",
+        "relativePath": "general/encyclopedias/Wikipedia - With Images, August 2025.zim",
+        "category": "general",
+        "subcategory": "Encyclopedias",
+        "type": "zim",
+        "size": 119265903349,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "variantGroup": "wikipedia-full",
+        "variantLabel": "With images",
+        "variantDefault": false
+      },
+      {
+        "id": "general/practical-skills/diy - stack exchange.zim",
+        "name": "DIY - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/DIY - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 1932162711,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/practical-skills/electonics and electrical engineering - stack exchange.zim",
+        "name": "Electonics and Electrical Engineering - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/Electonics and Electrical Engineering - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 4133780710,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete"
+      },
+      {
+        "id": "general/practical-skills/gardening - stack exchange.zim",
+        "name": "Gardening - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/Gardening - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 879764745,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/practical-skills/great outdoors - stack exchange.zim",
+        "name": "Great Outdoors - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/Great Outdoors - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 141878030,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/practical-skills/ham radio - stack exchange.zim",
+        "name": "Ham Radio - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/Ham Radio - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 69811992,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/practical-skills/motor vehicle mechanics - stack exchange.zim",
+        "name": "Motor Vehicle Mechanics - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/Motor Vehicle Mechanics - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 316832627,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/practical-skills/woodworking - stack exchange.zim",
+        "name": "Woodworking - Stack Exchange.zim",
+        "relativePath": "general/practical-skills/Woodworking - Stack Exchange.zim",
+        "category": "general",
+        "subcategory": "Practical Skills",
+        "type": "zim",
+        "size": 105105615,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "general/survival/fm 21-26 map reading and land navigation (1993).pdf",
+        "name": "FM 21-26 Map Reading and Land Navigation (1993).pdf",
+        "relativePath": "general/survival/FM 21-26 Map Reading and Land Navigation (1993).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 11791783,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Army field manual covering map symbols, grid coordinates, compass use, terrain association, route planning, and land-navigation techniques."
+      },
+      {
+        "id": "general/survival/fm 21-60 visual signals (1987).pdf",
+        "name": "FM 21-60 Visual Signals (1987).pdf",
+        "relativePath": "general/survival/FM 21-60 Visual Signals (1987).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 1228586,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Army reference to hand-and-arm signals, flags, lights, pyrotechnics, ground-to-air signs, and other visual communication methods."
+      },
+      {
+        "id": "general/survival/fm 21-76-1 survival evasion and recovery (1999).pdf",
+        "name": "FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+        "relativePath": "general/survival/FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 3136930,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A compact military guide to survival priorities, evasion planning, recovery procedures, signaling, navigation, shelter, water, food, and field medicine.",
+        "licenseId": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "licenseName": "Exact federal publication approved for public release; distribution unlimited",
+        "licenseUrl": "https://armypubs.army.mil/",
+        "sourceUrl": "https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02H%20Survival%2C%20Evasion%2C%20and%20Recovery.pdf",
+        "attributionText": "Survival, Evasion, and Recovery, FM 21-76-1 and multiservice equivalents, June 1999.",
+        "changesMade": "None.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "general/survival/fm 3-97.6  mountain operations manual (2000).pdf",
+        "name": "FM 3-97.6  Mountain Operations Manual (2000).pdf",
+        "relativePath": "general/survival/FM 3-97.6  Mountain Operations Manual (2000).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 1306519,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Army manual on operating in mountainous terrain, including environmental hazards, movement, sustainment, planning, and technical considerations."
+      },
+      {
+        "id": "general/survival/fm 34-52 intelligence interrogation (1992).pdf",
+        "name": "FM 34-52 Intelligence Interrogation (1992).pdf",
+        "relativePath": "general/survival/FM 34-52 Intelligence Interrogation (1992).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 14771217,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A historical U.S. Army manual describing the organization, planning, legal context, and techniques of military intelligence interrogation in its era."
+      },
+      {
+        "id": "general/survival/fm 4-25.11  first aid (2002).pdf",
+        "name": "FM 4-25.11  First Aid (2002).pdf",
+        "relativePath": "general/survival/FM 4-25.11  First Aid (2002).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 2621944,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Army first-aid manual covering casualty assessment, bleeding, shock, breathing problems, wounds, fractures, environmental injuries, and evacuation."
+      },
+      {
+        "id": "general/survival/fm 5-426  carpentry (1995).pdf",
+        "name": "FM 5-426  Carpentry (1995).pdf",
+        "relativePath": "general/survival/FM 5-426  Carpentry (1995).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 4671730,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A practical U.S. Army carpentry manual covering tools, materials, planning, framing, roofing, finishing, concrete forms, and field construction."
+      },
+      {
+        "id": "general/survival/in time of emergency by united states. office of civil defense.zip",
+        "name": "In Time of Emergency by United States. Office of Civil Defense.zip",
+        "relativePath": "general/survival/In Time of Emergency by United States. Office of Civil Defense.zip",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "htmlbook",
+        "size": 4459210,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A Cold War-era U.S. civil-defense handbook on preparing for emergencies, fallout protection, shelter living, fire safety, first aid, food, and water."
+      },
+      {
+        "id": "general/survival/navy marine corps sere handbook (1999).pdf",
+        "name": "Navy Marine Corps SERE Handbook (1999).pdf",
+        "relativePath": "general/survival/Navy Marine Corps SERE Handbook (1999).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 3362934,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Navy and Marine Corps handbook on survival, evasion, resistance, and escape principles for personnel isolated in hostile environments."
+      },
+      {
+        "id": "general/survival/usmc combat water survival (2003).pdf",
+        "name": "USMC Combat Water Survival (2003).pdf",
+        "relativePath": "general/survival/USMC Combat Water Survival (2003).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 3553138,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Marine Corps guide to water-survival skills, flotation, swimming in equipment, rescues, water obstacles, and aquatic risk management."
+      },
+      {
+        "id": "general/survival/usmc summer survival course (2002).pdf",
+        "name": "USMC Summer Survival Course (2002).pdf",
+        "relativePath": "general/survival/USMC Summer Survival Course (2002).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 4326295,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Marine Corps course reference for warm-weather survival, including shelter, water, fire, signaling, navigation, food procurement, and field expedients."
+      },
+      {
+        "id": "general/survival/usmc winter survival course (2002).pdf",
+        "name": "USMC Winter Survival Course (2002).pdf",
+        "relativePath": "general/survival/USMC Winter Survival Course (2002).pdf",
+        "category": "general",
+        "subcategory": "Survival & Emergency",
+        "type": "pdf",
+        "size": 4367617,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Marine Corps course reference for cold-weather survival, including winter hazards, shelters, fires, water, travel, signaling, and casualty prevention."
+      },
+      {
+        "id": "general/survival/atp 3-50.21 - survival (2018).pdf",
+        "name": "ATP 3-50.21 - Survival (2018).pdf",
+        "relativePath": "general/survival/ATP 3-50.21 - Survival (2018).pdf",
+        "category": "general",
+        "subcategory": "Other",
+        "type": "pdf",
+        "size": 23772309,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A modern U.S. Army survival publication focused on isolated-personnel priorities, protection, sustenance, signaling, recovery, and returning safely.",
+        "licenseId": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "licenseName": "Exact federal publication approved for public release; distribution unlimited",
+        "licenseUrl": "https://armypubs.army.mil/",
+        "sourceUrl": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/13BC7D8D-AD46-433D-9C0B-F3A1D1405259-1537466238381/atp3_50x21.pdf",
+        "attributionText": "ATP 3-50.21 - Survival, Headquarters, Department of the Army, September 2018.",
+        "changesMade": "None.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      }
+    ],
+    "medical": [
+      {
+        "id": "medical/reference/atp 4-02.83 - treatment of nuclear and radiological casualties (2014).pdf",
+        "name": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+        "relativePath": "medical/reference/ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+        "category": "medical",
+        "subcategory": "Reference",
+        "type": "pdf",
+        "size": 1946943,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Army medical reference on recognizing, triaging, decontaminating, and treating casualties exposed to nuclear or radiological hazards.",
+        "licenseId": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "licenseName": "Exact federal publication approved for public release; distribution unlimited",
+        "licenseUrl": "https://armypubs.army.mil/",
+        "sourceUrl": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/2C9DF500-FE70-4DFC-A915-D01FE6A8BCE2-1399482805293/atp_4-02x83.pdf",
+        "attributionText": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties, Headquarters, Department of the Army, May 2014.",
+        "changesMade": "None.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "medical/reference/medical sciences - stack exchange.zim",
+        "name": "Medical Sciences - Stack Exchange.zim",
+        "relativePath": "medical/reference/Medical Sciences - Stack Exchange.zim",
+        "category": "medical",
+        "subcategory": "Reference",
+        "type": "zim",
+        "size": 60799834,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "medical/reference/wikimed - sept 2025.zim",
+        "name": "WikiMed - Sept 2025.zim",
+        "relativePath": "medical/reference/WikiMed - Sept 2025.zim",
+        "category": "medical",
+        "subcategory": "Reference",
+        "type": "zim",
+        "size": 2053190934,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "medical/field-guides/breastfeeding guide.pdf",
+        "name": "Breastfeeding Guide.pdf",
+        "relativePath": "medical/field-guides/Breastfeeding Guide.pdf",
+        "category": "medical",
+        "subcategory": "Field Guides",
+        "type": "pdf",
+        "size": 1166477,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A practical guide to breastfeeding basics, positioning, milk supply, common concerns, expressing milk, infant feeding cues, and finding professional support."
+      },
+      {
+        "id": "medical/field-guides/infant feeding guide.pdf",
+        "name": "Infant Feeding Guide.pdf",
+        "relativePath": "medical/field-guides/Infant Feeding Guide.pdf",
+        "category": "medical",
+        "subcategory": "Field Guides",
+        "type": "pdf",
+        "size": 35958886,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A practical overview of infant feeding, including age-appropriate nutrition, feeding cues, safe preparation, introducing foods, and common concerns."
+      },
+      {
+        "id": "medical/field-guides/atp 4-02.11 - casualty response and first aid (2026).pdf",
+        "name": "ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+        "relativePath": "medical/field-guides/ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+        "category": "medical",
+        "subcategory": "Other",
+        "type": "pdf",
+        "size": 12665561,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A U.S. Army guide to immediate casualty response and first aid, organized around rapid assessment, lifesaving actions, stabilization, and evacuation.",
+        "licenseId": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "licenseName": "Exact federal publication approved for public release; distribution unlimited",
+        "licenseUrl": "https://armypubs.army.mil/",
+        "sourceUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+        "attributionText": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid, Headquarters, Department of the Army, March 2026.",
+        "changesMade": "None.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "medical/field-guides/fema cert basic training participant manual (2019).pdf",
+        "name": "FEMA CERT Basic Training Participant Manual (2019).pdf",
+        "relativePath": "medical/field-guides/FEMA CERT Basic Training Participant Manual (2019).pdf",
+        "category": "medical",
+        "subcategory": "Other",
+        "type": "pdf",
+        "size": 5603996,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "FEMA's Community Emergency Response Team manual covering disaster preparedness, fire safety, basic medical operations, light search and rescue, and team organization.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.govinfo.gov/app/details/GOVPUB-HS5_100-PURL-gpo185734",
+        "attributionText": "CERT Basic Training Participant Manual, U.S. Government Publishing Office, 2019 Update.",
+        "changesMade": "None.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      }
+    ],
+    "food-preparation": [
+      {
+        "id": "food-preparation/food/camp life in the woods and the tricks of trapping and trap making by gibson.zip",
+        "name": "Camp Life in the Woods and the Tricks of Trapping and Trap Making by Gibson.zip",
+        "relativePath": "food-preparation/food/Camp Life in the Woods and the Tricks of Trapping and Trap Making by Gibson.zip",
+        "category": "food-preparation",
+        "subcategory": "Hunting & Trapping",
+        "type": "htmlbook",
+        "size": 7168127,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A historical outdoors manual describing campcraft, traps, snares, animal habits, and practical methods used by nineteenth-century trappers."
+      },
+      {
+        "id": "food-preparation/food/deadfalls and snares by a. r. harding.zip",
+        "name": "Deadfalls and Snares by A. R. Harding.zip",
+        "relativePath": "food-preparation/food/Deadfalls and Snares by A. R. Harding.zip",
+        "category": "food-preparation",
+        "subcategory": "Hunting & Trapping",
+        "type": "htmlbook",
+        "size": 3172549,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An early twentieth-century guide to building deadfalls and snares, choosing locations, understanding animal behavior, and applying traditional trapping methods."
+      },
+      {
+        "id": "food-preparation/food/fifty years a hunter and trapper by e. n. woodcock.zip",
+        "name": "Fifty Years a Hunter and Trapper by E. N. Woodcock.zip",
+        "relativePath": "food-preparation/food/Fifty Years a Hunter and Trapper by E. N. Woodcock.zip",
+        "category": "food-preparation",
+        "subcategory": "Hunting & Trapping",
+        "type": "htmlbook",
+        "size": 1349494,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "E. N. Woodcock's memoir and practical account of decades spent hunting and trapping, combining field experiences with period techniques and observations."
+      },
+      {
+        "id": "food-preparation/food/hunting with the bow & arrow.zip",
+        "name": "Hunting with the Bow & Arrow.zip",
+        "relativePath": "food-preparation/food/Hunting with the Bow & Arrow.zip",
+        "category": "food-preparation",
+        "subcategory": "Hunting & Trapping",
+        "type": "htmlbook",
+        "size": 1870633,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Saxton Pope's classic account of archery hunting, including bow making, shooting technique, fieldcraft, equipment, and hunting experiences."
+      },
+      {
+        "id": "food-preparation/food/the theory and practice of archery.zip",
+        "name": "The theory and practice of archery.zip",
+        "relativePath": "food-preparation/food/The theory and practice of archery.zip",
+        "category": "food-preparation",
+        "subcategory": "Hunting & Trapping",
+        "type": "htmlbook",
+        "size": 878427,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A historical study of archery equipment, shooting form, aiming, practice, and competitive technique, with discussion of the sport's development."
+      },
+      {
+        "id": "food-preparation/food/beef slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
+        "name": "Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+        "relativePath": "food-preparation/food/Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+        "category": "food-preparation",
+        "subcategory": "Meat Processing",
+        "type": "htmlbook",
+        "size": 2859030,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A farm-oriented guide to humane beef slaughter, carcass handling, cutting, preservation, storage, food safety, and cooking methods."
+      },
+      {
+        "id": "food-preparation/food/lamb slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
+        "name": "Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+        "relativePath": "food-preparation/food/Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+        "category": "food-preparation",
+        "subcategory": "Meat Processing",
+        "type": "htmlbook",
+        "size": 1461220,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A farm-oriented guide to lamb slaughter, carcass handling, cutting, preservation, storage, food safety, and cooking methods."
+      },
+      {
+        "id": "food-preparation/food/meat on the farm - butchering, curing, and keeping.pdf",
+        "name": "Meat on the farm - butchering, curing, and keeping.pdf",
+        "relativePath": "food-preparation/food/Meat on the farm - butchering, curing, and keeping.pdf",
+        "category": "food-preparation",
+        "subcategory": "Meat Processing",
+        "type": "pdf",
+        "size": 3400846,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A historical farm reference on butchering meat, curing and smoking it, rendering fat, storing products, and reducing spoilage."
+      },
+      {
+        "id": "food-preparation/food/pork slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
+        "name": "Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+        "relativePath": "food-preparation/food/Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+        "category": "food-preparation",
+        "subcategory": "Meat Processing",
+        "type": "htmlbook",
+        "size": 2072231,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A farm-oriented guide to humane pork slaughter, carcass handling, cutting, curing, storage, food safety, and cooking methods."
+      },
+      {
+        "id": "food-preparation/food/usda - bison from farm to table.pdf",
+        "name": "USDA - Bison from Farm to Table.pdf",
+        "relativePath": "food-preparation/food/USDA - Bison from Farm to Table.pdf",
+        "category": "food-preparation",
+        "subcategory": "USDA Guides",
+        "type": "pdf",
+        "size": 647532,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A USDA consumer guide to bison, including inspection, purchasing, storage, safe handling, cooking temperatures, and preparation."
+      },
+      {
+        "id": "food-preparation/food/usda - goat from farm to table.pdf",
+        "name": "USDA - Goat from Farm to Table.pdf",
+        "relativePath": "food-preparation/food/USDA - Goat from Farm to Table.pdf",
+        "category": "food-preparation",
+        "subcategory": "USDA Guides",
+        "type": "pdf",
+        "size": 126891,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A USDA consumer guide to goat meat, including inspection, purchasing, storage, safe handling, cooking temperatures, and preparation."
+      },
+      {
+        "id": "food-preparation/food/canoe and camp cookery by seneca.zip",
+        "name": "Canoe and Camp Cookery by Seneca.zip",
+        "relativePath": "food-preparation/food/Canoe and Camp Cookery by Seneca.zip",
+        "category": "food-preparation",
+        "subcategory": "Cookbooks & Recipes",
+        "type": "htmlbook",
+        "size": 165231,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A nineteenth-century camping cookbook offering practical advice on provisions, camp kitchens, fires, utensils, and meals for canoe trips."
+      },
+      {
+        "id": "food-preparation/food/miss leslie's new cookery book by eliza leslie.zip",
+        "name": "Miss Leslie's New Cookery Book by Eliza Leslie.zip",
+        "relativePath": "food-preparation/food/Miss Leslie's New Cookery Book by Eliza Leslie.zip",
+        "category": "food-preparation",
+        "subcategory": "Cookbooks & Recipes",
+        "type": "htmlbook",
+        "size": 561178,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Eliza Leslie's nineteenth-century American cookbook, with period recipes and household guidance for meats, breads, vegetables, preserves, desserts, and beverages."
+      },
+      {
+        "id": "food-preparation/food/science in the kitchen by e. e. kellogg.zip",
+        "name": "Science in the Kitchen by E. E. Kellogg.zip",
+        "relativePath": "food-preparation/food/Science in the Kitchen by E. E. Kellogg.zip",
+        "category": "food-preparation",
+        "subcategory": "Cookbooks & Recipes",
+        "type": "htmlbook",
+        "size": 2933952,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A late nineteenth-century vegetarian cookbook that combines nutrition and household advice with recipes for grains, fruits, vegetables, breads, and simple meals."
+      },
+      {
+        "id": "food-preparation/food/coffee - stack exchange.zim",
+        "name": "Coffee - Stack Exchange.zim",
+        "relativePath": "food-preparation/food/Coffee - Stack Exchange.zim",
+        "category": "food-preparation",
+        "subcategory": "Beverages & Brewing",
+        "type": "zim",
+        "size": 17506323,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "food-preparation/food/homebrew - stack exchange.zim",
+        "name": "Homebrew - Stack Exchange.zim",
+        "relativePath": "food-preparation/food/Homebrew - Stack Exchange.zim",
+        "category": "food-preparation",
+        "subcategory": "Beverages & Brewing",
+        "type": "zim",
+        "size": 37380596,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "food-preparation/food/how to make sweet potato flour.zip",
+        "name": "How to make sweet potato flour.zip",
+        "relativePath": "food-preparation/food/How to make sweet potato flour.zip",
+        "category": "food-preparation",
+        "subcategory": "Foraging",
+        "type": "htmlbook",
+        "size": 605222,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A short practical guide to processing sweet potatoes into flour for storage and use as an alternative food ingredient."
+      },
+      {
+        "id": "food-preparation/food/our edible toadstools and mushrooms and how to distinguish them by gibson.zip",
+        "name": "Our Edible Toadstools and Mushrooms and How to Distinguish Them by Gibson.zip",
+        "relativePath": "food-preparation/food/Our Edible Toadstools and Mushrooms and How to Distinguish Them by Gibson.zip",
+        "category": "food-preparation",
+        "subcategory": "Foraging",
+        "type": "htmlbook",
+        "size": 5006215,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A historical illustrated guide to identifying selected edible mushrooms and distinguishing them from poisonous look-alikes; modern expert verification remains essential."
+      },
+      {
+        "id": "food-preparation/food/canning, freezing, storing garden produce.zip",
+        "name": "Canning, Freezing, Storing Garden Produce.zip",
+        "relativePath": "food-preparation/food/Canning, Freezing, Storing Garden Produce.zip",
+        "category": "food-preparation",
+        "subcategory": "Food Preservation",
+        "type": "htmlbook",
+        "size": 2716163,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A practical reference to preserving garden produce through canning, freezing, drying, and storage, with preparation guidance for common fruits and vegetables."
+      },
+      {
+        "id": "food-preparation/food/home_canning_usda.pdf",
+        "name": "Home_Canning_USDA.pdf",
+        "relativePath": "food-preparation/food/Home_Canning_USDA.pdf",
+        "category": "food-preparation",
+        "subcategory": "Food Preservation",
+        "type": "pdf",
+        "size": 14011885,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "USDA guidance for safe home canning, including equipment, tested processing methods, altitude adjustments, jar handling, and spoilage prevention."
+      },
+      {
+        "id": "food-preparation/water/epa - emergency disinfection of drinking water (2017).pdf",
+        "name": "EPA - EMERGENCY DISINFECTION OF DRINKING WATER (2017).pdf",
+        "relativePath": "food-preparation/water/EPA - EMERGENCY DISINFECTION OF DRINKING WATER (2017).pdf",
+        "category": "food-preparation",
+        "subcategory": "Water Safety",
+        "type": "pdf",
+        "size": 754723,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An EPA fact sheet explaining emergency drinking-water disinfection by boiling or chemical treatment when normal water service is unsafe."
+      },
+      {
+        "id": "food-preparation/water/epa - giardia - fact sheet (2002).pdf",
+        "name": "EPA - Giardia - Fact Sheet (2002).pdf",
+        "relativePath": "food-preparation/water/EPA - Giardia - Fact Sheet (2002).pdf",
+        "category": "food-preparation",
+        "subcategory": "Water Safety",
+        "type": "pdf",
+        "size": 78912,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An EPA fact sheet on Giardia in drinking water, including transmission, symptoms, treatment considerations, and ways water systems reduce risk."
+      },
+      {
+        "id": "food-preparation/food/arkfile - wild game safety and preservation (2026-07).zip",
+        "name": "ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+        "relativePath": "food-preparation/food/ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+        "category": "food-preparation",
+        "subcategory": "Other",
+        "type": "htmlbook",
+        "size": 15783,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An offline field guide to handling wild game safely, cooling and transporting meat, preventing contamination, and choosing appropriate preservation methods.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/roasting-those-other-holiday-meats",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service; Centers for Disease Control and Prevention; USDA Animal and Plant Health Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "food-preparation/food/usda fsis - chicken from farm to table (arkfile offline 2026-07).zip",
+        "name": "USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+        "relativePath": "food-preparation/food/USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+        "category": "food-preparation",
+        "subcategory": "Other",
+        "type": "htmlbook",
+        "size": 9813,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "USDA FSIS guidance on buying, storing, thawing, handling, and cooking chicken safely from purchase through leftovers.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/chicken-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "food-preparation/food/usda fsis - duck and goose from farm to table (arkfile offline 2026-07).zip",
+        "name": "USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+        "relativePath": "food-preparation/food/USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+        "category": "food-preparation",
+        "subcategory": "Other",
+        "type": "htmlbook",
+        "size": 8119,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "USDA FSIS guidance on buying, storing, thawing, handling, and cooking duck and goose safely from purchase through leftovers.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/duck-and-goose-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "food-preparation/food/usda fsis - fresh pork from farm to table (arkfile offline 2026-07).zip",
+        "name": "USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+        "relativePath": "food-preparation/food/USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+        "category": "food-preparation",
+        "subcategory": "Other",
+        "type": "htmlbook",
+        "size": 8320,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "USDA FSIS guidance on buying, storing, thawing, handling, and cooking fresh pork safely from purchase through leftovers.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/fresh-pork-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "food-preparation/food/usda fsis - lamb from farm to table (arkfile offline 2026-07).zip",
+        "name": "USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+        "relativePath": "food-preparation/food/USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+        "category": "food-preparation",
+        "subcategory": "Other",
+        "type": "htmlbook",
+        "size": 8394,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "USDA FSIS guidance on buying, storing, thawing, handling, and cooking lamb safely from purchase through leftovers.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/lamb-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "food-preparation/food/usda fsis - turkey from farm to table (arkfile offline 2026-07).zip",
+        "name": "USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+        "relativePath": "food-preparation/food/USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+        "category": "food-preparation",
+        "subcategory": "Other",
+        "type": "htmlbook",
+        "size": 9521,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "USDA FSIS guidance on buying, storing, thawing, handling, stuffing, and cooking turkey safely from purchase through leftovers.",
+        "licenseId": "US-GOV-WORK-17-USC-105",
+        "licenseName": "United States Government work under 17 U.S.C. 105",
+        "licenseUrl": "https://www.copyright.gov/title17/92chap1.html#105",
+        "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/turkey-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      }
+    ],
+    "travel": [
+      {
+        "id": "maps/regions/alaska-hawaii/region.pmtiles",
+        "name": "Street Map - Alaska & Hawaii (z14)",
+        "relativePath": "maps/regions/alaska-hawaii/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 778306496,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/california/region.pmtiles",
+        "name": "Street Map - California (z14)",
+        "relativePath": "maps/regions/california/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 643941528,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/florida-gulf/region.pmtiles",
+        "name": "Street Map - Florida & Gulf Coast (z14)",
+        "relativePath": "maps/regions/florida-gulf/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 927041017,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/great-lakes/region.pmtiles",
+        "name": "Street Map - Great Lakes (z14)",
+        "relativePath": "maps/regions/great-lakes/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 1883036603,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/mid-atlantic/region.pmtiles",
+        "name": "Street Map - Mid-Atlantic (z14)",
+        "relativePath": "maps/regions/mid-atlantic/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 1606831778,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/mountain-west/region.pmtiles",
+        "name": "Street Map - Mountain West (z14)",
+        "relativePath": "maps/regions/mountain-west/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 875230869,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/northeast/region.pmtiles",
+        "name": "Street Map - Northeast (z14)",
+        "relativePath": "maps/regions/northeast/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 557246264,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/pacific-northwest/region.pmtiles",
+        "name": "Street Map - Pacific Northwest (z14)",
+        "relativePath": "maps/regions/pacific-northwest/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 521469987,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/plains/region.pmtiles",
+        "name": "Street Map - Plains (z14)",
+        "relativePath": "maps/regions/plains/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 1211876476,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/southeast/region.pmtiles",
+        "name": "Street Map - Southeast (z14)",
+        "relativePath": "maps/regions/southeast/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 1668219280,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/southwest/region.pmtiles",
+        "name": "Street Map - Southwest (z14)",
+        "relativePath": "maps/regions/southwest/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 1107180414,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "maps/regions/texas-south-central/region.pmtiles",
+        "name": "Street Map - Texas & South Central (z14)",
+        "relativePath": "maps/regions/texas-south-central/region.pmtiles",
+        "category": "travel",
+        "subcategory": "Street-Level Maps (Complete)",
+        "type": "map",
+        "size": 882009400,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "defaultSelected": false
+      },
+      {
+        "id": "travel/guides/wikivoyage - dec 2025.zim",
+        "name": "WikiVoyage - Dec 2025.zim",
+        "relativePath": "travel/guides/WikiVoyage - Dec 2025.zim",
+        "category": "travel",
+        "subcategory": "Travel Guides",
+        "type": "zim",
+        "size": 1135835358,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-national/national atlas 2003 - united states general reference.pdf",
+        "name": "National Atlas 2003 - United States General Reference.pdf",
+        "relativePath": "travel/maps-national/National Atlas 2003 - United States General Reference.pdf",
+        "category": "travel",
+        "subcategory": "National Maps",
+        "type": "pdf",
+        "size": 3084030,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-national/united states.jpg",
+        "name": "United States.jpg",
+        "relativePath": "travel/maps-national/United States.jpg",
+        "category": "travel",
+        "subcategory": "National Maps",
+        "type": "image",
+        "size": 10388702,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-east/florida.jpg",
+        "name": "Florida.jpg",
+        "relativePath": "travel/maps-east/Florida.jpg",
+        "category": "travel",
+        "subcategory": "East Coast",
+        "type": "image",
+        "size": 5722437,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-east/middle atlantic states.jpg",
+        "name": "Middle Atlantic States.jpg",
+        "relativePath": "travel/maps-east/Middle Atlantic States.jpg",
+        "category": "travel",
+        "subcategory": "East Coast",
+        "type": "image",
+        "size": 8697776,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-east/northeastern states.jpg",
+        "name": "Northeastern States.jpg",
+        "relativePath": "travel/maps-east/Northeastern States.jpg",
+        "category": "travel",
+        "subcategory": "East Coast",
+        "type": "image",
+        "size": 8524543,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-east/southeastern states.jpg",
+        "name": "Southeastern States.jpg",
+        "relativePath": "travel/maps-east/Southeastern States.jpg",
+        "category": "travel",
+        "subcategory": "East Coast",
+        "type": "image",
+        "size": 7790363,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-midwest/central mississippi valley states.jpg",
+        "name": "Central Mississippi Valley States.jpg",
+        "relativePath": "travel/maps-midwest/Central Mississippi Valley States.jpg",
+        "category": "travel",
+        "subcategory": "Midwest",
+        "type": "image",
+        "size": 9208449,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-midwest/northern great lakes states.jpg",
+        "name": "Northern Great Lakes States.jpg",
+        "relativePath": "travel/maps-midwest/Northern Great Lakes States.jpg",
+        "category": "travel",
+        "subcategory": "Midwest",
+        "type": "image",
+        "size": 8934981,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-midwest/southern mississippi valley states.jpg",
+        "name": "Southern Mississippi Valley States.jpg",
+        "relativePath": "travel/maps-midwest/Southern Mississippi Valley States.jpg",
+        "category": "travel",
+        "subcategory": "Midwest",
+        "type": "image",
+        "size": 11186838,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-plains/central plains states.jpg",
+        "name": "Central Plains States.jpg",
+        "relativePath": "travel/maps-plains/Central Plains States.jpg",
+        "category": "travel",
+        "subcategory": "Plains",
+        "type": "image",
+        "size": 9659285,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-plains/northern plains states.jpg",
+        "name": "Northern Plains States.jpg",
+        "relativePath": "travel/maps-plains/Northern Plains States.jpg",
+        "category": "travel",
+        "subcategory": "Plains",
+        "type": "image",
+        "size": 7040951,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-plains/southern plains states .jpg",
+        "name": "Southern Plains States .jpg",
+        "relativePath": "travel/maps-plains/Southern Plains States .jpg",
+        "category": "travel",
+        "subcategory": "Plains",
+        "type": "image",
+        "size": 7864708,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-west/arizona and new mexico.jpg",
+        "name": "Arizona and New Mexico.jpg",
+        "relativePath": "travel/maps-west/Arizona and New Mexico.jpg",
+        "category": "travel",
+        "subcategory": "West Coast & Southwest",
+        "type": "image",
+        "size": 6076210,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-west/central pacific states.jpg",
+        "name": "Central Pacific States.jpg",
+        "relativePath": "travel/maps-west/Central Pacific States.jpg",
+        "category": "travel",
+        "subcategory": "West Coast & Southwest",
+        "type": "image",
+        "size": 6876243,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-west/northwestern states.jpg",
+        "name": "Northwestern States.jpg",
+        "relativePath": "travel/maps-west/Northwestern States.jpg",
+        "category": "travel",
+        "subcategory": "West Coast & Southwest",
+        "type": "image",
+        "size": 7898810,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-west/southern california.jpg",
+        "name": "Southern California.jpg",
+        "relativePath": "travel/maps-west/Southern California.jpg",
+        "category": "travel",
+        "subcategory": "West Coast & Southwest",
+        "type": "image",
+        "size": 6846427,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-west/southern texas.jpg",
+        "name": "Southern Texas.jpg",
+        "relativePath": "travel/maps-west/Southern Texas.jpg",
+        "category": "travel",
+        "subcategory": "West Coast & Southwest",
+        "type": "image",
+        "size": 7023009,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-alaska/aleutian islands.jpg",
+        "name": "Aleutian Islands.jpg",
+        "relativePath": "travel/maps-alaska/Aleutian Islands.jpg",
+        "category": "travel",
+        "subcategory": "Alaska",
+        "type": "image",
+        "size": 4677866,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-alaska/central alaska.jpg",
+        "name": "Central Alaska.jpg",
+        "relativePath": "travel/maps-alaska/Central Alaska.jpg",
+        "category": "travel",
+        "subcategory": "Alaska",
+        "type": "image",
+        "size": 8023747,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-alaska/northern alaska.jpg",
+        "name": "Northern Alaska.jpg",
+        "relativePath": "travel/maps-alaska/Northern Alaska.jpg",
+        "category": "travel",
+        "subcategory": "Alaska",
+        "type": "image",
+        "size": 5937456,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-alaska/southeastern alaska.jpg",
+        "name": "Southeastern Alaska.jpg",
+        "relativePath": "travel/maps-alaska/Southeastern Alaska.jpg",
+        "category": "travel",
+        "subcategory": "Alaska",
+        "type": "image",
+        "size": 3423089,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-alaska/southwestern alaska.jpg",
+        "name": "Southwestern Alaska.jpg",
+        "relativePath": "travel/maps-alaska/Southwestern Alaska.jpg",
+        "category": "travel",
+        "subcategory": "Alaska",
+        "type": "image",
+        "size": 6371496,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-urban/urban areas - atlanta, boston, buffalo, chicago, cincinatti, cleveland, detroit, miami, milwaukee, new orleans and pittsburgh.jpg",
+        "name": "Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinatti, Cleveland, Detroit, Miami, Milwaukee, New Orleans and Pittsburgh.jpg",
+        "relativePath": "travel/maps-urban/Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinatti, Cleveland, Detroit, Miami, Milwaukee, New Orleans and Pittsburgh.jpg",
+        "category": "travel",
+        "subcategory": "Urban Areas",
+        "type": "image",
+        "size": 8486472,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-urban/urban areas - dallas, denver, houston, kansas, los angeles, minneapolis, san francisco, san diego and st. louis.jpg",
+        "name": "Urban Areas - Dallas, Denver, Houston, Kansas, Los Angeles, Minneapolis, San Francisco, San Diego and St. Louis.jpg",
+        "relativePath": "travel/maps-urban/Urban Areas - Dallas, Denver, Houston, Kansas, Los Angeles, Minneapolis, San Francisco, San Diego and St. Louis.jpg",
+        "category": "travel",
+        "subcategory": "Urban Areas",
+        "type": "image",
+        "size": 8827315,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      },
+      {
+        "id": "travel/maps-urban/urban areas - new york and washington d.c..jpg",
+        "name": "Urban Areas - New York and Washington D.C..jpg",
+        "relativePath": "travel/maps-urban/Urban Areas - New York and Washington D.C..jpg",
+        "category": "travel",
+        "subcategory": "Urban Areas",
+        "type": "image",
+        "size": 4406536,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials"
+      }
+    ],
+    "books_documents": [
+      {
+        "id": "books_documents/openstax - algebra and trigonometry.zip",
+        "name": "OpenStax - Algebra and Trigonometry.zip",
+        "relativePath": "books_documents/OpenStax - Algebra and Trigonometry.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 103660814,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11758/algebra-and-trigonometry.epub",
+        "attributionText": "Algebra and Trigonometry by OpenStax CAT is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - american government.zip",
+        "name": "OpenStax - American Government.zip",
+        "relativePath": "books_documents/OpenStax - American Government.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 155423241,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11995/american-government.epub",
+        "attributionText": "American Government by OpenStax American Government is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - biology 2e.zip",
+        "name": "OpenStax - Biology 2e.zip",
+        "relativePath": "books_documents/OpenStax - Biology 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 421070190,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col24361/biology-2e.epub",
+        "attributionText": "Biology 2e by OpenStax Biology 2nd Edition is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - biology for ap courses.zip",
+        "name": "OpenStax - Biology for AP Courses.zip",
+        "relativePath": "books_documents/OpenStax - Biology for AP Courses.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 239024570,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12078/biology-for-ap-r-courses.epub",
+        "attributionText": "Biology for AP Courses by OpenStax Biology for AP Courses is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - chemistry - atoms first.zip",
+        "name": "OpenStax - Chemistry - Atoms First.zip",
+        "relativePath": "books_documents/OpenStax - Chemistry - Atoms First.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 268902963,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12012/chemistry-atoms-first.epub",
+        "attributionText": "Chemistry: Atoms First by OpenStax Chemistry: Atom First is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - chemistry.zip",
+        "name": "OpenStax - Chemistry.zip",
+        "relativePath": "books_documents/OpenStax - Chemistry.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 269473981,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11760/chemistry.epub",
+        "attributionText": "Chemistry by OpenStax Chemistry is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - college algebra.zip",
+        "name": "OpenStax - College Algebra.zip",
+        "relativePath": "books_documents/OpenStax - College Algebra.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 73308955,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11759/college-algebra.epub",
+        "attributionText": "College Algebra by OpenStax College Algebra is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - college physics.zip",
+        "name": "OpenStax - College Physics.zip",
+        "relativePath": "books_documents/OpenStax - College Physics.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 232453169,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11406/college-physics.epub",
+        "attributionText": "College Physics by OpenStax / OSC Physics Maintainer is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - college success.zip",
+        "name": "OpenStax - College Success.zip",
+        "relativePath": "books_documents/OpenStax - College Success.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 38611344,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col30990/cosu.epub",
+        "attributionText": "College Success by OpenStax College Success is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - elementary algebra 2e.zip",
+        "name": "OpenStax - Elementary Algebra 2e.zip",
+        "relativePath": "books_documents/OpenStax - Elementary Algebra 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 79523676,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col31130/elementary-algebra-2e-draft.epub",
+        "attributionText": "Elementary Algebra 2e by OpenStax Elementary Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - entrepreneurship.zip",
+        "name": "OpenStax - Entrepreneurship.zip",
+        "relativePath": "books_documents/OpenStax - Entrepreneurship.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 137566748,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col29104/entrepreneurship-draft.epub",
+        "attributionText": "Entrepreneurship by OpenStax Entrepreneurship ,OpenStax is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - intermediate algebra 2e.zip",
+        "name": "OpenStax - Intermediate Algebra 2e.zip",
+        "relativePath": "books_documents/OpenStax - Intermediate Algebra 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 85051450,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col31234/intermediate-algebra-2e.epub",
+        "attributionText": "Intermediate Algebra 2e by OpenStax Intermediate Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - introduction to business.zip",
+        "name": "OpenStax - Introduction to Business.zip",
+        "relativePath": "books_documents/OpenStax - Introduction to Business.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 176253402,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col25734/introduction-to-business.epub",
+        "attributionText": "Introduction to Business by OpenStax Introduction to Business is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - introduction to sociology 3e.zip",
+        "name": "OpenStax - Introduction to Sociology 3e.zip",
+        "relativePath": "books_documents/OpenStax - Introduction to Sociology 3e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 41062112,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col32649/introduction-to-sociology-3e.epub",
+        "attributionText": "Introduction to Sociology 3e by OpenStax ,First Last is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - introductory business statistics.zip",
+        "name": "OpenStax - Introductory Business Statistics.zip",
+        "relativePath": "books_documents/OpenStax - Introductory Business Statistics.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 24244739,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11776/introductory-statistics.epub",
+        "attributionText": "Introductory Business Statistics by OpenStax Business Statistics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - introductory statistics.zip",
+        "name": "OpenStax - Introductory Statistics.zip",
+        "relativePath": "books_documents/OpenStax - Introductory Statistics.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 25014328,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11562/collaborative-statistics.epub",
+        "attributionText": "Introductory Statistics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - microbiology.zip",
+        "name": "OpenStax - Microbiology.zip",
+        "relativePath": "books_documents/OpenStax - Microbiology.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 320364622,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12087/microbiology.epub",
+        "attributionText": "Microbiology by OpenStax College Microbiology is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - physics.zip",
+        "name": "OpenStax - Physics.zip",
+        "relativePath": "books_documents/OpenStax - Physics.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 50360076,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12081/hs-physics.epub",
+        "attributionText": "Physics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - prealgebra.zip",
+        "name": "OpenStax - Prealgebra.zip",
+        "relativePath": "books_documents/OpenStax - Prealgebra.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 61574328,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12157/prealgebra.epub",
+        "attributionText": "Prealgebra by OpenStax Developmental Math is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - precalculus.zip",
+        "name": "OpenStax - Precalculus.zip",
+        "relativePath": "books_documents/OpenStax - Precalculus.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 101938283,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11667/precalculus.epub",
+        "attributionText": "Precalculus by OpenStax College Precalculus is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - principles of economics 2e.zip",
+        "name": "OpenStax - Principles of Economics 2e.zip",
+        "relativePath": "books_documents/OpenStax - Principles of Economics 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 77966494,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12122/principles-of-economics-2e-draft.epub",
+        "attributionText": "Principles of Economics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - principles of macroeconomics 2e.zip",
+        "name": "OpenStax - Principles of Macroeconomics 2e.zip",
+        "relativePath": "books_documents/OpenStax - Principles of Macroeconomics 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 56470785,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12190/principles-of-macroeconomics-2e-draft.epub",
+        "attributionText": "Principles of Macroeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - principles of microeconomics 2e.zip",
+        "name": "OpenStax - Principles of Microeconomics 2e.zip",
+        "relativePath": "books_documents/OpenStax - Principles of Microeconomics 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 42469205,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12170/principles-of-microeconomics-2e-draft.epub",
+        "attributionText": "Principles of Microeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - principles of microeconomics for ap courses.zip",
+        "name": "OpenStax - Principles of Microeconomics for AP Courses.zip",
+        "relativePath": "books_documents/OpenStax - Principles of Microeconomics for AP Courses.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 43291365,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col11858/apecon.epub",
+        "attributionText": "Principles of Microeconomics for AP Courses by OpenStax College Principles of Economics for AP® Courses is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - psychology 2e.zip",
+        "name": "OpenStax - Psychology 2e.zip",
+        "relativePath": "books_documents/OpenStax - Psychology 2e.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 67139094,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col31502/psychology-2e.epub",
+        "attributionText": "Psychology 2e by OpenStax Psychology is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - statistics.zip",
+        "name": "OpenStax - Statistics.zip",
+        "relativePath": "books_documents/OpenStax - Statistics.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 26856309,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col30309/hs-statistics.epub",
+        "attributionText": "Statistics by OpenStax Statistics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/openstax - university physics.zip",
+        "name": "OpenStax - University Physics.zip",
+        "relativePath": "books_documents/OpenStax - University Physics.zip",
+        "category": "books_documents",
+        "subcategory": "Open Textbooks",
+        "type": "htmlbook",
+        "size": 173706872,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "licenseId": "CC-BY-4.0",
+        "licenseName": "Creative Commons Attribution 4.0 International",
+        "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://archive.org/download/cnx-org-col12105/openstax-university-physics-all-volumes.epub",
+        "attributionText": "University Physics by OpenStax University Physics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "contentLicenseLedgerVersion": "2026-07-10.1",
+        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
+        "contentLicenseDecisionStatus": "green"
+      },
+      {
+        "id": "books_documents/book of mormon.zip",
+        "name": "Book of Mormon.zip",
+        "relativePath": "books_documents/Book of Mormon.zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 705609,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A sacred text of the Latter Day Saint movement, presented as a religious history and testimony concerning ancient peoples in the Americas."
+      },
+      {
+        "id": "books_documents/king james bible.zip",
+        "name": "King James Bible.zip",
+        "relativePath": "books_documents/King James Bible.zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 2332480,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "The 1611 English translation of the Christian Bible, containing the Old and New Testaments in its influential King James wording."
+      },
+      {
+        "id": "books_documents/the children's bible.zip",
+        "name": "THE CHILDREN'S BIBLE.zip",
+        "relativePath": "books_documents/THE CHILDREN'S BIBLE.zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 1543903,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A retelling of selected Bible stories in language intended for younger readers, moving through major figures and events of both testaments."
+      },
+      {
+        "id": "books_documents/the confessions of st. augustine.zip",
+        "name": "The Confessions of St. Augustine.zip",
+        "relativePath": "books_documents/The Confessions of St. Augustine.zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 311117,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Augustine of Hippo's spiritual autobiography and theological reflection on memory, sin, conversion, time, and the search for God."
+      },
+      {
+        "id": "books_documents/the koran (al-qur'an).zip",
+        "name": "The Koran (Al-Qur'an).zip",
+        "relativePath": "books_documents/The Koran (Al-Qur'an).zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 949847,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An English rendering of the Qur'an, Islam's central scripture, organized into chapters addressing faith, worship, ethics, law, and prophetic narratives."
+      },
+      {
+        "id": "books_documents/the life of buddha and its lessons by henry steel olcott.zip",
+        "name": "The Life of Buddha and Its Lessons by Henry Steel Olcott.zip",
+        "relativePath": "books_documents/The Life of Buddha and Its Lessons by Henry Steel Olcott.zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 85978,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Henry Steel Olcott's brief account of the Buddha's life and the ethical and philosophical lessons he drew from Buddhist teaching."
+      },
+      {
+        "id": "books_documents/the pilgrim's progress by john bunyan.zip",
+        "name": "The Pilgrim's Progress by John Bunyan.zip",
+        "relativePath": "books_documents/The Pilgrim's Progress by John Bunyan.zip",
+        "category": "books_documents",
+        "subcategory": "Religious Texts",
+        "type": "htmlbook",
+        "size": 205629,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A Christian allegory following Christian's difficult journey from the City of Destruction toward the Celestial City and spiritual salvation."
+      },
+      {
+        "id": "books_documents/apology by plato.zip",
+        "name": "Apology by Plato.zip",
+        "relativePath": "books_documents/Apology by Plato.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 82999,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Plato's account of Socrates' defense at his trial, exploring his philosophical mission, civic duty, wisdom, and attitude toward death."
+      },
+      {
+        "id": "books_documents/as a man thinketh by james allen.zip",
+        "name": "As a man thinketh by James Allen.zip",
+        "relativePath": "books_documents/As a man thinketh by James Allen.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 89074,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A short self-help essay arguing that habitual thought shapes character, conduct, circumstances, achievement, and inner peace."
+      },
+      {
+        "id": "books_documents/beyond good and evil by nietzsche.zip",
+        "name": "Beyond Good and Evil by Nietzsche.zip",
+        "relativePath": "books_documents/Beyond Good and Evil by Nietzsche.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 225793,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Nietzsche's critique of traditional morality and philosophy, examining truth, power, religion, culture, and the assumptions behind moral judgment."
+      },
+      {
+        "id": "books_documents/mysticism and logic and other essays by bertrand russell.zip",
+        "name": "Mysticism and Logic and Other Essays by Bertrand Russell.zip",
+        "relativePath": "books_documents/Mysticism and Logic and Other Essays by Bertrand Russell.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 268141,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A collection of Bertrand Russell's essays on philosophy, science, mathematics, knowledge, ethics, education, and the tension between mystical and logical thought."
+      },
+      {
+        "id": "books_documents/on liberty by john stuart mill.zip",
+        "name": "On Liberty by John Stuart Mill.zip",
+        "relativePath": "books_documents/On Liberty by John Stuart Mill.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 179839,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "John Stuart Mill's argument for individual freedom of thought and action, limited chiefly by the need to prevent harm to others."
+      },
+      {
+        "id": "books_documents/pascal's pensées by blaise pascal.zip",
+        "name": "Pascal's Pensées by Blaise Pascal.zip",
+        "relativePath": "books_documents/Pascal's Pensées by Blaise Pascal.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 329552,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A posthumous collection of Pascal's fragments on faith, reason, human nature, suffering, diversion, and arguments for Christianity."
+      },
+      {
+        "id": "books_documents/politics,a treatise on government by aristotle.zip",
+        "name": "Politics,A Treatise on Government by Aristotle.zip",
+        "relativePath": "books_documents/Politics,A Treatise on Government by Aristotle.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 272578,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Aristotle's study of political communities, constitutions, citizenship, justice, education, and the conditions he believed support a flourishing state."
+      },
+      {
+        "id": "books_documents/the communist manifesto by karl marx and friedrich engels.zip",
+        "name": "The Communist Manifesto by Karl Marx and Friedrich Engels.zip",
+        "relativePath": "books_documents/The Communist Manifesto by Karl Marx and Friedrich Engels.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 108974,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Marx and Engels' political pamphlet interpreting history through class struggle and calling for workers to overturn capitalist social relations."
+      },
+      {
+        "id": "books_documents/the critique of pure reason by immanuel kant.zip",
+        "name": "The Critique of Pure Reason by Immanuel Kant.zip",
+        "relativePath": "books_documents/The Critique of Pure Reason by Immanuel Kant.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 592180,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Kant's investigation of the scope and limits of human knowledge, asking how experience, reason, space, time, and causality make understanding possible."
+      },
+      {
+        "id": "books_documents/the ethics of aristotle by aristotle.zip",
+        "name": "The Ethics of Aristotle by Aristotle.zip",
+        "relativePath": "books_documents/The Ethics of Aristotle by Aristotle.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 403590,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Aristotle's account of human flourishing through virtue, practical judgment, friendship, responsible action, and a life shaped by excellent habits."
+      },
+      {
+        "id": "books_documents/the republic by plato.zip",
+        "name": "The Republic by Plato.zip",
+        "relativePath": "books_documents/The Republic by Plato.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 495173,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Plato's dialogue on justice, education, political order, knowledge, and the ideal state, including the allegory of the cave."
+      },
+      {
+        "id": "books_documents/the simple life by charles wagner.zip",
+        "name": "The Simple Life by Charles Wagner.zip",
+        "relativePath": "books_documents/The Simple Life by Charles Wagner.zip",
+        "category": "books_documents",
+        "subcategory": "Philosophy",
+        "type": "htmlbook",
+        "size": 160260,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "An essay advocating simplicity in personal conduct, possessions, relationships, and civic life as an answer to needless complexity and social pressure."
+      },
+      {
+        "id": "books_documents/lincoln's gettysburg address.zip",
+        "name": "Lincoln's Gettysburg Address.zip",
+        "relativePath": "books_documents/Lincoln's Gettysburg Address.zip",
+        "category": "books_documents",
+        "subcategory": "American Founding",
+        "type": "htmlbook",
+        "size": 585475,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Abraham Lincoln's brief 1863 speech honoring the dead at Gettysburg and redefining the Civil War around national unity, equality, and democratic government."
+      },
+      {
+        "id": "books_documents/the declaration of independence.zip",
+        "name": "The Declaration of Independence.zip",
+        "relativePath": "books_documents/The Declaration of Independence.zip",
+        "category": "books_documents",
+        "subcategory": "American Founding",
+        "type": "htmlbook",
+        "size": 2410135,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "The 1776 declaration announcing the American colonies' separation from Britain and setting out grievances and principles of natural rights and government."
+      },
+      {
+        "id": "books_documents/the federalist papers.zip",
+        "name": "The Federalist Papers.zip",
+        "relativePath": "books_documents/The Federalist Papers.zip",
+        "category": "books_documents",
+        "subcategory": "American Founding",
+        "type": "htmlbook",
+        "size": 660952,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Eighty-five essays by Hamilton, Madison, and Jay arguing for ratification of the U.S. Constitution and explaining the proposed federal system."
+      },
+      {
+        "id": "books_documents/the united states bill of rights.zip",
+        "name": "The United States Bill of Rights.zip",
+        "relativePath": "books_documents/The United States Bill of Rights.zip",
+        "category": "books_documents",
+        "subcategory": "American Founding",
+        "type": "htmlbook",
+        "size": 810804,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "The first ten amendments to the U.S. Constitution, protecting specified individual liberties and reserving undelegated powers."
+      },
+      {
+        "id": "books_documents/the united states constitution.zip",
+        "name": "The United States Constitution.zip",
+        "relativePath": "books_documents/The United States Constitution.zip",
+        "category": "books_documents",
+        "subcategory": "American Founding",
+        "type": "htmlbook",
+        "size": 536360,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "The foundational charter of the United States federal government, defining its branches, powers, limits, amendment process, and relationship to the states."
+      },
+      {
+        "id": "books_documents/the writings of thomas paine.zip",
+        "name": "The Writings of Thomas Paine.zip",
+        "relativePath": "books_documents/The Writings of Thomas Paine.zip",
+        "category": "books_documents",
+        "subcategory": "American Founding",
+        "type": "htmlbook",
+        "size": 3832744,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A collection of Thomas Paine's political writings on independence, republican government, rights, revolution, religion, and social reform."
+      },
+      {
+        "id": "books_documents/paradise lost.zip",
+        "name": "Paradise Lost.zip",
+        "relativePath": "books_documents/Paradise Lost.zip",
+        "category": "books_documents",
+        "subcategory": "Epic & Classical",
+        "type": "htmlbook",
+        "size": 468094,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "John Milton's epic poem about Satan's rebellion, the temptation of Adam and Eve, humanity's fall, and the possibility of redemption."
+      },
+      {
+        "id": "books_documents/the aeneid by virgil.zip",
+        "name": "The Aeneid by Virgil.zip",
+        "relativePath": "books_documents/The Aeneid by Virgil.zip",
+        "category": "books_documents",
+        "subcategory": "Epic & Classical",
+        "type": "htmlbook",
+        "size": 315896,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Virgil's Roman epic following the Trojan hero Aeneas through exile, war, duty, loss, and the legendary origins of Rome."
+      },
+      {
+        "id": "books_documents/the iliad.zip",
+        "name": "The Iliad.zip",
+        "relativePath": "books_documents/The Iliad.zip",
+        "category": "books_documents",
+        "subcategory": "Epic & Classical",
+        "type": "htmlbook",
+        "size": 2023782,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Homer's epic of the Trojan War centered on Achilles' anger, honor, grief, and conflict with Agamemnon near the war's end."
+      },
+      {
+        "id": "books_documents/the odyssey.zip",
+        "name": "The Odyssey.zip",
+        "relativePath": "books_documents/The Odyssey.zip",
+        "category": "books_documents",
+        "subcategory": "Epic & Classical",
+        "type": "htmlbook",
+        "size": 553177,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Homer's epic of Odysseus' long voyage home from Troy, his encounters with danger and temptation, and his return to Ithaca."
+      },
+      {
+        "id": "books_documents/adventures of huckleberry finn.zip",
+        "name": "Adventures of Huckleberry Finn.zip",
+        "relativePath": "books_documents/Adventures of Huckleberry Finn.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 15593927,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Mark Twain's novel following Huck Finn and Jim down the Mississippi, using their journey to examine freedom, conscience, friendship, and American racism."
+      },
+      {
+        "id": "books_documents/moby-dick.zip",
+        "name": "Moby-Dick.zip",
+        "relativePath": "books_documents/Moby-Dick.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 804416,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Herman Melville's novel of Ishmael, Captain Ahab, and the Pequod's obsessive pursuit of a white whale, blending adventure with philosophical reflection."
+      },
+      {
+        "id": "books_documents/the call of the wild by jack london.zip",
+        "name": "The call of the wild by Jack London.zip",
+        "relativePath": "books_documents/The call of the wild by Jack London.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 420455,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Jack London's adventure novel about Buck, a domesticated dog forced into Yukon sled life who gradually answers the pull of the wild."
+      },
+      {
+        "id": "books_documents/the great gatsby.zip",
+        "name": "The Great Gatsby.zip",
+        "relativePath": "books_documents/The Great Gatsby.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 892761,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "F. Scott Fitzgerald's novel of Jay Gatsby's pursuit of Daisy Buchanan, seen through Nick Carraway amid wealth, longing, and disillusionment."
+      },
+      {
+        "id": "books_documents/the jungle by upton sinclair.zip",
+        "name": "The Jungle by Upton Sinclair.zip",
+        "relativePath": "books_documents/The Jungle by Upton Sinclair.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 625639,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Upton Sinclair's novel following an immigrant family through exploitation in Chicago's meatpacking industry and the harsh conditions of industrial labor."
+      },
+      {
+        "id": "books_documents/the life of frederick douglass.zip",
+        "name": "The Life of Frederick Douglass.zip",
+        "relativePath": "books_documents/The Life of Frederick Douglass.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 190046,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Frederick Douglass's autobiographical account of enslavement, literacy, resistance, escape, and his development as an abolitionist."
+      },
+      {
+        "id": "books_documents/the works of edgar allan poe.zip",
+        "name": "The Works of Edgar Allan Poe.zip",
+        "relativePath": "books_documents/The Works of Edgar Allan Poe.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 1680066,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A collection of Edgar Allan Poe's poems, tales, and essays, ranging across Gothic horror, mystery, satire, grief, and psychological suspense."
+      },
+      {
+        "id": "books_documents/walden, and on the duty of civil disobedience.zip",
+        "name": "Walden, and On The Duty Of Civil Disobedience.zip",
+        "relativePath": "books_documents/Walden, and On The Duty Of Civil Disobedience.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 928950,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Henry David Thoreau's reflections on simple living at Walden Pond, paired with his argument for resisting government actions that violate conscience."
+      },
+      {
+        "id": "books_documents/white fang by jack london.zip",
+        "name": "White Fang by Jack London.zip",
+        "relativePath": "books_documents/White Fang by Jack London.zip",
+        "category": "books_documents",
+        "subcategory": "American Literature",
+        "type": "htmlbook",
+        "size": 739414,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Jack London's novel tracing a wolf-dog's harsh life in the Yukon and his gradual transformation through human cruelty, survival, and kindness."
+      },
+      {
+        "id": "books_documents/aesop’s fables.zip",
+        "name": "Aesop’s fables.zip",
+        "relativePath": "books_documents/Aesop’s fables.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 352771,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A collection of brief animal tales traditionally attributed to Aesop, each using a simple story to convey a moral or practical lesson."
+      },
+      {
+        "id": "books_documents/anna karenina by leo tolstoy.zip",
+        "name": "Anna Karenina by Leo Tolstoy.zip",
+        "relativePath": "books_documents/Anna Karenina by Leo Tolstoy.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 1004084,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Tolstoy's novel interweaving Anna's tragic affair with Levin's search for meaning, examining family, society, love, work, and moral responsibility."
+      },
+      {
+        "id": "books_documents/crime and punishment, dostoyevsky.zip",
+        "name": "Crime and Punishment, Dostoyevsky.zip",
+        "relativePath": "books_documents/Crime and Punishment, Dostoyevsky.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 698948,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Dostoevsky's psychological novel about Raskolnikov, a poor student whose murder leads to guilt, investigation, moral conflict, and the possibility of redemption."
+      },
+      {
+        "id": "books_documents/the complete works of william shakespeare.zip",
+        "name": "The Complete Works of William Shakespeare.zip",
+        "relativePath": "books_documents/The Complete Works of William Shakespeare.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 2798445,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A collected edition of Shakespeare's plays and poetry, including comedies, histories, tragedies, sonnets, and longer poems."
+      },
+      {
+        "id": "books_documents/the count of monte cristo.zip",
+        "name": "The Count of Monte Cristo.zip",
+        "relativePath": "books_documents/The Count of Monte Cristo.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 106278875,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Alexandre Dumas's adventure novel about Edmond Dantès, whose wrongful imprisonment, escape, fortune, and elaborate revenge reshape many lives."
+      },
+      {
+        "id": "books_documents/the mysterious island by jules verne.zip",
+        "name": "The Mysterious Island by Jules Verne.zip",
+        "relativePath": "books_documents/The Mysterious Island by Jules Verne.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 489935,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Jules Verne's adventure novel about Civil War escapees using science and ingenuity to survive on an isolated island with a hidden mystery."
+      },
+      {
+        "id": "books_documents/ulysses by james joyce.zip",
+        "name": "Ulysses by James Joyce.zip",
+        "relativePath": "books_documents/Ulysses by James Joyce.zip",
+        "category": "books_documents",
+        "subcategory": "World Literature",
+        "type": "htmlbook",
+        "size": 2895011,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "James Joyce's modernist novel following Leopold Bloom, Stephen Dedalus, and Molly Bloom through one day in Dublin using many shifting literary styles."
+      },
+      {
+        "id": "books_documents/autobiography of benjamin franklin.zip",
+        "name": "Autobiography of Benjamin Franklin.zip",
+        "relativePath": "books_documents/Autobiography of Benjamin Franklin.zip",
+        "category": "books_documents",
+        "subcategory": "Biography & History",
+        "type": "htmlbook",
+        "size": 4619396,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Benjamin Franklin's unfinished account of his early life, work, civic projects, habits of self-improvement, and rise in colonial America."
+      },
+      {
+        "id": "books_documents/the art of war by sun tzu.zip",
+        "name": "The Art of War by Sun Tzu.zip",
+        "relativePath": "books_documents/The Art of War by Sun Tzu.zip",
+        "category": "books_documents",
+        "subcategory": "Biography & History",
+        "type": "htmlbook",
+        "size": 192469,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An ancient Chinese treatise on strategy, leadership, intelligence, preparation, deception, terrain, and winning conflicts efficiently."
+      },
+      {
+        "id": "books_documents/the history of the decline and fall of the roman empire by edward gibbon.zip",
+        "name": "The History of the Decline and Fall of the Roman Empire by Edward Gibbon.zip",
+        "relativePath": "books_documents/The History of the Decline and Fall of the Roman Empire by Edward Gibbon.zip",
+        "category": "books_documents",
+        "subcategory": "Biography & History",
+        "type": "htmlbook",
+        "size": 20543764,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "Edward Gibbon's large historical work tracing the Roman Empire's decline from the second century through Byzantium and the fall of Constantinople."
+      },
+      {
+        "id": "books_documents/how it works by archibald williams.zip",
+        "name": "How it Works by Archibald Williams.zip",
+        "relativePath": "books_documents/How it Works by Archibald Williams.zip",
+        "category": "books_documents",
+        "subcategory": "Practical & Science",
+        "type": "htmlbook",
+        "size": 9613518,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "An illustrated early twentieth-century introduction to the mechanisms behind engines, electricity, transport, communications, tools, and everyday technologies."
+      },
+      {
+        "id": "books_documents/on the origin of species by means of natural selection by charles darwin.zip",
+        "name": "On the Origin of Species By Means of Natural Selection by Charles Darwin.zip",
+        "relativePath": "books_documents/On the Origin of Species By Means of Natural Selection by Charles Darwin.zip",
+        "category": "books_documents",
+        "subcategory": "Practical & Science",
+        "type": "htmlbook",
+        "size": 415825,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Charles Darwin's foundational argument that species change over generations through natural selection acting on heritable variation."
+      },
+      {
+        "id": "books_documents/the age of invention - a chronicle of mechanical conquest.zip",
+        "name": "The Age of Invention - A Chronicle of Mechanical Conquest.zip",
+        "relativePath": "books_documents/The Age of Invention - A Chronicle of Mechanical Conquest.zip",
+        "category": "books_documents",
+        "subcategory": "Practical & Science",
+        "type": "htmlbook",
+        "size": 216712,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A historical survey of American inventors and technologies that shaped industrial development, transportation, communication, manufacturing, and daily life."
+      },
+      {
+        "id": "books_documents/the mechanical properties of wood by samuel j. record.zip",
+        "name": "The Mechanical Properties of Wood by Samuel J. Record.zip",
+        "relativePath": "books_documents/The Mechanical Properties of Wood by Samuel J. Record.zip",
+        "category": "books_documents",
+        "subcategory": "Practical & Science",
+        "type": "htmlbook",
+        "size": 2632105,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A technical reference on wood structure and mechanical behavior, including strength, elasticity, moisture, defects, testing, and factors affecting performance."
+      },
+      {
+        "id": "books_documents/the wealth of nations by adam smith.zip",
+        "name": "The Wealth of Nations by Adam Smith.zip",
+        "relativePath": "books_documents/The Wealth of Nations by Adam Smith.zip",
+        "category": "books_documents",
+        "subcategory": "Practical & Science",
+        "type": "htmlbook",
+        "size": 1811910,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "Adam Smith's study of production, trade, labor, markets, taxation, public institutions, and the forces he believed shape national prosperity."
+      },
+      {
+        "id": "books_documents/anecdotes for boys by harvey newcomb.zip",
+        "name": "Anecdotes for boys by Harvey Newcomb.zip",
+        "relativePath": "books_documents/Anecdotes for boys by Harvey Newcomb.zip",
+        "category": "books_documents",
+        "subcategory": "Children's & Youth",
+        "type": "htmlbook",
+        "size": 765041,
+        "availableInTiers": [
+          "complete"
+        ],
+        "minimumTier": "complete",
+        "requiredPack": "complete",
+        "summary": "A nineteenth-century collection of short moral anecdotes for boys, intended to illustrate character, habits, choices, and religious virtues."
+      },
+      {
+        "id": "books_documents/boy scouts handbook (1911).zip",
+        "name": "Boy Scouts Handbook (1911).zip",
+        "relativePath": "books_documents/Boy Scouts Handbook (1911).zip",
+        "category": "books_documents",
+        "subcategory": "Children's & Youth",
+        "type": "htmlbook",
+        "size": 8392969,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "The early Boy Scouts of America handbook covering organization, citizenship, campcraft, knots, tracking, first aid, nature study, and outdoor skills of its era."
+      },
+      {
+        "id": "books_documents/grimms' fairy tales.zip",
+        "name": "Grimms' Fairy Tales.zip",
+        "relativePath": "books_documents/Grimms' Fairy Tales.zip",
+        "category": "books_documents",
+        "subcategory": "Children's & Youth",
+        "type": "htmlbook",
+        "size": 265445,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "A collection of traditional German folktales gathered by the Brothers Grimm, featuring magic, danger, cleverness, transformation, and moral consequences."
+      },
+      {
+        "id": "books_documents/peter pan.zip",
+        "name": "Peter Pan.zip",
+        "relativePath": "books_documents/Peter Pan.zip",
+        "category": "books_documents",
+        "subcategory": "Children's & Youth",
+        "type": "htmlbook",
+        "size": 356181,
+        "availableInTiers": [
+          "lite",
+          "complete"
+        ],
+        "minimumTier": "lite",
+        "requiredPack": "essentials",
+        "summary": "J. M. Barrie's fantasy about Wendy, John, and Michael Darling joining Peter Pan in Neverland for adventures with the Lost Boys, fairies, and pirates."
+      }
+    ]
+  }
+}

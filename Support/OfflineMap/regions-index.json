@@ -1,0 +1,100 @@
+{
+  "regions": [
+    {
+      "id": "northeast",
+      "displayName": "Northeast",
+      "states": ["ME", "NH", "VT", "MA", "RI", "CT"],
+      "bounds": [-73.8, 40.9, -66.8, 47.6],
+      "sizeBytes": 557246264,
+      "maxZoom": 14
+    },
+    {
+      "id": "mid-atlantic",
+      "displayName": "Mid-Atlantic",
+      "states": ["NY", "NJ", "PA", "DE", "MD", "DC", "VA", "WV"],
+      "bounds": [-83.9, 36.4, -71.7, 45.2],
+      "sizeBytes": 1606831778,
+      "maxZoom": 14
+    },
+    {
+      "id": "southeast",
+      "displayName": "Southeast",
+      "states": ["NC", "SC", "GA", "AL", "MS", "TN", "KY"],
+      "bounds": [-91.8, 30.1, -75.3, 39.3],
+      "sizeBytes": 1668219280,
+      "maxZoom": 14
+    },
+    {
+      "id": "florida-gulf",
+      "displayName": "Florida & Gulf Coast",
+      "states": ["FL", "LA"],
+      "bounds": [-94.2, 24.2, -79.8, 33.2],
+      "sizeBytes": 927041017,
+      "maxZoom": 14
+    },
+    {
+      "id": "great-lakes",
+      "displayName": "Great Lakes",
+      "states": ["OH", "MI", "IN", "IL", "WI", "MN"],
+      "bounds": [-97.4, 38.2, -80.3, 49.5],
+      "sizeBytes": 1883036603,
+      "maxZoom": 14
+    },
+    {
+      "id": "plains",
+      "displayName": "Plains",
+      "states": ["IA", "MO", "ND", "SD", "NE", "KS", "OK"],
+      "bounds": [-104.3, 35.8, -89.0, 49.2],
+      "sizeBytes": 1211876476,
+      "maxZoom": 14
+    },
+    {
+      "id": "texas-south-central",
+      "displayName": "Texas & South Central",
+      "states": ["TX", "AR"],
+      "bounds": [-106.8, 25.6, -89.4, 36.7],
+      "sizeBytes": 882009400,
+      "maxZoom": 14
+    },
+    {
+      "id": "mountain-west",
+      "displayName": "Mountain West",
+      "states": ["CO", "WY", "MT", "ID", "UT"],
+      "bounds": [-117.5, 36.8, -102.0, 49.2],
+      "sizeBytes": 875230869,
+      "maxZoom": 14
+    },
+    {
+      "id": "southwest",
+      "displayName": "Southwest",
+      "states": ["AZ", "NM", "NV"],
+      "bounds": [-120.3, 31.1, -102.8, 42.2],
+      "sizeBytes": 1107180414,
+      "maxZoom": 14
+    },
+    {
+      "id": "california",
+      "displayName": "California",
+      "states": ["CA"],
+      "bounds": [-124.7, 32.3, -113.9, 42.2],
+      "sizeBytes": 643941528,
+      "maxZoom": 14
+    },
+    {
+      "id": "pacific-northwest",
+      "displayName": "Pacific Northwest",
+      "states": ["OR", "WA"],
+      "bounds": [-125.0, 41.8, -116.2, 49.2],
+      "sizeBytes": 521469987,
+      "maxZoom": 14
+    },
+    {
+      "id": "alaska-hawaii",
+      "displayName": "Alaska & Hawaii",
+      "states": ["AK", "HI"],
+      "bounds": [-180.0, 18.7, -129.7, 71.6],
+      "sizeBytes": 778306496,
+      "maxZoom": 14
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+jquery-bridget v2.0.1
+Tagged package.json fields:
+  "name": "jquery-bridget"
+  "version": "2.0.1"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/**
+ * Bridget makes jQuery widgets
+ * v2.0.1
+ * MIT license
+ */
+
+ev-emitter v1.1.0
+Tagged package.json fields:
+  "name": "ev-emitter"
+  "version": "1.1.0"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/**
+ * EvEmitter v1.1.0
+ * Lil' event emitter
+ * MIT License
+ */
+
+get-size v2.0.3
+Tagged package.json fields:
+  "name": "get-size"
+  "version": "2.0.3"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/*!
+ * getSize v2.0.3
+ * measure size of elements
+ * MIT license
+ */
+
+matches-selector v2.0.2
+Tagged package.json fields:
+  "name": "desandro-matches-selector"
+  "version": "2.0.2"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/**
+ * matchesSelector v2.0.2
+ * matchesSelector( element, '.selector' )
+ * MIT license
+ */
+
+fizzy-ui-utils v2.0.7
+Tagged package.json fields:
+  "name": "fizzy-ui-utils"
+  "version": "2.0.7"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/**
+ * Fizzy UI utils v2.0.7
+ * MIT license
+ */
+
+outlayer v2.1.1
+Tagged package.json fields:
+  "name": "outlayer"
+  "version": "2.1.1"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/*!
+ * Outlayer v2.1.1
+ * the brains and guts of a layout library
+ * MIT license
+ */
+
+masonry-layout v4.2.1
+Tagged package.json fields:
+  "name": "masonry-layout"
+  "version": "4.2.1"
+  "author": "David DeSandro"
+  "license": "MIT"
+Tagged source header:
+/*!
+ * Masonry v4.2.1
+ * Cascading grid layout library
+ * https://masonry.desandro.com
+ * MIT License
+ * by David DeSandro
+ */

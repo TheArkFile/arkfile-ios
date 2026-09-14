@@ -1,0 +1,413 @@
+THIRD-PARTY SOFTWARE NOTICES AND LICENSE REFERENCES
+===================================================
+
+This document identifies third-party software and assets in the current
+ArkFile iOS source line. Direct-package notices are preserved below. The
+ArkFile-controlled CoreKiwix build is also mapped component-by-component to
+the full notices retained under Dependencies/CoreKiwixNativeNotices in the
+matching public source release.
+
+The controlled recipe and notice inventory are present for CoreKiwix
+14.2.0+arkfile.1. One verified source-and-relink archive contains its framework,
+corresponding source, build inputs, notices, and relink material; it is bound to
+the source lock, build manifest, SPDX SBOM, and object map. For external
+TestFlight or App Store distribution, that archive is published once per exact
+native build in TheArkFile/arkfile-ios and recorded by URL and SHA-256 in each
+matching app source release. This engineering inventory does not claim owner or
+counsel approval of legal sufficiency.
+
+The ArkFile app and its Kiwix-derived application code are distributed under
+the GNU General Public License version 3 or later. The complete GPL version 3
+text is available offline under App License.
+
+
+-------------------------------------------------------------------
+KIWIX / COREKIWIX NATIVE STACK
+
+Kiwix Apple
+Source base: 46f2e8655dfcbab069a1718b185e887473dd2de1
+Copyright (C) Kiwix contributors
+License: GNU General Public License version 3 or later
+https://github.com/kiwix/kiwix-apple
+
+CoreKiwix 14.2.0+arkfile.1 / libkiwix 14.2.0
+Controlled build recipe: kiwix-build r_103 at
+23200d831c6070b3c90d5da78c05887b70f0d831 plus the SHA-256-locked ArkFile
+recipe diff and inputs in Dependencies/CoreKiwixNativeBuildRecipe.lock.json
+libkiwix source tag commit: 30adab733771835f25697e4f2ea18dc2eec4e92d
+Copyright (C) Kiwix contributors
+License: GNU General Public License version 3 or later
+https://github.com/kiwix/libkiwix/tree/14.2.0
+
+Controlled CoreKiwix notice map
+Base path: Dependencies/CoreKiwixNativeNotices/
+Machine-readable provenance and hashes: index.json
+
+kiwix-build r_103 (build-only):
+  kiwix-build-LICENSE-GPL-3.0.txt
+libkiwix 14.2.0:
+  libkiwix-COPYING-GPL-3.0.txt; libkiwix-AUTHORS.txt
+libzim 9.6.0 and embedded lrucache:
+  libzim-COPYING-GPL-2.0.txt; libzim-AUTHORS.txt;
+  libzim-lrucache-BSD-3-Clause.txt
+zlib 1.3.1: zlib-LICENSE-Zlib.txt
+Zstandard 1.5.7:
+  zstd-LICENSE-BSD-3-Clause.txt; zstd-COPYING-GPL-2.0.txt
+XZ Utils/liblzma 5.2.6:
+  xz-COPYING.txt; xz-AUTHORS.txt; xz-COPYING-GPL-2.0.txt;
+  xz-COPYING-GPL-3.0.txt; xz-COPYING-LGPL-2.1.txt
+Xapian 1.4.23:
+  xapian-COPYING-GPL-2.0.txt; xapian-AUTHORS.txt;
+  xapian-MIT-constinfo.txt; xapian-BSD-steminternal.txt;
+  xapian-BSL-intrusive_ptr.txt; xapian-UnicodeData-LICENSE.txt
+curl 8.4.0: curl-COPYING.txt
+ICU 73.2: icu-LICENSE-composite.txt
+GNU libmicrohttpd 0.9.76:
+  libmicrohttpd-COPYING-LGPL-2.1.txt; libmicrohttpd-AUTHORS.txt
+pugixml 1.15: pugixml-LICENSE-MIT.txt
+kainjow Mustache 4.1: mustache-cpp-LICENSE-BSL-1.0.txt
+autoComplete embedded asset: autoComplete-LICENSE-Apache-2.0.txt
+libkiwix lrucache: libkiwix-lrucache-BSD-3-Clause.txt
+libkiwix base64: libkiwix-base64-Nyffenegger-Zlib.txt
+Isotope 3.0.6 and bundled jquery-bridget 2.0.1, ev-emitter 1.1.0,
+get-size 2.0.3, matches-selector 2.0.2, fizzy-ui-utils 2.0.7,
+outlayer 2.1.1, and Masonry 4.2.1:
+  libkiwix-COPYING-GPL-3.0.txt; libkiwix-isotope-attributions.txt;
+  isotope-bundled-mit-tagged-attributions.txt; spdx-MIT-template.txt
+mustache.js 4.2.0:
+  libkiwix-mustache-js-identity.txt; mustache-js-LICENSE-MIT.txt
+DM Sans:
+  libkiwix-font-metadata-attributions.txt; dm-sans-LICENSE-OFL-1.1.txt
+Poppins:
+  libkiwix-font-metadata-attributions.txt; poppins-LICENSE-OFL-1.1.txt
+Roboto 2.137:
+  libkiwix-font-metadata-attributions.txt; autoComplete-LICENSE-Apache-2.0.txt
+Meson wrap-generated build files (build-only): meson-wrap-LICENSE-MIT.txt
+
+The exact Isotope dependency tags do not include standalone license files.
+Their tagged MIT declarations, David DeSandro author attributions, and source
+headers are therefore paired with the canonical MIT text from immutable SPDX
+License List v3.28.0. The font metadata file preserves the attribution inside
+the exact embedded binaries; the pinned upstream OFL files provide the full
+license terms.
+
+libzim / openZIM 9.6.0
+Source tag commit: 8e51607a1866f9a2ec6eb428b136c5184974afe7
+Copyright (C) openZIM contributors
+License: GNU General Public License version 2 or later
+https://github.com/openzim/libzim/tree/9.6.0
+
+Xapian 1.4.23
+Copyright (C) Xapian contributors
+License: GNU General Public License version 2 or later
+https://xapian.org
+
+ICU 73.2
+Copyright © 1991-2023 Unicode, Inc. All rights reserved.
+License: Unicode License v3 plus third-party notices in the matching source
+https://github.com/unicode-org/icu/tree/release-73-2
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright © 1991-2023 Unicode, Inc. All rights reserved.
+Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the Unicode data files and any associated documentation (the "Data Files")
+or Unicode software and any associated documentation (the "Software") to deal
+in the Data Files or Software without restriction, including without
+limitation the rights to use, copy, modify, merge, publish, distribute, and/or
+sell copies of the Data Files or Software, and to permit persons to whom the
+Data Files or Software are furnished to do so, provided that either (a) this
+copyright and permission notice appear with all copies of the Data Files or
+Software, or (b) this copyright and permission notice appear in associated
+Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD
+PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN
+THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
+OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA FILES OR
+SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in these Data Files or Software without prior written authorization of the
+copyright holder.
+
+
+-------------------------------------------------------------------
+ADDITIONAL NATIVE LIBRARIES IDENTIFIED IN COREKIWIX
+
+curl 8.4.0
+Copyright (c) 1996-2023, Daniel Stenberg and contributors
+License: curl license
+https://curl.se/docs/copyright.html
+
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright
+notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization of the copyright holder.
+
+GNU libmicrohttpd 0.9.76
+Copyright (C) 2006-2021 Christian Grothoff and contributing authors
+Copyright (C) 2014-2021 Evgeny Grin
+License: GNU Lesser General Public License version 2.1 or later
+https://www.gnu.org/software/libmicrohttpd/
+
+zlib 1.3.1
+Copyright (C) 1995-2024 Jean-loup Gailly and Mark Adler
+License: Zlib
+
+This software is provided 'as-is', without any express or implied warranty. In
+no event will the authors be held liable for any damages arising from the use
+of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a
+   product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+pugixml 1.15
+Copyright (c) 2006-2025 Arseny Kapoulkine
+Copyright (c) 2003 Kristen Wegner
+License: MIT
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+kainjow Mustache 4.1
+Copyright 2015-2020 Kevin Wojniak
+License: Boost Software License 1.0
+
+Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of the software and accompanying documentation covered by
+this license (the "Software") to use, reproduce, display, distribute, execute,
+and transmit the Software, and to prepare derivative works of the Software,
+and to permit third-parties to whom the Software is furnished to do so, all
+subject to the following:
+
+The copyright notices in the Software and this entire statement, including the
+above license grant, this restriction and the following disclaimer, must be
+included in all copies of the Software, in whole or in part, and all derivative
+works of the Software, unless such copies or derivative works are solely in the
+form of machine-executable object code generated by a source language
+processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY
+DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+Zstandard 1.5.7
+Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
+License option used for this notice: BSD 3-Clause
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. Neither the name Facebook, nor Meta, nor the names of its contributors may
+   be used to endorse or promote products derived from this software without
+   specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+liblzma / XZ Utils 5.2.6
+The exported API headers identify liblzma as a public-domain compression
+library and place those headers in the public domain. Matching XZ Utils source
+notices remain the controlling evidence for the complete library build.
+https://tukaani.org/xz/
+
+
+-------------------------------------------------------------------
+PINNED SWIFT PACKAGES SHIPPED IN THE IOS TARGET
+
+Defaults 8.2.0
+Revision: 38925e3cfacf3fb89a81a35b1cd44fd5a5b7e0fa
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com>
+License: MIT
+https://github.com/sindresorhus/Defaults
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+ZIPFoundation 0.9.20
+Revision: 22787ffb59de99e5dc1fbfe80b19c97a904ad48d
+Copyright (c) 2017-2025 Thomas Zoechling
+License: MIT
+https://github.com/weichsel/ZIPFoundation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+MapLibre Native 6.14.0
+Wrapper revision: 60d9bb85c94ce6e7fc4406cd32529fd12bdb7809
+Copyright (c) 2021 MapLibre contributors
+Copyright (c) 2018-2021 MapTiler.com
+Copyright (c) 2014-2020 Mapbox
+License: BSD 2-Clause
+https://github.com/maplibre/maplibre-native
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+-------------------------------------------------------------------
+OFFLINE MAP STYLE AND FONT ASSETS
+
+Protomaps Basemaps style 5.7.2
+Source commit: 3ea8293a28131c3dc63f1bb20827bdb8a76df06f
+Copyright 2019-2023 Protomaps LLC, Kelso Cartography
+License: BSD 3-Clause
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The visual design of the Protomaps basemap styles was created by Geraldine
+Sarmiento for Protomaps LLC and released under CC0. Certain style assets may
+include derivatives of Mapzen icons under the MIT License. The exact frozen
+asset tree is identified in the bundled map manifest.
+
+Noto Fonts (offline map labels)
+Copyright 2022 The Noto Project Authors
+License: SIL Open Font License 1.1
+The complete OFL notice travels with the bundled font assets at
+base/assets/fonts/OFL.txt (source path:
+content/maps/base/assets/fonts/OFL.txt).
+
+Map data attribution is listed separately under Content & Data Attributions.
+
+
+-------------------------------------------------------------------
+PACKAGES PRESENT IN THE SHARED PROJECT BUT EXCLUDED FROM IOS
+
+StripeApplePay 25.7.2 and StripeCore 25.7.2
+Copyright (c) 2011- Stripe, Inc.
+License: MIT
+These packages are filtered to the macOS target in project.yml.
+
+Swift System
+Revision: b083113aef646d9d35403ca17e9789b750e42d1d
+Copyright (c) Apple Inc. and the Swift project authors
+License: Apache License 2.0 with Runtime Library Exception
+This package is filtered to the macOS target in project.yml.

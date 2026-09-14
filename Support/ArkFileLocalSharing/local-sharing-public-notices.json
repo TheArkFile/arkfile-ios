@@ -1,0 +1,2714 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "contentId": "books-documents/adventures-of-huckleberry-finn.zip",
+      "canonicalPath": "books_documents/adventures of huckleberry finn.zip",
+      "notice": {
+        "sourceTitle": "Adventures of Huckleberry Finn",
+        "creators": [
+          "Twain, Mark"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/76",
+        "attributionText": "Adventures of Huckleberry Finn by Twain, Mark; sourced from Project Gutenberg ebook 76. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/aesop-s-fables.zip",
+      "canonicalPath": "books_documents/aesop’s fables.zip",
+      "notice": {
+        "sourceTitle": "Three hundred Aesop’s fables Translated by George Fyler Townsend",
+        "creators": [
+          "Aesop"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/21",
+        "attributionText": "Three hundred Aesop’s fables Translated by George Fyler Townsend by Aesop; sourced from Project Gutenberg ebook 21. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/anecdotes-for-boys-by-harvey-newcomb.zip",
+      "canonicalPath": "books_documents/anecdotes for boys by harvey newcomb.zip",
+      "notice": {
+        "sourceTitle": "Anecdotes for boys",
+        "creators": [
+          "Newcomb, Harvey"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/25540",
+        "attributionText": "Anecdotes for boys by Newcomb, Harvey; sourced from Project Gutenberg ebook 25540. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/anna-karenina-by-leo-tolstoy.zip",
+      "canonicalPath": "books_documents/anna karenina by leo tolstoy.zip",
+      "notice": {
+        "sourceTitle": "Anna Karenina",
+        "creators": [
+          "Tolstoy, Leo, graf"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1399",
+        "attributionText": "Anna Karenina by Tolstoy, Leo, graf; sourced from Project Gutenberg ebook 1399. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/apology-by-plato.zip",
+      "canonicalPath": "books_documents/apology by plato.zip",
+      "notice": {
+        "sourceTitle": "Apology",
+        "creators": [
+          "Plato"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1656",
+        "attributionText": "Apology by Plato; sourced from Project Gutenberg ebook 1656. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/as-a-man-thinketh-by-james-allen.zip",
+      "canonicalPath": "books_documents/as a man thinketh by james allen.zip",
+      "notice": {
+        "sourceTitle": "As a man thinketh",
+        "creators": [
+          "Allen, James"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/4507",
+        "attributionText": "As a man thinketh by Allen, James; sourced from Project Gutenberg ebook 4507. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/autobiography-of-benjamin-franklin.zip",
+      "canonicalPath": "books_documents/autobiography of benjamin franklin.zip",
+      "notice": {
+        "sourceTitle": "Autobiography of Benjamin Franklin",
+        "creators": [
+          "Franklin, Benjamin"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/20203",
+        "attributionText": "Autobiography of Benjamin Franklin by Franklin, Benjamin; sourced from Project Gutenberg ebook 20203. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/beyond-good-and-evil-by-nietzsche.zip",
+      "canonicalPath": "books_documents/beyond good and evil by nietzsche.zip",
+      "notice": {
+        "sourceTitle": "Beyond Good and Evil",
+        "creators": [
+          "Nietzsche, Friedrich Wilhelm"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/4363",
+        "attributionText": "Beyond Good and Evil by Nietzsche, Friedrich Wilhelm; sourced from Project Gutenberg ebook 4363. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/book-of-mormon.zip",
+      "canonicalPath": "books_documents/book of mormon.zip",
+      "notice": {
+        "sourceTitle": "The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi",
+        "creators": [
+          "Smith, Joseph, Jr.",
+          "Church of Jesus Christ of Latter-day Saints"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/17",
+        "attributionText": "The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi by Smith, Joseph, Jr., Church of Jesus Christ of Latter-day Saints; sourced from Project Gutenberg ebook 17. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/boy-scouts-handbook-1911-.zip",
+      "canonicalPath": "books_documents/boy scouts handbook (1911).zip",
+      "notice": {
+        "sourceTitle": "Boy Scouts Handbook The First Edition, 1911",
+        "creators": [
+          "Boy Scouts of America"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/29558",
+        "attributionText": "Boy Scouts Handbook The First Edition, 1911 by Boy Scouts of America; sourced from Project Gutenberg ebook 29558. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/crime-and-punishment-dostoyevsky.zip",
+      "canonicalPath": "books_documents/crime and punishment, dostoyevsky.zip",
+      "notice": {
+        "sourceTitle": "Crime and Punishment",
+        "creators": [
+          "Dostoyevsky, Fyodor"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/2554",
+        "attributionText": "Crime and Punishment by Dostoyevsky, Fyodor; sourced from Project Gutenberg ebook 2554. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/grimms-fairy-tales.zip",
+      "canonicalPath": "books_documents/grimms' fairy tales.zip",
+      "notice": {
+        "sourceTitle": "Grimms' Fairy Tales",
+        "creators": [
+          "Grimm, Jacob",
+          "Grimm, Wilhelm"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/2591",
+        "attributionText": "Grimms' Fairy Tales by Grimm, Jacob, Grimm, Wilhelm; sourced from Project Gutenberg ebook 2591. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/how-it-works-by-archibald-williams.zip",
+      "canonicalPath": "books_documents/how it works by archibald williams.zip",
+      "notice": {
+        "sourceTitle": "How it Works Dealing in simple language with steam, electricity, light, heat, sound, hydraulics, optics, etc., and with their applications to apparatus in common use",
+        "creators": [
+          "Williams, Archibald"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/28553",
+        "attributionText": "How it Works Dealing in simple language with steam, electricity, light, heat, sound, hydraulics, optics, etc., and with their applications to apparatus in common use by Williams, Archibald; sourced from Project Gutenberg ebook 28553. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/king-james-bible.zip",
+      "canonicalPath": "books_documents/king james bible.zip",
+      "notice": {
+        "sourceTitle": "The King James Version of the Bible",
+        "creators": [],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/10",
+        "attributionText": "The King James Version of the Bible by ; sourced from Project Gutenberg ebook 10. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/lincoln-s-gettysburg-address.zip",
+      "canonicalPath": "books_documents/lincoln's gettysburg address.zip",
+      "notice": {
+        "sourceTitle": "Lincoln's Gettysburg Address Given November 19, 1863 on the battlefield near Gettysburg, Pennsylvania, USA",
+        "creators": [
+          "Lincoln, Abraham"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/4",
+        "attributionText": "Lincoln's Gettysburg Address Given November 19, 1863 on the battlefield near Gettysburg, Pennsylvania, USA by Lincoln, Abraham; sourced from Project Gutenberg ebook 4. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/moby-dick.zip",
+      "canonicalPath": "books_documents/moby-dick.zip",
+      "notice": {
+        "sourceTitle": "Moby-Dick; or, The Whale",
+        "creators": [
+          "Melville, Herman"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/15",
+        "attributionText": "Moby-Dick; or, The Whale by Melville, Herman; sourced from Project Gutenberg ebook 15. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/mysticism-and-logic-and-other-essays-by-bertrand-russell.zip",
+      "canonicalPath": "books_documents/mysticism and logic and other essays by bertrand russell.zip",
+      "notice": {
+        "sourceTitle": "Mysticism and Logic and Other Essays",
+        "creators": [
+          "Russell, Bertrand"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/25447",
+        "attributionText": "Mysticism and Logic and Other Essays by Russell, Bertrand; sourced from Project Gutenberg ebook 25447. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/on-liberty-by-john-stuart-mill.zip",
+      "canonicalPath": "books_documents/on liberty by john stuart mill.zip",
+      "notice": {
+        "sourceTitle": "On Liberty",
+        "creators": [
+          "Mill, John Stuart"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/34901",
+        "attributionText": "On Liberty by Mill, John Stuart; sourced from Project Gutenberg ebook 34901. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/on-the-origin-of-species-by-means-of-natural-selection-by-charles-darwin.zip",
+      "canonicalPath": "books_documents/on the origin of species by means of natural selection by charles darwin.zip",
+      "notice": {
+        "sourceTitle": "On the Origin of Species By Means of Natural Selection Or, the Preservation of Favoured Races in the Struggle for Life",
+        "creators": [
+          "Darwin, Charles"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1228",
+        "attributionText": "On the Origin of Species By Means of Natural Selection Or, the Preservation of Favoured Races in the Struggle for Life by Darwin, Charles; sourced from Project Gutenberg ebook 1228. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-algebra-and-trigonometry.zip",
+      "canonicalPath": "books_documents/openstax - algebra and trigonometry.zip",
+      "notice": {
+        "sourceTitle": "Algebra and Trigonometry",
+        "creators": [
+          "OpenStax CAT"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11758/algebra-and-trigonometry.epub",
+        "attributionText": "Algebra and Trigonometry by OpenStax CAT is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-american-government.zip",
+      "canonicalPath": "books_documents/openstax - american government.zip",
+      "notice": {
+        "sourceTitle": "American Government",
+        "creators": [
+          "OpenStax American Government"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11995/american-government.epub",
+        "attributionText": "American Government by OpenStax American Government is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-biology-2e.zip",
+      "canonicalPath": "books_documents/openstax - biology 2e.zip",
+      "notice": {
+        "sourceTitle": "Biology 2e",
+        "creators": [
+          "OpenStax Biology 2nd Edition"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col24361/biology-2e.epub",
+        "attributionText": "Biology 2e by OpenStax Biology 2nd Edition is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-biology-for-ap-courses.zip",
+      "canonicalPath": "books_documents/openstax - biology for ap courses.zip",
+      "notice": {
+        "sourceTitle": "Biology for AP Courses",
+        "creators": [
+          "OpenStax Biology for AP Courses"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12078/biology-for-ap-r-courses.epub",
+        "attributionText": "Biology for AP Courses by OpenStax Biology for AP Courses is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-chemistry-atoms-first.zip",
+      "canonicalPath": "books_documents/openstax - chemistry - atoms first.zip",
+      "notice": {
+        "sourceTitle": "Chemistry: Atoms First",
+        "creators": [
+          "OpenStax Chemistry: Atom First"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12012/chemistry-atoms-first.epub",
+        "attributionText": "Chemistry: Atoms First by OpenStax Chemistry: Atom First is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-chemistry.zip",
+      "canonicalPath": "books_documents/openstax - chemistry.zip",
+      "notice": {
+        "sourceTitle": "Chemistry",
+        "creators": [
+          "OpenStax Chemistry"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11760/chemistry.epub",
+        "attributionText": "Chemistry by OpenStax Chemistry is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-college-algebra.zip",
+      "canonicalPath": "books_documents/openstax - college algebra.zip",
+      "notice": {
+        "sourceTitle": "College Algebra",
+        "creators": [
+          "OpenStax College Algebra"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11759/college-algebra.epub",
+        "attributionText": "College Algebra by OpenStax College Algebra is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-college-physics.zip",
+      "canonicalPath": "books_documents/openstax - college physics.zip",
+      "notice": {
+        "sourceTitle": "College Physics",
+        "creators": [
+          "OpenStax / OSC Physics Maintainer"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11406/college-physics.epub",
+        "attributionText": "College Physics by OpenStax / OSC Physics Maintainer is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-college-success.zip",
+      "canonicalPath": "books_documents/openstax - college success.zip",
+      "notice": {
+        "sourceTitle": "College Success",
+        "creators": [
+          "OpenStax College Success"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col30990/cosu.epub",
+        "attributionText": "College Success by OpenStax College Success is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-elementary-algebra-2e.zip",
+      "canonicalPath": "books_documents/openstax - elementary algebra 2e.zip",
+      "notice": {
+        "sourceTitle": "Elementary Algebra 2e",
+        "creators": [
+          "OpenStax Elementary Algebra 2e"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col31130/elementary-algebra-2e-draft.epub",
+        "attributionText": "Elementary Algebra 2e by OpenStax Elementary Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-entrepreneurship.zip",
+      "canonicalPath": "books_documents/openstax - entrepreneurship.zip",
+      "notice": {
+        "sourceTitle": "Entrepreneurship",
+        "creators": [
+          "OpenStax Entrepreneurship ,OpenStax"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col29104/entrepreneurship-draft.epub",
+        "attributionText": "Entrepreneurship by OpenStax Entrepreneurship ,OpenStax is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-intermediate-algebra-2e.zip",
+      "canonicalPath": "books_documents/openstax - intermediate algebra 2e.zip",
+      "notice": {
+        "sourceTitle": "Intermediate Algebra 2e",
+        "creators": [
+          "OpenStax Intermediate Algebra 2e"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col31234/intermediate-algebra-2e.epub",
+        "attributionText": "Intermediate Algebra 2e by OpenStax Intermediate Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introduction-to-business.zip",
+      "canonicalPath": "books_documents/openstax - introduction to business.zip",
+      "notice": {
+        "sourceTitle": "Introduction to Business",
+        "creators": [
+          "OpenStax Introduction to Business"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col25734/introduction-to-business.epub",
+        "attributionText": "Introduction to Business by OpenStax Introduction to Business is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introduction-to-sociology-3e.zip",
+      "canonicalPath": "books_documents/openstax - introduction to sociology 3e.zip",
+      "notice": {
+        "sourceTitle": "Introduction to Sociology 3e",
+        "creators": [
+          "OpenStax ,First Last"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col32649/introduction-to-sociology-3e.epub",
+        "attributionText": "Introduction to Sociology 3e by OpenStax ,First Last is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introductory-business-statistics.zip",
+      "canonicalPath": "books_documents/openstax - introductory business statistics.zip",
+      "notice": {
+        "sourceTitle": "Introductory Business Statistics",
+        "creators": [
+          "OpenStax Business Statistics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11776/introductory-statistics.epub",
+        "attributionText": "Introductory Business Statistics by OpenStax Business Statistics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introductory-statistics.zip",
+      "canonicalPath": "books_documents/openstax - introductory statistics.zip",
+      "notice": {
+        "sourceTitle": "Introductory Statistics",
+        "creators": [
+          "OpenStax College"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11562/collaborative-statistics.epub",
+        "attributionText": "Introductory Statistics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-microbiology.zip",
+      "canonicalPath": "books_documents/openstax - microbiology.zip",
+      "notice": {
+        "sourceTitle": "Microbiology",
+        "creators": [
+          "OpenStax College Microbiology"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12087/microbiology.epub",
+        "attributionText": "Microbiology by OpenStax College Microbiology is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-physics.zip",
+      "canonicalPath": "books_documents/openstax - physics.zip",
+      "notice": {
+        "sourceTitle": "Physics",
+        "creators": [
+          "OpenStax College"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12081/hs-physics.epub",
+        "attributionText": "Physics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-prealgebra.zip",
+      "canonicalPath": "books_documents/openstax - prealgebra.zip",
+      "notice": {
+        "sourceTitle": "Prealgebra",
+        "creators": [
+          "OpenStax Developmental Math"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12157/prealgebra.epub",
+        "attributionText": "Prealgebra by OpenStax Developmental Math is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-precalculus.zip",
+      "canonicalPath": "books_documents/openstax - precalculus.zip",
+      "notice": {
+        "sourceTitle": "Precalculus",
+        "creators": [
+          "OpenStax College Precalculus"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11667/precalculus.epub",
+        "attributionText": "Precalculus by OpenStax College Precalculus is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-economics-2e.zip",
+      "canonicalPath": "books_documents/openstax - principles of economics 2e.zip",
+      "notice": {
+        "sourceTitle": "Principles of Economics 2e",
+        "creators": [
+          "OpenStax Economics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12122/principles-of-economics-2e-draft.epub",
+        "attributionText": "Principles of Economics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-macroeconomics-2e.zip",
+      "canonicalPath": "books_documents/openstax - principles of macroeconomics 2e.zip",
+      "notice": {
+        "sourceTitle": "Principles of Macroeconomics 2e",
+        "creators": [
+          "OpenStax Economics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12190/principles-of-macroeconomics-2e-draft.epub",
+        "attributionText": "Principles of Macroeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-microeconomics-2e.zip",
+      "canonicalPath": "books_documents/openstax - principles of microeconomics 2e.zip",
+      "notice": {
+        "sourceTitle": "Principles of Microeconomics 2e",
+        "creators": [
+          "OpenStax Economics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12170/principles-of-microeconomics-2e-draft.epub",
+        "attributionText": "Principles of Microeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-microeconomics-for-ap-courses.zip",
+      "canonicalPath": "books_documents/openstax - principles of microeconomics for ap courses.zip",
+      "notice": {
+        "sourceTitle": "Principles of Microeconomics for AP Courses",
+        "creators": [
+          "OpenStax College Principles of Economics for AP® Courses"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col11858/apecon.epub",
+        "attributionText": "Principles of Microeconomics for AP Courses by OpenStax College Principles of Economics for AP® Courses is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-psychology-2e.zip",
+      "canonicalPath": "books_documents/openstax - psychology 2e.zip",
+      "notice": {
+        "sourceTitle": "Psychology 2e",
+        "creators": [
+          "OpenStax Psychology"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col31502/psychology-2e.epub",
+        "attributionText": "Psychology 2e by OpenStax Psychology is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-statistics.zip",
+      "canonicalPath": "books_documents/openstax - statistics.zip",
+      "notice": {
+        "sourceTitle": "Statistics",
+        "creators": [
+          "OpenStax Statistics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col30309/hs-statistics.epub",
+        "attributionText": "Statistics by OpenStax Statistics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-university-physics.zip",
+      "canonicalPath": "books_documents/openstax - university physics.zip",
+      "notice": {
+        "sourceTitle": "University Physics",
+        "creators": [
+          "OpenStax University Physics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalURL": "https://archive.org/download/cnx-org-col12105/openstax-university-physics-all-volumes.epub",
+        "attributionText": "University Physics by OpenStax University Physics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "rightsSummary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions."
+      }
+    },
+    {
+      "contentId": "books-documents/paradise-lost.zip",
+      "canonicalPath": "books_documents/paradise lost.zip",
+      "notice": {
+        "sourceTitle": "Paradise Lost",
+        "creators": [
+          "Milton, John"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/20",
+        "attributionText": "Paradise Lost by Milton, John; sourced from Project Gutenberg ebook 20. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/pascal-s-pensees-by-blaise-pascal.zip",
+      "canonicalPath": "books_documents/pascal's pensées by blaise pascal.zip",
+      "notice": {
+        "sourceTitle": "Pascal's Pensées",
+        "creators": [
+          "Pascal, Blaise"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/18269",
+        "attributionText": "Pascal's Pensées by Pascal, Blaise; sourced from Project Gutenberg ebook 18269. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/peter-pan.zip",
+      "canonicalPath": "books_documents/peter pan.zip",
+      "notice": {
+        "sourceTitle": "Peter Pan : $b [Peter and Wendy]",
+        "creators": [
+          "Barrie, J. M. (James Matthew)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/16",
+        "attributionText": "Peter Pan : $b [Peter and Wendy] by Barrie, J. M. (James Matthew); sourced from Project Gutenberg ebook 16. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/politics-a-treatise-on-government-by-aristotle.zip",
+      "canonicalPath": "books_documents/politics,a treatise on government by aristotle.zip",
+      "notice": {
+        "sourceTitle": "Politics: A Treatise on Government",
+        "creators": [
+          "Aristotle"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/6762",
+        "attributionText": "Politics: A Treatise on Government by Aristotle; sourced from Project Gutenberg ebook 6762. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-aeneid-by-virgil.zip",
+      "canonicalPath": "books_documents/the aeneid by virgil.zip",
+      "notice": {
+        "sourceTitle": "The Aeneid",
+        "creators": [
+          "Virgil"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/228",
+        "attributionText": "The Aeneid by Virgil; sourced from Project Gutenberg ebook 228. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-age-of-invention-a-chronicle-of-mechanical-conquest.zip",
+      "canonicalPath": "books_documents/the age of invention - a chronicle of mechanical conquest.zip",
+      "notice": {
+        "sourceTitle": "The Age of Invention: A Chronicle of Mechanical Conquest",
+        "creators": [
+          "Thompson, Holland"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/2900",
+        "attributionText": "The Age of Invention: A Chronicle of Mechanical Conquest by Thompson, Holland; sourced from Project Gutenberg ebook 2900. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-art-of-war-by-sun-tzu.zip",
+      "canonicalPath": "books_documents/the art of war by sun tzu.zip",
+      "notice": {
+        "sourceTitle": "The Art of War",
+        "creators": [
+          "Sunzi, active 6th century B.C."
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/132",
+        "attributionText": "The Art of War by Sunzi, active 6th century B.C.; sourced from Project Gutenberg ebook 132. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-call-of-the-wild-by-jack-london.zip",
+      "canonicalPath": "books_documents/the call of the wild by jack london.zip",
+      "notice": {
+        "sourceTitle": "The call of the wild",
+        "creators": [
+          "London, Jack"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/215",
+        "attributionText": "The call of the wild by London, Jack; sourced from Project Gutenberg ebook 215. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-children-s-bible.zip",
+      "canonicalPath": "books_documents/the children's bible.zip",
+      "notice": {
+        "sourceTitle": "The Children's Bible",
+        "creators": [
+          "Sherman, Henry A.",
+          "Kent, Charles Foster"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/23580",
+        "attributionText": "The Children's Bible by Sherman, Henry A., Kent, Charles Foster; sourced from Project Gutenberg ebook 23580. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-communist-manifesto-by-karl-marx-and-friedrich-engels.zip",
+      "canonicalPath": "books_documents/the communist manifesto by karl marx and friedrich engels.zip",
+      "notice": {
+        "sourceTitle": "The Communist Manifesto",
+        "creators": [
+          "Marx, Karl",
+          "Engels, Friedrich"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/61",
+        "attributionText": "The Communist Manifesto by Marx, Karl, Engels, Friedrich; sourced from Project Gutenberg ebook 61. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-complete-works-of-william-shakespeare.zip",
+      "canonicalPath": "books_documents/the complete works of william shakespeare.zip",
+      "notice": {
+        "sourceTitle": "The Complete Works of William Shakespeare",
+        "creators": [
+          "Shakespeare, William"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/100",
+        "attributionText": "The Complete Works of William Shakespeare by Shakespeare, William; sourced from Project Gutenberg ebook 100. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-confessions-of-st.-augustine.zip",
+      "canonicalPath": "books_documents/the confessions of st. augustine.zip",
+      "notice": {
+        "sourceTitle": "The Confessions of St. Augustine",
+        "creators": [
+          "Augustine, of Hippo, Saint"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/3296",
+        "attributionText": "The Confessions of St. Augustine by Augustine, of Hippo, Saint; sourced from Project Gutenberg ebook 3296. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-count-of-monte-cristo.zip",
+      "canonicalPath": "books_documents/the count of monte cristo.zip",
+      "notice": {
+        "sourceTitle": "The Count of Monte Cristo",
+        "creators": [
+          "Dumas, Alexandre",
+          "Maquet, Auguste"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1184",
+        "attributionText": "The Count of Monte Cristo by Dumas, Alexandre, Maquet, Auguste; sourced from Project Gutenberg ebook 1184. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-critique-of-pure-reason-by-immanuel-kant.zip",
+      "canonicalPath": "books_documents/the critique of pure reason by immanuel kant.zip",
+      "notice": {
+        "sourceTitle": "The Critique of Pure Reason",
+        "creators": [
+          "Kant, Immanuel"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/4280",
+        "attributionText": "The Critique of Pure Reason by Kant, Immanuel; sourced from Project Gutenberg ebook 4280. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-declaration-of-independence.zip",
+      "canonicalPath": "books_documents/the declaration of independence.zip",
+      "notice": {
+        "sourceTitle": "The Declaration of Independence of the United States of America",
+        "creators": [
+          "Jefferson, Thomas"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1",
+        "attributionText": "The Declaration of Independence of the United States of America by Jefferson, Thomas; sourced from Project Gutenberg ebook 1. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-ethics-of-aristotle-by-aristotle.zip",
+      "canonicalPath": "books_documents/the ethics of aristotle by aristotle.zip",
+      "notice": {
+        "sourceTitle": "The Nicomachean ethics of Aristotle",
+        "creators": [
+          "Aristotle"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/8438",
+        "attributionText": "The Nicomachean ethics of Aristotle by Aristotle; sourced from Project Gutenberg ebook 8438. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-federalist-papers.zip",
+      "canonicalPath": "books_documents/the federalist papers.zip",
+      "notice": {
+        "sourceTitle": "The Federalist Papers",
+        "creators": [
+          "Hamilton, Alexander",
+          "Jay, John",
+          "Madison, James"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/18",
+        "attributionText": "The Federalist Papers by Hamilton, Alexander, Jay, John, Madison, James; sourced from Project Gutenberg ebook 18. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-great-gatsby.zip",
+      "canonicalPath": "books_documents/the great gatsby.zip",
+      "notice": {
+        "sourceTitle": "The Great Gatsby",
+        "creators": [
+          "Fitzgerald, F. Scott (Francis Scott)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/64317",
+        "attributionText": "The Great Gatsby by Fitzgerald, F. Scott (Francis Scott); sourced from Project Gutenberg ebook 64317. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-history-of-the-decline-and-fall-of-the-roman-empire-by-edward-gibbon.zip",
+      "canonicalPath": "books_documents/the history of the decline and fall of the roman empire by edward gibbon.zip",
+      "notice": {
+        "sourceTitle": "The History of the Decline and Fall of the Roman Empire Table of Contents with links in the HTML file to the two Project Gutenberg editions (12 volumes)",
+        "creators": [
+          "Gibbon, Edward"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/25717",
+        "attributionText": "The History of the Decline and Fall of the Roman Empire Table of Contents with links in the HTML file to the two Project Gutenberg editions (12 volumes) by Gibbon, Edward; sourced from Project Gutenberg ebook 25717. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-iliad.zip",
+      "canonicalPath": "books_documents/the iliad.zip",
+      "notice": {
+        "sourceTitle": "The Iliad",
+        "creators": [
+          "Homer"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/6130",
+        "attributionText": "The Iliad by Homer; sourced from Project Gutenberg ebook 6130. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-jungle-by-upton-sinclair.zip",
+      "canonicalPath": "books_documents/the jungle by upton sinclair.zip",
+      "notice": {
+        "sourceTitle": "The Jungle",
+        "creators": [
+          "Sinclair, Upton"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/140",
+        "attributionText": "The Jungle by Sinclair, Upton; sourced from Project Gutenberg ebook 140. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-koran-al-qur-an-.zip",
+      "canonicalPath": "books_documents/the koran (al-qur'an).zip",
+      "notice": {
+        "sourceTitle": "The Koran (Al-Qur'an)",
+        "creators": [],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/7440",
+        "attributionText": "The Koran (Al-Qur'an) by ; sourced from Project Gutenberg ebook 7440. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-life-of-buddha-and-its-lessons-by-henry-steel-olcott.zip",
+      "canonicalPath": "books_documents/the life of buddha and its lessons by henry steel olcott.zip",
+      "notice": {
+        "sourceTitle": "The Life of Buddha and Its Lessons",
+        "creators": [
+          "Olcott, Henry Steel"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/18194",
+        "attributionText": "The Life of Buddha and Its Lessons by Olcott, Henry Steel; sourced from Project Gutenberg ebook 18194. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-life-of-frederick-douglass.zip",
+      "canonicalPath": "books_documents/the life of frederick douglass.zip",
+      "notice": {
+        "sourceTitle": "Narrative of the Life of Frederick Douglass, an American Slave",
+        "creators": [
+          "Douglass, Frederick"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/23",
+        "attributionText": "Narrative of the Life of Frederick Douglass, an American Slave by Douglass, Frederick; sourced from Project Gutenberg ebook 23. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-mechanical-properties-of-wood-by-samuel-j.-record.zip",
+      "canonicalPath": "books_documents/the mechanical properties of wood by samuel j. record.zip",
+      "notice": {
+        "sourceTitle": "The Mechanical Properties of Wood Including a Discussion of the Factors Affecting the Mechanical Properties, and Methods of Timber Testing",
+        "creators": [
+          "Record, Samuel J. (Samuel James)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/12299",
+        "attributionText": "The Mechanical Properties of Wood Including a Discussion of the Factors Affecting the Mechanical Properties, and Methods of Timber Testing by Record, Samuel J. (Samuel James); sourced from Project Gutenberg ebook 12299. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-mysterious-island-by-jules-verne.zip",
+      "canonicalPath": "books_documents/the mysterious island by jules verne.zip",
+      "notice": {
+        "sourceTitle": "The Mysterious Island",
+        "creators": [
+          "Verne, Jules"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1268",
+        "attributionText": "The Mysterious Island by Verne, Jules; sourced from Project Gutenberg ebook 1268. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-odyssey.zip",
+      "canonicalPath": "books_documents/the odyssey.zip",
+      "notice": {
+        "sourceTitle": "The Odyssey Rendered into English prose for the use of those who cannot read the original",
+        "creators": [
+          "Homer"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1727",
+        "attributionText": "The Odyssey Rendered into English prose for the use of those who cannot read the original by Homer; sourced from Project Gutenberg ebook 1727. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-pilgrim-s-progress-by-john-bunyan.zip",
+      "canonicalPath": "books_documents/the pilgrim's progress by john bunyan.zip",
+      "notice": {
+        "sourceTitle": "The Pilgrim's Progress from this world to that which is to come Delivered under the similitude of a dream, by John Bunyan",
+        "creators": [
+          "Bunyan, John"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/131",
+        "attributionText": "The Pilgrim's Progress from this world to that which is to come Delivered under the similitude of a dream, by John Bunyan by Bunyan, John; sourced from Project Gutenberg ebook 131. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-republic-by-plato.zip",
+      "canonicalPath": "books_documents/the republic by plato.zip",
+      "notice": {
+        "sourceTitle": "The Republic",
+        "creators": [
+          "Plato"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/1497",
+        "attributionText": "The Republic by Plato; sourced from Project Gutenberg ebook 1497. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-simple-life-by-charles-wagner.zip",
+      "canonicalPath": "books_documents/the simple life by charles wagner.zip",
+      "notice": {
+        "sourceTitle": "The Simple Life",
+        "creators": [
+          "Wagner, Charles"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/23092",
+        "attributionText": "The Simple Life by Wagner, Charles; sourced from Project Gutenberg ebook 23092. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-united-states-bill-of-rights.zip",
+      "canonicalPath": "books_documents/the united states bill of rights.zip",
+      "notice": {
+        "sourceTitle": "The United States Bill of Rights The Ten Original Amendments to the Constitution of the United States",
+        "creators": [
+          "United States"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/2",
+        "attributionText": "The United States Bill of Rights The Ten Original Amendments to the Constitution of the United States by United States; sourced from Project Gutenberg ebook 2. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-united-states-constitution.zip",
+      "canonicalPath": "books_documents/the united states constitution.zip",
+      "notice": {
+        "sourceTitle": "The United States Constitution",
+        "creators": [
+          "United States"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/5",
+        "attributionText": "The United States Constitution by United States; sourced from Project Gutenberg ebook 5. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-wealth-of-nations-by-adam-smith.zip",
+      "canonicalPath": "books_documents/the wealth of nations by adam smith.zip",
+      "notice": {
+        "sourceTitle": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+        "creators": [
+          "Smith, Adam"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/3300",
+        "attributionText": "An Inquiry into the Nature and Causes of the Wealth of Nations by Smith, Adam; sourced from Project Gutenberg ebook 3300. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-works-of-edgar-allan-poe.zip",
+      "canonicalPath": "books_documents/the works of edgar allan poe.zip",
+      "notice": {
+        "sourceTitle": "The Works of Edgar Allan Poe, The Raven Edition Table Of Contents And Index Of The Five Volumes",
+        "creators": [
+          "Poe, Edgar Allan"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/25525",
+        "attributionText": "The Works of Edgar Allan Poe, The Raven Edition Table Of Contents And Index Of The Five Volumes by Poe, Edgar Allan; sourced from Project Gutenberg ebook 25525. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/the-writings-of-thomas-paine.zip",
+      "canonicalPath": "books_documents/the writings of thomas paine.zip",
+      "notice": {
+        "sourceTitle": "The Writings of Thomas Paine, Complete With Index to Volumes I - IV",
+        "creators": [
+          "Paine, Thomas"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/31270",
+        "attributionText": "The Writings of Thomas Paine, Complete With Index to Volumes I - IV by Paine, Thomas; sourced from Project Gutenberg ebook 31270. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/ulysses-by-james-joyce.zip",
+      "canonicalPath": "books_documents/ulysses by james joyce.zip",
+      "notice": {
+        "sourceTitle": "Ulysses",
+        "creators": [
+          "Joyce, James"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/4300",
+        "attributionText": "Ulysses by Joyce, James; sourced from Project Gutenberg ebook 4300. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/walden-and-on-the-duty-of-civil-disobedience.zip",
+      "canonicalPath": "books_documents/walden, and on the duty of civil disobedience.zip",
+      "notice": {
+        "sourceTitle": "Walden, and On The Duty Of Civil Disobedience",
+        "creators": [
+          "Thoreau, Henry David"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/205",
+        "attributionText": "Walden, and On The Duty Of Civil Disobedience by Thoreau, Henry David; sourced from Project Gutenberg ebook 205. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "books-documents/white-fang-by-jack-london.zip",
+      "canonicalPath": "books_documents/white fang by jack london.zip",
+      "notice": {
+        "sourceTitle": "White Fang",
+        "creators": [
+          "London, Jack"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/910",
+        "attributionText": "White Fang by London, Jack; sourced from Project Gutenberg ebook 910. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "bundled-sample/books_documents/meditations by marcus aurelius.zip",
+      "canonicalPath": "books_documents/meditations by marcus aurelius.zip",
+      "notice": {
+        "sourceTitle": "Meditations by Marcus Aurelius.zip",
+        "creators": [],
+        "publisher": null,
+        "canonicalURL": null,
+        "attributionText": "Meditations by Marcus Aurelius.zip. Preserve any source and attribution notices included with this item.",
+        "changesMade": "Bundled with ArkFile for offline use.",
+        "rightsSummary": "Consult the original source and any included license and attribution notices for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "bundled-sample/food-preparation/water/rainwater harvesting for army installations  (2010).pdf",
+      "canonicalPath": "food-preparation/water/rainwater harvesting for army installations  (2010).pdf",
+      "notice": {
+        "sourceTitle": "RAINWATER HARVESTING FOR ARMY INSTALLATIONS  (2010).pdf",
+        "creators": [],
+        "publisher": null,
+        "canonicalURL": null,
+        "attributionText": "RAINWATER HARVESTING FOR ARMY INSTALLATIONS  (2010).pdf. Preserve any source and attribution notices included with this item.",
+        "changesMade": "Bundled with ArkFile for offline use.",
+        "rightsSummary": "Consult the original source and any included license and attribution notices for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "bundled-sample/general/encyclopedias/wikipedia_en_100_nopic_2026-04.zim",
+      "canonicalPath": "general/encyclopedias/wikipedia_en_100_nopic_2026-04.zim",
+      "notice": {
+        "sourceTitle": "wikipedia_en_100_nopic_2026-04.zim",
+        "creators": [],
+        "publisher": null,
+        "canonicalURL": null,
+        "attributionText": "wikipedia_en_100_nopic_2026-04.zim. Preserve any source and attribution notices included with this item.",
+        "changesMade": "Bundled with ArkFile for offline use.",
+        "rightsSummary": "Consult the original source and any included license and attribution notices for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "bundled-sample/medical/reference/emergency childbirth by us office of civil defense.zip",
+      "canonicalPath": "medical/reference/emergency childbirth by us office of civil defense.zip",
+      "notice": {
+        "sourceTitle": "Emergency Childbirth by US Office of Civil Defense.zip",
+        "creators": [],
+        "publisher": null,
+        "canonicalURL": null,
+        "attributionText": "Emergency Childbirth by US Office of Civil Defense.zip. Preserve any source and attribution notices included with this item.",
+        "changesMade": "Bundled with ArkFile for offline use.",
+        "rightsSummary": "Consult the original source and any included license and attribution notices for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "bundled-sample/travel/maps-hawaii/hawaiian islands.jpg",
+      "canonicalPath": "travel/maps-hawaii/hawaiian islands.jpg",
+      "notice": {
+        "sourceTitle": "Hawaiian Islands.jpg",
+        "creators": [],
+        "publisher": null,
+        "canonicalURL": null,
+        "attributionText": "Hawaiian Islands.jpg. Preserve any source and attribution notices included with this item.",
+        "changesMade": "Bundled with ArkFile for offline use.",
+        "rightsSummary": "Consult the original source and any included license and attribution notices for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/arkfile-wild-game-safety-preservation-2026-07.zip",
+      "canonicalPath": "food-preparation/food/arkfile - wild game safety and preservation (2026-07).zip",
+      "notice": {
+        "sourceTitle": "ArkFile - Wild Game Safety and Preservation",
+        "creators": [
+          "USDA Food Safety and Inspection Service",
+          "Centers for Disease Control and Prevention",
+          "USDA Animal and Plant Health Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/roasting-those-other-holiday-meats",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service; Centers for Disease Control and Prevention; USDA Animal and Plant Health Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "rightsSummary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/beef-slaughtering-cutting-preserving-and-cooking-on-the-farm-by-h.-russell-cross-et-al.zip",
+      "canonicalPath": "food-preparation/food/beef slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
+      "notice": {
+        "sourceTitle": "Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm",
+        "creators": [
+          "Cross, H. Russell",
+          "Green, E. Curtis",
+          "Jones, William R.",
+          "Kotula, Anthony",
+          "West, R. L. (Roger Lawrence)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/62848",
+        "attributionText": "Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm by Cross, H. Russell, Green, E. Curtis, Jones, William R., Kotula, Anthony, West, R. L. (Roger Lawrence); sourced from Project Gutenberg ebook 62848. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/camp-life-in-the-woods-and-the-tricks-of-trapping-and-trap-making-by-gibson.zip",
+      "canonicalPath": "food-preparation/food/camp life in the woods and the tricks of trapping and trap making by gibson.zip",
+      "notice": {
+        "sourceTitle": "Camp Life in the Woods and the Tricks of Trapping and Trap Making",
+        "creators": [
+          "Gibson, W. Hamilton (William Hamilton)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/17093",
+        "attributionText": "Camp Life in the Woods and the Tricks of Trapping and Trap Making by Gibson, W. Hamilton (William Hamilton); sourced from Project Gutenberg ebook 17093. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/canning-freezing-storing-garden-produce.zip",
+      "canonicalPath": "food-preparation/food/canning, freezing, storing garden produce.zip",
+      "notice": {
+        "sourceTitle": "Canning, Freezing, Storing Garden Produce",
+        "creators": [
+          "United States. Department of Agriculture"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/59977",
+        "attributionText": "Canning, Freezing, Storing Garden Produce by United States. Department of Agriculture; sourced from Project Gutenberg ebook 59977. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/canoe-and-camp-cookery-by-seneca.zip",
+      "canonicalPath": "food-preparation/food/canoe and camp cookery by seneca.zip",
+      "notice": {
+        "sourceTitle": "Canoe and Camp Cookery A Practical Cook Book for Canoeists, Corinthian Sailors and Outers",
+        "creators": [
+          "Seneca (Writer on outdoor life)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/55705",
+        "attributionText": "Canoe and Camp Cookery A Practical Cook Book for Canoeists, Corinthian Sailors and Outers by Seneca (Writer on outdoor life); sourced from Project Gutenberg ebook 55705. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/coffee-stack-exchange.zim",
+      "canonicalPath": "food-preparation/food/coffee - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Coffee Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/coffee.stackexchange.com_en_all_2026-02.zim.meta4",
+        "attributionText": "Coffee Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/coffee.stackexchange.com_en_all_2026-02.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/deadfalls-and-snares-by-a.-r.-harding.zip",
+      "canonicalPath": "food-preparation/food/deadfalls and snares by a. r. harding.zip",
+      "notice": {
+        "sourceTitle": "Deadfalls and Snares A Book of Instruction for Trappers About These and Other Home-Made Traps",
+        "creators": [
+          "Harding, A. R. (Arthur Robert)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/34110",
+        "attributionText": "Deadfalls and Snares A Book of Instruction for Trappers About These and Other Home-Made Traps by Harding, A. R. (Arthur Robert); sourced from Project Gutenberg ebook 34110. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/fifty-years-a-hunter-and-trapper-by-e.-n.-woodcock.zip",
+      "canonicalPath": "food-preparation/food/fifty years a hunter and trapper by e. n. woodcock.zip",
+      "notice": {
+        "sourceTitle": "Fifty Years a Hunter and Trapper Autobiography, experiences and observations of Eldred Nathaniel Woodcock during his fifty years of hunting and trapping.",
+        "creators": [
+          "Woodcock, E. N. (Eldred Nathaniel)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/34063",
+        "attributionText": "Fifty Years a Hunter and Trapper Autobiography, experiences and observations of Eldred Nathaniel Woodcock during his fifty years of hunting and trapping. by Woodcock, E. N. (Eldred Nathaniel); sourced from Project Gutenberg ebook 34063. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/home-canning-usda.pdf",
+      "canonicalPath": "food-preparation/food/home_canning_usda.pdf",
+      "notice": {
+        "sourceTitle": "Complete Guide to Home Canning",
+        "creators": [],
+        "publisher": "USDA/NIFA; produced with University of Georgia and other university contributors",
+        "canonicalURL": "https://www.nifa.usda.gov/topics/food-safety",
+        "attributionText": "Complete Guide to Home Canning by USDA/NIFA; produced with University of Georgia and other university contributors; source: https://www.nifa.usda.gov/topics/food-safety",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This publication includes non-Federal university contributions. Government hosting does not establish public-domain status for all text, tables or illustrations. Preserve source credits and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/homebrew-stack-exchange.zim",
+      "canonicalPath": "food-preparation/food/homebrew - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Homebrewing Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/homebrew.stackexchange.com_en_all_2026-02.zim.meta4",
+        "attributionText": "Homebrewing Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/homebrew.stackexchange.com_en_all_2026-02.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/how-to-make-sweet-potato-flour.zip",
+      "canonicalPath": "food-preparation/food/how to make sweet potato flour.zip",
+      "notice": {
+        "sourceTitle": "How to make sweet potato flour, starch, sugar, bread and mock cocoanut",
+        "creators": [
+          "Carver, George Washington"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/77397",
+        "attributionText": "How to make sweet potato flour, starch, sugar, bread and mock cocoanut by Carver, George Washington; sourced from Project Gutenberg ebook 77397. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/hunting-with-the-bow-and-arrow.zip",
+      "canonicalPath": "food-preparation/food/hunting with the bow & arrow.zip",
+      "notice": {
+        "sourceTitle": "Hunting with the Bow & Arrow",
+        "creators": [
+          "Pope, Saxton T. (Saxton Temple)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/8084",
+        "attributionText": "Hunting with the Bow & Arrow by Pope, Saxton T. (Saxton Temple); sourced from Project Gutenberg ebook 8084. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/lamb-slaughtering-cutting-preserving-and-cooking-on-the-farm-by-h.-russell-cross-et-al.zip",
+      "canonicalPath": "food-preparation/food/lamb slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
+      "notice": {
+        "sourceTitle": "Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm",
+        "creators": [
+          "Cross, H. Russell",
+          "Green, E. Curtis",
+          "Jones, William R.",
+          "Kotula, Anthony",
+          "West, R. L. (Roger Lawrence)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/62838",
+        "attributionText": "Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm by Cross, H. Russell, Green, E. Curtis, Jones, William R., Kotula, Anthony, West, R. L. (Roger Lawrence); sourced from Project Gutenberg ebook 62838. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/meat-on-the-farm-butchering-curing-and-keeping.pdf",
+      "canonicalPath": "food-preparation/food/meat on the farm - butchering, curing, and keeping.pdf",
+      "notice": {
+        "sourceTitle": "Meat on the Farm: Butchering, Curing, and Keeping",
+        "creators": [],
+        "publisher": "U.S. Department of Agriculture; Andrew Boss, University of Minnesota",
+        "canonicalURL": "https://www.govinfo.gov/content/pkg/GOVPUB-GP3-6259ece001b98abd7796531e37876bf4/pdf/GOVPUB-GP3-6259ece001b98abd7796531e37876bf4.pdf",
+        "attributionText": "Meat on the Farm: Butchering, Curing, and Keeping by U.S. Department of Agriculture; Andrew Boss, University of Minnesota; source: https://www.govinfo.gov/content/pkg/GOVPUB-GP3-6259ece001b98abd7796531e37876bf4/pdf/GOVPUB-GP3-6259ece001b98abd7796531e37876bf4.pdf",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This USDA publication identifies a University of Minnesota author. Government publication alone does not establish the rights to every contribution. Preserve source credits and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/miss-leslie-s-new-cookery-book-by-eliza-leslie.zip",
+      "canonicalPath": "food-preparation/food/miss leslie's new cookery book by eliza leslie.zip",
+      "notice": {
+        "sourceTitle": "Miss Leslie's New Cookery Book",
+        "creators": [
+          "Leslie, Eliza"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/40943",
+        "attributionText": "Miss Leslie's New Cookery Book by Leslie, Eliza; sourced from Project Gutenberg ebook 40943. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/our-edible-toadstools-and-mushrooms-and-how-to-distinguish-them-by-gibson.zip",
+      "canonicalPath": "food-preparation/food/our edible toadstools and mushrooms and how to distinguish them by gibson.zip",
+      "notice": {
+        "sourceTitle": "Our Edible Toadstools and Mushrooms and How to Distinguish Them A Selection of Thirty Native Food Varieties Easily Recognizable by their Marked Individualities, with Simple Rules for the Identification of Poisonous Species",
+        "creators": [
+          "Gibson, W. Hamilton (William Hamilton)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/46514",
+        "attributionText": "Our Edible Toadstools and Mushrooms and How to Distinguish Them A Selection of Thirty Native Food Varieties Easily Recognizable by their Marked Individualities, with Simple Rules for the Identification of Poisonous Species by Gibson, W. Hamilton (William Hamilton); sourced from Project Gutenberg ebook 46514. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/pork-slaughtering-cutting-preserving-and-cooking-on-the-farm-by-h.-russell-cross-et-al.zip",
+      "canonicalPath": "food-preparation/food/pork slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
+      "notice": {
+        "sourceTitle": "Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm",
+        "creators": [
+          "Cross, H. Russell",
+          "Green, E. Curtis",
+          "Jones, William R.",
+          "Kotula, Anthony",
+          "West, R. L. (Roger Lawrence)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/62859",
+        "attributionText": "Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm by Cross, H. Russell, Green, E. Curtis, Jones, William R., Kotula, Anthony, West, R. L. (Roger Lawrence); sourced from Project Gutenberg ebook 62859. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/science-in-the-kitchen-by-e.-e.-kellogg.zip",
+      "canonicalPath": "food-preparation/food/science in the kitchen by e. e. kellogg.zip",
+      "notice": {
+        "sourceTitle": "Science in the Kitchen A Scientific Treatise On Food Substances and Their Dietetic Properties, Together with a Practical Explanation of the Principles of Healthful Cookery, and a Large Number of Original, Palatable, and Wholesome Recipes",
+        "creators": [
+          "Kellogg, E. E. (Ella Ervilla)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/12238",
+        "attributionText": "Science in the Kitchen A Scientific Treatise On Food Substances and Their Dietetic Properties, Together with a Practical Explanation of the Principles of Healthful Cookery, and a Large Number of Original, Palatable, and Wholesome Recipes by Kellogg, E. E. (Ella Ervilla); sourced from Project Gutenberg ebook 12238. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/the-theory-and-practice-of-archery.zip",
+      "canonicalPath": "food-preparation/food/the theory and practice of archery.zip",
+      "notice": {
+        "sourceTitle": "The theory and practice of archery",
+        "creators": [
+          "Ford, Horace A. (Horace Alfred)",
+          "Butt, W. (William)"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/41643",
+        "attributionText": "The theory and practice of archery by Ford, Horace A. (Horace Alfred), Butt, W. (William); sourced from Project Gutenberg ebook 41643. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-bison-from-farm-to-table.pdf",
+      "canonicalPath": "food-preparation/food/usda - bison from farm to table.pdf",
+      "notice": {
+        "sourceTitle": "Bison from Farm to Table",
+        "creators": [],
+        "publisher": "USDA Food Safety and Inspection Service",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/bison-farm-table",
+        "attributionText": "Bison from Farm to Table by USDA Food Safety and Inspection Service; source: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/bison-farm-table",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "The publication permits reprinting and distribution for food-safety education. Restrictions on separate USDA symbol or logo use and implied commercial endorsement apply. Preserve its notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-chicken-farm-table-offline-2026-07.zip",
+      "canonicalPath": "food-preparation/food/usda fsis - chicken from farm to table (arkfile offline 2026-07).zip",
+      "notice": {
+        "sourceTitle": "USDA FSIS - Chicken from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/chicken-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "rightsSummary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-duck-goose-farm-table-offline-2026-07.zip",
+      "canonicalPath": "food-preparation/food/usda fsis - duck and goose from farm to table (arkfile offline 2026-07).zip",
+      "notice": {
+        "sourceTitle": "USDA FSIS - Duck and Goose from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/duck-and-goose-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "rightsSummary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-fresh-pork-farm-table-offline-2026-07.zip",
+      "canonicalPath": "food-preparation/food/usda fsis - fresh pork from farm to table (arkfile offline 2026-07).zip",
+      "notice": {
+        "sourceTitle": "USDA FSIS - Fresh Pork from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/fresh-pork-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "rightsSummary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-lamb-farm-table-offline-2026-07.zip",
+      "canonicalPath": "food-preparation/food/usda fsis - lamb from farm to table (arkfile offline 2026-07).zip",
+      "notice": {
+        "sourceTitle": "USDA FSIS - Lamb from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/lamb-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "rightsSummary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-turkey-farm-table-offline-2026-07.zip",
+      "canonicalPath": "food-preparation/food/usda fsis - turkey from farm to table (arkfile offline 2026-07).zip",
+      "notice": {
+        "sourceTitle": "USDA FSIS - Turkey from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/turkey-farm-table",
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "rightsSummary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted."
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-goat-from-farm-to-table.pdf",
+      "canonicalPath": "food-preparation/food/usda - goat from farm to table.pdf",
+      "notice": {
+        "sourceTitle": "Goat from Farm to Table",
+        "creators": [],
+        "publisher": "USDA Food Safety and Inspection Service",
+        "canonicalURL": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/goat-farm-table",
+        "attributionText": "Goat from Farm to Table by USDA Food Safety and Inspection Service; source: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/goat-farm-table",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "The publication permits reprinting and distribution for food-safety education. Restrictions on separate USDA symbol or logo use and implied commercial endorsement apply. Preserve its notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/water/epa-emergency-disinfection-of-drinking-water-2017-.pdf",
+      "canonicalPath": "food-preparation/water/epa - emergency disinfection of drinking water (2017).pdf",
+      "notice": {
+        "sourceTitle": "Emergency Disinfection of Drinking Water",
+        "creators": [],
+        "publisher": "U.S. Environmental Protection Agency",
+        "canonicalURL": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water-0",
+        "attributionText": "Emergency Disinfection of Drinking Water by U.S. Environmental Protection Agency; source: https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water-0",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "EPA materials may include protected third-party and contractor contributions. Official hosting alone does not grant commercial redistribution rights. Preserve source credits and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "food-preparation/water/epa-giardia-fact-sheet-2002-.pdf",
+      "canonicalPath": "food-preparation/water/epa - giardia - fact sheet (2002).pdf",
+      "notice": {
+        "sourceTitle": "Giardia: Drinking Water Fact Sheet",
+        "creators": [],
+        "publisher": "U.S. Environmental Protection Agency",
+        "canonicalURL": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1002VKP.TXT",
+        "attributionText": "Giardia: Drinking Water Fact Sheet by U.S. Environmental Protection Agency; source: https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1002VKP.TXT",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "EPA materials may include protected third-party contributions. Preserve source credits and included notices and consult the original source for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/encyclopedias/simple-wikipedia.zim",
+      "canonicalPath": "general/encyclopedias/simple wikipedia.zim",
+      "notice": {
+        "sourceTitle": "Wikipedia in simple English",
+        "creators": [
+          "Wikipedia"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_simple_all_maxi_2024-06.zim.meta4",
+        "attributionText": "Wikipedia in simple English by Wikipedia; source: https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_simple_all_maxi_2024-06.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/encyclopedias/wikipedia-no-images-august-2025.zim",
+      "canonicalPath": "general/encyclopedias/wikipedia - no images, august 2025.zim",
+      "notice": {
+        "sourceTitle": "Wikipedia",
+        "creators": [
+          "Wikipedia"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2025-08.zim.meta4",
+        "attributionText": "Wikipedia by Wikipedia; source: https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2025-08.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/encyclopedias/wikipedia-with-images-august-2025.zim",
+      "canonicalPath": "general/encyclopedias/wikipedia - with images, august 2025.zim",
+      "notice": {
+        "sourceTitle": "Wikipedia",
+        "creators": [
+          "Wikipedia"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_all_maxi_2025-08.zim.meta4",
+        "attributionText": "Wikipedia by Wikipedia; source: https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_all_maxi_2025-08.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/diy-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/diy - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Home Improvement Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/diy.stackexchange.com_en_all_2025-08.zim.meta4",
+        "attributionText": "Home Improvement Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/diy.stackexchange.com_en_all_2025-08.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/electonics-and-electrical-engineering-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/electonics and electrical engineering - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Electronics Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/electronics.stackexchange.com_en_all_2025-12.zim.meta4",
+        "attributionText": "Electronics Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/electronics.stackexchange.com_en_all_2025-12.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/gardening-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/gardening - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Gardening & Landscaping Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/gardening.stackexchange.com_en_all_2025-10.zim.meta4",
+        "attributionText": "Gardening & Landscaping Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/gardening.stackexchange.com_en_all_2025-10.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/great-outdoors-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/great outdoors - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "The Great Outdoors Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/outdoors.stackexchange.com_en_all_2025-12.zim.meta4",
+        "attributionText": "The Great Outdoors Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/outdoors.stackexchange.com_en_all_2025-12.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/ham-radio-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/ham radio - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Amateur Radio Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/ham.stackexchange.com_en_all_2025-08.zim.meta4",
+        "attributionText": "Amateur Radio Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/ham.stackexchange.com_en_all_2025-08.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/motor-vehicle-mechanics-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/motor vehicle mechanics - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Motor Vehicle Mechanics",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/mechanics.stackexchange.com_en_all_2025-08.zim.meta4",
+        "attributionText": "Motor Vehicle Mechanics by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/mechanics.stackexchange.com_en_all_2025-08.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/practical-skills/woodworking-stack-exchange.zim",
+      "canonicalPath": "general/practical-skills/woodworking - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Woodworking Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/woodworking.stackexchange.com_en_all_2026-02.zim.meta4",
+        "attributionText": "Woodworking Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/woodworking.stackexchange.com_en_all_2026-02.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/atp-3-50-21-survival-2018.pdf",
+      "canonicalPath": "general/survival/atp 3-50.21 - survival (2018).pdf",
+      "notice": {
+        "sourceTitle": "ATP 3-50.21 - Survival",
+        "creators": [
+          "Headquarters, Department of the Army"
+        ],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/13BC7D8D-AD46-433D-9C0B-F3A1D1405259-1537466238381/atp3_50x21.pdf",
+        "attributionText": "ATP 3-50.21 - Survival, Headquarters, Department of the Army, September 2018.",
+        "changesMade": "None.",
+        "rightsSummary": "Exact, unmodified publication may be redistributed with its public-release marking and attribution preserved."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-21-26-map-reading-and-land-navigation-1993-.pdf",
+      "canonicalPath": "general/survival/fm 21-26 map reading and land navigation (1993).pdf",
+      "notice": {
+        "sourceTitle": "Map Reading and Land Navigation",
+        "creators": [],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": "https://www.govinfo.gov/content/pkg/GOVPUB-GP3-f499458f1f053b101cbe2c34f9212ed7/pdf/GOVPUB-GP3-f499458f1f053b101cbe2c34f9212ed7.pdf",
+        "attributionText": "Map Reading and Land Navigation by Headquarters, Department of the Army; source: https://www.govinfo.gov/content/pkg/GOVPUB-GP3-f499458f1f053b101cbe2c34f9212ed7/pdf/GOVPUB-GP3-f499458f1f053b101cbe2c34f9212ed7.pdf",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This publication bears a public-release marking. That marking is not itself a copyright license; third-party text or graphics may have separate terms. Preserve the original marking, attribution and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-21-60-visual-signals-1987-.pdf",
+      "canonicalPath": "general/survival/fm 21-60 visual signals (1987).pdf",
+      "notice": {
+        "sourceTitle": "Visual Signals",
+        "creators": [],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": "https://www.govinfo.gov/content/pkg/GOVPUB-GP3-cf2e9dd5a0681d25f908cd6bb63c8048/pdf/GOVPUB-GP3-cf2e9dd5a0681d25f908cd6bb63c8048.pdf",
+        "attributionText": "Visual Signals by Headquarters, Department of the Army; source: https://www.govinfo.gov/content/pkg/GOVPUB-GP3-cf2e9dd5a0681d25f908cd6bb63c8048/pdf/GOVPUB-GP3-cf2e9dd5a0681d25f908cd6bb63c8048.pdf",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Photographs, illustrations and other third-party contributions may have separate rights. Preserve source credits and included notices and consult the original source for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-21-76-1-survival-evasion-and-recovery-1999-.pdf",
+      "canonicalPath": "general/survival/fm 21-76-1 survival evasion and recovery (1999).pdf",
+      "notice": {
+        "sourceTitle": "Survival, Evasion, and Recovery",
+        "creators": [
+          "Departments of the Army, Marine Corps, Navy, and Air Force"
+        ],
+        "publisher": "Air Land Sea Application Center",
+        "canonicalURL": "https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02H%20Survival%2C%20Evasion%2C%20and%20Recovery.pdf",
+        "attributionText": "Survival, Evasion, and Recovery, FM 21-76-1 and multiservice equivalents, June 1999.",
+        "changesMade": "None.",
+        "rightsSummary": "Retained as the exact, unmodified public-release publication with its cover marking and attribution preserved."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-3-97.6-mountain-operations-manual-2000-.pdf",
+      "canonicalPath": "general/survival/fm 3-97.6  mountain operations manual (2000).pdf",
+      "notice": {
+        "sourceTitle": "Mountain Operations",
+        "creators": [],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": "https://www.benning.army.mil/Infantry/AMWS/Courses.html",
+        "attributionText": "Mountain Operations by Headquarters, Department of the Army; source: https://www.benning.army.mil/Infantry/AMWS/Courses.html",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This publication bears a public-release marking. That marking is not itself a copyright license; third-party text or graphics may have separate terms. Preserve the original marking, attribution and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-34-52-intelligence-interrogation-1992-.pdf",
+      "canonicalPath": "general/survival/fm 34-52 intelligence interrogation (1992).pdf",
+      "notice": {
+        "sourceTitle": "Intelligence Interrogation",
+        "creators": [],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": null,
+        "attributionText": "Intelligence Interrogation by Headquarters, Department of the Army",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Edition, public-release markings and third-party source notices apply to the publication as supplied. Preserve those notices; source credits may identify separately protected contributions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-4-25.11-first-aid-2002-.pdf",
+      "canonicalPath": "general/survival/fm 4-25.11  first aid (2002).pdf",
+      "notice": {
+        "sourceTitle": "First Aid",
+        "creators": [],
+        "publisher": "Departments of the Army, Navy, Air Force, and Marine Corps",
+        "canonicalURL": "https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02G%20First%20Aid.pdf",
+        "attributionText": "First Aid by Departments of the Army, Navy, Air Force, and Marine Corps; source: https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02G%20First%20Aid.pdf",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This publication bears a public-release marking. That marking is not itself a copyright license; third-party text or graphics may have separate terms. Preserve the original marking, attribution and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/fm-5-426-carpentry-1995-.pdf",
+      "canonicalPath": "general/survival/fm 5-426  carpentry (1995).pdf",
+      "notice": {
+        "sourceTitle": "Carpentry",
+        "creators": [],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": null,
+        "attributionText": "Carpentry by Headquarters, Department of the Army",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This publication bears a public-release marking. That marking is not itself a copyright license; third-party text or graphics may have separate terms. Preserve the original marking, attribution and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/in-time-of-emergency-by-united-states.-office-of-civil-defense.zip",
+      "canonicalPath": "general/survival/in time of emergency by united states. office of civil defense.zip",
+      "notice": {
+        "sourceTitle": "In Time of Emergency A Citizen's Handbook on Nuclear Attack, Natural Disasters (1968)",
+        "creators": [
+          "United States. Office of Civil Defense"
+        ],
+        "publisher": "Project Gutenberg",
+        "canonicalURL": "https://www.gutenberg.org/ebooks/15158",
+        "attributionText": "In Time of Emergency A Citizen's Handbook on Nuclear Attack, Natural Disasters (1968) by United States. Office of Civil Defense; sourced from Project Gutenberg ebook 15158. Official metadata states \"Public domain in the USA.\"",
+        "changesMade": "Packaged as an ArkFile static HTML ZIP.",
+        "rightsSummary": "Project Gutenberg identifies this title as public domain in the United States. Copyright status can differ elsewhere. Project Gutenberg trademark and distribution terms and included media notices still apply. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/navy-marine-corps-sere-handbook-1999-.pdf",
+      "canonicalPath": "general/survival/navy marine corps sere handbook (1999).pdf",
+      "notice": {
+        "sourceTitle": "Survival, Evasion, Resistance and Escape (SERE) Student Handbook",
+        "creators": [],
+        "publisher": "U.S. Navy Fleet Aviation Specialized Operational Training Groups",
+        "canonicalURL": null,
+        "attributionText": "Survival, Evasion, Resistance and Escape (SERE) Student Handbook by U.S. Navy Fleet Aviation Specialized Operational Training Groups",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "This handbook is marked unclassified. That marking does not itself grant copyright or redistribution rights. Preserve source credits and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/usmc-combat-water-survival-2003-.pdf",
+      "canonicalPath": "general/survival/usmc combat water survival (2003).pdf",
+      "notice": {
+        "sourceTitle": "Marine Combat Water Survival",
+        "creators": [],
+        "publisher": "U.S. Marine Corps",
+        "canonicalURL": "https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02C%20Marine%20Combat%20Water%20Survival.pdf?ver=UW62H9ySd3erYc3EFksIqg%3D%3D",
+        "attributionText": "Marine Combat Water Survival by U.S. Marine Corps; source: https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02C%20Marine%20Combat%20Water%20Survival.pdf?ver=UW62H9ySd3erYc3EFksIqg%3D%3D",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Photographs, illustrations and credited third-party contributions may have separate rights. Preserve source credits and included notices and consult the original source for applicable reuse terms. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/usmc-summer-survival-course-2002-.pdf",
+      "canonicalPath": "general/survival/usmc summer survival course (2002).pdf",
+      "notice": {
+        "sourceTitle": "Summer Survival Course Handbook",
+        "creators": [],
+        "publisher": "Marine Corps Mountain Warfare Training Center",
+        "canonicalURL": null,
+        "attributionText": "Summer Survival Course Handbook by Marine Corps Mountain Warfare Training Center",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Source excerpts and illustrations may have separate rights. Preserve source credits and included notices; military authorship or hosting does not by itself grant rights to every contribution. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "general/survival/usmc-winter-survival-course-2002-.pdf",
+      "canonicalPath": "general/survival/usmc winter survival course (2002).pdf",
+      "notice": {
+        "sourceTitle": "Winter Survival Course Handbook",
+        "creators": [],
+        "publisher": "Marine Corps Mountain Warfare Training Center",
+        "canonicalURL": null,
+        "attributionText": "Winter Survival Course Handbook by Marine Corps Mountain Warfare Training Center",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Source excerpts and illustrations may have separate rights. Preserve source credits and included notices; military authorship or hosting does not by itself grant rights to every contribution. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/alaska-hawaii/region.pmtiles",
+      "canonicalPath": "maps/regions/alaska-hawaii/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/california/region.pmtiles",
+      "canonicalPath": "maps/regions/california/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/florida-gulf/region.pmtiles",
+      "canonicalPath": "maps/regions/florida-gulf/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/great-lakes/region.pmtiles",
+      "canonicalPath": "maps/regions/great-lakes/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/mid-atlantic/region.pmtiles",
+      "canonicalPath": "maps/regions/mid-atlantic/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/mountain-west/region.pmtiles",
+      "canonicalPath": "maps/regions/mountain-west/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/northeast/region.pmtiles",
+      "canonicalPath": "maps/regions/northeast/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/pacific-northwest/region.pmtiles",
+      "canonicalPath": "maps/regions/pacific-northwest/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/plains/region.pmtiles",
+      "canonicalPath": "maps/regions/plains/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/southeast/region.pmtiles",
+      "canonicalPath": "maps/regions/southeast/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/southwest/region.pmtiles",
+      "canonicalPath": "maps/regions/southwest/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "maps/regions/texas-south-central/region.pmtiles",
+      "canonicalPath": "maps/regions/texas-south-central/region.pmtiles",
+      "notice": {
+        "sourceTitle": "Protomaps Basemap daily build geographic extract",
+        "creators": [
+          "OpenStreetMap contributors",
+          "Protomaps basemap project contributors"
+        ],
+        "publisher": "Protomaps daily builds",
+        "canonicalURL": "https://docs.protomaps.com/basemaps/downloads",
+        "attributionText": "© OpenStreetMap contributors. Data available under the Open Database License 1.0. Basemap produced with Protomaps.",
+        "changesMade": "Geographic and zoom sub-pyramid extraction from the recorded Protomaps daily PMTiles produced work; no semantic tag editing is performed by the ArkFile script.",
+        "rightsSummary": "OpenStreetMap data is subject to the Open Database License (ODbL) 1.0, including applicable attribution and database-availability requirements. Other source layers can have separate terms. Preserve the Protomaps and source-data notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "medical/field-guides/atp-4-02-11-casualty-response-first-aid-2026.pdf",
+      "canonicalPath": "medical/field-guides/atp 4-02.11 - casualty response and first aid (2026).pdf",
+      "notice": {
+        "sourceTitle": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid",
+        "creators": [
+          "Headquarters, Department of the Army"
+        ],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+        "attributionText": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid, Headquarters, Department of the Army, March 2026.",
+        "changesMade": "None.",
+        "rightsSummary": "Exact, unmodified publication may be redistributed with its public-release marking and attribution preserved."
+      }
+    },
+    {
+      "contentId": "medical/field-guides/breastfeeding-guide.pdf",
+      "canonicalPath": "medical/field-guides/breastfeeding guide.pdf",
+      "notice": {
+        "sourceTitle": "Your Guide to Breastfeeding",
+        "creators": [],
+        "publisher": "U.S. Department of Health and Human Services, Office on Women's Health",
+        "canonicalURL": "https://womenshealth.gov/patient-materials/resource/guides",
+        "attributionText": "Your Guide to Breastfeeding by U.S. Department of Health and Human Services, Office on Women's Health; source: https://womenshealth.gov/patient-materials/resource/guides",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "The HHS source states that its materials may be copied, reproduced or duplicated, with citation appreciated. Preserve source attribution; agency marks are not a grant of endorsement or trademark rights. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "medical/field-guides/fema-cert-basic-training-participant-manual-2019.pdf",
+      "canonicalPath": "medical/field-guides/fema cert basic training participant manual (2019).pdf",
+      "notice": {
+        "sourceTitle": "CERT Basic Training Participant Manual",
+        "creators": [
+          "Federal Emergency Management Agency"
+        ],
+        "publisher": "U.S. Government Publishing Office",
+        "canonicalURL": "https://www.govinfo.gov/app/details/GOVPUB-HS5_100-PURL-gpo185734",
+        "attributionText": "CERT Basic Training Participant Manual, U.S. Government Publishing Office, 2019 Update.",
+        "changesMade": "None.",
+        "rightsSummary": "Federal-work text may be redistributed; third-party marks and media remain outside the profile."
+      }
+    },
+    {
+      "contentId": "medical/field-guides/infant-feeding-guide.pdf",
+      "canonicalPath": "medical/field-guides/infant feeding guide.pdf",
+      "notice": {
+        "sourceTitle": "Infant Nutrition and Feeding: A Guide for Use in the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)",
+        "creators": [],
+        "publisher": "USDA Food and Nutrition Service",
+        "canonicalURL": "https://wicworks.fns.usda.gov/resources/infant-nutrition-and-feeding-guide",
+        "attributionText": "Infant Nutrition and Feeding: A Guide for Use in the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) by USDA Food and Nutrition Service; source: https://wicworks.fns.usda.gov/resources/infant-nutrition-and-feeding-guide",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Source photographs and other third-party contributions may have separate rights. Preserve source credits and included notices. Separate WIC logo restrictions apply to the marks. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "medical/reference/atp-4-02-83-treatment-nuclear-radiological-casualties-2014.pdf",
+      "canonicalPath": "medical/reference/atp 4-02.83 - treatment of nuclear and radiological casualties (2014).pdf",
+      "notice": {
+        "sourceTitle": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties",
+        "creators": [
+          "Departments of the Army, Marine Corps, Navy, and Air Force"
+        ],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalURL": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/2C9DF500-FE70-4DFC-A915-D01FE6A8BCE2-1399482805293/atp_4-02x83.pdf",
+        "attributionText": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties, Headquarters, Department of the Army, May 2014.",
+        "changesMade": "None.",
+        "rightsSummary": "Exact, unmodified publication may be redistributed with its public-release marking and attribution preserved."
+      }
+    },
+    {
+      "contentId": "medical/reference/medical-sciences-stack-exchange.zim",
+      "canonicalPath": "medical/reference/medical sciences - stack exchange.zim",
+      "notice": {
+        "sourceTitle": "Medical Sciences Q&A",
+        "creators": [
+          "Stack Exchange"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/stack_exchange/medicalsciences.stackexchange.com_en_all_2026-02.zim.meta4",
+        "attributionText": "Medical Sciences Q&A by Stack Exchange; source: https://lb.download.kiwix.org/zim/stack_exchange/medicalsciences.stackexchange.com_en_all_2026-02.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "medical/reference/wikimed-sept-2025.zim",
+      "canonicalPath": "medical/reference/wikimed - sept 2025.zim",
+      "notice": {
+        "sourceTitle": "WikiMed Medical Encyclopedia",
+        "creators": [
+          "Wikipedia"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_maxi_2025-09.zim.meta4",
+        "attributionText": "WikiMed Medical Encyclopedia by Wikipedia; source: https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_maxi_2025-09.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/guides/wikivoyage-dec-2025.zim",
+      "canonicalPath": "travel/guides/wikivoyage - dec 2025.zim",
+      "notice": {
+        "sourceTitle": "Wikivoyage",
+        "creators": [
+          "Wikivoyage"
+        ],
+        "publisher": "openZIM",
+        "canonicalURL": "https://lb.download.kiwix.org/zim/wikivoyage/wikivoyage_en_all_maxi_2025-12.zim.meta4",
+        "attributionText": "Wikivoyage by Wikivoyage; source: https://lb.download.kiwix.org/zim/wikivoyage/wikivoyage_en_all_maxi_2025-12.zim.meta4",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "Preserve source attribution and included notices. Text, images, trademarks and other contributions can have separate reuse terms; consult the original source for the applicable conditions. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-alaska/aleutian-islands.jpg",
+      "canonicalPath": "travel/maps-alaska/aleutian islands.jpg",
+      "notice": {
+        "sourceTitle": "Aleutian Islands",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Aleutian Islands by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-alaska/central-alaska.jpg",
+      "canonicalPath": "travel/maps-alaska/central alaska.jpg",
+      "notice": {
+        "sourceTitle": "Central Alaska",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Central Alaska by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-alaska/northern-alaska.jpg",
+      "canonicalPath": "travel/maps-alaska/northern alaska.jpg",
+      "notice": {
+        "sourceTitle": "Northern Alaska",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Northern Alaska by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-alaska/southeastern-alaska.jpg",
+      "canonicalPath": "travel/maps-alaska/southeastern alaska.jpg",
+      "notice": {
+        "sourceTitle": "Southeastern Alaska",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southeastern Alaska by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-alaska/southwestern-alaska.jpg",
+      "canonicalPath": "travel/maps-alaska/southwestern alaska.jpg",
+      "notice": {
+        "sourceTitle": "Southwestern Alaska",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southwestern Alaska by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-east/florida.jpg",
+      "canonicalPath": "travel/maps-east/florida.jpg",
+      "notice": {
+        "sourceTitle": "Florida",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Florida by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-east/middle-atlantic-states.jpg",
+      "canonicalPath": "travel/maps-east/middle atlantic states.jpg",
+      "notice": {
+        "sourceTitle": "Middle Atlantic States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Middle Atlantic States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-east/northeastern-states.jpg",
+      "canonicalPath": "travel/maps-east/northeastern states.jpg",
+      "notice": {
+        "sourceTitle": "Northeastern States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Northeastern States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-east/southeastern-states.jpg",
+      "canonicalPath": "travel/maps-east/southeastern states.jpg",
+      "notice": {
+        "sourceTitle": "Southeastern States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southeastern States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-midwest/central-mississippi-valley-states.jpg",
+      "canonicalPath": "travel/maps-midwest/central mississippi valley states.jpg",
+      "notice": {
+        "sourceTitle": "Central Mississippi Valley States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Central Mississippi Valley States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-midwest/northern-great-lakes-states.jpg",
+      "canonicalPath": "travel/maps-midwest/northern great lakes states.jpg",
+      "notice": {
+        "sourceTitle": "Northern Great Lakes States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Northern Great Lakes States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-midwest/southern-mississippi-valley-states.jpg",
+      "canonicalPath": "travel/maps-midwest/southern mississippi valley states.jpg",
+      "notice": {
+        "sourceTitle": "Southern Mississippi Valley States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southern Mississippi Valley States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-national/national-atlas-2003-united-states-general-reference.pdf",
+      "canonicalPath": "travel/maps-national/national atlas 2003 - united states general reference.pdf",
+      "notice": {
+        "sourceTitle": "United States General Reference",
+        "creators": [],
+        "publisher": "U.S. Geological Survey / National Atlas of the United States",
+        "canonicalURL": "https://www.usgs.gov/programs/national-geospatial-program/national-map",
+        "attributionText": "United States General Reference by U.S. Geological Survey / National Atlas of the United States; source: https://www.usgs.gov/programs/national-geospatial-program/national-map",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-national/united-states.jpg",
+      "canonicalPath": "travel/maps-national/united states.jpg",
+      "notice": {
+        "sourceTitle": "United States - U.S. General Reference",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "United States - U.S. General Reference by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-plains/central-plains-states.jpg",
+      "canonicalPath": "travel/maps-plains/central plains states.jpg",
+      "notice": {
+        "sourceTitle": "Central Plains States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Central Plains States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-plains/northern-plains-states.jpg",
+      "canonicalPath": "travel/maps-plains/northern plains states.jpg",
+      "notice": {
+        "sourceTitle": "Northern Plains States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Northern Plains States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-plains/southern-plains-states-.jpg",
+      "canonicalPath": "travel/maps-plains/southern plains states .jpg",
+      "notice": {
+        "sourceTitle": "Southern Plains States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southern Plains States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-urban/urban-areas-atlanta-boston-buffalo-chicago-cincinatti-cleveland-detroit-miami-milwaukee-new-orleans-and-pittsburgh.jpg",
+      "canonicalPath": "travel/maps-urban/urban areas - atlanta, boston, buffalo, chicago, cincinatti, cleveland, detroit, miami, milwaukee, new orleans and pittsburgh.jpg",
+      "notice": {
+        "sourceTitle": "Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinnati, Cleveland, Detroit, Miami, Milwaukee, New Orleans, and Pittsburgh",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinnati, Cleveland, Detroit, Miami, Milwaukee, New Orleans, and Pittsburgh by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-urban/urban-areas-dallas-denver-houston-kansas-los-angeles-minneapolis-san-francisco-san-diego-and-st.-louis.jpg",
+      "canonicalPath": "travel/maps-urban/urban areas - dallas, denver, houston, kansas, los angeles, minneapolis, san francisco, san diego and st. louis.jpg",
+      "notice": {
+        "sourceTitle": "Urban Areas - Dallas, Denver, Houston, Kansas City, Los Angeles, Minneapolis, San Francisco, San Diego, and St. Louis",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Urban Areas - Dallas, Denver, Houston, Kansas City, Los Angeles, Minneapolis, San Francisco, San Diego, and St. Louis by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-urban/urban-areas-new-york-and-washington-d.c..jpg",
+      "canonicalPath": "travel/maps-urban/urban areas - new york and washington d.c..jpg",
+      "notice": {
+        "sourceTitle": "Urban Areas - New York and Washington, D.C.",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Urban Areas - New York and Washington, D.C. by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-west/arizona-and-new-mexico.jpg",
+      "canonicalPath": "travel/maps-west/arizona and new mexico.jpg",
+      "notice": {
+        "sourceTitle": "Arizona and New Mexico",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Arizona and New Mexico by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-west/central-pacific-states.jpg",
+      "canonicalPath": "travel/maps-west/central pacific states.jpg",
+      "notice": {
+        "sourceTitle": "Central Pacific States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Central Pacific States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-west/northwestern-states.jpg",
+      "canonicalPath": "travel/maps-west/northwestern states.jpg",
+      "notice": {
+        "sourceTitle": "Northwestern States",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Northwestern States by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-west/southern-california.jpg",
+      "canonicalPath": "travel/maps-west/southern california.jpg",
+      "notice": {
+        "sourceTitle": "Southern California",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southern California by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    },
+    {
+      "contentId": "travel/maps-west/southern-texas.jpg",
+      "canonicalPath": "travel/maps-west/southern texas.jpg",
+      "notice": {
+        "sourceTitle": "Southern Texas",
+        "creators": [],
+        "publisher": "U.S. Geological Survey",
+        "canonicalURL": "https://pubs.usgs.gov/publication/70039583",
+        "attributionText": "Southern Texas by U.S. Geological Survey; source: https://pubs.usgs.gov/publication/70039583",
+        "changesMade": "Packaged for offline use by ArkFile.",
+        "rightsSummary": "USGS-authored work is generally public domain, while included third-party images or graphics may have separate terms. This copy is a resized or cropped map image. Preserve source credits, marks and included notices. Receiving this copy does not grant additional reuse rights."
+      }
+    }
+  ]
+}

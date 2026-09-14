@@ -1,0 +1,633 @@
+{
+  "schemaVersion": 1,
+  "status": "recipe-frozen-notice-coverage-complete",
+  "package": {
+    "name": "CoreKiwix",
+    "version": "14.2.0+arkfile.1",
+    "upstreamVersion": "14.2.0",
+    "arkFileRevision": 1
+  },
+  "sourceDateEpoch": 1775477105,
+  "noticeIndex": {
+    "path": "Dependencies/CoreKiwixNativeNotices/index.json",
+    "sha256": "77f7a5b4d885e992412b8de181664911de4a9ae1ec109b0e68c5e78c259940f2",
+    "coverageComplete": true,
+    "missingStandaloneLicenseTextEntryIds": []
+  },
+  "buildRecipe": {
+    "source": {
+      "type": "git",
+      "url": "https://github.com/kiwix/kiwix-build.git",
+      "release": "r_103",
+      "commit": "23200d831c6070b3c90d5da78c05887b70f0d831",
+      "tree": "c784e67ffced7579e08d2d5831fcd552560bc7f5"
+    },
+    "license": {
+      "expression": "GPL-3.0-only",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/kiwix-build-LICENSE-GPL-3.0.txt",
+      "noticeSha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+    },
+    "trackedWorkingTreeDiff": {
+      "format": "git diff --binary HEAD",
+      "sha256": "16d586dfef673f5ebc24a712a12e8e505cd71686a4b0513faf6a4cc21db66eb0"
+    },
+    "modifiedFiles": [
+      {
+        "path": "kiwixbuild/configs/ios.py",
+        "sha256": "14d8e869cb3249eb69e323f97b124bdf95d1a1b13f627d945fd6e4254dfe0b56"
+      },
+      {
+        "path": "kiwixbuild/dependencies/libkiwix.py",
+        "sha256": "3582ebfed3d214b09baa202b784a1a77b869c4f2214327fbaf630160fc8fc6c6"
+      },
+      {
+        "path": "kiwixbuild/dependencies/libmicrohttpd.py",
+        "sha256": "94c21e5c93fce598f9bced62a7364c9bc598f8e581e2b1f292c8598933ebafae"
+      },
+      {
+        "path": "kiwixbuild/dependencies/libzim.py",
+        "sha256": "c00309086a17665a87763593effe1b8de5a2562e44566ecc610d186493138733"
+      },
+      {
+        "path": "kiwixbuild/templates/meson_ios_cross_file.txt",
+        "sha256": "bd300e84195d2e28d5b6fccef75e009476eeeccb311feec749b1189d2233e715"
+      },
+      {
+        "path": "kiwixbuild/versions.py",
+        "sha256": "6d5a0344b0bc156ce3adcf086f5b99a14a4d633fda30b7b0de3c543597750d26"
+      },
+      {
+        "path": "kiwixbuild/patches/libmicrohttpd_meson_pipe2.patch",
+        "sha256": "9b4dbbc68da7fc77d8b676d723d03af646d0fe5aebbc068786e2ebffa59bb18c",
+        "origin": {
+          "url": "https://github.com/kiwix/kiwix-build/commit/ca23d24fb05f45c6eeac29f7134edd38b5dc97f5",
+          "commit": "ca23d24fb05f45c6eeac29f7134edd38b5dc97f5"
+        }
+      }
+    ],
+    "appliedPatchFiles": [
+      {
+        "path": "kiwixbuild/patches/zstd_qsort.patch",
+        "sha256": "37019944fdfce9b0ee913f683b016bb365501e73660839d213b34cd405f87b94"
+      },
+      {
+        "path": "kiwixbuild/patches/lzma_meson_install.patch",
+        "sha256": "3610a6e8fc82adefc777ba01a166cf62db7f6f8352e64f63dcf8f69f0cb08445"
+      },
+      {
+        "path": "kiwixbuild/patches/icu4c_fix_static_lib_name_mingw.patch",
+        "sha256": "b4453629064706df396ae7354b6394cdd42f15fdfdccc9cf10fcc955a2ff72a2"
+      },
+      {
+        "path": "kiwixbuild/patches/icu4c_rpath.patch",
+        "sha256": "658eb58f443d49366ae1772864acc618d73c65f2639773edd52fb87c7623fc9b"
+      },
+      {
+        "path": "kiwixbuild/patches/icu4c_wasm.patch",
+        "sha256": "33985289bba20cf78cef9e36e6b27ee88b10aca65041ae8a81296c2ed4ba3db6"
+      },
+      {
+        "path": "kiwixbuild/patches/libmicrohttpd_meson_pkgconfig.patch",
+        "sha256": "c64d14c85a49571a8a7cefa0c7148e4f6744eeb4df62c57ab39b0c05971c5c96"
+      },
+      {
+        "path": "kiwixbuild/patches/libmicrohttpd_meson_timeval_tvsec_size.patch",
+        "sha256": "fecfd4585ee4ae22c5571c81526222ce8ad1223c133220f640586a91518f983c"
+      },
+      {
+        "path": "kiwixbuild/patches/libmicrohttpd_meson_winet6.patch",
+        "sha256": "d29e66cf0e655de550e803ba480740cfab5457a22dc92c51f81237abf2831eef"
+      },
+      {
+        "path": "kiwixbuild/patches/libmicrohttpd_meson_pipe2.patch",
+        "sha256": "9b4dbbc68da7fc77d8b676d723d03af646d0fe5aebbc068786e2ebffa59bb18c"
+      },
+      {
+        "path": "kiwixbuild/patches/pugixml_meson.patch",
+        "sha256": "2ff34488ec5047d2440141c75623c82db9ea3c7bcef745525ec266241c110e31"
+      }
+    ]
+  },
+  "toolchain": {
+    "host": {
+      "architecture": "arm64",
+      "target": "arm64-apple-darwin25.3.0"
+    },
+    "xcode": {
+      "version": "26.4.1",
+      "buildVersion": "17E202",
+      "appleClangVersion": "21.0.0 (clang-2100.0.123.102)",
+      "iphoneosSdkVersion": "26.4",
+      "iphonesimulatorSdkVersion": "26.4",
+      "macosxSdkVersion": "26.4"
+    },
+    "python": {
+      "version": "3.9.6",
+      "provenance": "Apple system toolchain"
+    },
+    "tools": [
+      {
+        "name": "pkgconf",
+        "version": "2.4.3",
+        "archiveName": "pkgconf-2.4.3.tar.gz",
+        "archiveSha256": "cf6be37c79265802f2cb1dfc412e18de23a35b5204fc5868bc09fcfd092ac225"
+      },
+      {
+        "name": "cmake",
+        "version": "3.31.10",
+        "archiveName": "cmake-3.31.10-py3-none-macosx_10_10_universal2.whl",
+        "archiveSha256": "ad697643a00d9ba85179590a383c4f7401169b55ebf4b8b2938daf28c6bdeb6d"
+      },
+      {
+        "name": "meson",
+        "version": "1.10.2",
+        "archiveName": "meson-1.10.2-py3-none-any.whl",
+        "archiveSha256": "5f84ef186e6e788d9154db63620fc61b3ece69f643b94b43c8b9203c43d89b36"
+      },
+      {
+        "name": "ninja",
+        "version": "1.13.0",
+        "reportedVersion": "1.13.0.git.kitware.jobserver-pipe-1",
+        "archiveName": "ninja-1.13.0-py3-none-macosx_10_9_universal2.whl",
+        "archiveSha256": "fa2a8bfc62e31b08f83127d1613d10821775a0eb334197154c4d6067b7068ff1"
+      },
+      {
+        "name": "distro",
+        "version": "1.9.0",
+        "archiveName": "distro-1.9.0-py3-none-any.whl",
+        "archiveSha256": "7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"
+      }
+    ]
+  },
+  "targetMatrix": [
+    {
+      "recipeTarget": "ios_arm64_static",
+      "architecture": "arm64",
+      "targetTriple": "aarch64-apple-ios",
+      "sdk": "iphoneos",
+      "minimumOsVersion": "15.0"
+    },
+    {
+      "recipeTarget": "ios_simulator_x86-64_static",
+      "architecture": "x86_64",
+      "targetTriple": "x86-apple-ios-simulator",
+      "sdk": "iphonesimulator",
+      "minimumOsVersion": "15.0"
+    },
+    {
+      "recipeTarget": "ios_simulator_arm64_static",
+      "architecture": "arm64",
+      "targetTriple": "aarch64-apple-ios-simulator",
+      "sdk": "iphonesimulator",
+      "minimumOsVersion": "15.0",
+      "configureBuildTriple": "aarch64-apple-darwin"
+    },
+    {
+      "recipeTarget": "macos_arm64_static",
+      "architecture": "arm64",
+      "targetTriple": "arm64-apple-macos",
+      "sdk": "macosx",
+      "minimumOsVersion": "12.0"
+    },
+    {
+      "recipeTarget": "macos_x86-64_static",
+      "architecture": "x86_64",
+      "targetTriple": "x86_64-apple-darwin",
+      "sdk": "macosx",
+      "minimumOsVersion": "12.0"
+    }
+  ],
+  "expectedXcframeworkSlices": [
+    "ios-arm64",
+    "ios-arm64_x86_64-simulator",
+    "macos-arm64_x86_64"
+  ],
+  "sourceInputs": [
+    {
+      "id": "libkiwix",
+      "version": "14.2.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kiwix/libkiwix.git",
+        "commit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+        "tree": "1291464180410c31547aceafcdfe20ef160ef941"
+      },
+      "referenceReleaseArchive": {
+        "usedForBuild": false,
+        "sha256": "6431e3dd31edcfc9a1cf2930a266616e845002882211adfe4c1dab9c28af540b"
+      },
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-COPYING-GPL-3.0.txt",
+          "sha256": "2170baac1a469f107cca076f1471e1cdddf858ff3407ece7a1bfee989c8674d7"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-AUTHORS.txt",
+          "sha256": "af326dae1602e50b658a63428bab7ac8c64e5f536a41efb1bfc49e6e59f56d78"
+        }
+      ]
+    },
+    {
+      "id": "libzim",
+      "version": "9.6.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/openzim/libzim.git",
+        "commit": "8e51607a1866f9a2ec6eb428b136c5184974afe7",
+        "tree": "ef88779a784f00840243f2d454c821208cf494a6"
+      },
+      "referenceReleaseArchive": {
+        "usedForBuild": false,
+        "sha256": "a3bb8358c322c92e774c8becd96bc078cc6c6495c4f5e1a86330d2ccde3f3364"
+      },
+      "sourceEvidence": [
+        {
+          "path": "src/lrucache.h",
+          "sha256": "5f04bf12feb5dfcba50c1373642a10a96ec308834b503507049dc5ab6ee32a8a"
+        }
+      ],
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libzim-COPYING-GPL-2.0.txt",
+          "sha256": "86dfcf55c2b28fc143f89c5bf66ada6eec8a2d1c64ea1fdf557b708c16177f37"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libzim-AUTHORS.txt",
+          "sha256": "be674160b83ce87f45d884abbc8af010e67083666f499dfe57933f90334aea28"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libzim-lrucache-BSD-3-Clause.txt",
+          "sha256": "42a31466b92a53c4510a45641def0a94e1e76d3354cc8cf1b2e93d2ecf4e1ad3"
+        }
+      ]
+    },
+    {
+      "id": "zlib",
+      "version": "1.3.1",
+      "url": "https://dev.kiwix.org/kiwix-build/zlib-1.3.1.tar.gz",
+      "archiveName": "zlib-1.3.1.tar.gz",
+      "archiveSha256": "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/zlib-LICENSE-Zlib.txt",
+          "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+        }
+      ]
+    },
+    {
+      "id": "xz-liblzma",
+      "version": "5.2.6",
+      "url": "https://dev.kiwix.org/kiwix-build/xz-5.2.6.tar.gz",
+      "archiveName": "xz-5.2.6.tar.gz",
+      "archiveSha256": "a2105abee17bcd2ebd15ced31b4f5eda6e17efd6b10f921a01cda4a44c91b3a0",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING.txt",
+          "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-AUTHORS.txt",
+          "sha256": "c07ea89b85db044f5e4a28fcc18a1dd900541737fb5ef8a69df1e1eb603f5966"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING-GPL-2.0.txt",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING-GPL-3.0.txt",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xz-COPYING-LGPL-2.1.txt",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        }
+      ]
+    },
+    {
+      "id": "zstd",
+      "version": "1.5.7",
+      "url": "https://dev.kiwix.org/kiwix-build/zstd-1.5.7.tar.gz",
+      "archiveName": "zstd-1.5.7.tar.gz",
+      "archiveSha256": "eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/zstd-LICENSE-BSD-3-Clause.txt",
+          "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/zstd-COPYING-GPL-2.0.txt",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        }
+      ]
+    },
+    {
+      "id": "xapian-core",
+      "version": "1.4.23",
+      "url": "https://dev.kiwix.org/kiwix-build/xapian-core-1.4.23.tar.xz",
+      "archiveName": "xapian-core-1.4.23.tar.xz",
+      "archiveSha256": "30d3518172084f310dab86d262b512718a7f9a13635aaa1a188e61dc26b2288c",
+      "sourceEvidence": [
+        {
+          "path": "api/constinfo.cc",
+          "sha256": "e4e195983ab11bb627b0e17d533dbc6aa7be2c54cad93c65d13ffd5c032b93d7"
+        },
+        {
+          "path": "languages/steminternal.cc",
+          "sha256": "8689b4a948bdb3eafdd313d0880fcf3fc3087f98e5ec137d764ad7909de94392"
+        },
+        {
+          "path": "include/xapian/intrusive_ptr.h",
+          "sha256": "67ecbe51a204471765551ad311fb7e4880c4a25669569581c67bc0a82a877b89"
+        },
+        {
+          "path": "unicode/UnicodeData-README.txt",
+          "sha256": "943d5c88aeef7391b080cc6123e7a443c4a78d71965c10c5b215700e928019f1"
+        }
+      ],
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-COPYING-GPL-2.0.txt",
+          "sha256": "c38aee9e3c8c4d5d594ff548a1be05453023016d6286931f6512db215ec1fd42"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-AUTHORS.txt",
+          "sha256": "b9427184e1666ede7b02efe63998279bde296f06dba9f69f1c8f8e8e72fa7341"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-MIT-constinfo.txt",
+          "sha256": "020af2ab20611bdf83a3d0b75cf458b94c9c7022d6050588a15d3cc8caf5de8d"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-BSD-steminternal.txt",
+          "sha256": "5d4261a99736edf2b452da645d62e980c4d13e683d480f5b30cbdb77cee7ad1a"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-BSL-intrusive_ptr.txt",
+          "sha256": "56c4e77d4729e29404900cb4cc406a6befc926d851a9be543e9b7e166beb074a"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/xapian-UnicodeData-LICENSE.txt",
+          "sha256": "943d5c88aeef7391b080cc6123e7a443c4a78d71965c10c5b215700e928019f1"
+        }
+      ]
+    },
+    {
+      "id": "pugixml",
+      "version": "1.15",
+      "url": "https://dev.kiwix.org/kiwix-build/pugixml-1.15.tar.gz",
+      "archiveName": "pugixml-1.15.tar.gz",
+      "archiveSha256": "2e094287f58de02047b2ef23122904de0e02e3b4e9d6b44952d087e746b25974",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/pugixml-LICENSE-MIT.txt",
+          "sha256": "0d0b3772af2fa45628a548a3b34583707ebcc68bb6f83ec48ca273aab4a510f1"
+        }
+      ]
+    },
+    {
+      "id": "curl",
+      "version": "8.4.0",
+      "url": "https://curl.se/download/curl-8.4.0.tar.xz",
+      "archiveName": "curl-8.4.0.tar.xz",
+      "archiveSha256": "16c62a9c4af0f703d28bda6d7bbf37ba47055ad3414d70dec63e2e6336f2a82d",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/curl-COPYING.txt",
+          "sha256": "b1d7feb949ea5023552029fbe0bf5db4f23c2f85e9b8e51e18536f0ecbf9c524"
+        }
+      ]
+    },
+    {
+      "id": "icu",
+      "version": "73.2",
+      "archives": [
+        {
+          "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz",
+          "archiveName": "icu4c-73_2-src.tgz",
+          "archiveSha256": "818a80712ed3caacd9b652305e01afc7fa167e6f2e94996da44b90c2ab604ce1"
+        },
+        {
+          "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-data.zip",
+          "archiveName": "icu4c-73_2-data.zip",
+          "archiveSha256": "ca1ee076163b438461e484421a7679fc33a64cd0a54f9d4b401893fa1eb42701"
+        }
+      ],
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/icu-LICENSE-composite.txt",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "id": "mustache-cpp",
+      "version": "4.1",
+      "url": "https://dev.kiwix.org/kiwix-build/mustache-4.1.tar.gz",
+      "archiveName": "Mustache-4.1.tar.gz",
+      "archiveSha256": "acd66359feb4318b421f9574cfc5a511133a77d916d0b13c7caa3783c0bfe167",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/mustache-cpp-LICENSE-BSL-1.0.txt",
+          "sha256": "03630faa63ff1049b2eaf1434f771817b7123afa2524568d57850529fae5189e"
+        }
+      ]
+    },
+    {
+      "id": "libmicrohttpd",
+      "version": "0.9.76",
+      "url": "https://dev.kiwix.org/kiwix-build/libmicrohttpd-0.9.76.tar.gz",
+      "archiveName": "libmicrohttpd-0.9.76.tar.gz",
+      "archiveSha256": "f0b1547b5a42a6c0f724e8e1c1cb5ce9c4c35fb495e7d780b9930d35011ceb4c",
+      "relinkMaterialRequired": true,
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libmicrohttpd-COPYING-LGPL-2.1.txt",
+          "sha256": "7399547209438c93f9b90297954698773d4846cea44cde5ca982c84c45952a3b"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libmicrohttpd-AUTHORS.txt",
+          "sha256": "24094fde89a45bc5b0a1894554923d2b921c174ff28bfc6f78aa68879d04d379"
+        }
+      ]
+    }
+  ],
+  "embeddedInputs": [
+    {
+      "id": "libkiwix-autoComplete",
+      "version": "NOASSERTION",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "static/skin/autoComplete/autoComplete.min.js",
+      "sha256": "a01853de27be951bdeb8797225e04370cdf4e6a5034e0847981c0d4f8d242275",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/autoComplete-LICENSE-Apache-2.0.txt",
+      "noticeSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "id": "libkiwix-lrucache",
+      "version": "NOASSERTION",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "src/tools/lrucache.h",
+      "sha256": "c3d462d6fc16e65e59e6c43b4180f9fd5ad09463baae67880b0a2bdba7ec40cd",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/libkiwix-lrucache-BSD-3-Clause.txt",
+      "noticeSha256": "42a31466b92a53c4510a45641def0a94e1e76d3354cc8cf1b2e93d2ecf4e1ad3"
+    },
+    {
+      "id": "libkiwix-base64",
+      "version": "NOASSERTION",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "src/tools/base64.cpp",
+      "sha256": "7df829ba7fb6f934261dd6a5e620b6e3c72751306a4ebe61818e16a95506e509",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/libkiwix-base64-Nyffenegger-Zlib.txt",
+      "noticeSha256": "b3b80bff73d5cf6aebd149d9cd3920d22381d3a2b5b084df35461e872bf3061d"
+    },
+    {
+      "id": "libkiwix-isotope",
+      "version": "3.0.6",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "static/skin/isotope.pkgd.min.js",
+      "sha256": "49ec40ee61a914dba0980e0906f3589d296ab5abc836c27d1c1954b97fccb847",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-COPYING-GPL-3.0.txt",
+          "sha256": "2170baac1a469f107cca076f1471e1cdddf858ff3407ece7a1bfee989c8674d7"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-isotope-attributions.txt",
+          "sha256": "ba437b7be632db8dac21c4b771847ca841f5240d25adb017ea707258df28d75b"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/isotope-bundled-mit-tagged-attributions.txt",
+          "sha256": "627a4573882b6a2b9a2b12ce660afa01d98320d8b12571b11f9e1f4251b3a29e"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/spdx-MIT-template.txt",
+          "sha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5"
+        }
+      ],
+      "noticeCoverage": "complete"
+    },
+    {
+      "id": "libkiwix-mustache-js",
+      "version": "4.2.0",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "static/skin/mustache.min.js",
+      "sha256": "fa4e44c6c914d71a4890ece1f75bed9c805a649a854a81c6a217fe5e427aff17",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-mustache-js-identity.txt",
+          "sha256": "53157c85e68c3f66a01e0ee1bd480a4df65e1be4f566e127d6c748268426e02e"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/mustache-js-LICENSE-MIT.txt",
+          "sha256": "e60b280838180a70cbb4b934f825c8119cdcf8912259ff4c6da20b284231c832"
+        }
+      ],
+      "noticeCoverage": "complete"
+    },
+    {
+      "id": "libkiwix-dm-sans",
+      "version": "NOASSERTION",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "static/skin/fonts/DMSans-Regular.ttf",
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-font-metadata-attributions.txt",
+          "sha256": "4e8fec533603412741df22afec07ef1468b8aa5ce8600c65e158e3f54cdd28ad"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/dm-sans-LICENSE-OFL-1.1.txt",
+          "sha256": "61b3f97168f02ad34a748c3303d193449807534079894cc6d579eb9ba7318823"
+        }
+      ],
+      "noticeCoverage": "complete"
+    },
+    {
+      "id": "libkiwix-poppins",
+      "version": "NOASSERTION",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "static/skin/fonts/Poppins.ttf",
+      "sha256": "e554db189b5d944ef0e6f98ee0e4e8c75f69e95315dc9f4ae0c616a8756a2ba4",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-font-metadata-attributions.txt",
+          "sha256": "4e8fec533603412741df22afec07ef1468b8aa5ce8600c65e158e3f54cdd28ad"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/poppins-LICENSE-OFL-1.1.txt",
+          "sha256": "fbc4c9a72266d66689621c1c438f71e214c2141a6416b667f9c5e556bbc2e7b3"
+        }
+      ],
+      "noticeCoverage": "complete"
+    },
+    {
+      "id": "libkiwix-roboto",
+      "version": "2.137",
+      "sourceCommit": "30adab733771835f25697e4f2ea18dc2eec4e92d",
+      "path": "static/skin/fonts/Roboto.ttf",
+      "sha256": "319cff6e7a31f0f2a41c475dca42890aa5d19fe16017e2290f8c1d4e14f76481",
+      "notices": [
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/libkiwix-font-metadata-attributions.txt",
+          "sha256": "4e8fec533603412741df22afec07ef1468b8aa5ce8600c65e158e3f54cdd28ad"
+        },
+        {
+          "path": "Dependencies/CoreKiwixNativeNotices/autoComplete-LICENSE-Apache-2.0.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    }
+  ],
+  "patchArchiveInputs": [
+    {
+      "id": "zlib-meson-wrap",
+      "version": "1.3.1-1",
+      "url": "https://dev.kiwix.org/kiwix-build/zlib_1.3.1-1_patch.zip",
+      "archiveName": "zlib_1.3.1-1_patch.zip",
+      "archiveSha256": "e79b98eb24a75392009cec6f99ca5cdca9881ff20bfa174e8b8926d5c7a47095",
+      "scope": "build-only",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/meson-wrap-LICENSE-MIT.txt",
+      "noticeSha256": "7939f4c45423cec4a18236ad0a88570e33508dd7462e07b1038001f90ece65fb"
+    },
+    {
+      "id": "liblzma-meson-wrap",
+      "version": "5.2.6-3",
+      "url": "https://dev.kiwix.org/kiwix-build/liblzma_5.2.6-3_patch.zip",
+      "archiveName": "liblzma_5.2.6-3_patch.zip",
+      "archiveSha256": "1c71536d364e1a3ce6bea61266576f89cc5cce4d3b9e11f3494417dafa29780b",
+      "scope": "build-only",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/meson-wrap-LICENSE-MIT.txt",
+      "noticeSha256": "7939f4c45423cec4a18236ad0a88570e33508dd7462e07b1038001f90ece65fb"
+    },
+    {
+      "id": "curl-meson-wrap",
+      "version": "8.4.0-2",
+      "url": "https://dev.kiwix.org/libkiwix/curl_8.4.0-2_patch.zip",
+      "archiveName": "curl_8.4.0-2_patch.zip",
+      "archiveSha256": "bbb6ae75225c36ef9bb336cface729794c7c070c623a003fff40bd416042ff6e",
+      "scope": "build-only",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/meson-wrap-LICENSE-MIT.txt",
+      "noticeSha256": "7939f4c45423cec4a18236ad0a88570e33508dd7462e07b1038001f90ece65fb"
+    },
+    {
+      "id": "libmicrohttpd-meson-wrap",
+      "version": "0.9.76-3",
+      "url": "https://wrapdb.mesonbuild.com/v2/libmicrohttpd_0.9.76-3/get_patch",
+      "archiveName": "libmicrohttpd_0.9.16-3_patch.zip",
+      "archiveSha256": "0954c094a0d4cfe0dd799d8df8a04face6669f7b4d51a7386a9c3e2d37b9c3b3",
+      "scope": "build-only",
+      "noticePath": "Dependencies/CoreKiwixNativeNotices/meson-wrap-LICENSE-MIT.txt",
+      "noticeSha256": "7939f4c45423cec4a18236ad0a88570e33508dd7462e07b1038001f90ece65fb"
+    }
+  ],
+  "testOnlyInputs": [
+    {
+      "id": "zim-testing-suite",
+      "version": "0.9.0",
+      "url": "https://github.com/openzim/zim-testing-suite/releases/download/0.9.0/zim-testing-suite-0.9.0.tar.gz",
+      "archiveName": "zim-testing-suite-0.9.0.tar.gz",
+      "archiveSha256": "1192a4552c5a455c5219a732657d3dbfb5fd6f5ddab206f9cbb913b1ba09a99c",
+      "scope": "build-test-only",
+      "noticeRequirement": "not-shipped"
+    }
+  ]
+}

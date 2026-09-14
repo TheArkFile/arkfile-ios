@@ -1,0 +1,25 @@
+DMSans-Regular.ttf
+Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts)
+Colophon Foundry
+Colophon Foundry, Jonny Pinhorn
+https://www.colophon-foundry.org
+https://www.indiantypefoundry.com
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+https://scripts.sil.org/OFL
+
+Poppins.ttf
+Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
+Indian Type Foundry
+Ninad Kale (Devanagari), Jonny Pinhorn (Latin)
+https://indiantypefoundry.com
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+https://scripts.sil.org/OFL
+
+Roboto.ttf
+Copyright 2011 Google Inc. All Rights Reserved.
+Roboto is a trademark of Google.
+Google
+Google.com
+Christian Robertson
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0

@@ -1,0 +1,2165 @@
+{
+  "schemaVersion": 1,
+  "ledgerVersion": "2026-07-10.1",
+  "coverage": {
+    "expectedArtifacts": 195,
+    "greenArtifacts": 38,
+    "retiredArtifacts": 13,
+    "incompleteArtifacts": 144,
+    "complete": false
+  },
+  "entries": [
+    {
+      "contentId": "books-documents/openstax-algebra-and-trigonometry.zip",
+      "displayName": "OpenStax - Algebra and Trigonometry.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Algebra and Trigonometry.zip",
+        "type": "htmlbook",
+        "sha256": "9c38f8507890d7c882729777b95ffa8e47a6619c47c384d4a2b31fbcb9c6327e",
+        "sizeBytes": 103660814,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Algebra and Trigonometry",
+        "creators": [
+          "OpenStax CAT"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11758/algebra-and-trigonometry.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11758/algebra-and-trigonometry.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Algebra and Trigonometry by OpenStax CAT is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-american-government.zip",
+      "displayName": "OpenStax - American Government.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - American Government.zip",
+        "type": "htmlbook",
+        "sha256": "ee4f0f19951f9ac39c2831b3898b7f74c38fe9e0ea5394534de0c9ac3e967b36",
+        "sizeBytes": 155423241,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "American Government",
+        "creators": [
+          "OpenStax American Government"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11995/american-government.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11995/american-government.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "American Government by OpenStax American Government is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-biology-2e.zip",
+      "displayName": "OpenStax - Biology 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Biology 2e.zip",
+        "type": "htmlbook",
+        "sha256": "cfc395569828ffb79af19a553582fc961a876b629b3c4ffe0b3cc09d9c6d9d83",
+        "sizeBytes": 421070190,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Biology 2e",
+        "creators": [
+          "OpenStax Biology 2nd Edition"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col24361/biology-2e.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col24361/biology-2e.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Biology 2e by OpenStax Biology 2nd Edition is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-biology-for-ap-courses.zip",
+      "displayName": "OpenStax - Biology for AP Courses.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Biology for AP Courses.zip",
+        "type": "htmlbook",
+        "sha256": "81fd2f4a3d286ef47cdff9a73120a1f613bfb0110d8486a663a41a0957ff6b1c",
+        "sizeBytes": 239024570,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Biology for AP Courses",
+        "creators": [
+          "OpenStax Biology for AP Courses"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12078/biology-for-ap-r-courses.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12078/biology-for-ap-r-courses.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Biology for AP Courses by OpenStax Biology for AP Courses is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-chemistry-atoms-first.zip",
+      "displayName": "OpenStax - Chemistry - Atoms First.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Chemistry - Atoms First.zip",
+        "type": "htmlbook",
+        "sha256": "86a2b8f4f21ee4c27a045fab129abd08124c083a3195158f94c656ed9b8fb498",
+        "sizeBytes": 268902963,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Chemistry: Atoms First",
+        "creators": [
+          "OpenStax Chemistry: Atom First"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12012/chemistry-atoms-first.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12012/chemistry-atoms-first.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Chemistry: Atoms First by OpenStax Chemistry: Atom First is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-chemistry.zip",
+      "displayName": "OpenStax - Chemistry.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Chemistry.zip",
+        "type": "htmlbook",
+        "sha256": "dad1a80f8aa15e64fd77bc71392966bb1fc99d7ecd8595147830c9e187e24792",
+        "sizeBytes": 269473981,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Chemistry",
+        "creators": [
+          "OpenStax Chemistry"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11760/chemistry.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11760/chemistry.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Chemistry by OpenStax Chemistry is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-college-algebra.zip",
+      "displayName": "OpenStax - College Algebra.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - College Algebra.zip",
+        "type": "htmlbook",
+        "sha256": "411897a509b54d476562100ac1b1c02546e4127be7445ec42a49e221adda150a",
+        "sizeBytes": 73308955,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "College Algebra",
+        "creators": [
+          "OpenStax College Algebra"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11759/college-algebra.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11759/college-algebra.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "College Algebra by OpenStax College Algebra is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-college-physics.zip",
+      "displayName": "OpenStax - College Physics.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - College Physics.zip",
+        "type": "htmlbook",
+        "sha256": "12b7abcaa46ac301019b764585c6a525c9672533e245be18c9c669f38376ed9e",
+        "sizeBytes": 232453169,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "College Physics",
+        "creators": [
+          "OpenStax / OSC Physics Maintainer"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11406/college-physics.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11406/college-physics.epub",
+        "retrievedAt": "2026-07-04"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "College Physics by OpenStax / OSC Physics Maintainer is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-college-success.zip",
+      "displayName": "OpenStax - College Success.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - College Success.zip",
+        "type": "htmlbook",
+        "sha256": "d8da9fd96e601e92d384437e39c40af6657ac90f99ad04e59b2aa36f224c5bc3",
+        "sizeBytes": 38611344,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "College Success",
+        "creators": [
+          "OpenStax College Success"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col30990/cosu.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col30990/cosu.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "College Success by OpenStax College Success is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-elementary-algebra-2e.zip",
+      "displayName": "OpenStax - Elementary Algebra 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Elementary Algebra 2e.zip",
+        "type": "htmlbook",
+        "sha256": "969f029afc465a49fb4419a5ed00fba3ac0e96ad436cdfcc5f3a8b81867b03c3",
+        "sizeBytes": 79523676,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Elementary Algebra 2e",
+        "creators": [
+          "OpenStax Elementary Algebra 2e"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col31130/elementary-algebra-2e-draft.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col31130/elementary-algebra-2e-draft.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Elementary Algebra 2e by OpenStax Elementary Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-entrepreneurship.zip",
+      "displayName": "OpenStax - Entrepreneurship.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Entrepreneurship.zip",
+        "type": "htmlbook",
+        "sha256": "8f954ba91876d7d9c9a2c0c9137ef6c4e24835726d93038735647e94501999f6",
+        "sizeBytes": 137566748,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Entrepreneurship",
+        "creators": [
+          "OpenStax Entrepreneurship ,OpenStax"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col29104/entrepreneurship-draft.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col29104/entrepreneurship-draft.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Entrepreneurship by OpenStax Entrepreneurship ,OpenStax is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-intermediate-algebra-2e.zip",
+      "displayName": "OpenStax - Intermediate Algebra 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Intermediate Algebra 2e.zip",
+        "type": "htmlbook",
+        "sha256": "2173361ee9a5fb2268eb3ae4509fbf2efeffbea0991a73c244f68c6ea33099e4",
+        "sizeBytes": 85051450,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Intermediate Algebra 2e",
+        "creators": [
+          "OpenStax Intermediate Algebra 2e"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col31234/intermediate-algebra-2e.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col31234/intermediate-algebra-2e.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Intermediate Algebra 2e by OpenStax Intermediate Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introduction-to-business.zip",
+      "displayName": "OpenStax - Introduction to Business.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Introduction to Business.zip",
+        "type": "htmlbook",
+        "sha256": "f566bfc202ec7907d94fa43babafc2dc28001f6fb20b0cb136174ce2c6c830ba",
+        "sizeBytes": 176253402,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Introduction to Business",
+        "creators": [
+          "OpenStax Introduction to Business"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col25734/introduction-to-business.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col25734/introduction-to-business.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Introduction to Business by OpenStax Introduction to Business is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introduction-to-sociology-3e.zip",
+      "displayName": "OpenStax - Introduction to Sociology 3e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Introduction to Sociology 3e.zip",
+        "type": "htmlbook",
+        "sha256": "db2b370af5e1019366b466127b0334cf8d189995232f67c579f429c3d10d05b8",
+        "sizeBytes": 41062112,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Introduction to Sociology 3e",
+        "creators": [
+          "OpenStax ,First Last"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col32649/introduction-to-sociology-3e.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col32649/introduction-to-sociology-3e.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Introduction to Sociology 3e by OpenStax ,First Last is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introductory-business-statistics.zip",
+      "displayName": "OpenStax - Introductory Business Statistics.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Introductory Business Statistics.zip",
+        "type": "htmlbook",
+        "sha256": "c7b010bffb0bee7a8c265016677297996789a72580d1274cc92b905df418e5b0",
+        "sizeBytes": 24244739,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Introductory Business Statistics",
+        "creators": [
+          "OpenStax Business Statistics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11776/introductory-statistics.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11776/introductory-statistics.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Introductory Business Statistics by OpenStax Business Statistics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-introductory-statistics.zip",
+      "displayName": "OpenStax - Introductory Statistics.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Introductory Statistics.zip",
+        "type": "htmlbook",
+        "sha256": "d8add9ee3172c52b7efb4837eae275da4eb5b1fd8d6240279932f2059bf364a9",
+        "sizeBytes": 25014328,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Introductory Statistics",
+        "creators": [
+          "OpenStax College"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11562/collaborative-statistics.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11562/collaborative-statistics.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Introductory Statistics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-microbiology.zip",
+      "displayName": "OpenStax - Microbiology.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Microbiology.zip",
+        "type": "htmlbook",
+        "sha256": "f9116494bd415e3b2ac6f15f97026b8a9f3cd114b3371f80639b3ec6963ec4bb",
+        "sizeBytes": 320364622,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Microbiology",
+        "creators": [
+          "OpenStax College Microbiology"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12087/microbiology.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12087/microbiology.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Microbiology by OpenStax College Microbiology is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-physics.zip",
+      "displayName": "OpenStax - Physics.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Physics.zip",
+        "type": "htmlbook",
+        "sha256": "23807dbccdfd153ac758280ff6f690d5075a98e45721e5a2ce6bada6bda0ed64",
+        "sizeBytes": 50360076,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Physics",
+        "creators": [
+          "OpenStax College"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12081/hs-physics.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12081/hs-physics.epub",
+        "retrievedAt": "2026-07-04"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Physics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-prealgebra.zip",
+      "displayName": "OpenStax - Prealgebra.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Prealgebra.zip",
+        "type": "htmlbook",
+        "sha256": "45fcaad2cf65442ae234fc45f556dd0ae88889b5af2dea3054ed479718650c80",
+        "sizeBytes": 61574328,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Prealgebra",
+        "creators": [
+          "OpenStax Developmental Math"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12157/prealgebra.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12157/prealgebra.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Prealgebra by OpenStax Developmental Math is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-precalculus.zip",
+      "displayName": "OpenStax - Precalculus.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Precalculus.zip",
+        "type": "htmlbook",
+        "sha256": "1755a09ecfa1677e7f2bfee1b5b1838ceea271c1f0f4ccfa470b8d0864e29125",
+        "sizeBytes": 101938283,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Precalculus",
+        "creators": [
+          "OpenStax College Precalculus"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11667/precalculus.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11667/precalculus.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Precalculus by OpenStax College Precalculus is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-economics-2e.zip",
+      "displayName": "OpenStax - Principles of Economics 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Principles of Economics 2e.zip",
+        "type": "htmlbook",
+        "sha256": "a30a5e967c9cee1b50b57cb252164183836ba42f04f355fd5f8c7986c99b34d2",
+        "sizeBytes": 77966494,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Principles of Economics 2e",
+        "creators": [
+          "OpenStax Economics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12122/principles-of-economics-2e-draft.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12122/principles-of-economics-2e-draft.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Principles of Economics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-macroeconomics-2e.zip",
+      "displayName": "OpenStax - Principles of Macroeconomics 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Principles of Macroeconomics 2e.zip",
+        "type": "htmlbook",
+        "sha256": "6feac2d4a27f4a1cb98ec801c6303f7c66371b9a27dc3907a4391e8648f17e77",
+        "sizeBytes": 56470785,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Principles of Macroeconomics 2e",
+        "creators": [
+          "OpenStax Economics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12190/principles-of-macroeconomics-2e-draft.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12190/principles-of-macroeconomics-2e-draft.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Principles of Macroeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-microeconomics-2e.zip",
+      "displayName": "OpenStax - Principles of Microeconomics 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Principles of Microeconomics 2e.zip",
+        "type": "htmlbook",
+        "sha256": "8ac67545a452b8386620e248b7d06f64def13c763a1c6b99da6e8ba30b096e78",
+        "sizeBytes": 42469205,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Principles of Microeconomics 2e",
+        "creators": [
+          "OpenStax Economics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12170/principles-of-microeconomics-2e-draft.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12170/principles-of-microeconomics-2e-draft.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Principles of Microeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-principles-of-microeconomics-for-ap-courses.zip",
+      "displayName": "OpenStax - Principles of Microeconomics for AP Courses.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Principles of Microeconomics for AP Courses.zip",
+        "type": "htmlbook",
+        "sha256": "cca276f38bf14af5a5a9427d42a6c5601aea6b3c96dcf9c9d3d43678b7aa907a",
+        "sizeBytes": 43291365,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Principles of Microeconomics for AP Courses",
+        "creators": [
+          "OpenStax College Principles of Economics for AP® Courses"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col11858/apecon.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col11858/apecon.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Principles of Microeconomics for AP Courses by OpenStax College Principles of Economics for AP® Courses is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-psychology-2e.zip",
+      "displayName": "OpenStax - Psychology 2e.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Psychology 2e.zip",
+        "type": "htmlbook",
+        "sha256": "7408234222d6aa08662ca0c7c0219dd7f4f537abdd7a3ca90f5f48020dd96197",
+        "sizeBytes": 67139094,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Psychology 2e",
+        "creators": [
+          "OpenStax Psychology"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col31502/psychology-2e.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col31502/psychology-2e.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Psychology 2e by OpenStax Psychology is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-statistics.zip",
+      "displayName": "OpenStax - Statistics.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - Statistics.zip",
+        "type": "htmlbook",
+        "sha256": "e61eef80ad331d0e93db6a0272ee624156de0d6c28d64f10459ecfa63991d056",
+        "sizeBytes": 26856309,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Statistics",
+        "creators": [
+          "OpenStax Statistics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col30309/hs-statistics.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col30309/hs-statistics.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "Statistics by OpenStax Statistics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "books-documents/openstax-university-physics.zip",
+      "displayName": "OpenStax - University Physics.zip",
+      "artifact": {
+        "relativePath": "books_documents/OpenStax - University Physics.zip",
+        "type": "htmlbook",
+        "sha256": "1af49bff8aabdd10ea8ac3f54b8c32b67ff5831a8695bab3d146500218e0b24b",
+        "sizeBytes": 173706872,
+        "editionOrRevision": "Frozen 2022 OpenStax CC BY artifact",
+        "includedInTiers": [
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "University Physics",
+        "creators": [
+          "OpenStax University Physics"
+        ],
+        "publisher": "OpenStax",
+        "canonicalUrl": "https://archive.org/download/cnx-org-col12105/openstax-university-physics-all-volumes.epub",
+        "artifactUrl": "https://archive.org/download/cnx-org-col12105/openstax-university-physics-all-volumes.epub",
+        "retrievedAt": "2026-07-07"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": true
+      },
+      "notices": {
+        "attributionText": "University Physics by OpenStax University Physics is licensed under Creative Commons Attribution 4.0 International.",
+        "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
+        "requiredInternalFiles": [
+          "arkfile-license.html",
+          "arkfile-attribution.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "CC BY 4.0 permits commercial reuse, redistribution, and modification with attribution and without additional restrictions.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "public-preview",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-09"
+      }
+    },
+    {
+      "contentId": "food-preparation/food/arkfile-wild-game-safety-preservation-2026-07.zip",
+      "displayName": "ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+      "artifact": {
+        "relativePath": "food-preparation/food/ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+        "type": "htmlbook",
+        "sha256": "1bf92241c721e6a49d1ebe02a1b1e1c0dfbaef4989b346f1ca22458770da9c55",
+        "sizeBytes": 15783,
+        "editionOrRevision": "ArkFile text-only offline edition 2026-07",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "ArkFile - Wild Game Safety and Preservation",
+        "creators": [
+          "USDA Food Safety and Inspection Service",
+          "Centers for Disease Control and Prevention",
+          "USDA Animal and Plant Health Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/roasting-those-other-holiday-meats",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service; Centers for Disease Control and Prevention; USDA Animal and Plant Health Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "requiredInternalFiles": [
+          "sources.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-chicken-farm-table-offline-2026-07.zip",
+      "displayName": "USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+      "artifact": {
+        "relativePath": "food-preparation/food/USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+        "type": "htmlbook",
+        "sha256": "322dc39d8dd028f9444619f75fea3526a760504e751180a924ed95f08e87e99a",
+        "sizeBytes": 9813,
+        "editionOrRevision": "ArkFile text-only offline edition 2026-07",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "USDA FSIS - Chicken from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/chicken-farm-table",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "requiredInternalFiles": [
+          "sources.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-duck-goose-farm-table-offline-2026-07.zip",
+      "displayName": "USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+      "artifact": {
+        "relativePath": "food-preparation/food/USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+        "type": "htmlbook",
+        "sha256": "dcc7248f12aff7bf7564fde2834b0dc4ddc0c7c56579f44624324a8018d55cd1",
+        "sizeBytes": 8119,
+        "editionOrRevision": "ArkFile text-only offline edition 2026-07",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "USDA FSIS - Duck and Goose from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/duck-and-goose-farm-table",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "requiredInternalFiles": [
+          "sources.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-fresh-pork-farm-table-offline-2026-07.zip",
+      "displayName": "USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+      "artifact": {
+        "relativePath": "food-preparation/food/USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+        "type": "htmlbook",
+        "sha256": "b1cb73467a1019e0e281c2786c7bf21c9c0309d4fba6268c4eaae8ea0405dae7",
+        "sizeBytes": 8320,
+        "editionOrRevision": "ArkFile text-only offline edition 2026-07",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "USDA FSIS - Fresh Pork from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/fresh-pork-farm-table",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "requiredInternalFiles": [
+          "sources.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-lamb-farm-table-offline-2026-07.zip",
+      "displayName": "USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+      "artifact": {
+        "relativePath": "food-preparation/food/USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+        "type": "htmlbook",
+        "sha256": "a548254e45f31da347af32eaf21e7941fc5397919e1052a95041ef041f67a3dd",
+        "sizeBytes": 8394,
+        "editionOrRevision": "ArkFile text-only offline edition 2026-07",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "USDA FSIS - Lamb from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/lamb-farm-table",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "requiredInternalFiles": [
+          "sources.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "food-preparation/food/usda-fsis-turkey-farm-table-offline-2026-07.zip",
+      "displayName": "USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+      "artifact": {
+        "relativePath": "food-preparation/food/USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+        "type": "htmlbook",
+        "sha256": "b6418a50125e4157ce29f623bba03e40d8863f729c5b87b6704753e425cdbf40",
+        "sizeBytes": 9521,
+        "editionOrRevision": "ArkFile text-only offline edition 2026-07",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "USDA FSIS - Turkey from Farm to Table",
+        "creators": [
+          "USDA Food Safety and Inspection Service"
+        ],
+        "publisher": "ArkFile text-only offline edition from official federal sources",
+        "canonicalUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/turkey-farm-table",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
+        "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
+        "requiredInternalFiles": [
+          "sources.json"
+        ]
+      },
+      "downstreamRights": {
+        "summary": "Federal source text is redistributed with provenance and changes disclosed; third-party visual material was intentionally omitted.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "general/survival/atp-3-50-21-survival-2018.pdf",
+      "displayName": "ATP 3-50.21 - Survival (2018).pdf",
+      "artifact": {
+        "relativePath": "general/survival/ATP 3-50.21 - Survival (2018).pdf",
+        "type": "pdf",
+        "sha256": "440035273e6e2ddab5f6ba8b79a4b0d5c901f3804538998381b343092512a813",
+        "sizeBytes": 23772309,
+        "editionOrRevision": "September 2018",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "ATP 3-50.21 - Survival",
+        "creators": [
+          "Headquarters, Department of the Army"
+        ],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalUrl": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/13BC7D8D-AD46-433D-9C0B-F3A1D1405259-1537466238381/atp3_50x21.pdf",
+        "artifactUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN12086_ATP%203-50x21%20FINAL%20WEB%202.pdf",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "name": "Exact federal publication approved for public release; distribution unlimited",
+        "url": "https://armypubs.army.mil/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "prohibited",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "ATP 3-50.21 - Survival, Headquarters, Department of the Army, September 2018.",
+        "changesMade": "None.",
+        "requiredInternalFiles": []
+      },
+      "downstreamRights": {
+        "summary": "Exact, unmodified publication may be redistributed with its public-release marking and attribution preserved.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "general/survival/fm-21-76-1-survival-evasion-and-recovery-1999-.pdf",
+      "displayName": "FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+      "artifact": {
+        "relativePath": "general/survival/FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+        "type": "pdf",
+        "sha256": "f4bf6508978e695a16815ca19c52e2b9d5ba5634f5d76fdcc666adbd203cd05c",
+        "sizeBytes": 3136930,
+        "editionOrRevision": "FM 21-76-1 / MCRP 3-02H / NWP 3-50.3 / AFTTP(I) 3-2.26, June 1999",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "Survival, Evasion, and Recovery",
+        "creators": [
+          "Departments of the Army, Marine Corps, Navy, and Air Force"
+        ],
+        "publisher": "Air Land Sea Application Center",
+        "canonicalUrl": "https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02H%20Survival%2C%20Evasion%2C%20and%20Recovery.pdf",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "name": "Exact federal publication approved for public release; distribution unlimited",
+        "url": "https://armypubs.army.mil/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "prohibited",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "Survival, Evasion, and Recovery, FM 21-76-1 and multiservice equivalents, June 1999.",
+        "changesMade": "None.",
+        "requiredInternalFiles": []
+      },
+      "downstreamRights": {
+        "summary": "Retained as the exact, unmodified public-release publication with its cover marking and attribution preserved.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "medical/field-guides/atp-4-02-11-casualty-response-first-aid-2026.pdf",
+      "displayName": "ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+      "artifact": {
+        "relativePath": "medical/field-guides/ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+        "type": "pdf",
+        "sha256": "a4a0650f5bb14c1c7163b9b1e9f08bcc012fb3fe49ea4432f0ccaffb9af86542",
+        "sizeBytes": 12665561,
+        "editionOrRevision": "March 2026",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid",
+        "creators": [
+          "Headquarters, Department of the Army"
+        ],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+        "artifactUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "name": "Exact federal publication approved for public release; distribution unlimited",
+        "url": "https://armypubs.army.mil/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "prohibited",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid, Headquarters, Department of the Army, March 2026.",
+        "changesMade": "None.",
+        "requiredInternalFiles": []
+      },
+      "downstreamRights": {
+        "summary": "Exact, unmodified publication may be redistributed with its public-release marking and attribution preserved.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "medical/field-guides/fema-cert-basic-training-participant-manual-2019.pdf",
+      "displayName": "FEMA CERT Basic Training Participant Manual (2019).pdf",
+      "artifact": {
+        "relativePath": "medical/field-guides/FEMA CERT Basic Training Participant Manual (2019).pdf",
+        "type": "pdf",
+        "sha256": "6805819d1236a78be217adc20a7fd9346eb9033da14d9041ffde797ad49eb7ee",
+        "sizeBytes": 5603996,
+        "editionOrRevision": "2019 Update",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "CERT Basic Training Participant Manual",
+        "creators": [
+          "Federal Emergency Management Agency"
+        ],
+        "publisher": "U.S. Government Publishing Office",
+        "canonicalUrl": "https://www.govinfo.gov/app/details/GOVPUB-HS5_100-PURL-gpo185734",
+        "artifactUrl": "https://www.govinfo.gov/content/pkg/GOVPUB-HS5_100-PURL-gpo185734/pdf/GOVPUB-HS5_100-PURL-gpo185734.pdf",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "US-GOV-WORK-17-USC-105",
+        "name": "United States Government work under 17 U.S.C. 105",
+        "url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "allowed",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "CERT Basic Training Participant Manual, U.S. Government Publishing Office, 2019 Update.",
+        "changesMade": "None.",
+        "requiredInternalFiles": []
+      },
+      "downstreamRights": {
+        "summary": "Federal-work text may be redistributed; third-party marks and media remain outside the profile.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    },
+    {
+      "contentId": "medical/reference/atp-4-02-83-treatment-nuclear-radiological-casualties-2014.pdf",
+      "displayName": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+      "artifact": {
+        "relativePath": "medical/reference/ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+        "type": "pdf",
+        "sha256": "4cf250e450281200fa26edb9cd33315c24f2a22a61a4a307062bc5ac5f1a1a95",
+        "sizeBytes": 1946943,
+        "editionOrRevision": "May 2014",
+        "includedInTiers": [
+          "lite",
+          "standard",
+          "complete"
+        ]
+      },
+      "source": {
+        "title": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties",
+        "creators": [
+          "Departments of the Army, Marine Corps, Navy, and Air Force"
+        ],
+        "publisher": "Headquarters, Department of the Army",
+        "canonicalUrl": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/2C9DF500-FE70-4DFC-A915-D01FE6A8BCE2-1399482805293/atp_4-02x83.pdf",
+        "artifactUrl": "https://remm.hhs.gov/ATP_4-02_83_Treatment_Rad_May_2014.pdf",
+        "retrievedAt": "2026-07-10"
+      },
+      "license": {
+        "id": "FEDERAL-PUBLIC-RELEASE-UNLIMITED",
+        "name": "Exact federal publication approved for public release; distribution unlimited",
+        "url": "https://armypubs.army.mil/",
+        "commercialUse": "allowed",
+        "redistribution": "allowed",
+        "modification": "prohibited",
+        "shareAlike": false,
+        "attributionRequired": true,
+        "noAdditionalRestrictions": false
+      },
+      "notices": {
+        "attributionText": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties, Headquarters, Department of the Army, May 2014.",
+        "changesMade": "None.",
+        "requiredInternalFiles": []
+      },
+      "downstreamRights": {
+        "summary": "Exact, unmodified publication may be redistributed with its public-release marking and attribution preserved.",
+        "allowedDistributionModes": [
+          "paid-download",
+          "offline-use",
+          "local-sharing",
+          "future-updates"
+        ]
+      },
+      "decision": {
+        "status": "green",
+        "reviewedAt": "2026-07-10"
+      }
+    }
+  ],
+  "projectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39"
+}
