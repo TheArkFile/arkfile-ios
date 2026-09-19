@@ -2,7 +2,7 @@
 
 Application code licensing is separate from content licensing.
 
-ArkFile iOS can display bundled sample content, preview catalog metadata, and downloaded ArkFile Essentials and Complete content. ArkFile maintains a private artifact-level ledger and distributes required notices with the app, title, reader, map, or package as appropriate.
+ArkFile iOS can display bundled sample content, preview catalog metadata, and downloaded ArkFile Essentials and Complete content. Required notices accompany the app, title, reader, map, or package as appropriate.
 
 ## Current Content Areas
 
@@ -12,19 +12,14 @@ ArkFile iOS can display bundled sample content, preview catalog metadata, and do
 | Books and documents | Public domain books, government/public-domain PDFs, curated guides | Public-domain status and source-specific terms must be verified per item. |
 | Maps | OpenStreetMap, PMTiles/Protomaps-derived packages | Open Database License and visible attribution requirements may apply. |
 | Preview catalog | Metadata generated from ArkFile Desktop catalog | Must not imply rights beyond the underlying content licenses. |
-| Future AI/source maps | Model and content-derived indexes | Must include model license, source-map attribution, and no placeholder provenance before shipment. |
 
-## Release Requirement
+## Title Rights And Notices
 
-The normal release gate is risk-based:
-
-- hard-block known prohibited, noncommercial, incompatible, red, or retired content and any concrete unmet source, attribution, notice, share-alike, modification, or redistribution obligation;
-- review the report-mode ledger output, including non-catalog and bundled assets;
-- require a private ledger review for every new or materially changed distributed artifact;
-- permit an existing yellow/evidence-incomplete artifact only when the owner records risk acceptance and review confirms that its actual required notices are already present in the artifact or product; and
-- do not represent the whole catalog as fully cleared while the evidence backlog remains incomplete.
-
-The public website is a minimal index and correction route, not a public audit dump or a promise that every distributed title has completed green metadata. Green rows receive public title-level metadata. Accepted-yellow titles rely on the source/license/attribution paths already present in the artifact or product until the private evidence record is completed. Strict zero-yellow validation remains available as an optional full-coverage/deep-audit mode.
+Content rights and notices are specific to each title and artifact. Consult the
+notices included with the content and the title-level records available in the
+app. Catalog inclusion does not grant rights beyond the applicable license or
+establish that every title has the same supporting documentation. For licensing
+or attribution questions and corrections, contact support@thearkfile.com.
 
 ## Local Sharing Posture
 
@@ -39,8 +34,8 @@ do not lock reading or Local Sharing of valid installed copies. Empty
 entitlement snapshots, account changes, expired tokens, and service failures
 also do not narrow the readable installed library.
 
-The license and disposition records remain release-review evidence and may
-provide receiver notices or checksum-based ETags when available. They are not a
+The license and disposition records may provide receiver notices or
+checksum-based ETags when available. They are not a
 runtime Local Sharing allowlist. ArkFile does not claim that user-imported
 content was reviewed, licensed, or owned by ArkFile.
 

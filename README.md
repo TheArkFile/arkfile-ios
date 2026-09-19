@@ -24,9 +24,9 @@ ArkFile trademarks, paid content-pack access, backend services, account entitlem
 
 ## App Store / GPL Notice
 
-ArkFile publishes matching corresponding source no later than distribution for every external TestFlight build, App Store build, or build made available to anyone other than the sole developer. A self-only internal TestFlight build may omit publication only when the finalized release identity binds matching internal-only flags in the requested options, Xcode-produced options, and exact code-signed IPA, and the upload-time App Store Connect check confirms that every automatic recipient record belongs to the sole developer. ArkFile's paid content/download service does not restrict users' GPL rights in the application code.
+Matching corresponding source for distributed ArkFile builds is available through the release tags and GitHub Releases linked below. ArkFile's paid content/download service does not restrict users' GPL rights in the application code.
 
-Kiwix/openZIM outreach must not be described as permission, affiliation, or endorsement. Public upstream and binary-provenance details are recorded in [docs/UPSTREAM_PROVENANCE.md](docs/UPSTREAM_PROVENANCE.md).
+Public upstream and binary-provenance details are recorded in [docs/UPSTREAM_PROVENANCE.md](docs/UPSTREAM_PROVENANCE.md).
 
 ## Source Releases
 
@@ -35,7 +35,11 @@ matching release tags and GitHub Releases at:
 
 https://github.com/TheArkFile/arkfile-ios
 
-Source release archives are sanitized snapshots generated from shipped-build commits. They include app and widget runtime source, project configuration, reviewed dependency locks and hashes, the deterministic public-build entrypoint, provenance, notices, and a release manifest. They exclude private repository history, private test suites and title research, internal legal/release material, Apple credentials, signing material, paid content payloads, local AI/model packages, TestFlight artifacts, agent files, and private operations.
+Release tags and archives preserve the source snapshot for each build. The main
+branch may include later documentation corrections; use the matching release
+tag or archive when reproducing a released build.
+
+Source release archives are sanitized snapshots generated from shipped-build commits. They include app and widget runtime source, project configuration, reviewed dependency locks and hashes, the deterministic public-build entrypoint, provenance, notices, and a release manifest. They exclude private repository history, private test suites and title research, Apple credentials, signing material, paid content payloads, local AI/model packages, TestFlight artifacts, agent files, and private operations.
 
 Distribution-bound releases include the verified CoreKiwix source-and-relink
 archive, notices, controlled build evidence, and the reviewed attribution limits
@@ -54,7 +58,7 @@ scripts/arkfile-public-build.sh
 
 The script downloads or accepts local copies of the exact pinned XcodeGen and CoreKiwix archives, checks them against reviewed hashes and the CoreKiwix certification receipt, restores the reviewed SwiftPM lock, disables automatic package resolution and code signing, builds the Release configuration for a generic iOS Simulator, and fails if source files change.
 
-The internal scheme/target names may still say `Kiwix` while the user-facing product is ArkFile. Legal/source clarity takes priority over broad project renaming until the build is stable.
+The internal scheme/target names may still say `Kiwix` while the user-facing product is ArkFile.
 
 ## Support
 

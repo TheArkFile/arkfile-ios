@@ -7,10 +7,9 @@ recipe is recorded in `Dependencies/CoreKiwixNativeBuildRecipe.lock.json`, and
 its component/embedded-asset notices and exact provenance are recorded in
 `Dependencies/CoreKiwixNativeNotices/index.json`.
 
-The notice index is engineering-complete for every identified controlled input.
-That does not make this document a legal opinion. The single CoreKiwix source-
-and-relink archive contains the controlled framework, corresponding source,
-build inputs, notices, and relink material. It is validated against the build
+The notice index identifies the controlled inputs and their notices.
+The single CoreKiwix source-and-relink archive contains the controlled framework,
+corresponding source, build inputs, notices, and relink material. It is validated against the build
 manifest, source lock, SPDX SBOM, and object map. For external distribution it
 is published once per exact native build in `TheArkFile/arkfile-ios`, reused by
 matching app releases, and recorded by URL and SHA-256.
@@ -86,25 +85,17 @@ not be presented as shipped iOS libraries.
 | StripeCore | `25.7.2`, revision `ef6d95d4a74796bb739df49dc41d24f1d58a6d2a` | MIT |
 | Swift System | revision `b083113aef646d9d35403ca17e9789b750e42d1d` | Apache-2.0 with Runtime Library Exception |
 
-## Release evidence
+## Source And Build Evidence
 
-- Generate and validate the native build manifest, source lock, SPDX SBOM, and
-  object map against the single source-and-relink archive and installed
-  framework. Check in evidence only when it matches the framework byte-for-byte.
-- Before external distribution, publish that archive once in its versioned
-  `TheArkFile/arkfile-ios` native release; verify anonymous download and bind
-  its URL/SHA-256 in each matching app source manifest. The app release notes
-  also include one plain line linking it.
-- Have the owner or counsel decide whether the complete evidence and delivery
-  mechanism satisfy the applicable GPL/LGPL/OFL and notice obligations; the
-  engineering `coverageComplete` flag is not that decision.
-- Confirm the exact Protomaps asset notice set for the frozen asset tree rather
-  than relying only on a repository name and branch.
-- Keep the bundled in-app document labeled as notices and license references.
-  It now directly identifies every notice in the controlled CoreKiwix index,
-  and the build's source-release URL must resolve to the identity-bound source
-  and relink material.
+The native build manifest, source lock, SPDX SBOM, and object map are in
+`Dependencies/`. The matching app release manifest records the versioned
+CoreKiwix source-and-relink archive URL and SHA-256; the app release notes also
+link to that archive. These records describe the controlled framework and its
+inputs, including the source-attribution limits recorded in the manifest.
+
+The bundled notices identify the files in the controlled CoreKiwix notice
+index. Map assets carry their own applicable notices and attribution.
 
 If a source header, pinned package license, or matching upstream release notice
-conflicts with this summary, that primary evidence controls and this inventory
-must be corrected before release.
+conflicts with this summary, that primary evidence controls. Report corrections
+to support@thearkfile.com.
