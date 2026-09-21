@@ -31,6 +31,35 @@ struct ArkFileTrustedPackageManifest: Sendable {
         self.recognizedIdentities = recognizedIdentities
     }
 
+    /// Only a signature-verified, selection-validated v2 release can create this
+    /// provenance. The immutable payload digest is the semantic identity.
+    init(verifiedRelease: ArkFileVerifiedContentRelease,
+         request: ArkFileContentReleaseRequest,
+         previousVerifiedReleases: [ArkFileVerifiedContentRelease] = []) throws {
+        _ = try verifiedRelease.selectedFiles(for: request)
+        let identity = Identity(manifestID: "v2-" + verifiedRelease.binding.releaseID,
+                                semanticFingerprint: verifiedRelease.binding.releaseSHA256)
+        var recognized: Set<Identity> = [identity]
+        for previous in previousVerifiedReleases {
+            recognized.insert(Identity(manifestID: "v2-" + previous.binding.releaseID,
+                                       semanticFingerprint: previous.binding.releaseSHA256))
+        }
+        if let legacy = try? ArkFileLocalSharingDispositionIndex.loadBundled() {
+            recognized.formUnion(legacy.source.manifests.map {
+                Identity(manifestID: $0.id, semanticFingerprint: $0.semanticFingerprint)
+            })
+        }
+        self.init(projectionHash: verifiedRelease.binding.releaseSHA256,
+                  identity: identity, recognizedIdentities: recognized)
+    }
+
+    func includingVerifiedReleases(_ releases: [ArkFileVerifiedContentRelease]) -> Self {
+        let additional = Set(releases.map { Identity(manifestID: "v2-" + $0.binding.releaseID,
+                                                      semanticFingerprint: $0.binding.releaseSHA256) })
+        return Self(projectionHash: projectionHash, identity: identity,
+                    recognizedIdentities: recognizedIdentities.union(additional))
+    }
+
     func recognizes(
         _ provenance: ArkFileInstalledContentAccess.ManifestProvenance
     ) -> Bool {
@@ -43,21 +72,9 @@ struct ArkFileTrustedPackageManifest: Sendable {
     }
 }
 
-/// Release-bound runtime authorization for Local Sharing.
-///
-/// This is deliberately separate from the public green-only license index:
-/// evidence status and the owner's mode-specific sharing disposition answer
-/// different questions. Every allowed byte still needs an exact accepted
-/// identity before it can enter a serving snapshot.
+/// Exact bundled content identities and public receiver notices. Private
+/// approval evidence is checked by release tooling and is not shipped.
 struct ArkFileLocalSharingDispositionIndex: Decodable, Sendable {
-    struct OwnerAcceptance: Decodable, Hashable, Sendable {
-        let id: String
-        let acceptedAt: String
-        let acceptedArtifactCount: Int
-        let acceptedIdentityCount: Int
-        let acceptedArtifactSetSHA256: String
-    }
-
     struct Source: Decodable, Sendable {
         struct Manifest: Decodable, Hashable, Sendable {
             let id: String
@@ -71,21 +88,14 @@ struct ArkFileLocalSharingDispositionIndex: Decodable, Sendable {
         }
 
         let catalogSHA256: String
-        let ledgerVersion: String
-        let ledgerSHA256: String
         let currentManifestSHA256s: [String: String]
         let retainedManifestSHA256s: [String: String]
-        let sampleEvidenceSHA256: String
         let manifests: [Manifest]
     }
 
     struct Coverage: Decodable, Hashable, Sendable {
         let managedCatalogEntries: Int
         let bundledSampleEntries: Int
-        let greenManagedEntries: Int
-        let ownerAcceptedYellowManagedEntries: Int
-        let ownerAcceptedYellowBundledSamples: Int
-        let ownerAcceptedYellowEntries: Int
         let allowedEntries: Int
     }
 
@@ -121,7 +131,6 @@ struct ArkFileLocalSharingDispositionIndex: Decodable, Sendable {
         let canonicalPath: String
         let type: String
         let managed: Bool
-        let evidenceStatus: String
         let disposition: String
         var blockReason: String? = nil
         let acceptedIdentities: [AcceptedIdentity]
@@ -142,7 +151,6 @@ struct ArkFileLocalSharingDispositionIndex: Decodable, Sendable {
     let schemaVersion: Int
     let policyVersion: String
     let projectionHash: String
-    let ownerAcceptance: OwnerAcceptance
     let source: Source
     let coverage: Coverage
     let entries: [Entry]
@@ -214,14 +222,10 @@ struct ArkFileLocalSharingDispositionIndex: Decodable, Sendable {
     }
 
     private func validateRuntimeShape() throws {
-        guard schemaVersion == 1,
+        guard schemaVersion == 2,
               policyVersion == "local-sharing-v1",
               Self.isSHA256(projectionHash),
-              Self.isSHA256(ownerAcceptance.acceptedArtifactSetSHA256),
               Self.isSHA256(source.catalogSHA256),
-              Self.isSHA256(source.ledgerSHA256),
-              Self.isSHA256(source.sampleEvidenceSHA256),
-              !source.ledgerVersion.isEmpty,
               !source.manifests.isEmpty,
               coverage.allowedEntries
                 == entries.filter({ $0.disposition == "allow" }).count else {

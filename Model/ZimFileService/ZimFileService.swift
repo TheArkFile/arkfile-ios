@@ -389,6 +389,10 @@ struct ZimFileService {
     /// Releases only CoreKiwix archive objects. URL registrations remain, so
     /// subsequent browser requests reopen lazily. Searches pin their archives
     /// until completion and are never invalidated by a memory warning.
+    /// Quiescence keeps new managed responses out while existing search pins
+    /// drain. A purge request alone cannot prove that old inode blocks closed.
+    var hasPinnedArchives: Bool { !Self.archivePinCounts.isEmpty }
+
     func purgeUnpinnedArchives() {
         guard Self.archivePinCounts.isEmpty else {
             Self.purgeWhenUnpinned = true

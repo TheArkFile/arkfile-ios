@@ -17,18 +17,8 @@ import Foundation
 
 struct ArkFileContentLicenseIndex: Decodable, Sendable {
     let schemaVersion: Int
-    let ledgerVersion: String
     let projectionHash: String
-    let coverage: Coverage
     let entries: [ArkFileContentLicenseEntry]
-
-    struct Coverage: Decodable, Hashable, Sendable {
-        let expectedArtifacts: Int
-        let greenArtifacts: Int
-        let retiredArtifacts: Int
-        let incompleteArtifacts: Int
-        let complete: Bool
-    }
 
     func entry(forRelativePath relativePath: String) -> ArkFileContentLicenseEntry? {
         let key = Self.canonicalPath(relativePath)
@@ -81,7 +71,6 @@ struct ArkFileContentLicenseEntry: Decodable, Identifiable, Hashable, Sendable {
     let license: License
     let notices: Notices
     let downstreamRights: DownstreamRights
-    let decision: Decision
 
     var allowsLocalSharing: Bool {
         downstreamRights.allowedDistributionModes.contains("local-sharing")
@@ -126,11 +115,6 @@ struct ArkFileContentLicenseEntry: Decodable, Identifiable, Hashable, Sendable {
     struct DownstreamRights: Decodable, Hashable, Sendable {
         let summary: String
         let allowedDistributionModes: [String]
-    }
-
-    struct Decision: Decodable, Hashable, Sendable {
-        let status: String
-        let reviewedAt: String
     }
 }
 

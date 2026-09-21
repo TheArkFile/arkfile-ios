@@ -522,6 +522,7 @@ private struct ArkFileHomeWelcome: View {
     @ObservedObject private var readinessCoordinator = ArkFileOfflineReadinessCoordinator.shared
     @State private var showEmergencyNumbers = false
     @State private var sheet: ArkFileHomeSheet?
+    @State private var contentUpdateTargetPath: String?
     @State private var selectedPreviewItems: [String: ArkFileLibraryContentItem] = [:]
     @State private var selectedBookmark: ArkFileContentBookmark?
     @State private var lockedPreviewItem: ArkFileLibraryContentItem?
@@ -596,9 +597,8 @@ private struct ArkFileHomeWelcome: View {
     @MainActor
     private func loadHome() async {
         await contentLibrary.refresh()
-        contentCatalog = await Task.detached(priority: .utility) {
-            try? ArkFileContentCatalog.loadBundled()
-        }.value
+        contentCatalog = ArkFileContentReleaseProvider.shared.discoveryCatalog
+            ?? (try? ArkFileContentCatalog.loadBundled())
         prunePreviewSelections()
         updateDownloadRuntimeGuard()
         await readinessChecker.refreshCachedState()
@@ -835,6 +835,10 @@ private struct ArkFileHomeWelcome: View {
         .onChange(of: contentLibrary.libraryCategories) { _, _ in
             prunePreviewSelections()
         }
+        .onReceive(NotificationCenter.default.publisher(for: .arkFileContentReleaseChanged)) { _ in
+            contentCatalog = ArkFileContentReleaseProvider.shared.discoveryCatalog
+            Task { await contentLibrary.refresh() }
+        }
         .onDisappear {
             ArkFileDownloadRuntimeGuard.keepScreenAwake(false)
         }
@@ -866,7 +870,15 @@ private struct ArkFileHomeWelcome: View {
                 handleLockedRestoreAction(route)
             },
             downloadOnlyAction: { item, tier in
-                liteInstaller.includeItemAndDownload(key: item.id, tier: tier)
+                if ArkFileContentReleaseProvider.shared.snapshot.available?.release.items.contains(where: {
+                    ArkFileContentReleaseVerifier.canonicalPath($0.catalog.relativePath)
+                        == ArkFileContentReleaseVerifier.canonicalPath(item.relativePath)
+                }) == true {
+                    contentUpdateTargetPath = item.relativePath
+                    DispatchQueue.main.async { sheet = .contentUpdates }
+                } else {
+                    liteInstaller.includeItemAndDownload(key: item.id, tier: tier)
+                }
             }
         )
         .arkFileRestoreOutcomePrompt(
@@ -972,6 +984,8 @@ private struct ArkFileHomeWelcome: View {
                 toolSheet {
                     ArkFileHomeLibrarySheet()
                 }
+            case .contentUpdates:
+                toolSheet { ArkFileContentUpdatesView(initialTargetRelativePath: contentUpdateTargetPath) }
             case .localSharing:
                 toolSheet {
                     HotspotZimFilesSelection()
@@ -1113,6 +1127,13 @@ private struct ArkFileHomeWelcome: View {
             .buttonStyle(.plain)
             .foregroundStyle(Color.arkInteractiveForeground)
             .frame(minHeight: 44)
+            Button { contentUpdateTargetPath = nil; sheet = .contentUpdates } label: {
+                Label("Content Updates", systemImage: "arrow.triangle.2.circlepath")
+                    .frame(minHeight: 44)
+            }
+            .font(.subheadline)
+            .foregroundStyle(Color.arkInteractiveForeground)
+            .accessibilityIdentifier("arkfile_home_content_updates")
             if !liteInstaller.hasSavedCompleteAccess {
                 Button(hasEssentialsAccess ? "View Upgrade" : "View Packs") {
                     presentGeneralPackComparison()
@@ -2838,8 +2859,8 @@ private struct ArkFileHomeWelcome: View {
 
     private func openBookmark(_ bookmark: ArkFileContentBookmark) {
         openingPreviewItemID = nil
-        guard let item = contentLibrary.allItems.first(where: { $0.relativePath == bookmark.relativePath }) else {
-            previewOpenError = "ArkFile could not find \(bookmark.fileName) in the local library."
+        guard let item = ArkFileSavedContentIdentity.item(for: bookmark, in: contentLibrary.allItems) else {
+            previewOpenError = "\(bookmark.fileName) is not currently downloaded. Its Saved entry is kept; use Content Updates to download it again."
             return
         }
         if let openSceneContent {
@@ -3339,6 +3360,7 @@ enum ArkFileHomeSheet: Identifiable {
     case library
     case account
     case localSharing
+    case contentUpdates
     case offlineReadiness(autoRunQuickCheck: Bool, requestID: UUID?)
 
     var ownsInstallerAlerts: Bool {
@@ -3362,6 +3384,8 @@ enum ArkFileHomeSheet: Identifiable {
             "account"
         case .localSharing:
             "local-sharing"
+        case .contentUpdates:
+            "content-updates"
         case .offlineReadiness(let autoRunQuickCheck, let requestID):
             "offline-readiness-\(autoRunQuickCheck ? "auto" : "manual")-\(requestID?.uuidString ?? "direct")"
         }

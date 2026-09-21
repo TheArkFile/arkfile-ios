@@ -577,7 +577,7 @@ final class ArkFileLocalSharingPortalServer: @unchecked Sendable {
         let zimServerPort: Int?
         let offlineMapResources: ArkFileOfflineMapResources
         let contentRoots: [URL]
-        let contentLicenseLedgerVersion: String?
+        let contentMetadataVersion: String?
         let allowedHosts: Set<String>
         let approvedLocalIPAddresses: Set<String>
         let allowsDynamicPersonalHotspotInterfaces: Bool
@@ -607,6 +607,7 @@ final class ArkFileLocalSharingPortalServer: @unchecked Sendable {
         let isLocked: Bool
         let isSampleContent: Bool
         let contentLicense: ArkFileContentLicenseEntry?
+        let publicNotice: ArkFileContentPublicNotice?
         let receiverNotice:
             ArkFileLocalSharingDispositionIndex.Entry.ReceiverNotice?
         let expectedSHA256: String?
@@ -1555,7 +1556,13 @@ final class ArkFileLocalSharingPortalServer: @unchecked Sendable {
                 isLocked: false,
                 isSampleContent: item.isSampleContent,
                 contentLicense: descriptor.contentLicense,
-                receiverNotice: descriptor.disposition?.receiverNotice,
+                publicNotice: descriptor.publicNotice,
+                receiverNotice: descriptor.publicNotice.map { notice in
+                    .init(sourceTitle: notice.sourceTitle, creators: notice.creators,
+                          publisher: notice.publisher, canonicalURL: notice.canonicalURL,
+                          attributionText: notice.attributionText, changesMade: notice.changesMade,
+                          rightsSummary: notice.rightsSummary)
+                } ?? descriptor.disposition?.receiverNotice,
                 expectedSHA256: committedArtifact?.byteCount
                     == sourceFileIdentity.byteCount
                     ? committedArtifact?.sha256
@@ -1682,7 +1689,7 @@ final class ArkFileLocalSharingPortalServer: @unchecked Sendable {
             zimServerPort: zimServerURL.map { $0.port ?? 80 },
             offlineMapResources: offlineMapResources,
             contentRoots: contentRoots,
-            contentLicenseLedgerVersion: contentSnapshot.ledgerVersion,
+            contentMetadataVersion: contentSnapshot.metadataVersion,
             allowedHosts: allowedHosts,
             approvedLocalIPAddresses: approvedLocalIPAddresses,
             allowsDynamicPersonalHotspotInterfaces: allowsDynamicPersonalHotspotInterfaces,
@@ -1823,6 +1830,11 @@ final class ArkFileLocalSharingPortalServer: @unchecked Sendable {
         } else {
             sourceValue = "<a href=\"\(escape(notice.canonicalURL ?? ""))\">\(escape(notice.sourceTitle))</a>"
         }
+        let licenseRow = item.publicNotice.flatMap { notice -> String? in
+            guard let name = notice.licenseName else { return nil }
+            let value = notice.licenseURL.map { "<a href=\"\(escape($0))\">\(escape(name))</a>" } ?? escape(name)
+            return "<dt>License</dt><dd>\(value)</dd>"
+        } ?? ""
         return page(
             title: "Source & Notice — \(item.name)",
             snapshot: snapshot,
@@ -1845,6 +1857,7 @@ final class ArkFileLocalSharingPortalServer: @unchecked Sendable {
                 <dt>Attribution</dt><dd>\(escape(notice.attributionText))</dd>
                 <dt>Changes</dt><dd>\(escape(notice.changesMade))</dd>
                 <dt>Rights summary</dt><dd>\(escape(notice.rightsSummary))</dd>
+                \(licenseRow)
               </dl>
             </main>
             <p class="license-back"><a class="back" href="\(sharedPath("/view/\(item.id)", snapshot: snapshot))">Back to title</a></p>

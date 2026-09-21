@@ -40,6 +40,11 @@ struct ArkFileContentBrowserView: View {
     @State private var selectedGroup: ArkFileContentDisplayGroup?
     @State private var detailItem: ArkFileLibraryContentItem?
     @State private var showPackComparison = false
+    @State private var releaseDownloadTarget: ReleaseDownloadTarget?
+    private struct ReleaseDownloadTarget: Identifiable {
+        let path: String
+        var id: String { path }
+    }
 
     init(
         openItem: @escaping (ArkFileLocalContentItem) -> Void,
@@ -138,6 +143,11 @@ struct ArkFileContentBrowserView: View {
             .navigationBarTitleDisplayMode(.inline)
             .task {
                 await load()
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .arkFileContentReleaseChanged)) { _ in
+                catalog = ArkFileContentReleaseProvider.shared.discoveryCatalog
+                rebuildSections()
+                Task { await contentLibrary.refresh() }
             }
             .onChange(of: contentLibrary.categories) { _, _ in
                 rebuildSections()
@@ -283,6 +293,14 @@ struct ArkFileContentBrowserView: View {
         .navigationDestination(item: $detailItem) { selected in
             titleDetail(for: sections.flatMap(\.items).first { $0.id == selected.id } ?? selected)
         }
+        .sheet(item: $releaseDownloadTarget) { target in
+            NavigationStack {
+                ArkFileContentUpdatesView(initialTargetRelativePath: target.path)
+                    .toolbar { ToolbarItem(placement: .confirmationAction) {
+                        Button("Done") { releaseDownloadTarget = nil }
+                    } }
+            }
+        }
         .sheet(isPresented: $showPackComparison) {
             packComparisonSheet
         }
@@ -345,6 +363,13 @@ struct ArkFileContentBrowserView: View {
                         .foregroundStyle(Color.arkTextMuted)
                         .fixedSize(horizontal: false, vertical: true)
                 }
+                NavigationLink {
+                    ArkFileContentUpdatesView()
+                } label: {
+                    Label("Content Updates & Editions", systemImage: "arrow.triangle.2.circlepath")
+                        .frame(minHeight: 44)
+                }
+                .accessibilityIdentifier("arkfile_downloads_content_updates")
                 libraryFilterControl
                 if selectedGroup != nil {
                     Button("Show all categories") { selectedGroup = nil }
@@ -863,6 +888,13 @@ struct ArkFileContentBrowserView: View {
     }
 
     private func startIndividualDownload(_ item: ArkFileLibraryContentItem, tier: ArkFileContentTier) {
+        if ArkFileContentReleaseProvider.shared.snapshot.available?.release.items.contains(where: {
+            ArkFileContentReleaseVerifier.canonicalPath($0.catalog.relativePath)
+                == ArkFileContentReleaseVerifier.canonicalPath(item.relativePath)
+        }) == true {
+            releaseDownloadTarget = .init(path: item.relativePath)
+            return
+        }
         // Regional map review includes any required foundation files in the
         // download total before the user starts the transfer.
         guard item.type != .map else {
@@ -928,7 +960,7 @@ struct ArkFileContentBrowserView: View {
             actionSystemImage: actionIcon,
             isActionEnabled: isEnabled,
             licenseEntry: contentLicenseEntry(for: item),
-            ledgerVersion: contentLicenseIndex?.ledgerVersion ?? "Unknown",
+            publicNotice: publicNotice(for: item),
             primaryAction: {
                 if isOffline {
                     openFromLibrary(item)
@@ -1096,7 +1128,7 @@ struct ArkFileContentBrowserView: View {
     }
 
     private func load() async {
-        catalog = try? ArkFileContentCatalog.loadBundled()
+        catalog = ArkFileContentReleaseProvider.shared.discoveryCatalog ?? (try? ArkFileContentCatalog.loadBundled())
         contentLicenseIndex = try? ArkFileContentLicenseIndex.loadBundled()
         await contentLibrary.refresh()
         rebuildSections()
@@ -1109,10 +1141,26 @@ struct ArkFileContentBrowserView: View {
         }.value ?? nil
     }
 
+    private func publicNotice(for item: ArkFileLibraryContentItem) -> ArkFileContentPublicNotice? {
+        if let url = item.url, let identity = ArkFileInstalledContentAccess.committedArtifactIdentity(for: url) {
+            return ArkFileContentReleaseProvider.shared.installedPublicNotice(relativePath: item.relativePath,
+                byteCount: identity.byteCount, sha256: identity.sha256)
+        }
+        guard !item.isInstalled else { return nil }
+        return ArkFileContentReleaseProvider.shared.snapshot.available?.release.items.first {
+            ArkFileContentReleaseVerifier.canonicalPath($0.catalog.relativePath)
+                == ArkFileContentReleaseVerifier.canonicalPath(item.relativePath)
+        }?.publicNotice
+    }
+
     private func contentLicenseEntry(
         for item: ArkFileLibraryContentItem
     ) -> ArkFileContentLicenseEntry? {
-        contentLicenseIndex?.entry(forRelativePath: item.relativePath)
+        guard let entry = contentLicenseIndex?.entry(forRelativePath: item.relativePath) else { return nil }
+        if let url = item.url, let identity = ArkFileInstalledContentAccess.committedArtifactIdentity(for: url) {
+            guard entry.artifact.sizeBytes == identity.byteCount, entry.artifact.sha256 == identity.sha256 else { return nil }
+        }
+        return entry
     }
 
     private func rebuildSections() {

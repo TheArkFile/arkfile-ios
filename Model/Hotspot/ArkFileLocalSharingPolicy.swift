@@ -24,6 +24,7 @@ struct ArkFileLocalSharingServeDescriptor: Sendable {
     let sourceIdentity: ArkFileInstalledContentAccess.CommittedSourceIdentity?
     let disposition: ArkFileLocalSharingDispositionIndex.Entry?
     let contentLicense: ArkFileContentLicenseEntry?
+    let publicNotice: ArkFileContentPublicNotice?
     let zimIdentity: ArkFileLocalSharingZIMIdentity?
 
     init(
@@ -33,7 +34,8 @@ struct ArkFileLocalSharingServeDescriptor: Sendable {
         sourceIdentity: ArkFileInstalledContentAccess.CommittedSourceIdentity?,
         disposition: ArkFileLocalSharingDispositionIndex.Entry?,
         contentLicense: ArkFileContentLicenseEntry?,
-        zimIdentity: ArkFileLocalSharingZIMIdentity?
+        zimIdentity: ArkFileLocalSharingZIMIdentity?,
+        publicNotice: ArkFileContentPublicNotice? = nil
     ) {
         self.canonicalPathKey = canonicalPathKey
         self.item = item
@@ -41,6 +43,7 @@ struct ArkFileLocalSharingServeDescriptor: Sendable {
         self.sourceIdentity = sourceIdentity
         self.disposition = disposition
         self.contentLicense = contentLicense
+        self.publicNotice = publicNotice
         self.zimIdentity = zimIdentity
     }
 }
@@ -60,7 +63,7 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
     let categoryDescriptorKeys: [ArkFileLocalContentCategoryKey: [String]]
     let favoriteDescriptorKeys: [String]
     let projectionHash: String?
-    let ledgerVersion: String?
+    let metadataVersion: String?
 
     init(
         categories: [ArkFileLocalContentCategory],
@@ -78,7 +81,7 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
         ] = [:],
         favoriteDescriptorKeys: [String] = [],
         projectionHash: String? = nil,
-        ledgerVersion: String? = nil
+        metadataVersion: String? = nil
     ) {
         self.categories = categories
         self.libraryCategories = libraryCategories
@@ -91,7 +94,7 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
         self.categoryDescriptorKeys = categoryDescriptorKeys
         self.favoriteDescriptorKeys = favoriteDescriptorKeys
         self.projectionHash = projectionHash
-        self.ledgerVersion = ledgerVersion
+        self.metadataVersion = metadataVersion
     }
 
     static func make(
@@ -100,12 +103,25 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
         favoriteItems: [ArkFileLocalContentItem],
         additionalZimFileIDs: Set<UUID> = []
     ) -> ArkFileLocalSharingContentSnapshot {
+        let releases = ArkFileContentReleaseProvider.shared.snapshot
         return make(
             categories: categories,
             libraryCategories: libraryCategories,
             favoriteItems: favoriteItems,
             dispositionIndex: try? ArkFileLocalSharingDispositionIndex.loadBundled(),
             licenseIndex: try? ArkFileContentLicenseIndex.loadBundled(),
+            releaseGeneration: releases.generation,
+            publicNoticeProvider: { path, identity in
+                guard let artifact = identity.artifact else { return nil }
+                let key = ArkFileContentReleaseVerifier.canonicalPath(path)
+                return releases.installed.values.first { receipt in
+                    receipt.files.contains { file in
+                        ArkFileContentReleaseVerifier.canonicalPath(file.relativePath) == key
+                            && file.sizeBytes == artifact.byteCount
+                            && file.sha256 == artifact.sha256.lowercased()
+                    }
+                }?.publicNotice
+            },
             committedSourceIdentityProvider:
                 ArkFileInstalledContentAccess.committedSourceIdentity,
             sourceFileIdentityProvider: ArkFileOpenFileIdentity.capture,
@@ -138,6 +154,8 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
         favoriteItems: [ArkFileLocalContentItem],
         dispositionIndex: ArkFileLocalSharingDispositionIndex?,
         licenseIndex: ArkFileContentLicenseIndex?,
+        releaseGeneration: UInt64 = 0,
+        publicNoticeProvider: (String, ArkFileInstalledContentAccess.CommittedSourceIdentity) -> ArkFileContentPublicNotice? = { _, _ in nil },
         committedSourceIdentityProvider: (
             URL
         ) -> ArkFileInstalledContentAccess.CommittedSourceIdentity?,
@@ -259,18 +277,33 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
             } else {
                 zimIdentity = nil
             }
+            let committedIdentity = committedSourceIdentityProvider(item.url)
+            let publicNotice = committedIdentity.flatMap { identity in
+                identity.artifact?.byteCount == sourceFileIdentity.byteCount
+                    ? publicNoticeProvider(item.relativePath, identity) : nil
+            }
+            let bundledDisposition = dispositionIndex?.entry(forRelativePath: item.relativePath)
+            let bundledLicense = licenseIndex?.entry(forRelativePath: item.relativePath)
+            let disposition: ArkFileLocalSharingDispositionIndex.Entry?
+            let license: ArkFileContentLicenseEntry?
+            if let artifact = committedIdentity?.artifact {
+                disposition = bundledDisposition?.acceptedIdentity(byteCount: artifact.byteCount, sha256: artifact.sha256) != nil
+                    ? bundledDisposition : nil
+                license = bundledLicense?.artifact.sizeBytes == artifact.byteCount
+                    && bundledLicense?.artifact.sha256 == artifact.sha256 ? bundledLicense : nil
+            } else {
+                disposition = bundledDisposition
+                license = bundledLicense
+            }
             descriptors[key] = ArkFileLocalSharingServeDescriptor(
                 canonicalPathKey: key,
                 item: item,
                 sourceFileIdentity: sourceFileIdentity,
-                sourceIdentity: committedSourceIdentityProvider(item.url),
-                disposition: dispositionIndex?.entry(
-                    forRelativePath: item.relativePath
-                ),
-                contentLicense: licenseIndex?.entry(
-                    forRelativePath: item.relativePath
-                ),
-                zimIdentity: zimIdentity
+                sourceIdentity: committedIdentity,
+                disposition: disposition,
+                contentLicense: publicNotice == nil ? license : nil,
+                zimIdentity: zimIdentity,
+                publicNotice: publicNotice
             )
         }
 
@@ -373,7 +406,7 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
                     descriptor.zimIdentity?.contentID ?? ""
                 ].joined(separator: "|")
             }
-        ).joined(separator: "\n")
+        ).joined(separator: "\n") + (releaseGeneration == 0 ? "" : "\ncontent-generation:\(releaseGeneration)")
 
         return ArkFileLocalSharingContentSnapshot(
             categories: filteredCategories,
@@ -387,7 +420,8 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
             categoryDescriptorKeys: categoryKeys,
             favoriteDescriptorKeys: favoriteKeys,
             projectionHash: dispositionIndex?.projectionHash,
-            ledgerVersion: dispositionIndex?.source.ledgerVersion
+            metadataVersion: dispositionIndex.map { "\($0.policyVersion)-schema\($0.schemaVersion)" }
+                .map { $0 + (releaseGeneration == 0 ? "" : "-release\(releaseGeneration)") }
         )
     }
 
@@ -426,7 +460,7 @@ struct ArkFileLocalSharingContentSnapshot: Sendable {
     }
 }
 
-/// Retained only to audit the historical evidence projection. Local Sharing
+/// Retained only to audit exact historical artifact identities. Local Sharing
 /// does not call this Build 349-era policy; the active snapshot above follows
 /// the Build 328 installed/readable contract.
 enum ArkFileLocalSharingPolicy {
@@ -462,8 +496,6 @@ enum ArkFileLocalSharingPolicy {
               ),
               disposition.disposition == "allow",
               disposition.type == item.type.rawValue,
-              disposition.evidenceStatus == "green"
-                || disposition.evidenceStatus == "yellow",
               item.type != .html else {
             return nil
         }
@@ -567,7 +599,6 @@ enum ArkFileLocalSharingPolicy {
               (try? item.url.resourceValues(forKeys: [.isRegularFileKey]).isRegularFile) == true,
               ArkFileInstalledContentAccess.canRead(item.url),
               let entry = licenseIndex?.entry(forRelativePath: item.relativePath),
-              entry.decision.status.caseInsensitiveCompare("green") == .orderedSame,
               entry.allowsLocalSharing,
               entry.artifact.type == item.type.rawValue,
               entry.artifact.sizeBytes >= 0,

@@ -7,6 +7,7 @@ import path from 'node:path';
 import process from 'node:process';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { publicLicenseIndex } from './arkfile-public-runtime-metadata.mjs';
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(SCRIPT_DIR, '..');
@@ -56,9 +57,7 @@ const PUBLIC_LICENSE_FIELD_NAMES = [
   'sourceUrl',
   'attributionText',
   'changesMade',
-  'contentLicenseLedgerVersion',
   'contentLicenseProjectionHash',
-  'contentLicenseDecisionStatus',
 ];
 const LICENSE_PERMISSION_VALUES = new Set(['allowed', 'prohibited', 'permission-required']);
 const LICENSE_DECISION_STATUSES = new Set(['green']);
@@ -198,8 +197,7 @@ function stableStringify(value) {
 function projectionHashFor(index) {
   const core = {
     schemaVersion: index.schemaVersion,
-    ledgerVersion: index.ledgerVersion,
-    coverage: index.coverage,
+    ...(index.schemaVersion === 1 ? {ledgerVersion: index.ledgerVersion, coverage: index.coverage} : {}),
     entries: index.entries,
   };
   return crypto.createHash('sha256').update(stableStringify(core)).digest('hex');
@@ -227,9 +225,7 @@ function publicLicenseFieldsFor(entry, index) {
     sourceUrl: entry.source.canonicalUrl,
     attributionText: entry.notices.attributionText,
     changesMade: entry.notices.changesMade,
-    contentLicenseLedgerVersion: index.ledgerVersion,
     contentLicenseProjectionHash: index.projectionHash,
-    contentLicenseDecisionStatus: entry.decision.status,
   };
 }
 
@@ -350,7 +346,7 @@ function normalizeIOSItem(item, licenseEntry, licenseIndex, titleSummaryEntry) {
     normalized.summary = titleSummaryEntry.summary.trim();
   }
   for (const field of PUBLIC_LICENSE_FIELD_NAMES) {
-    if (isNonEmptyString(item[field])) {
+    if (field !== 'contentLicenseProjectionHash' && isNonEmptyString(item[field])) {
       normalized[field] = item[field].trim();
     }
   }
@@ -463,9 +459,7 @@ function buildIOSCatalog(sourcePath, licenseIndex, titleSummaryLedger) {
       desktopCommit: gitCommitFor(sourcePath),
     },
     contentLicenses: {
-      ledgerVersion: licenseIndex.ledgerVersion,
       projectionHash: licenseIndex.projectionHash,
-      coverageComplete: licenseIndex.coverage.complete,
     },
     categories,
   };
@@ -555,17 +549,19 @@ function validateLicenseIndex(index, options = {}) {
   if (!index || typeof index !== 'object' || Array.isArray(index)) {
     return ['content license index must be a JSON object'];
   }
-  validatePublicKeys(index, ['schemaVersion', 'ledgerVersion', 'coverage', 'entries', 'projectionHash'], 'content license index', errors);
-  validatePublicKeys(index.coverage, ['expectedArtifacts', 'greenArtifacts', 'retiredArtifacts', 'incompleteArtifacts', 'complete'], 'content license coverage', errors);
-  if (index.schemaVersion !== 1) {
-    errors.push(`content license index schemaVersion must be 1; received ${index.schemaVersion}`);
+  const legacy = index.schemaVersion === 1 && options.allowLegacy === true;
+  validatePublicKeys(index, ['schemaVersion', ...(legacy ? ['ledgerVersion', 'coverage'] : []), 'entries', 'projectionHash'], 'content license index', errors);
+  if (legacy) validatePublicKeys(index.coverage, ['expectedArtifacts', 'greenArtifacts', 'retiredArtifacts', 'incompleteArtifacts', 'complete'], 'content license coverage', errors);
+  if (index.schemaVersion !== 2 && !legacy) {
+    errors.push(`content license index schemaVersion must be 2; received ${index.schemaVersion}`);
   }
-  if (!isNonEmptyString(index.ledgerVersion)) {
+  if (legacy && !isNonEmptyString(index.ledgerVersion)) {
     errors.push('content license index ledgerVersion must be a non-empty string');
   }
   if (!SHA256_PATTERN.test(String(index.projectionHash || ''))) {
     errors.push('content license index projectionHash must be a lowercase SHA-256 digest');
   }
+  if (legacy) {
   if (!index.coverage || typeof index.coverage !== 'object' || Array.isArray(index.coverage)) {
     errors.push('content license index coverage must be an object');
   } else {
@@ -577,6 +573,7 @@ function validateLicenseIndex(index, options = {}) {
     if (typeof index.coverage.complete !== 'boolean') {
       errors.push('content license index coverage.complete must be boolean');
     }
+  }
   }
   if (!Array.isArray(index.entries)) {
     errors.push('content license index entries must be an array');
@@ -594,13 +591,13 @@ function validateLicenseIndex(index, options = {}) {
       errors.push(`${prefix} must be an object`);
       continue;
     }
-    validatePublicKeys(entry, ['contentId', 'displayName', 'artifact', 'source', 'license', 'notices', 'downstreamRights', 'decision'], prefix, errors);
+    validatePublicKeys(entry, ['contentId', 'displayName', 'artifact', 'source', 'license', 'notices', 'downstreamRights', ...(legacy ? ['decision'] : [])], prefix, errors);
     validatePublicKeys(entry.artifact, ['relativePath', 'type', 'sha256', 'sizeBytes', 'editionOrRevision', 'includedInTiers'], `${prefix}.artifact`, errors);
     validatePublicKeys(entry.source, ['title', 'creators', 'publisher', 'canonicalUrl', 'artifactUrl', 'retrievedAt'], `${prefix}.source`, errors);
     validatePublicKeys(entry.license, ['id', 'name', 'url', 'commercialUse', 'redistribution', 'modification', 'shareAlike', 'attributionRequired', 'noAdditionalRestrictions'], `${prefix}.license`, errors);
     validatePublicKeys(entry.notices, ['attributionText', 'changesMade', 'requiredInternalFiles'], `${prefix}.notices`, errors);
     validatePublicKeys(entry.downstreamRights, ['summary', 'allowedDistributionModes'], `${prefix}.downstreamRights`, errors);
-    validatePublicKeys(entry.decision, ['status', 'reviewedAt'], `${prefix}.decision`, errors);
+    if (legacy) validatePublicKeys(entry.decision, ['status', 'reviewedAt'], `${prefix}.decision`, errors);
     if (/(?:private pilot ledger|internal notes?|counsel review|\/Users\/|\/Volumes\/)/i.test(JSON.stringify(entry))) {
       errors.push(`${prefix} contains private publication metadata`);
     }
@@ -661,17 +658,17 @@ function validateLicenseIndex(index, options = {}) {
     if (!isNonEmptyString(notices?.changesMade)) errors.push(`${prefix} is missing notices.changesMade`);
     if (!Array.isArray(notices?.requiredInternalFiles)) errors.push(`${prefix} has invalid notices.requiredInternalFiles`);
 
-    const status = entry.decision?.status;
+    const status = legacy ? entry.decision?.status : undefined;
     const downstreamRights = entry.downstreamRights;
     if (!isNonEmptyString(downstreamRights?.summary)) errors.push(`${prefix} is missing downstreamRights.summary`);
     if (!Array.isArray(downstreamRights?.allowedDistributionModes)
-        || (status === 'green' && downstreamRights.allowedDistributionModes.length < 1)
+        || ((!legacy || status === 'green') && downstreamRights.allowedDistributionModes.length < 1)
         || downstreamRights.allowedDistributionModes.some((mode) => !DISTRIBUTION_MODES.has(mode))) {
       errors.push(`${prefix} has invalid downstreamRights.allowedDistributionModes`);
     }
 
-    if (!LICENSE_DECISION_STATUSES.has(status)) errors.push(`${prefix} has invalid decision.status`);
-    if (!isNonEmptyString(entry.decision?.reviewedAt)) errors.push(`${prefix} is missing decision.reviewedAt`);
+    if (legacy && !LICENSE_DECISION_STATUSES.has(status)) errors.push(`${prefix} has invalid decision.status`);
+    if (legacy && !isNonEmptyString(entry.decision?.reviewedAt)) errors.push(`${prefix} is missing decision.reviewedAt`);
     if (status === 'green') greenCount += 1;
     else incompleteCount += 1;
   }
@@ -682,7 +679,7 @@ function validateLicenseIndex(index, options = {}) {
       errors.push(`content license index projectionHash is stale; expected ${expectedHash}`);
     }
   }
-  if (index.coverage && typeof index.coverage === 'object') {
+  if (legacy && index.coverage && typeof index.coverage === 'object') {
     if (index.coverage.greenArtifacts !== greenCount) errors.push('content license coverage.greenArtifacts does not match green entries');
     if (index.entries.length !== greenCount) errors.push('public content license entries must contain only green decisions');
     if (index.coverage.incompleteArtifacts < incompleteCount) {
@@ -696,7 +693,7 @@ function validateLicenseIndex(index, options = {}) {
       errors.push('content license coverage.complete cannot be true while entries are incomplete');
     }
   }
-  if (options.requireContentLicenses) {
+  if (legacy && options.requireContentLicenses) {
     if (index.ledgerVersion === 'bootstrap-unverified') {
       errors.push('strict content-license validation cannot use the bootstrap-unverified ledger');
     }
@@ -719,7 +716,7 @@ function validateCatalog(catalog, options = {}) {
       && catalog.source.desktopCatalogPath !== 'www/catalog/content-catalog.json') {
     errors.push('catalog source path must use the public project-relative location');
   }
-  validatePublicKeys(catalog.contentLicenses, ['ledgerVersion', 'projectionHash', 'coverageComplete'], 'catalog contentLicenses', errors);
+  validatePublicKeys(catalog.contentLicenses, ['projectionHash'], 'catalog contentLicenses', errors);
   validatePublicKeys(catalog.categories, CATEGORY_KEYS, 'catalog categories', errors);
   for (const categoryItems of Object.values(catalog.categories || {})) {
     for (const item of Array.isArray(categoryItems) ? categoryItems : []) {
@@ -814,9 +811,7 @@ function validateCatalog(catalog, options = {}) {
     }
     if (options.requireContentLicenses) {
       if (!licenseEntry) errors.push(`strict content-license coverage is missing: ${relativePath}`);
-      else if (licenseEntry.decision.status !== 'green') {
-        errors.push(`strict content-license coverage requires green status for ${relativePath}; received ${licenseEntry.decision.status}`);
-      } else if (!licenseEntry.downstreamRights.allowedDistributionModes.includes('local-sharing')) {
+      else if (!licenseEntry.downstreamRights.allowedDistributionModes.includes('local-sharing')) {
         errors.push(`strict content-license coverage requires local-sharing permission for ${relativePath}`);
       }
     }
@@ -824,14 +819,8 @@ function validateCatalog(catalog, options = {}) {
 
   const catalogLicenseMetadata = catalog.contentLicenses;
   if (catalogLicenseMetadata) {
-    if (catalogLicenseMetadata.ledgerVersion !== licenseIndex?.ledgerVersion) {
-      errors.push('catalog content-license ledgerVersion does not match bundled index');
-    }
     if (catalogLicenseMetadata.projectionHash !== licenseIndex?.projectionHash) {
       errors.push('catalog content-license projectionHash does not match bundled index');
-    }
-    if (catalogLicenseMetadata.coverageComplete !== licenseIndex?.coverage?.complete) {
-      errors.push('catalog content-license coverageComplete does not match bundled index');
     }
   } else if (entriesByPath.size > 0 || options.requireContentLicenses) {
     errors.push('catalog is missing contentLicenses projection metadata');
@@ -875,11 +864,13 @@ function main() {
   if (!fs.existsSync(effectiveLicenseIndexPath)) {
     fail(`Content license index not found: ${effectiveLicenseIndexPath}`);
   }
-  const licenseIndex = readJSON(effectiveLicenseIndexPath);
-  const indexErrors = validateLicenseIndex(licenseIndex, {
+  const sourceIndex = readJSON(effectiveLicenseIndexPath);
+  const indexErrors = validateLicenseIndex(sourceIndex, {
+    allowLegacy: !args.validateOnly,
     requireContentLicenses: args.requireContentLicenses,
   });
   if (indexErrors.length) fail(indexErrors.join('; '));
+  const licenseIndex = args.validateOnly ? sourceIndex : publicLicenseIndex(sourceIndex);
 
   if (args.validateOnly) {
     if (!fs.existsSync(args.output)) fail(`Bundled catalog not found: ${args.output}`);
@@ -912,10 +903,10 @@ function main() {
 
   fs.mkdirSync(path.dirname(args.output), { recursive: true });
   fs.writeFileSync(args.output, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
-  if (path.resolve(effectiveLicenseIndexPath) !== path.resolve(args.licenseIndex)) {
+  {
     fs.mkdirSync(path.dirname(args.licenseIndex), { recursive: true });
-    fs.copyFileSync(effectiveLicenseIndexPath, args.licenseIndex);
-    log(`Copied the full public content-license projection to ${path.relative(ROOT_DIR, args.licenseIndex)}`);
+    fs.writeFileSync(args.licenseIndex, `${JSON.stringify(licenseIndex, null, 2)}\n`);
+    log(`Wrote the public content-license projection to ${path.relative(ROOT_DIR, args.licenseIndex)}`);
   }
   log(`Wrote ${flattenItems(catalog).length} iOS catalog entries to ${path.relative(ROOT_DIR, args.output)}`);
 }

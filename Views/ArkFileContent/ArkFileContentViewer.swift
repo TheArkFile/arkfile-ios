@@ -73,6 +73,12 @@ struct ArkFileContentViewer: View {
     @State private var pendingWebBookmarkLocation: ArkFileWebLocationSnapshot?
     @State private var bookmarkSaveError: String?
     @State private var contentLicenseIndex: ArkFileContentLicenseIndex?
+    @State private var installedPublicNotice: ArkFileContentPublicNotice?
+    @State private var selectedPublicNotice: PublicNoticePresentation?
+    private struct PublicNoticePresentation: Identifiable {
+        let id = UUID()
+        let notice: ArkFileContentPublicNotice
+    }
     @State private var selectedLicenseEntry: ArkFileContentLicenseEntry?
     @State private var savedOpenError: String?
     @State private var isReaderVisible = false
@@ -99,6 +105,10 @@ struct ArkFileContentViewer: View {
             if item.isNoLongerDistributedByArkFile {
                 noLongerDistributedNotice
                 Divider()
+            }
+            if let bookmark = activeBookmark, bookmark.relativePath != item.relativePath {
+                Text("This title has a newer edition. Your Saved location may have moved.")
+                    .font(.caption).foregroundStyle(.secondary).padding(8)
             }
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -143,11 +153,18 @@ struct ArkFileContentViewer: View {
                 isShowingBookmarkEditor = false
             }
         }
+        .sheet(item: $selectedPublicNotice) { selection in
+            NavigationStack {
+                ArkFilePublicContentNoticeView(notice: selection.notice)
+                    .toolbar { ToolbarItem(placement: .confirmationAction) {
+                        Button("Done") { selectedPublicNotice = nil }
+                    } }
+            }
+        }
         .sheet(item: $selectedLicenseEntry) { entry in
             NavigationStack {
                 ArkFileContentLicenseDetailView(
-                    entry: entry,
-                    ledgerVersion: contentLicenseIndex?.ledgerVersion ?? "Unknown"
+                    entry: entry
                 )
             }
         }
@@ -181,6 +198,10 @@ struct ArkFileContentViewer: View {
             isReaderVisible = true
             if contentLicenseIndex == nil {
                 contentLicenseIndex = try? ArkFileContentLicenseIndex.loadBundled()
+            }
+            if let identity = ArkFileInstalledContentAccess.committedArtifactIdentity(for: item.url) {
+                installedPublicNotice = ArkFileContentReleaseProvider.shared.installedPublicNotice(
+                    relativePath: item.relativePath, byteCount: identity.byteCount, sha256: identity.sha256)
             }
             refreshAccessBlock()
             if let initialBookmark {
@@ -431,7 +452,16 @@ struct ArkFileContentViewer: View {
             .hoverEffect(.highlight)
             .accessibilityLabel("Bookmarks")
 
-            if let entry = contentLicenseEntry {
+            if let notice = installedPublicNotice {
+                Button { selectedPublicNotice = .init(notice: notice) } label: {
+                    Image(systemName: "info.circle")
+                        .frame(width: ArkFileReaderChromeLayoutPolicy.minimumControlDimension,
+                               height: ArkFileReaderChromeLayoutPolicy.minimumControlDimension)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Source and notice for \(item.displayName)")
+            } else if let entry = contentLicenseEntry {
                 Button {
                     selectedLicenseEntry = entry
                 } label: {
@@ -454,7 +484,11 @@ struct ArkFileContentViewer: View {
     }
 
     private var contentLicenseEntry: ArkFileContentLicenseEntry? {
-        contentLicenseIndex?.entry(forRelativePath: item.relativePath)
+        guard let entry = contentLicenseIndex?.entry(forRelativePath: item.relativePath) else { return nil }
+        if let identity = ArkFileInstalledContentAccess.committedArtifactIdentity(for: item.url) {
+            guard entry.artifact.sizeBytes == identity.byteCount, entry.artifact.sha256 == identity.sha256 else { return nil }
+        }
+        return entry
     }
 
     private var noLongerDistributedNotice: some View {
@@ -828,8 +862,8 @@ struct ArkFileContentViewer: View {
     }
 
     private func openBookmark(_ bookmark: ArkFileContentBookmark) {
-        guard let targetItem = contentLibrary.allItems.first(where: { $0.relativePath == bookmark.relativePath }) else {
-            savedOpenError = "ArkFile could not find \(bookmark.fileName) in the local library. The Saved entry was kept."
+        guard let targetItem = ArkFileSavedContentIdentity.item(for: bookmark, in: contentLibrary.allItems) else {
+            savedOpenError = "\(bookmark.fileName) is not currently downloaded. Its Saved entry is kept; use Content Updates to download it again."
             return
         }
         isShowingBookmarks = false

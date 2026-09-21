@@ -12,6 +12,7 @@
 
 #if os(iOS)
 import SwiftUI
+import StoreKit
 
 enum ArkFilePackComparisonAction: Equatable {
     case manageDownloads
@@ -143,6 +144,121 @@ enum ArkFilePostRestoreContinuation: Equatable {
     }
 }
 
+enum ArkFilePurchaseArtwork {
+    static func assetName(for role: ArkFileStoreKitProductRole) -> String {
+        switch role {
+        case .lite: return "ArkFilePurchaseEssentials"
+        case .complete: return "ArkFilePurchaseComplete"
+        case .completeUpgrade: return "ArkFilePurchaseCompleteUpgrade"
+        }
+    }
+}
+
+struct ArkFileOfferCodeOwnershipSnapshot: Equatable {
+    let hasResolvedProof: Bool
+    let tier: ArkFileContentTier?
+
+    var verifiedTier: ArkFileContentTier? {
+        hasResolvedProof && tier?.isIOSInstallable == true ? tier : nil
+    }
+}
+
+/// The Apple sheet's result describes presentation, not a verified purchase.
+/// This coordinator can only refresh ownership; it has no download or sync action.
+@MainActor
+final class ArkFileOfferCodeRedemptionCoordinator: ObservableObject {
+    @Published var isPresented = false
+    @Published private(set) var isRefreshing = false
+    @Published private(set) var refreshGeneration = 0
+    @Published private(set) var snapshot: ArkFileOfferCodeOwnershipSnapshot?
+    @Published private(set) var outcome = Outcome.none
+    enum Outcome: Equatable { case none, closed, cancelled, failed }
+
+    private let refresh: @MainActor () async -> ArkFileOfferCodeOwnershipSnapshot
+    private var attempt = 0
+    private var refreshedAttempt: Int?
+    private var observedRevision = 0
+
+    init(refresh: @escaping @MainActor () async -> ArkFileOfferCodeOwnershipSnapshot = {
+        let manager = ArkFileLitePurchaseManager.shared
+        await manager.reconcileLiteEntitlementOnLaunchOrForeground()
+        return ArkFileOfferCodeOwnershipSnapshot(
+            hasResolvedProof: manager.hasResolvedCurrentStoreKitProof,
+            tier: manager.currentStoreKitProofTier
+        )
+    }) {
+        self.refresh = refresh
+    }
+
+    func present() {
+        guard !isPresented, !isRefreshing else { return }
+        attempt += 1
+        refreshedAttempt = nil
+        snapshot = nil
+        outcome = .none
+        isPresented = true
+    }
+
+    func sheetCompleted(_ result: Result<Void, Error>) async {
+        guard attempt > 0 else { return }
+        switch result {
+        case .success: outcome = .closed
+        case .failure(let error):
+            let isCancelled: Bool
+            if let storeKitError = error as? StoreKitError, case .userCancelled = storeKitError {
+                isCancelled = true
+            } else if let legacyError = error as? SKError, legacyError.code == .paymentCancelled {
+                isCancelled = true
+            } else {
+                isCancelled = error is CancellationError
+            }
+            outcome = isCancelled ? .cancelled : .failed
+        }
+        isPresented = false
+        await refreshAfterDismissal()
+    }
+
+    func sheetDismissed() async {
+        guard attempt > 0 else { return }
+        if outcome == .none { outcome = .closed }
+        isPresented = false
+        await refreshAfterDismissal()
+    }
+
+    func observeVerifiedOwnership(_ value: ArkFileOfferCodeOwnershipSnapshot) {
+        guard attempt > 0 else { return }
+        observedRevision += 1
+        snapshot = value
+    }
+
+    var statusMessage: String? {
+        guard outcome != .none else { return nil }
+        if isRefreshing { return "Checking Apple purchases…" }
+        if outcome == .cancelled { return "Code redemption was cancelled." }
+        if outcome == .failed {
+            return "Apple could not complete code redemption. Try again, or use Restore Purchases if you already redeemed a code."
+        }
+        if let tier = snapshot?.verifiedTier {
+            let name = tier == .complete ? "Complete" : "Essentials"
+            return "Apple purchase found: \(name). Your download choices remain unchanged."
+        }
+        return "No new purchase is verified yet. If you redeemed a code, allow a moment for Apple to update your purchases or use Restore Purchases."
+    }
+
+    private func refreshAfterDismissal() async {
+        guard refreshedAttempt != attempt else { return }
+        refreshedAttempt = attempt
+        isRefreshing = true
+        let currentAttempt = attempt
+        let revision = observedRevision
+        let refreshed = await refresh()
+        guard currentAttempt == attempt else { return }
+        if revision == observedRevision { snapshot = refreshed }
+        isRefreshing = false
+        refreshGeneration += 1
+    }
+}
+
 /// A user-requested comparison surface. Opening this view is the point where
 /// ArkFile asks StoreKit for localized prices; app launch stays network-free.
 struct ArkFilePackComparisonView: View {
@@ -165,8 +281,11 @@ struct ArkFilePackComparisonView: View {
     var initialTier: ArkFileContentTier? = nil
 
     @ObservedObject private var merchandisingStore = ArkFileStoreKitMerchandisingStore.shared
+    @ObservedObject private var purchaseManager = ArkFileLitePurchaseManager.shared
+    @StateObject private var redemption = ArkFileOfferCodeRedemptionCoordinator()
     @State private var hasCurrentEssentialsProof = false
     @State private var didResolveUpgradeEligibility = false
+    @State private var upgradeEligibilityGeneration = 0
 
     private var metrics: ArkFilePackCatalogMetrics? {
         catalog.map(ArkFilePackCatalogMetrics.make(catalog:))
@@ -271,6 +390,24 @@ struct ArkFilePackComparisonView: View {
                 }
 
                 Button {
+                    redemption.present()
+                } label: {
+                    Label("Redeem Offer Code", systemImage: "gift")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .disabled(isBusy || redemption.isRefreshing || redemption.isPresented)
+                .accessibilityIdentifier("arkfile_pack_redeem_action")
+
+                if let message = redemption.statusMessage {
+                    Text(message)
+                        .font(.caption)
+                        .foregroundStyle(Color.arkTextMuted)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("arkfile_pack_redemption_status")
+                }
+
+                Button {
                     restorePurchases()
                 } label: {
                     Label("Restore Purchases", systemImage: "arrow.clockwise.circle")
@@ -290,13 +427,38 @@ struct ArkFilePackComparisonView: View {
         .background(Color.arkAppBackground.ignoresSafeArea())
         .navigationTitle("Compare Packs")
         .navigationBarTitleDisplayMode(.inline)
-        .task {
-            async let metadataLoad: Void = merchandisingStore.loadIfNeeded()
-            hasCurrentEssentialsProof = await ArkFileLitePurchaseManager.shared
-                .hasCurrentEssentialsProofForUpgradeOffer()
-            didResolveUpgradeEligibility = true
-            await metadataLoad
+        .offerCodeRedemption(isPresented: $redemption.isPresented) { result in
+            Task { await redemption.sheetCompleted(result) }
         }
+        .onChange(of: redemption.isPresented) { _, presented in
+            if !presented { Task { await redemption.sheetDismissed() } }
+        }
+        .onChange(of: redemptionOwnershipSnapshot) { _, snapshot in
+            // Transaction.updates can arrive after the native sheet has closed.
+            redemption.observeVerifiedOwnership(snapshot)
+        }
+        .task { await merchandisingStore.loadIfNeeded() }
+        .task(id: purchaseManager.ownershipSnapshot) { await refreshUpgradeEligibility() }
+        .task(id: redemption.refreshGeneration) {
+            if redemption.refreshGeneration > 0 { await refreshUpgradeEligibility() }
+        }
+    }
+
+    private var redemptionOwnershipSnapshot: ArkFileOfferCodeOwnershipSnapshot {
+        ArkFileOfferCodeOwnershipSnapshot(
+            hasResolvedProof: purchaseManager.hasResolvedCurrentStoreKitProof,
+            tier: purchaseManager.currentStoreKitProofTier
+        )
+    }
+
+    private func refreshUpgradeEligibility() async {
+        upgradeEligibilityGeneration += 1
+        let generation = upgradeEligibilityGeneration
+        didResolveUpgradeEligibility = false
+        let verifiedEssentials = await purchaseManager.hasCurrentEssentialsProofForUpgradeOffer()
+        guard !Task.isCancelled, generation == upgradeEligibilityGeneration else { return }
+        hasCurrentEssentialsProof = verifiedEssentials
+        didResolveUpgradeEligibility = true
     }
 
     private var essentialsCard: some View {
@@ -305,6 +467,7 @@ struct ArkFilePackComparisonView: View {
             priceAccessibilityID: "arkfile_pack_essentials_price",
             primaryAccessibilityID: "arkfile_pack_essentials_primary_action",
             title: "ArkFile Essentials",
+            artworkRole: .lite,
             benefit: "Preparedness, medical, food, travel and practical reference.",
             price: essentialsPrice,
             ownership: essentialsOwnershipStatus,
@@ -346,6 +509,7 @@ struct ArkFilePackComparisonView: View {
             priceAccessibilityID: "arkfile_pack_complete_price",
             primaryAccessibilityID: "arkfile_pack_complete_primary_action",
             title: "ArkFile Complete",
+            artworkRole: hasCompleteAccess ? .complete : completePurchaseRole,
             benefit: "Essentials plus full Wikipedia choices, textbooks and regional maps.",
             price: completePrice,
             ownership: completeOwnershipStatus,
@@ -388,6 +552,7 @@ struct ArkFilePackComparisonView: View {
         priceAccessibilityID: String,
         primaryAccessibilityID: String,
         title: String,
+        artworkRole: ArkFileStoreKitProductRole,
         benefit: String,
         price: String,
         ownership: String,
@@ -403,7 +568,13 @@ struct ArkFilePackComparisonView: View {
         primaryAction: @escaping () -> Void
     ) -> some View {
         VStack(alignment: .leading, spacing: 9) {
-            VStack(alignment: .leading, spacing: 4) {
+            HStack(alignment: .top, spacing: 12) {
+                Image(ArkFilePurchaseArtwork.assetName(for: artworkRole))
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 64, height: 64)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .accessibilityHidden(true)
                 // A container-level identifier masks the distinct price and
                 // button identifiers on iOS, so the rendered title anchors the card.
                 ViewThatFits(in: .horizontal) {
@@ -459,7 +630,7 @@ struct ArkFilePackComparisonView: View {
             }
             .buttonStyle(.borderedProminent)
             .tint(tint)
-            .disabled(isBusy || isPrimaryDisabled)
+            .disabled(isBusy || redemption.isRefreshing || redemption.isPresented || isPrimaryDisabled)
             .accessibilityIdentifier(primaryAccessibilityID)
 
             DisclosureGroup("What’s included") {

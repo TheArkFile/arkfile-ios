@@ -1,0 +1,3880 @@
+{
+  "formatVersion": 1,
+  "baselineReleaseID": "library-2026-09-baseline",
+  "baselineReleaseSHA256": "32f694a0bd08d9bfdac0586ffe6b8be16125b5ec83eb30f1fc790a49dde33aec",
+  "entries": [
+    {
+      "legacyRelativePath": "general/encyclopedias/Simple Wikipedia.zim",
+      "itemID": "wikipedia.simple",
+      "revisionID": "bytes-5396162e0c50f044e948cad342b58fbe",
+      "groupID": "wikipedia.simple.payload",
+      "files": [
+        {
+          "fileID": "file-030398503a82134bf700417043623d14",
+          "relativePath": "general/encyclopedias/Simple Wikipedia.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/encyclopedias/Simple Wikipedia.zim",
+          "sizeBytes": 2561230101,
+          "sha256": "7d127b3d3ac542ec722cd0239e00e54b836010b66b0ce9beab44769a42fddcec"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/encyclopedias/Wikipedia - No Images, August 2025.zim",
+      "itemID": "wikipedia.en.full.text",
+      "revisionID": "bytes-6db667990bd76474ea138320d3e8181f",
+      "groupID": "wikipedia.en.full.text.payload",
+      "files": [
+        {
+          "fileID": "file-a6f7981b22c3711aa500a22a7a08cff1",
+          "relativePath": "general/encyclopedias/Wikipedia - No Images, August 2025.zim",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/general/encyclopedias/Wikipedia - No Images, August 2025.zim",
+          "sizeBytes": 46623121155,
+          "sha256": "f8ff1e22cc2d1811620837ffb07d9bf85fdd1e4e7659f4d80c481337b52a62b1"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/encyclopedias/Wikipedia - With Images, August 2025.zim",
+      "itemID": "wikipedia.en.full.images",
+      "revisionID": "bytes-ab9693e2af035d16df43ad231fd594ec",
+      "groupID": "wikipedia.en.full.images.payload",
+      "files": [
+        {
+          "fileID": "file-fa9ddeea26a4514bba4752793a20a1ba",
+          "relativePath": "general/encyclopedias/Wikipedia - With Images, August 2025.zim",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/general/encyclopedias/Wikipedia - With Images, August 2025.zim",
+          "sizeBytes": 119265903349,
+          "sha256": "3aa55399c5afa6eb5c2477194e0d022c0527616408bc644c2224ed328da62dfb"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/DIY - Stack Exchange.zim",
+      "itemID": "title-9a77e673a3e3ace38f4ba779",
+      "revisionID": "bytes-67c08b4ff83007632b3bf83b91bd90e9",
+      "groupID": "title-9a77e673a3e3ace38f4ba779.payload",
+      "files": [
+        {
+          "fileID": "file-56e6a53fbc692e08fe3e43c255aaa368",
+          "relativePath": "general/practical-skills/DIY - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/practical-skills/DIY - Stack Exchange.zim",
+          "sizeBytes": 1932162711,
+          "sha256": "7ae00afe2d16d80ccd5186138d2b64bd9c7b913c6e46ba172fe888eb6745d41a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/Electonics and Electrical Engineering - Stack Exchange.zim",
+      "itemID": "title-a3ca439a002119e4469a1a31",
+      "revisionID": "bytes-9cc0751955b2557600e81544ffbf6a98",
+      "groupID": "title-a3ca439a002119e4469a1a31.payload",
+      "files": [
+        {
+          "fileID": "file-61c7a22af522597ba953aa2bd32e7388",
+          "relativePath": "general/practical-skills/Electonics and Electrical Engineering - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/general/practical-skills/Electonics and Electrical Engineering - Stack Exchange.zim",
+          "sizeBytes": 4133780710,
+          "sha256": "4538c611437a66e6e0eb7dae45149a5f24b22e45f7fec446d8faa98e73f42fce"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/Gardening - Stack Exchange.zim",
+      "itemID": "title-8adbe6af07edc8e69ffc3097",
+      "revisionID": "bytes-ec326e5af089ac08d000224f71123d39",
+      "groupID": "title-8adbe6af07edc8e69ffc3097.payload",
+      "files": [
+        {
+          "fileID": "file-b073466443aea6e5f4110fee600462c0",
+          "relativePath": "general/practical-skills/Gardening - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/practical-skills/Gardening - Stack Exchange.zim",
+          "sizeBytes": 879764745,
+          "sha256": "df0ed8faecc1488fdaaa756200bd53b7f52bfb70c7fbace7f50646832b38c50b"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/Great Outdoors - Stack Exchange.zim",
+      "itemID": "title-e812e6f6c9a282046021d392",
+      "revisionID": "bytes-955374d0a176a7a39f57dbd105da5e34",
+      "groupID": "title-e812e6f6c9a282046021d392.payload",
+      "files": [
+        {
+          "fileID": "file-1a79c83d6be3685082e99e6bef83dd4b",
+          "relativePath": "general/practical-skills/Great Outdoors - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/practical-skills/Great Outdoors - Stack Exchange.zim",
+          "sizeBytes": 141878030,
+          "sha256": "a49af31291de1af07519532ce984f37651756a939808cdb51449de72455e6734"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/Ham Radio - Stack Exchange.zim",
+      "itemID": "title-3ae2c61bba601e45a5b7dbd4",
+      "revisionID": "bytes-9693508f04c27861f1bb976993198cce",
+      "groupID": "title-3ae2c61bba601e45a5b7dbd4.payload",
+      "files": [
+        {
+          "fileID": "file-34ea2b6f38f5ad9fd7a79f9bc936fbe5",
+          "relativePath": "general/practical-skills/Ham Radio - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/practical-skills/Ham Radio - Stack Exchange.zim",
+          "sizeBytes": 69811992,
+          "sha256": "a2703bab088b95b954bcd51dcc4e0f9fd421d8e7f8116a2b097917f36b4e024c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/Motor Vehicle Mechanics - Stack Exchange.zim",
+      "itemID": "title-55befde65dcc30d792b1f121",
+      "revisionID": "bytes-2f5d478a607babeef9c88862eed63e18",
+      "groupID": "title-55befde65dcc30d792b1f121.payload",
+      "files": [
+        {
+          "fileID": "file-fe6f2cb664751ef40a60e280849fdb61",
+          "relativePath": "general/practical-skills/Motor Vehicle Mechanics - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/practical-skills/Motor Vehicle Mechanics - Stack Exchange.zim",
+          "sizeBytes": 316832627,
+          "sha256": "942e1a64fe6dd225e66dd3bc30eb9b928eb47695582fb2afe42f7329185e2867"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/practical-skills/Woodworking - Stack Exchange.zim",
+      "itemID": "title-fa389692486fda873e9b9e1a",
+      "revisionID": "bytes-29a171ffcf29d469e53ad3bf3c152fa0",
+      "groupID": "title-fa389692486fda873e9b9e1a.payload",
+      "files": [
+        {
+          "fileID": "file-b4616c3f078068d005b6f18dff9ff937",
+          "relativePath": "general/practical-skills/Woodworking - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/general/practical-skills/Woodworking - Stack Exchange.zim",
+          "sizeBytes": 105105615,
+          "sha256": "24ef2fd97a648be71d314124bf34f837399e846765aadea7e6f556c6de493031"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 21-26 Map Reading and Land Navigation (1993).pdf",
+      "itemID": "title-d09791c9229f7a58ec79da6d",
+      "revisionID": "bytes-a4c9940c6bf93fc9f2b542a1d23a4b7c",
+      "groupID": "title-d09791c9229f7a58ec79da6d.payload",
+      "files": [
+        {
+          "fileID": "file-4868197fa8766dc84202e9596280383d",
+          "relativePath": "general/survival/FM 21-26 Map Reading and Land Navigation (1993).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 21-26 Map Reading and Land Navigation (1993).pdf",
+          "sizeBytes": 11791783,
+          "sha256": "383a9954fb56b8c21fbd68ee499d0fcf781debf75debe3cf362749bdb77b0b7e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 21-60 Visual Signals (1987).pdf",
+      "itemID": "title-6174ebbb4befb1a2a64ad3af",
+      "revisionID": "bytes-da55ddc512ed30646c50252e5bd2b515",
+      "groupID": "title-6174ebbb4befb1a2a64ad3af.payload",
+      "files": [
+        {
+          "fileID": "file-6e3c0f76131d1fe737354b2e4b0ecbea",
+          "relativePath": "general/survival/FM 21-60 Visual Signals (1987).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 21-60 Visual Signals (1987).pdf",
+          "sizeBytes": 1228586,
+          "sha256": "b60e1cc172fe6dfd1e013b1f124c881d807bcfee6062414ab4856c5965f2a586"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+      "itemID": "title-280b24a756cb5ed38065cc8f",
+      "revisionID": "bytes-608dc643d1561fa79f27a24c4aacc046",
+      "groupID": "title-280b24a756cb5ed38065cc8f.payload",
+      "files": [
+        {
+          "fileID": "file-4cae5076ddee24eb85a004193d0bef19",
+          "relativePath": "general/survival/FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 21-76-1 Survival Evasion and Recovery (1999).pdf",
+          "sizeBytes": 3136930,
+          "sha256": "f4bf6508978e695a16815ca19c52e2b9d5ba5634f5d76fdcc666adbd203cd05c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 3-97.6  Mountain Operations Manual (2000).pdf",
+      "itemID": "title-baf9487762c9c2c71c9db846",
+      "revisionID": "bytes-946853534a526c3400b492f393146182",
+      "groupID": "title-baf9487762c9c2c71c9db846.payload",
+      "files": [
+        {
+          "fileID": "file-d6df4b0f3e67b3503b5a2efcdacb85d6",
+          "relativePath": "general/survival/FM 3-97.6  Mountain Operations Manual (2000).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 3-97.6  Mountain Operations Manual (2000).pdf",
+          "sizeBytes": 1306519,
+          "sha256": "89ab96f5366e656328ec68ff4bd43e1ace3eadf9406a2077176745cf45bf2622"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 34-52 Intelligence Interrogation (1992).pdf",
+      "itemID": "title-9111988c0b299c7f8a133a82",
+      "revisionID": "bytes-bcc70447f24054ed7d1117af3c96ab89",
+      "groupID": "title-9111988c0b299c7f8a133a82.payload",
+      "files": [
+        {
+          "fileID": "file-8b7cdf5771794581878244d26ae2ef3c",
+          "relativePath": "general/survival/FM 34-52 Intelligence Interrogation (1992).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 34-52 Intelligence Interrogation (1992).pdf",
+          "sizeBytes": 14771217,
+          "sha256": "53d1cb6a6a700ef9b5b8fbf7a3abba059f2897d63ad54cbfc30f8e8b44af71e2"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 4-25.11  First Aid (2002).pdf",
+      "itemID": "title-c1bd4fa4a67e8fb64229fb44",
+      "revisionID": "bytes-8ece9ce220a0a959678b7698d9e1d926",
+      "groupID": "title-c1bd4fa4a67e8fb64229fb44.payload",
+      "files": [
+        {
+          "fileID": "file-44b03b26472f84f632e07c6349a48c80",
+          "relativePath": "general/survival/FM 4-25.11  First Aid (2002).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 4-25.11  First Aid (2002).pdf",
+          "sizeBytes": 2621944,
+          "sha256": "95fb01c941cdb385c152d045081ae011b59805931524e03192e953dc4e57af2f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/FM 5-426  Carpentry (1995).pdf",
+      "itemID": "title-1d634b192d1d03ea88a8b289",
+      "revisionID": "bytes-e1ba2f6d8dc83ea0f0ddcadcd9d08a4c",
+      "groupID": "title-1d634b192d1d03ea88a8b289.payload",
+      "files": [
+        {
+          "fileID": "file-318d8bcbc315a4c8310a1f27927efac5",
+          "relativePath": "general/survival/FM 5-426  Carpentry (1995).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/FM 5-426  Carpentry (1995).pdf",
+          "sizeBytes": 4671730,
+          "sha256": "f7724a1928d36d6fdffad32641a177d3f8c5f3351b322d24c14a576d9694f481"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/In Time of Emergency by United States. Office of Civil Defense.zip",
+      "itemID": "title-10dcf0cbbe1d789ffa34deb4",
+      "revisionID": "bytes-aa6f8831ce2599782fc55cd7826a1392",
+      "groupID": "title-10dcf0cbbe1d789ffa34deb4.payload",
+      "files": [
+        {
+          "fileID": "file-3ba24eb2bb62e91e431678868396514f",
+          "relativePath": "general/survival/In Time of Emergency by United States. Office of Civil Defense.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/In Time of Emergency by United States. Office of Civil Defense.zip",
+          "sizeBytes": 4459210,
+          "sha256": "832e3c46c6463e4239843fffd9ad55b6247b902ceda002d72ad354012b9959c9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/Navy Marine Corps SERE Handbook (1999).pdf",
+      "itemID": "title-03950bf56529d2993542c75f",
+      "revisionID": "bytes-07f8dcab15a52d14b689640fa7c86cbe",
+      "groupID": "title-03950bf56529d2993542c75f.payload",
+      "files": [
+        {
+          "fileID": "file-0761a01aefc06fbf4ef0345f1836a4e5",
+          "relativePath": "general/survival/Navy Marine Corps SERE Handbook (1999).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/Navy Marine Corps SERE Handbook (1999).pdf",
+          "sizeBytes": 3362934,
+          "sha256": "5211e79495104cfdbd86e8b00e0b2913ac30cf56b0731ad63d673f5a0a1fc85c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/USMC Combat Water Survival (2003).pdf",
+      "itemID": "title-ada08dd6f56517dfd71d9c89",
+      "revisionID": "bytes-e962be48a87570325480abbd78185189",
+      "groupID": "title-ada08dd6f56517dfd71d9c89.payload",
+      "files": [
+        {
+          "fileID": "file-42614de1f30286f09cc9e4f210de78b8",
+          "relativePath": "general/survival/USMC Combat Water Survival (2003).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/USMC Combat Water Survival (2003).pdf",
+          "sizeBytes": 3553138,
+          "sha256": "52258c64983d4e0748ddf2e8d586e88c0cf825867755c5ecb82db3c7df5cd8de"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/USMC Summer Survival Course (2002).pdf",
+      "itemID": "title-f0657371b23809fb6ba50dd6",
+      "revisionID": "bytes-de3d6782ae1b14dd3da07224d6a5c5fb",
+      "groupID": "title-f0657371b23809fb6ba50dd6.payload",
+      "files": [
+        {
+          "fileID": "file-5249d8c2abddfa0d9e753a283aeb7912",
+          "relativePath": "general/survival/USMC Summer Survival Course (2002).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/USMC Summer Survival Course (2002).pdf",
+          "sizeBytes": 4326295,
+          "sha256": "4ee2a8416ef168b2624e6ab57c273874d6aaa57cf12c0f9cd58f7985fc434d82"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/USMC Winter Survival Course (2002).pdf",
+      "itemID": "title-711c28b181760339a8ee88ee",
+      "revisionID": "bytes-44e85a19d9d15e1f7830a182b257ee63",
+      "groupID": "title-711c28b181760339a8ee88ee.payload",
+      "files": [
+        {
+          "fileID": "file-816f2737b615371b052653775fe2b18b",
+          "relativePath": "general/survival/USMC Winter Survival Course (2002).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/general/survival/USMC Winter Survival Course (2002).pdf",
+          "sizeBytes": 4367617,
+          "sha256": "f937706f3f6e656ab7efe177004d94d920d0213a109bf71f6a143d8fb489fe4f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "general/survival/ATP 3-50.21 - Survival (2018).pdf",
+      "itemID": "title-bdba088602a70744d7756052",
+      "revisionID": "bytes-27da1dfe337e8918293451e8caa46df2",
+      "groupID": "title-bdba088602a70744d7756052.payload",
+      "files": [
+        {
+          "fileID": "file-094b503dd87b0fd9f6f32c3c3353c674",
+          "relativePath": "general/survival/ATP 3-50.21 - Survival (2018).pdf",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/general/survival/ATP 3-50.21 - Survival (2018).pdf",
+          "sizeBytes": 23772309,
+          "sha256": "440035273e6e2ddab5f6ba8b79a4b0d5c901f3804538998381b343092512a813"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/reference/ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+      "itemID": "title-8871c0230d597c61ef0ee962",
+      "revisionID": "bytes-b0827aa6116dc38bfe00b9a3e20b2326",
+      "groupID": "title-8871c0230d597c61ef0ee962.payload",
+      "files": [
+        {
+          "fileID": "file-5b33174de3e8a7c35f845dcd19bb926d",
+          "relativePath": "medical/reference/ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/medical/reference/ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties (2014).pdf",
+          "sizeBytes": 1946943,
+          "sha256": "4cf250e450281200fa26edb9cd33315c24f2a22a61a4a307062bc5ac5f1a1a95"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/reference/Medical Sciences - Stack Exchange.zim",
+      "itemID": "title-6a57a632a001bd4f057dda0a",
+      "revisionID": "bytes-bc6095bc014f700bfd19dbf6eb2be029",
+      "groupID": "title-6a57a632a001bd4f057dda0a.payload",
+      "files": [
+        {
+          "fileID": "file-f58954b842842c8ba7ae983a20c99a3f",
+          "relativePath": "medical/reference/Medical Sciences - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/medical/reference/Medical Sciences - Stack Exchange.zim",
+          "sizeBytes": 60799834,
+          "sha256": "cdf4bfa36ba2142fe3ec0d19d7c08486a0d121f55b9c44f7f5adbfb748d6cbad"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/reference/WikiMed - Sept 2025.zim",
+      "itemID": "title-f4f29b343752d43097f9a949",
+      "revisionID": "bytes-f89cb60762462764b77e41de9e2f8d16",
+      "groupID": "title-f4f29b343752d43097f9a949.payload",
+      "files": [
+        {
+          "fileID": "file-7d1c460dc7b76bf8124f6b75f3db88a3",
+          "relativePath": "medical/reference/WikiMed - Sept 2025.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/medical/reference/WikiMed - Sept 2025.zim",
+          "sizeBytes": 2053190934,
+          "sha256": "3dd9df7e309fbe88dc73f71cd3458d25a18bd23ecd3edaca7f26170e6c1369b1"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/field-guides/Breastfeeding Guide.pdf",
+      "itemID": "title-d14d17211229130b9a3ee232",
+      "revisionID": "bytes-33c1d3c8643bd2028e261f79a849a647",
+      "groupID": "title-d14d17211229130b9a3ee232.payload",
+      "files": [
+        {
+          "fileID": "file-cae176c824956e3a1ef106c47381a20f",
+          "relativePath": "medical/field-guides/Breastfeeding Guide.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/medical/field-guides/Breastfeeding Guide.pdf",
+          "sizeBytes": 1166477,
+          "sha256": "f560515b81ebbd4f9caf01494aded0f0ed9bf6a4843ad44ee0623d6fe5e33ee7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/field-guides/Infant Feeding Guide.pdf",
+      "itemID": "title-c73841b100db7a8305f95b22",
+      "revisionID": "bytes-e85736aa5456d426698b6245c94ab27e",
+      "groupID": "title-c73841b100db7a8305f95b22.payload",
+      "files": [
+        {
+          "fileID": "file-970a3bf8bc1ae98a301a91cb39c7a9ae",
+          "relativePath": "medical/field-guides/Infant Feeding Guide.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/medical/field-guides/Infant Feeding Guide.pdf",
+          "sizeBytes": 35958886,
+          "sha256": "d0c043cc70dedf16920673f57cc4771692974db30761df351faec4e56db45b1d"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/field-guides/ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+      "itemID": "title-0a75ff631bd7dbc5fc9412e5",
+      "revisionID": "bytes-2a516a5e9526932335b9e14c24810905",
+      "groupID": "title-0a75ff631bd7dbc5fc9412e5.payload",
+      "files": [
+        {
+          "fileID": "file-66ad108fd0da2fec8a778971700f733e",
+          "relativePath": "medical/field-guides/ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/medical/field-guides/ATP 4-02.11 - Casualty Response and First Aid (2026).pdf",
+          "sizeBytes": 12665561,
+          "sha256": "a4a0650f5bb14c1c7163b9b1e9f08bcc012fb3fe49ea4432f0ccaffb9af86542"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "medical/field-guides/FEMA CERT Basic Training Participant Manual (2019).pdf",
+      "itemID": "title-291ae05efa518621caf4781f",
+      "revisionID": "bytes-604d0dbac1dcf64b1c3ca0f7fa7fb148",
+      "groupID": "title-291ae05efa518621caf4781f.payload",
+      "files": [
+        {
+          "fileID": "file-6b05ee5690206c4a30cab8127180a8ff",
+          "relativePath": "medical/field-guides/FEMA CERT Basic Training Participant Manual (2019).pdf",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/medical/field-guides/FEMA CERT Basic Training Participant Manual (2019).pdf",
+          "sizeBytes": 5603996,
+          "sha256": "6805819d1236a78be217adc20a7fd9346eb9033da14d9041ffde797ad49eb7ee"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Camp Life in the Woods and the Tricks of Trapping and Trap Making by Gibson.zip",
+      "itemID": "title-47ea6687333704178b123330",
+      "revisionID": "bytes-2a6b6df32878d9bd6231ed5ca613325a",
+      "groupID": "title-47ea6687333704178b123330.payload",
+      "files": [
+        {
+          "fileID": "file-849e63119c20c501e6002e73daec30ae",
+          "relativePath": "food-preparation/food/Camp Life in the Woods and the Tricks of Trapping and Trap Making by Gibson.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Camp Life in the Woods and the Tricks of Trapping and Trap Making by Gibson.zip",
+          "sizeBytes": 7168127,
+          "sha256": "e5bca446139e662dccef87ecc04938b5506d9ce3c8b3ad72b9d7d3cbc3df62d9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Deadfalls and Snares by A. R. Harding.zip",
+      "itemID": "title-0ed9fe9d1fe66e2adf973c65",
+      "revisionID": "bytes-afa0e7f0bacb74b98219c776671c50c9",
+      "groupID": "title-0ed9fe9d1fe66e2adf973c65.payload",
+      "files": [
+        {
+          "fileID": "file-3aa1acca5ed771ec215b813df0dff17b",
+          "relativePath": "food-preparation/food/Deadfalls and Snares by A. R. Harding.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Deadfalls and Snares by A. R. Harding.zip",
+          "sizeBytes": 3172549,
+          "sha256": "20dceb1655c796a012c6f471e21d199f99f24297c5dd8f898b6d17274020fcd3"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Fifty Years a Hunter and Trapper by E. N. Woodcock.zip",
+      "itemID": "title-9d3f9fc4c414985a230f8f55",
+      "revisionID": "bytes-9386595c09cb191cebb14a153fdb294b",
+      "groupID": "title-9d3f9fc4c414985a230f8f55.payload",
+      "files": [
+        {
+          "fileID": "file-f99d49b59549be2a194011ded9f68dc7",
+          "relativePath": "food-preparation/food/Fifty Years a Hunter and Trapper by E. N. Woodcock.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Fifty Years a Hunter and Trapper by E. N. Woodcock.zip",
+          "sizeBytes": 1349494,
+          "sha256": "db0faf6265b6271a9f2e0289f639ea47332a67579e1ac96955bfebc6c83e3ff0"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Hunting with the Bow & Arrow.zip",
+      "itemID": "title-3246ad7584459858701272c1",
+      "revisionID": "bytes-7206ef14f2f87e97390e26efc6f7f6fd",
+      "groupID": "title-3246ad7584459858701272c1.payload",
+      "files": [
+        {
+          "fileID": "file-f27fb3324521e013a94e69125ac54c8c",
+          "relativePath": "food-preparation/food/Hunting with the Bow & Arrow.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Hunting with the Bow & Arrow.zip",
+          "sizeBytes": 1870633,
+          "sha256": "4c5c911e035e07eed7aaea1560a1258d1bd5965468332f5c06fa0de59bbb1d2e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/The theory and practice of archery.zip",
+      "itemID": "title-518b614f75d225897f29a38a",
+      "revisionID": "bytes-edf320372c10fdd9c1a397648ab4099b",
+      "groupID": "title-518b614f75d225897f29a38a.payload",
+      "files": [
+        {
+          "fileID": "file-4f1ddb2c04e9dc861d81ce92bc6288c9",
+          "relativePath": "food-preparation/food/The theory and practice of archery.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/The theory and practice of archery.zip",
+          "sizeBytes": 878427,
+          "sha256": "4c8252f032090b64de4fd5bd24c6ad94d84214929a2f9c2c1b8b21357aeebff3"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+      "itemID": "title-f77005715035433cc99d14ef",
+      "revisionID": "bytes-4408b7c12b755f32446eaae2eafe8d19",
+      "groupID": "title-f77005715035433cc99d14ef.payload",
+      "files": [
+        {
+          "fileID": "file-e607fd276872bc95801c50c838dedb3a",
+          "relativePath": "food-preparation/food/Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+          "sizeBytes": 2859030,
+          "sha256": "84e4c1f7000c4d475885daa9358ce8dda5a752d962ec7ac2d011dcf7fdaaf59c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+      "itemID": "title-d8458087938086ab64bc4856",
+      "revisionID": "bytes-601a302d9f88206b30a925e29ecd22bd",
+      "groupID": "title-d8458087938086ab64bc4856.payload",
+      "files": [
+        {
+          "fileID": "file-1886d6c932b707df1e4b9e95a839a440",
+          "relativePath": "food-preparation/food/Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+          "sizeBytes": 1461220,
+          "sha256": "f3eb1c23d57595953a35f046d0a2bf2d69dedc571161c8e23a8b1522b6c2a5d5"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Meat on the farm - butchering, curing, and keeping.pdf",
+      "itemID": "title-5e9af9dc2183834d79c115eb",
+      "revisionID": "bytes-12d89e175001d0b129d991dd1a32543b",
+      "groupID": "title-5e9af9dc2183834d79c115eb.payload",
+      "files": [
+        {
+          "fileID": "file-f9d3e7fb579549595a095b0d544bda62",
+          "relativePath": "food-preparation/food/Meat on the farm - butchering, curing, and keeping.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Meat on the farm - butchering, curing, and keeping.pdf",
+          "sizeBytes": 3400846,
+          "sha256": "a5de749ac82bcac15849559053a4e04d4eb30334614ced33a49ff454090c0ff5"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+      "itemID": "title-7f15a0b08ef5fd6af3507b2e",
+      "revisionID": "bytes-433abae8bbd0f605fb22a951bd0b0443",
+      "groupID": "title-7f15a0b08ef5fd6af3507b2e.payload",
+      "files": [
+        {
+          "fileID": "file-0f186b23553ce32b4c4a3bb35abea53e",
+          "relativePath": "food-preparation/food/Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm by H. Russell Cross et al.zip",
+          "sizeBytes": 2072231,
+          "sha256": "b0ce64a828660679fddf8c0f22f76584b00381c4699d7f94b36c8998ffb6ba16"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA - Bison from Farm to Table.pdf",
+      "itemID": "title-3d3f8f9d6f1214f1dbcfd71e",
+      "revisionID": "bytes-087825fac5389e920afae30f7f702c2b",
+      "groupID": "title-3d3f8f9d6f1214f1dbcfd71e.payload",
+      "files": [
+        {
+          "fileID": "file-edfeb7784305411625d0eb0452dab89f",
+          "relativePath": "food-preparation/food/USDA - Bison from Farm to Table.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/USDA - Bison from Farm to Table.pdf",
+          "sizeBytes": 647532,
+          "sha256": "0d8e9fbb2d0e3312c71704bb54fe024839cf1a417fa08bb3e079f1a3ccd6ad3e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA - Goat from Farm to Table.pdf",
+      "itemID": "title-7a37476cd546a8347649b652",
+      "revisionID": "bytes-2761eb5926b697a903a1f754ee74700b",
+      "groupID": "title-7a37476cd546a8347649b652.payload",
+      "files": [
+        {
+          "fileID": "file-aee99552b82232510107be77eb1a1505",
+          "relativePath": "food-preparation/food/USDA - Goat from Farm to Table.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/USDA - Goat from Farm to Table.pdf",
+          "sizeBytes": 126891,
+          "sha256": "4810def5e98cf3f82832cc88edfcb238889183c8d39b769c79f8ad40e7df0619"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Canoe and Camp Cookery by Seneca.zip",
+      "itemID": "title-46c6d9c516dfac3ef5cc5fc6",
+      "revisionID": "bytes-0a97848ac7294daf42f622bbf1b58d73",
+      "groupID": "title-46c6d9c516dfac3ef5cc5fc6.payload",
+      "files": [
+        {
+          "fileID": "file-69a3490b8dcdc151d8fb8e90ad70780b",
+          "relativePath": "food-preparation/food/Canoe and Camp Cookery by Seneca.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Canoe and Camp Cookery by Seneca.zip",
+          "sizeBytes": 165231,
+          "sha256": "09f84fd33e209871c8816f07dae24cd1ed8ac992036de95e84cf3857432bf013"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Miss Leslie's New Cookery Book by Eliza Leslie.zip",
+      "itemID": "title-c13ef1853047712ea575fc1d",
+      "revisionID": "bytes-922bec5e8a474126c037b08f01ed4daf",
+      "groupID": "title-c13ef1853047712ea575fc1d.payload",
+      "files": [
+        {
+          "fileID": "file-21674ad1200cc467d4de4b6a23401fc2",
+          "relativePath": "food-preparation/food/Miss Leslie's New Cookery Book by Eliza Leslie.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Miss Leslie's New Cookery Book by Eliza Leslie.zip",
+          "sizeBytes": 561178,
+          "sha256": "f2a3ec5378ddca18c28ae4d5eedcc6426588a136105134d0b35781a5129816db"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Science in the Kitchen by E. E. Kellogg.zip",
+      "itemID": "title-360d5d499a14e855626ca1bc",
+      "revisionID": "bytes-88e163e7afaf448fca5a7fe369408bc4",
+      "groupID": "title-360d5d499a14e855626ca1bc.payload",
+      "files": [
+        {
+          "fileID": "file-ca8595cb7bde207e7b8307f7c874db7a",
+          "relativePath": "food-preparation/food/Science in the Kitchen by E. E. Kellogg.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Science in the Kitchen by E. E. Kellogg.zip",
+          "sizeBytes": 2933952,
+          "sha256": "dbc36bd65e08dffe1285421e8eaeeb7f71aec99e04eeb878c06ad5531082203b"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Coffee - Stack Exchange.zim",
+      "itemID": "title-651982e6fc29e991fb0d6419",
+      "revisionID": "bytes-4a42c9ce219c6e31a53e2e30223cb64a",
+      "groupID": "title-651982e6fc29e991fb0d6419.payload",
+      "files": [
+        {
+          "fileID": "file-8586d0bef820e0ab7a6cb1006b47b0df",
+          "relativePath": "food-preparation/food/Coffee - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Coffee - Stack Exchange.zim",
+          "sizeBytes": 17506323,
+          "sha256": "0c4c033b9e8d6473de1f387aa8751d7482bfb94d245fcf1b84c8b2281b2325d7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Homebrew - Stack Exchange.zim",
+      "itemID": "title-8e8853682e6e916ebf57e262",
+      "revisionID": "bytes-5938cb42f33a4aa9bbd9a27d555b5fe5",
+      "groupID": "title-8e8853682e6e916ebf57e262.payload",
+      "files": [
+        {
+          "fileID": "file-1533719c88b1261cab0b8b3c885fefb4",
+          "relativePath": "food-preparation/food/Homebrew - Stack Exchange.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Homebrew - Stack Exchange.zim",
+          "sizeBytes": 37380596,
+          "sha256": "3c48cfbf3db151b7f0157ffd58491bca712f411447d0f03c7337d956835cdd6b"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/How to make sweet potato flour.zip",
+      "itemID": "title-bf93f187616558fc7ba2c0e9",
+      "revisionID": "bytes-0b209c85154906c16cf86342300281f2",
+      "groupID": "title-bf93f187616558fc7ba2c0e9.payload",
+      "files": [
+        {
+          "fileID": "file-f5c5148c2e23353db0c5f39a3bdc739e",
+          "relativePath": "food-preparation/food/How to make sweet potato flour.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/How to make sweet potato flour.zip",
+          "sizeBytes": 605222,
+          "sha256": "be2cc884b2fc79bed3fbd6c38584174df15d625e434b2f3681e76bba0680b304"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Our Edible Toadstools and Mushrooms and How to Distinguish Them by Gibson.zip",
+      "itemID": "title-01122963eb10f791a1432a3e",
+      "revisionID": "bytes-7b34abb8d76007de0bfcba81b591a242",
+      "groupID": "title-01122963eb10f791a1432a3e.payload",
+      "files": [
+        {
+          "fileID": "file-03768663c5e157cf45bf4ec6f96428cb",
+          "relativePath": "food-preparation/food/Our Edible Toadstools and Mushrooms and How to Distinguish Them by Gibson.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Our Edible Toadstools and Mushrooms and How to Distinguish Them by Gibson.zip",
+          "sizeBytes": 5006215,
+          "sha256": "b80ed320847a828517b545baefcb45027f0d6e8779163da9fdba606ea6a0fcc4"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Canning, Freezing, Storing Garden Produce.zip",
+      "itemID": "title-2c64a073cc189708633eb2e2",
+      "revisionID": "bytes-11de9e500db1193ba02d5207361dc115",
+      "groupID": "title-2c64a073cc189708633eb2e2.payload",
+      "files": [
+        {
+          "fileID": "file-811ef036155490914e2973f426bfd8f9",
+          "relativePath": "food-preparation/food/Canning, Freezing, Storing Garden Produce.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Canning, Freezing, Storing Garden Produce.zip",
+          "sizeBytes": 2716163,
+          "sha256": "80beb7eb598d6e91f7df055a1a29d912ef2f2a5f8a7146279288b9c4348a6fbf"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/Home_Canning_USDA.pdf",
+      "itemID": "title-174f6033ca799193b2768e0e",
+      "revisionID": "bytes-c525b67dd7d21e76a35e7ed29da73d24",
+      "groupID": "title-174f6033ca799193b2768e0e.payload",
+      "files": [
+        {
+          "fileID": "file-baea2772422b935b972718ca24c8120a",
+          "relativePath": "food-preparation/food/Home_Canning_USDA.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/food/Home_Canning_USDA.pdf",
+          "sizeBytes": 14011885,
+          "sha256": "f997c69cdffbe06f8c5b2e581e2d2e33659968912586243cc553cff42dfc6112"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/water/EPA - EMERGENCY DISINFECTION OF DRINKING WATER (2017).pdf",
+      "itemID": "title-4c88e83c2108a480ebaeeab9",
+      "revisionID": "bytes-5d121ef2aa9f14f0cf7408868f739b72",
+      "groupID": "title-4c88e83c2108a480ebaeeab9.payload",
+      "files": [
+        {
+          "fileID": "file-d5394ea001eb3e806b02133281f53bb5",
+          "relativePath": "food-preparation/water/EPA - EMERGENCY DISINFECTION OF DRINKING WATER (2017).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/water/EPA - EMERGENCY DISINFECTION OF DRINKING WATER (2017).pdf",
+          "sizeBytes": 754723,
+          "sha256": "f404083d00decedc267bf4265eda776bb250ccfe18c1f7b19152aa006ff727c5"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/water/EPA - Giardia - Fact Sheet (2002).pdf",
+      "itemID": "title-d277614490c94cbacb4e6f46",
+      "revisionID": "bytes-50ea44c356db2a8050d0cfd2529c8160",
+      "groupID": "title-d277614490c94cbacb4e6f46.payload",
+      "files": [
+        {
+          "fileID": "file-9211416530de60ebc2971b9488878f5b",
+          "relativePath": "food-preparation/water/EPA - Giardia - Fact Sheet (2002).pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/food-preparation/water/EPA - Giardia - Fact Sheet (2002).pdf",
+          "sizeBytes": 78912,
+          "sha256": "5dba678826d35ea0e7253dbef69cb698b37c1f1a53c1293731d70eabe1dec5ca"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+      "itemID": "title-9971e7bd13a332c46543ba21",
+      "revisionID": "bytes-36f1035e223dffba39d9cd957cc698a0",
+      "groupID": "title-9971e7bd13a332c46543ba21.payload",
+      "files": [
+        {
+          "fileID": "file-ba75a2be688721d48424b606132ec041",
+          "relativePath": "food-preparation/food/ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/food-preparation/food/ArkFile - Wild Game Safety and Preservation (2026-07).zip",
+          "sizeBytes": 15783,
+          "sha256": "1bf92241c721e6a49d1ebe02a1b1e1c0dfbaef4989b346f1ca22458770da9c55"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+      "itemID": "title-34a8b437cd20b280dd6902bf",
+      "revisionID": "bytes-184ab6b393ec728fcd196d50c5f21f34",
+      "groupID": "title-34a8b437cd20b280dd6902bf.payload",
+      "files": [
+        {
+          "fileID": "file-dbd4845a7504f5c587f015b0fca1e90b",
+          "relativePath": "food-preparation/food/USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/food-preparation/food/USDA FSIS - Chicken from Farm to Table (ArkFile Offline 2026-07).zip",
+          "sizeBytes": 9813,
+          "sha256": "322dc39d8dd028f9444619f75fea3526a760504e751180a924ed95f08e87e99a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+      "itemID": "title-e8c4d159e0c059dc1bcd6398",
+      "revisionID": "bytes-f2c542d1e5d95d64886f789721f588f7",
+      "groupID": "title-e8c4d159e0c059dc1bcd6398.payload",
+      "files": [
+        {
+          "fileID": "file-d6850a004a3dfea0efca5d853c0dbdc3",
+          "relativePath": "food-preparation/food/USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/food-preparation/food/USDA FSIS - Duck and Goose from Farm to Table (ArkFile Offline 2026-07).zip",
+          "sizeBytes": 8119,
+          "sha256": "dcc7248f12aff7bf7564fde2834b0dc4ddc0c7c56579f44624324a8018d55cd1"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+      "itemID": "title-b31f5996a3b559428d835228",
+      "revisionID": "bytes-5284451ae79348a61177b9f31aef72fc",
+      "groupID": "title-b31f5996a3b559428d835228.payload",
+      "files": [
+        {
+          "fileID": "file-89ebd02c6f2cbf1bc325fbe25361eb19",
+          "relativePath": "food-preparation/food/USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/food-preparation/food/USDA FSIS - Fresh Pork from Farm to Table (ArkFile Offline 2026-07).zip",
+          "sizeBytes": 8320,
+          "sha256": "b1cb73467a1019e0e281c2786c7bf21c9c0309d4fba6268c4eaae8ea0405dae7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+      "itemID": "title-65b2d58204708af5dea9ede4",
+      "revisionID": "bytes-73340e8bdbfad4765505c6d2a9e3be32",
+      "groupID": "title-65b2d58204708af5dea9ede4.payload",
+      "files": [
+        {
+          "fileID": "file-fd4e63758fb24ae4f3ca9edc7ff49921",
+          "relativePath": "food-preparation/food/USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/food-preparation/food/USDA FSIS - Lamb from Farm to Table (ArkFile Offline 2026-07).zip",
+          "sizeBytes": 8394,
+          "sha256": "a548254e45f31da347af32eaf21e7941fc5397919e1052a95041ef041f67a3dd"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "food-preparation/food/USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+      "itemID": "title-e5e4e453d3b679b366b6506b",
+      "revisionID": "bytes-cb380fa4ce2f6a614f0229b16fc01120",
+      "groupID": "title-e5e4e453d3b679b366b6506b.payload",
+      "files": [
+        {
+          "fileID": "file-ce75d25d0cff703753ec0471787870b3",
+          "relativePath": "food-preparation/food/USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+          "objectKey": "content-packs/releases/2026-07-content-refresh-v1/lite-full/files/food-preparation/food/USDA FSIS - Turkey from Farm to Table (ArkFile Offline 2026-07).zip",
+          "sizeBytes": 9521,
+          "sha256": "b6418a50125e4157ce29f623bba03e40d8863f729c5b87b6704753e425cdbf40"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/alaska-hawaii/region.pmtiles",
+      "itemID": "title-20ae83d26da6e082c3041641",
+      "revisionID": "bytes-a7a90e01bfd6479e990a87855337822d",
+      "groupID": "title-20ae83d26da6e082c3041641.payload",
+      "files": [
+        {
+          "fileID": "file-6a096382fc774df5d0ca8c33936af380",
+          "relativePath": "maps/regions/alaska-hawaii/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/alaska-hawaii/manifest-20260707-72894ef87fc3.json",
+          "sizeBytes": 699,
+          "sha256": "72894ef87fc30dc95dca9d9dbaa11094240fe708bae9aecac4d1da5801701090"
+        },
+        {
+          "fileID": "file-20ae83d26da6e082c3041641febea7b7",
+          "relativePath": "maps/regions/alaska-hawaii/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/alaska-hawaii/region-20260707-598f710f5e6f.pmtiles",
+          "sizeBytes": 778306496,
+          "sha256": "598f710f5e6faca36d1cb5d947121b4673bb815e6827aa487eb277e6bccc008c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/california/region.pmtiles",
+      "itemID": "title-b4eb5faee021751fa906e4ae",
+      "revisionID": "bytes-95c845b1a0707d3ce273c78c1ca4bae7",
+      "groupID": "title-b4eb5faee021751fa906e4ae.payload",
+      "files": [
+        {
+          "fileID": "file-78138352d83d73fba41bbfa12eee761c",
+          "relativePath": "maps/regions/california/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/california/manifest-20260707-ed8a422912e0.json",
+          "sizeBytes": 683,
+          "sha256": "ed8a422912e0e5023bf90e57a40471650d41da36ba968fa41f4033717588d70e"
+        },
+        {
+          "fileID": "file-b4eb5faee021751fa906e4aed4714651",
+          "relativePath": "maps/regions/california/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/california/region-20260707-e7002d51fc71.pmtiles",
+          "sizeBytes": 643941528,
+          "sha256": "e7002d51fc7171550a35f6050681cb01b5e3b3e00089fbd0d839d445663a6793"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/florida-gulf/region.pmtiles",
+      "itemID": "title-039b7b995a0b576ea21483b4",
+      "revisionID": "bytes-d7c8175fdd75cca6b676f484556eec61",
+      "groupID": "title-039b7b995a0b576ea21483b4.payload",
+      "files": [
+        {
+          "fileID": "file-6ff7b5ac0e7396030ae64dffa2bdbcff",
+          "relativePath": "maps/regions/florida-gulf/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/florida-gulf/manifest-20260707-d61ac4325364.json",
+          "sizeBytes": 703,
+          "sha256": "d61ac4325364af0786108a62903a011e497f8c760fed40fd8854d27d2dff50ff"
+        },
+        {
+          "fileID": "file-039b7b995a0b576ea21483b435ac061b",
+          "relativePath": "maps/regions/florida-gulf/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/florida-gulf/region-20260707-a015de7a06ca.pmtiles",
+          "sizeBytes": 927041017,
+          "sha256": "a015de7a06ca8fc611cd65fd1459a27787d44fc00e529b76c25238c1fb46a1f5"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/great-lakes/region.pmtiles",
+      "itemID": "title-5912451a101e91f4b92193b8",
+      "revisionID": "bytes-d133db389b6730de5018133b42f38b79",
+      "groupID": "title-5912451a101e91f4b92193b8.payload",
+      "files": [
+        {
+          "fileID": "file-744fb47f61b3bf8cbff7eeafd5a7a187",
+          "relativePath": "maps/regions/great-lakes/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/great-lakes/manifest-20260707-a6edc2e6ea69.json",
+          "sizeBytes": 742,
+          "sha256": "a6edc2e6ea696e97227dd31243ab2f60bbe468c902b41ea8a7078ebb61bd1834"
+        },
+        {
+          "fileID": "file-5912451a101e91f4b92193b8264f0973",
+          "relativePath": "maps/regions/great-lakes/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/great-lakes/region-20260707-f3b57fc6cdf1.pmtiles",
+          "sizeBytes": 1883036603,
+          "sha256": "f3b57fc6cdf1e258ea494876c284df84807f4d0d92e451c44166e227dcf33276"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/mid-atlantic/region.pmtiles",
+      "itemID": "title-67d280fc3f21ef2251c26155",
+      "revisionID": "bytes-d63a60f2a54db35ebeefe2533fad6012",
+      "groupID": "title-67d280fc3f21ef2251c26155.payload",
+      "files": [
+        {
+          "fileID": "file-73553f7e3bf9328b094d98d23eca7f41",
+          "relativePath": "maps/regions/mid-atlantic/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/mid-atlantic/manifest-20260707-54104a02b483.json",
+          "sizeBytes": 768,
+          "sha256": "54104a02b483ac5d38b99d3e0c695de93485e0f9bb105dc85e3ec41dc08eac5a"
+        },
+        {
+          "fileID": "file-67d280fc3f21ef2251c26155103a1eab",
+          "relativePath": "maps/regions/mid-atlantic/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/mid-atlantic/region-20260707-43cf992d8aca.pmtiles",
+          "sizeBytes": 1606831778,
+          "sha256": "43cf992d8acaa6e4da03c54e1aac424984c0b7847ec05cfc3a3ca61f9f8d9c18"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/mountain-west/region.pmtiles",
+      "itemID": "title-4e7005b60b7033f1ed803a37",
+      "revisionID": "bytes-689bbe68df8091468f997879c615dca1",
+      "groupID": "title-4e7005b60b7033f1ed803a37.payload",
+      "files": [
+        {
+          "fileID": "file-752d0db69f1cff89b59245d9f6182c1c",
+          "relativePath": "maps/regions/mountain-west/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/mountain-west/manifest-20260707-24dd46d4780a.json",
+          "sizeBytes": 733,
+          "sha256": "24dd46d4780a88d5e0fa22a0807285b4bd649c56826e71040eca8d870ec9dce4"
+        },
+        {
+          "fileID": "file-4e7005b60b7033f1ed803a37cce609af",
+          "relativePath": "maps/regions/mountain-west/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/mountain-west/region-20260707-ef01d44199c5.pmtiles",
+          "sizeBytes": 875230869,
+          "sha256": "ef01d44199c5a78ba72498606930106e3b78f68ad7e298531a69a54623d23920"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/northeast/region.pmtiles",
+      "itemID": "title-9b76b35d9b14fb79a65a1f11",
+      "revisionID": "bytes-797b8685339e1eee927e2d0888617809",
+      "groupID": "title-9b76b35d9b14fb79a65a1f11.payload",
+      "files": [
+        {
+          "fileID": "file-6a3a58b6c060c851db0fe105c45821b4",
+          "relativePath": "maps/regions/northeast/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/northeast/manifest-20260707-a0a05168218c.json",
+          "sizeBytes": 737,
+          "sha256": "a0a05168218cacb7840ec9a987159a6da81dbb89d4247ac44d7f321f852aadcc"
+        },
+        {
+          "fileID": "file-9b76b35d9b14fb79a65a1f114927a51f",
+          "relativePath": "maps/regions/northeast/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/northeast/region-20260707-3893e50ab195.pmtiles",
+          "sizeBytes": 557246264,
+          "sha256": "3893e50ab19557f085d2b1730b229a2990757469338a26effb6da2ce53b13364"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/pacific-northwest/region.pmtiles",
+      "itemID": "title-ca4f4b277d3bd3cda5ae5090",
+      "revisionID": "bytes-a633fbce3f03d8fa68e641befd197556",
+      "groupID": "title-ca4f4b277d3bd3cda5ae5090.payload",
+      "files": [
+        {
+          "fileID": "file-ca828fb698b8867b5a8dedb0413b44b1",
+          "relativePath": "maps/regions/pacific-northwest/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/pacific-northwest/manifest-20260707-be9158d6b467.json",
+          "sizeBytes": 705,
+          "sha256": "be9158d6b467b613cbcce9db6826a294c461fb1843c062e007694da0515b0e47"
+        },
+        {
+          "fileID": "file-ca4f4b277d3bd3cda5ae509065d7bf59",
+          "relativePath": "maps/regions/pacific-northwest/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/pacific-northwest/region-20260707-216b6acd9152.pmtiles",
+          "sizeBytes": 521469987,
+          "sha256": "216b6acd915218886c3abd131b73c3e1a9e5c3437fd6b16dbaf74d60434286c7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/plains/region.pmtiles",
+      "itemID": "title-7c58f428933940ce3b27225e",
+      "revisionID": "bytes-a7cfa2c8257fd247c9e514e8c0008601",
+      "groupID": "title-7c58f428933940ce3b27225e.payload",
+      "files": [
+        {
+          "fileID": "file-ffd19eb58c00f36f5593c5cff9a9f2e0",
+          "relativePath": "maps/regions/plains/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/plains/manifest-20260707-1c828bdaca6c.json",
+          "sizeBytes": 742,
+          "sha256": "1c828bdaca6cf0f508834900297101106b104daaef6e9b6e6e2362044bff6b83"
+        },
+        {
+          "fileID": "file-7c58f428933940ce3b27225e426cbb0f",
+          "relativePath": "maps/regions/plains/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/plains/region-20260707-6c681854fe5b.pmtiles",
+          "sizeBytes": 1211876476,
+          "sha256": "6c681854fe5b844657b3b4d8223c68d838dda05806a419ebe58dfbdb38e39507"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/southeast/region.pmtiles",
+      "itemID": "title-011bbf6afe5acee07517942e",
+      "revisionID": "bytes-937bf1f2b01acf8cc564aa3a88b52ca6",
+      "groupID": "title-011bbf6afe5acee07517942e.payload",
+      "files": [
+        {
+          "fileID": "file-d6e1992e18179ab263d7a91356e11a84",
+          "relativePath": "maps/regions/southeast/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/southeast/manifest-20260707-06a12384371f.json",
+          "sizeBytes": 750,
+          "sha256": "06a12384371ff2a693695fb6b11d2b86766fea1f41abf51eb825ced88b330bb8"
+        },
+        {
+          "fileID": "file-011bbf6afe5acee07517942e8447c8d3",
+          "relativePath": "maps/regions/southeast/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/southeast/region-20260707-2cad0edc88e8.pmtiles",
+          "sizeBytes": 1668219280,
+          "sha256": "2cad0edc88e827a3f899a32630ddf9f7a4c8e46a779a5f854d85a6a3e2252037"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/southwest/region.pmtiles",
+      "itemID": "title-e79a340f299ac0349f485ac6",
+      "revisionID": "bytes-43d12a04c2c314ea2592ebcc95224fac",
+      "groupID": "title-e79a340f299ac0349f485ac6.payload",
+      "files": [
+        {
+          "fileID": "file-acb4badf7d9ec0de92f838bd7a8d9aa4",
+          "relativePath": "maps/regions/southwest/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/southwest/manifest-20260707-8c3172c447da.json",
+          "sizeBytes": 706,
+          "sha256": "8c3172c447da78f6ddd1b591475a8729292ab7b74d4f3833f62cdabf6de24605"
+        },
+        {
+          "fileID": "file-e79a340f299ac0349f485ac651dbf212",
+          "relativePath": "maps/regions/southwest/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/southwest/region-20260707-750df11c1b4f.pmtiles",
+          "sizeBytes": 1107180414,
+          "sha256": "750df11c1b4f5d96b57388f75bfd95bb995d48b47b5904717bdb0d329c87c63a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/regions/texas-south-central/region.pmtiles",
+      "itemID": "title-72c596aea3ffa49e45652364",
+      "revisionID": "bytes-04a7398abe573de41fcf3e539af079b8",
+      "groupID": "title-72c596aea3ffa49e45652364.payload",
+      "files": [
+        {
+          "fileID": "file-db1ac72312e0940ef7055252506a9689",
+          "relativePath": "maps/regions/texas-south-central/manifest.json",
+          "objectKey": "content-packs/objects/maps/regions/texas-south-central/manifest-20260707-3d5c570faf8a.json",
+          "sizeBytes": 713,
+          "sha256": "3d5c570faf8ac64ecf75d129ff8a9ac0e1255ecc3df5bb65eb25cd49f21de6f4"
+        },
+        {
+          "fileID": "file-72c596aea3ffa49e456523648037288b",
+          "relativePath": "maps/regions/texas-south-central/region.pmtiles",
+          "objectKey": "content-packs/objects/maps/regions/texas-south-central/region-20260707-1f66d4901e13.pmtiles",
+          "sizeBytes": 882009400,
+          "sha256": "1f66d4901e136467b811d941ec60bb1c1a3b0fe8754306f35de5140ab504a97f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/guides/WikiVoyage - Dec 2025.zim",
+      "itemID": "title-252e50a816cf5d9fea1ccd10",
+      "revisionID": "bytes-cfc3d8bb1e448dbfadb832a2100251d4",
+      "groupID": "title-252e50a816cf5d9fea1ccd10.payload",
+      "files": [
+        {
+          "fileID": "file-85c396d2249fc4538fa2239f9a06c6c5",
+          "relativePath": "travel/guides/WikiVoyage - Dec 2025.zim",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/guides/WikiVoyage - Dec 2025.zim",
+          "sizeBytes": 1135835358,
+          "sha256": "3dea1843647e117a9f06e21b81e2f14cdf21fb332fe04e97cf754ed8f16aef38"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-national/National Atlas 2003 - United States General Reference.pdf",
+      "itemID": "title-ca97ae685c38bd1801bc592c",
+      "revisionID": "bytes-aba53b99c467cba54cc0c7e118fe1f20",
+      "groupID": "title-ca97ae685c38bd1801bc592c.payload",
+      "files": [
+        {
+          "fileID": "file-c6ae011a35e2cde581f55a4c383b20b1",
+          "relativePath": "travel/maps-national/National Atlas 2003 - United States General Reference.pdf",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-national/National Atlas 2003 - United States General Reference.pdf",
+          "sizeBytes": 3084030,
+          "sha256": "3b0454957ab43c8f7ede5d802dae9448697f4e31bdecc45e677b0f01010ee55e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-national/United States.jpg",
+      "itemID": "title-791327a78efe386f6afdb647",
+      "revisionID": "bytes-a703923aa45df14ed084d7e964128072",
+      "groupID": "title-791327a78efe386f6afdb647.payload",
+      "files": [
+        {
+          "fileID": "file-40292d2f24147608fdd650c437651d2d",
+          "relativePath": "travel/maps-national/United States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-national/United States.jpg",
+          "sizeBytes": 10388702,
+          "sha256": "c9743eb347d1089ae50c5019f6c1d9d034ad6283aeb2a165e1c6b3389ebd856f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-east/Florida.jpg",
+      "itemID": "title-d88231ba1e7d94ae5604b2ff",
+      "revisionID": "bytes-e85ff0a4f8fef7654c4956f518a71e4c",
+      "groupID": "title-d88231ba1e7d94ae5604b2ff.payload",
+      "files": [
+        {
+          "fileID": "file-1f4bdf021a2c1e136450463e8ab3d1c3",
+          "relativePath": "travel/maps-east/Florida.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-east/Florida.jpg",
+          "sizeBytes": 5722437,
+          "sha256": "807f3aeb9c2cfdd32729788b56ab2a4af33b80043c9811efb08f824a1556d034"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-east/Middle Atlantic States.jpg",
+      "itemID": "title-a78eda5d86bedee2aefd5146",
+      "revisionID": "bytes-ef9c63a2615d22aa110abe4d359a7d02",
+      "groupID": "title-a78eda5d86bedee2aefd5146.payload",
+      "files": [
+        {
+          "fileID": "file-6f2d292f6a0896bc89048a98779b1d04",
+          "relativePath": "travel/maps-east/Middle Atlantic States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-east/Middle Atlantic States.jpg",
+          "sizeBytes": 8697776,
+          "sha256": "48a89afbd2aa7dcf8d4dc44133fc309ae11041f3e94a787a17823615d334c3d7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-east/Northeastern States.jpg",
+      "itemID": "title-600091aa3558faa29af33b70",
+      "revisionID": "bytes-a3b1418a5b9b5df3ca21d93ca68ef7fb",
+      "groupID": "title-600091aa3558faa29af33b70.payload",
+      "files": [
+        {
+          "fileID": "file-6b3ef0461bd1aba72ac9efb4e724f31b",
+          "relativePath": "travel/maps-east/Northeastern States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-east/Northeastern States.jpg",
+          "sizeBytes": 8524543,
+          "sha256": "71b5d729d06d2de075d02e5b3a2e4aef4e1c94de873e4235d3b8053b3bda09e1"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-east/Southeastern States.jpg",
+      "itemID": "title-1815cc07ac2063adece7156a",
+      "revisionID": "bytes-0e3456670b1236135ff0509ed39cfb53",
+      "groupID": "title-1815cc07ac2063adece7156a.payload",
+      "files": [
+        {
+          "fileID": "file-5aeb3c399b2dd905521fee04333b7a64",
+          "relativePath": "travel/maps-east/Southeastern States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-east/Southeastern States.jpg",
+          "sizeBytes": 7790363,
+          "sha256": "d3799ca1c53ff68ac7885a376ee77837223dbac9f946ae189d50e3037294b37f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-midwest/Central Mississippi Valley States.jpg",
+      "itemID": "title-435af72c72f1a5aa3412f6ab",
+      "revisionID": "bytes-802fd82dbe6ee7e54556330dafd425f5",
+      "groupID": "title-435af72c72f1a5aa3412f6ab.payload",
+      "files": [
+        {
+          "fileID": "file-9775f50ec08df6bb16c03315f81b7157",
+          "relativePath": "travel/maps-midwest/Central Mississippi Valley States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-midwest/Central Mississippi Valley States.jpg",
+          "sizeBytes": 9208449,
+          "sha256": "12a9344258596bafbe76615869eab9100d47a7b144c3ba2976f64fde56e778cc"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-midwest/Northern Great Lakes States.jpg",
+      "itemID": "title-fcde399a97ff0addc845ee61",
+      "revisionID": "bytes-56586187f0ebeb923fdd4e432092806f",
+      "groupID": "title-fcde399a97ff0addc845ee61.payload",
+      "files": [
+        {
+          "fileID": "file-942fc9ac0e20406d1bca41a7fd71c726",
+          "relativePath": "travel/maps-midwest/Northern Great Lakes States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-midwest/Northern Great Lakes States.jpg",
+          "sizeBytes": 8934981,
+          "sha256": "2e3765fc4763ec44b43973e88b93fecf4a166462a06c53797605f0af4eae8a2e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-midwest/Southern Mississippi Valley States.jpg",
+      "itemID": "title-dec32fea2b24b6c4d34aca40",
+      "revisionID": "bytes-5a4a601a3788c4369e59417ea51215c6",
+      "groupID": "title-dec32fea2b24b6c4d34aca40.payload",
+      "files": [
+        {
+          "fileID": "file-6f1466cfffc2cb93d530eaa5dcc0edff",
+          "relativePath": "travel/maps-midwest/Southern Mississippi Valley States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-midwest/Southern Mississippi Valley States.jpg",
+          "sizeBytes": 11186838,
+          "sha256": "08e370f21a3355f912be9a7a80df4249297aa9f028007d173a029ad2d807e7fe"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-plains/Central Plains States.jpg",
+      "itemID": "title-ebfc6ed244929b65d871d5ac",
+      "revisionID": "bytes-4d62e5036d64ab65cbc47f89a1924986",
+      "groupID": "title-ebfc6ed244929b65d871d5ac.payload",
+      "files": [
+        {
+          "fileID": "file-e6d775229a66cd74caea9c1cba8e7478",
+          "relativePath": "travel/maps-plains/Central Plains States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-plains/Central Plains States.jpg",
+          "sizeBytes": 9659285,
+          "sha256": "deaaad2ae6a9fee82d09c34ba086bb0250f8b83e4473e80fe590ebf3a2d37529"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-plains/Northern Plains States.jpg",
+      "itemID": "title-3b94019573299f5132fa98da",
+      "revisionID": "bytes-bf72432f3b130eb9e9cf4e05d6780da7",
+      "groupID": "title-3b94019573299f5132fa98da.payload",
+      "files": [
+        {
+          "fileID": "file-708b8c8bd0273d42b29d7728262a0c15",
+          "relativePath": "travel/maps-plains/Northern Plains States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-plains/Northern Plains States.jpg",
+          "sizeBytes": 7040951,
+          "sha256": "f2b5df38d3d46e8e11425607e061916331787e45eb5d052193e5b9747556742d"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-plains/Southern Plains States .jpg",
+      "itemID": "title-ed38b025f5fc2115e7bf28d6",
+      "revisionID": "bytes-457c303392d895c1d4451caa3f0dc0ab",
+      "groupID": "title-ed38b025f5fc2115e7bf28d6.payload",
+      "files": [
+        {
+          "fileID": "file-9584b4b2000edb607c0482a11ebda54e",
+          "relativePath": "travel/maps-plains/Southern Plains States .jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-plains/Southern Plains States .jpg",
+          "sizeBytes": 7864708,
+          "sha256": "67ee3328daf95863a7109bdd0c332f095edd7519fbebf518bfee4207a46f182f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-west/Arizona and New Mexico.jpg",
+      "itemID": "title-cbeb05a0bebd075e1d8fc46d",
+      "revisionID": "bytes-64935fda905eb71907df3d82a7059111",
+      "groupID": "title-cbeb05a0bebd075e1d8fc46d.payload",
+      "files": [
+        {
+          "fileID": "file-975637566672de36bede6bb9ed70e77d",
+          "relativePath": "travel/maps-west/Arizona and New Mexico.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-west/Arizona and New Mexico.jpg",
+          "sizeBytes": 6076210,
+          "sha256": "2b15ca934df22e1191e016684c5fb7e314ddc94c39a71d21ead8e019e7f56994"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-west/Central Pacific States.jpg",
+      "itemID": "title-88934d0d3aa38a80e6bc53fa",
+      "revisionID": "bytes-928cab489e0b6acded4c31375617d847",
+      "groupID": "title-88934d0d3aa38a80e6bc53fa.payload",
+      "files": [
+        {
+          "fileID": "file-30dbdf0281c7823a4c335da1950c93bb",
+          "relativePath": "travel/maps-west/Central Pacific States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-west/Central Pacific States.jpg",
+          "sizeBytes": 6876243,
+          "sha256": "1a5f83e118076c22ebc2ac47774bf53fb6359150bcc1846262a67fac902d1d92"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-west/Northwestern States.jpg",
+      "itemID": "title-f17a6f04b58bef1749f12a21",
+      "revisionID": "bytes-a1450fb4c819ee6fef662a9baf7d735c",
+      "groupID": "title-f17a6f04b58bef1749f12a21.payload",
+      "files": [
+        {
+          "fileID": "file-84b06c98302d3333007739bc12f68bc2",
+          "relativePath": "travel/maps-west/Northwestern States.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-west/Northwestern States.jpg",
+          "sizeBytes": 7898810,
+          "sha256": "ab2e324c7f81406af2b9d080602775415076feea22e1b86bbf37d12a32074cd3"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-west/Southern California.jpg",
+      "itemID": "title-b5d67b7924f24f3e63b31b7e",
+      "revisionID": "bytes-4466c2dc44322c1f831ed6c407aa2a24",
+      "groupID": "title-b5d67b7924f24f3e63b31b7e.payload",
+      "files": [
+        {
+          "fileID": "file-8ff1ed313f9dc01df180e836ff1e982e",
+          "relativePath": "travel/maps-west/Southern California.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-west/Southern California.jpg",
+          "sizeBytes": 6846427,
+          "sha256": "4932f457082f590087107552d3a341f3915f5893c8fd0586839c7511b62a3e93"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-west/Southern Texas.jpg",
+      "itemID": "title-74ee4a4dc244de469604e82f",
+      "revisionID": "bytes-515f053657237086f2b665c6c74d4163",
+      "groupID": "title-74ee4a4dc244de469604e82f.payload",
+      "files": [
+        {
+          "fileID": "file-0800e4a8fa53885bb327bc549af0902f",
+          "relativePath": "travel/maps-west/Southern Texas.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-west/Southern Texas.jpg",
+          "sizeBytes": 7023009,
+          "sha256": "77234e5ce1e7b618493fb426f688122ad607b8d5307c41f22707e7b0e4dbd948"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-alaska/Aleutian Islands.jpg",
+      "itemID": "title-2567627e3dd27dcab3f45af8",
+      "revisionID": "bytes-6b05e6a6f2a9d41b0414ee73f232ebba",
+      "groupID": "title-2567627e3dd27dcab3f45af8.payload",
+      "files": [
+        {
+          "fileID": "file-97a48e47f6d891c978a7d061b18c8014",
+          "relativePath": "travel/maps-alaska/Aleutian Islands.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-alaska/Aleutian Islands.jpg",
+          "sizeBytes": 4677866,
+          "sha256": "dce786873c51054e91fd7914d15c6a0cbc813b0ac0bf3d748b3228e214aa18e9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-alaska/Central Alaska.jpg",
+      "itemID": "title-332d9f145f8477c684de68f5",
+      "revisionID": "bytes-ec9e93e1f42bd2fc189561a2abd79ea1",
+      "groupID": "title-332d9f145f8477c684de68f5.payload",
+      "files": [
+        {
+          "fileID": "file-76605ebb9fa9fa715426a67b5e2bb2ba",
+          "relativePath": "travel/maps-alaska/Central Alaska.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-alaska/Central Alaska.jpg",
+          "sizeBytes": 8023747,
+          "sha256": "a2d1e492aef18f3235da5ede4225ce6906c170ccbdf6c13ae324f92f81db8d01"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-alaska/Northern Alaska.jpg",
+      "itemID": "title-95f92dcab48462960374421d",
+      "revisionID": "bytes-dac820e7c71ac8372491ebaca6ff3b2f",
+      "groupID": "title-95f92dcab48462960374421d.payload",
+      "files": [
+        {
+          "fileID": "file-1f500235ff4cd014847e2e56ae408849",
+          "relativePath": "travel/maps-alaska/Northern Alaska.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-alaska/Northern Alaska.jpg",
+          "sizeBytes": 5937456,
+          "sha256": "e17fe0d5d41c9c9f6723b1ab43c747c545aba726bdd0c9de193abbf6f977424b"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-alaska/Southeastern Alaska.jpg",
+      "itemID": "title-28094f4b0e6092049652680b",
+      "revisionID": "bytes-70565ae6e05bb7842b8527c6f5f195b9",
+      "groupID": "title-28094f4b0e6092049652680b.payload",
+      "files": [
+        {
+          "fileID": "file-f9310becbf66d118f08ae4d687c279b2",
+          "relativePath": "travel/maps-alaska/Southeastern Alaska.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-alaska/Southeastern Alaska.jpg",
+          "sizeBytes": 3423089,
+          "sha256": "af433aa1cfce1199bdf5c507fcffd0b2af26e8e4f5eb938f574d785241902d53"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-alaska/Southwestern Alaska.jpg",
+      "itemID": "title-637eeacd82d6ef918435a505",
+      "revisionID": "bytes-a758dcdbecdb137ae4e8dd5f708081f6",
+      "groupID": "title-637eeacd82d6ef918435a505.payload",
+      "files": [
+        {
+          "fileID": "file-533fd7d07e91f55b3e05b08200ae4d87",
+          "relativePath": "travel/maps-alaska/Southwestern Alaska.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-alaska/Southwestern Alaska.jpg",
+          "sizeBytes": 6371496,
+          "sha256": "34510db02cdffd952772769b8aa44d57776363bb5facd351d39a510b5956ac06"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-urban/Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinatti, Cleveland, Detroit, Miami, Milwaukee, New Orleans and Pittsburgh.jpg",
+      "itemID": "title-49722c65171155b94c105a54",
+      "revisionID": "bytes-0abd4e2afb874d564a88054b4bd76eb4",
+      "groupID": "title-49722c65171155b94c105a54.payload",
+      "files": [
+        {
+          "fileID": "file-9148fb5a6aa580bb45c8f90e55d485d8",
+          "relativePath": "travel/maps-urban/Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinatti, Cleveland, Detroit, Miami, Milwaukee, New Orleans and Pittsburgh.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-urban/Urban Areas - Atlanta, Boston, Buffalo, Chicago, Cincinatti, Cleveland, Detroit, Miami, Milwaukee, New Orleans and Pittsburgh.jpg",
+          "sizeBytes": 8486472,
+          "sha256": "612f24f08190212efb5996d0b047509bb719718b35577d953450571585219465"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-urban/Urban Areas - Dallas, Denver, Houston, Kansas, Los Angeles, Minneapolis, San Francisco, San Diego and St. Louis.jpg",
+      "itemID": "title-3012ce56eafe3972634df8a0",
+      "revisionID": "bytes-370e291631fb5df00ed56933e5f7a677",
+      "groupID": "title-3012ce56eafe3972634df8a0.payload",
+      "files": [
+        {
+          "fileID": "file-cd9783910f44f72dd5a7954759628a32",
+          "relativePath": "travel/maps-urban/Urban Areas - Dallas, Denver, Houston, Kansas, Los Angeles, Minneapolis, San Francisco, San Diego and St. Louis.jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-urban/Urban Areas - Dallas, Denver, Houston, Kansas, Los Angeles, Minneapolis, San Francisco, San Diego and St. Louis.jpg",
+          "sizeBytes": 8827315,
+          "sha256": "2a94048ab13fd8ef59f1d57416132d44ae6c00fdc7cfbed54b28a18112289900"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "travel/maps-urban/Urban Areas - New York and Washington D.C..jpg",
+      "itemID": "title-fac069722aa32fbfe8758e4b",
+      "revisionID": "bytes-f6281864faf692e69a7b1767e2bdec59",
+      "groupID": "title-fac069722aa32fbfe8758e4b.payload",
+      "files": [
+        {
+          "fileID": "file-3013dd934632c85c6f44788bbdde2d98",
+          "relativePath": "travel/maps-urban/Urban Areas - New York and Washington D.C..jpg",
+          "objectKey": "content-packs/manifests/lite-full/files/travel/maps-urban/Urban Areas - New York and Washington D.C..jpg",
+          "sizeBytes": 4406536,
+          "sha256": "a9427f6740fa3ca122cf1b9d5e76090464cadf661d449ee4bea58f21864edbf1"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Algebra and Trigonometry.zip",
+      "itemID": "title-b4db11f66dabc13bc88466e4",
+      "revisionID": "bytes-c65aafbe8c00fe11bc744cc4b18d4799",
+      "groupID": "title-b4db11f66dabc13bc88466e4.payload",
+      "files": [
+        {
+          "fileID": "file-9d3edb4015527f0927a8d58fef9d9606",
+          "relativePath": "books_documents/OpenStax - Algebra and Trigonometry.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Algebra and Trigonometry.zip",
+          "sizeBytes": 103660814,
+          "sha256": "9c38f8507890d7c882729777b95ffa8e47a6619c47c384d4a2b31fbcb9c6327e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - American Government.zip",
+      "itemID": "title-7be1282919c5b1d606fbfda6",
+      "revisionID": "bytes-0b5e0d4acfa3fb69f53b1a74f0aadf3e",
+      "groupID": "title-7be1282919c5b1d606fbfda6.payload",
+      "files": [
+        {
+          "fileID": "file-12701d6a6c6ba909405429e8180ddd40",
+          "relativePath": "books_documents/OpenStax - American Government.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - American Government.zip",
+          "sizeBytes": 155423241,
+          "sha256": "ee4f0f19951f9ac39c2831b3898b7f74c38fe9e0ea5394534de0c9ac3e967b36"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Biology 2e.zip",
+      "itemID": "title-5a07690e190d7ab3701be510",
+      "revisionID": "bytes-f4b6e1f31e3a8650c9a3a87b9ae279d8",
+      "groupID": "title-5a07690e190d7ab3701be510.payload",
+      "files": [
+        {
+          "fileID": "file-c60af38c7b0512b5d88fba1ab49ab560",
+          "relativePath": "books_documents/OpenStax - Biology 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Biology 2e.zip",
+          "sizeBytes": 421070190,
+          "sha256": "cfc395569828ffb79af19a553582fc961a876b629b3c4ffe0b3cc09d9c6d9d83"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Biology for AP Courses.zip",
+      "itemID": "title-227fb544854a3d5a736564aa",
+      "revisionID": "bytes-ede8504d3ce7c787ce30d72b69e35b77",
+      "groupID": "title-227fb544854a3d5a736564aa.payload",
+      "files": [
+        {
+          "fileID": "file-5777000179d837e7dd1ca95479af7fce",
+          "relativePath": "books_documents/OpenStax - Biology for AP Courses.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Biology for AP Courses.zip",
+          "sizeBytes": 239024570,
+          "sha256": "81fd2f4a3d286ef47cdff9a73120a1f613bfb0110d8486a663a41a0957ff6b1c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Chemistry - Atoms First.zip",
+      "itemID": "title-2b77026447b5cf776029a9b8",
+      "revisionID": "bytes-44cb37cdb7a4dd5ea40a378847fddb11",
+      "groupID": "title-2b77026447b5cf776029a9b8.payload",
+      "files": [
+        {
+          "fileID": "file-3f3125d3c8bed8e02b33aaaf3291585d",
+          "relativePath": "books_documents/OpenStax - Chemistry - Atoms First.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Chemistry - Atoms First.zip",
+          "sizeBytes": 268902963,
+          "sha256": "86a2b8f4f21ee4c27a045fab129abd08124c083a3195158f94c656ed9b8fb498"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Chemistry.zip",
+      "itemID": "title-468aab43bb6e53aee9f8564c",
+      "revisionID": "bytes-d4b4e18be53b33dd32af1a8a5c00157e",
+      "groupID": "title-468aab43bb6e53aee9f8564c.payload",
+      "files": [
+        {
+          "fileID": "file-ace6a0307866795401b0bbd2866d41c8",
+          "relativePath": "books_documents/OpenStax - Chemistry.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Chemistry.zip",
+          "sizeBytes": 269473981,
+          "sha256": "dad1a80f8aa15e64fd77bc71392966bb1fc99d7ecd8595147830c9e187e24792"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - College Algebra.zip",
+      "itemID": "title-4e4e7c948c51b7484b70dcac",
+      "revisionID": "bytes-114c3605790b2b059d44f7d7d5e82bbf",
+      "groupID": "title-4e4e7c948c51b7484b70dcac.payload",
+      "files": [
+        {
+          "fileID": "file-42818ea2a2160850c470d787d0d15ab4",
+          "relativePath": "books_documents/OpenStax - College Algebra.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - College Algebra.zip",
+          "sizeBytes": 73308955,
+          "sha256": "411897a509b54d476562100ac1b1c02546e4127be7445ec42a49e221adda150a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - College Physics.zip",
+      "itemID": "title-0a7e271375de285382ee4db4",
+      "revisionID": "bytes-32a2fdad1593c43f74b65c97aa24b884",
+      "groupID": "title-0a7e271375de285382ee4db4.payload",
+      "files": [
+        {
+          "fileID": "file-4ad3c7a0efd5fa9953d5af006348d4bc",
+          "relativePath": "books_documents/OpenStax - College Physics.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - College Physics.zip",
+          "sizeBytes": 232453169,
+          "sha256": "12b7abcaa46ac301019b764585c6a525c9672533e245be18c9c669f38376ed9e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - College Success.zip",
+      "itemID": "title-dee76b33b76a2da2ed73c0af",
+      "revisionID": "bytes-7d8a2c20cbcb929a42cea30900d8adc7",
+      "groupID": "title-dee76b33b76a2da2ed73c0af.payload",
+      "files": [
+        {
+          "fileID": "file-a85cdd3fb817fd5409a692fa8b54701e",
+          "relativePath": "books_documents/OpenStax - College Success.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - College Success.zip",
+          "sizeBytes": 38611344,
+          "sha256": "d8da9fd96e601e92d384437e39c40af6657ac90f99ad04e59b2aa36f224c5bc3"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Elementary Algebra 2e.zip",
+      "itemID": "title-e17f39c046c54c23cbc28d45",
+      "revisionID": "bytes-64ae75b4b5fe8601d388789650e0a506",
+      "groupID": "title-e17f39c046c54c23cbc28d45.payload",
+      "files": [
+        {
+          "fileID": "file-87d58869db27110de99a85ae2b010ed2",
+          "relativePath": "books_documents/OpenStax - Elementary Algebra 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Elementary Algebra 2e.zip",
+          "sizeBytes": 79523676,
+          "sha256": "969f029afc465a49fb4419a5ed00fba3ac0e96ad436cdfcc5f3a8b81867b03c3"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Entrepreneurship.zip",
+      "itemID": "title-871a9a1dc209cfa9f718ab53",
+      "revisionID": "bytes-bb321c9e8cf0ab6e0ca7b0f23e8a9bec",
+      "groupID": "title-871a9a1dc209cfa9f718ab53.payload",
+      "files": [
+        {
+          "fileID": "file-5d2dafc8b4d4c9b510b49e85e38f9e30",
+          "relativePath": "books_documents/OpenStax - Entrepreneurship.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Entrepreneurship.zip",
+          "sizeBytes": 137566748,
+          "sha256": "8f954ba91876d7d9c9a2c0c9137ef6c4e24835726d93038735647e94501999f6"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Intermediate Algebra 2e.zip",
+      "itemID": "title-e9def1f24d6ebfeebdfd0c0b",
+      "revisionID": "bytes-658c8a2bb971fcae9f50029f12168afa",
+      "groupID": "title-e9def1f24d6ebfeebdfd0c0b.payload",
+      "files": [
+        {
+          "fileID": "file-d4881f007ab0647dd6c028377e973de5",
+          "relativePath": "books_documents/OpenStax - Intermediate Algebra 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Intermediate Algebra 2e.zip",
+          "sizeBytes": 85051450,
+          "sha256": "2173361ee9a5fb2268eb3ae4509fbf2efeffbea0991a73c244f68c6ea33099e4"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Introduction to Business.zip",
+      "itemID": "title-ed517b160ea223704c7b36ee",
+      "revisionID": "bytes-f1ca4cc91317793ef1506e33921bcda6",
+      "groupID": "title-ed517b160ea223704c7b36ee.payload",
+      "files": [
+        {
+          "fileID": "file-6a0050eb1f34bf939f87b618778e371d",
+          "relativePath": "books_documents/OpenStax - Introduction to Business.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Introduction to Business.zip",
+          "sizeBytes": 176253402,
+          "sha256": "f566bfc202ec7907d94fa43babafc2dc28001f6fb20b0cb136174ce2c6c830ba"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Introduction to Sociology 3e.zip",
+      "itemID": "title-f352176a11a1fe804fb5af9a",
+      "revisionID": "bytes-0a82b94902d0410097dc325b9d2b4ef2",
+      "groupID": "title-f352176a11a1fe804fb5af9a.payload",
+      "files": [
+        {
+          "fileID": "file-db2c6490a9112d19967d8872c8397822",
+          "relativePath": "books_documents/OpenStax - Introduction to Sociology 3e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Introduction to Sociology 3e.zip",
+          "sizeBytes": 41062112,
+          "sha256": "db2b370af5e1019366b466127b0334cf8d189995232f67c579f429c3d10d05b8"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Introductory Business Statistics.zip",
+      "itemID": "title-54a941c336358020ab2ed124",
+      "revisionID": "bytes-7212ebd80250b144c9e30dcda1650e81",
+      "groupID": "title-54a941c336358020ab2ed124.payload",
+      "files": [
+        {
+          "fileID": "file-4331f5c505dcc21825cf12e5a229a827",
+          "relativePath": "books_documents/OpenStax - Introductory Business Statistics.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Introductory Business Statistics.zip",
+          "sizeBytes": 24244739,
+          "sha256": "c7b010bffb0bee7a8c265016677297996789a72580d1274cc92b905df418e5b0"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Introductory Statistics.zip",
+      "itemID": "title-64e552eba4af24506605500b",
+      "revisionID": "bytes-6677997a88cb1f6c0fd7f9ffeb53cf89",
+      "groupID": "title-64e552eba4af24506605500b.payload",
+      "files": [
+        {
+          "fileID": "file-3895680a5531974cca50844b5071c394",
+          "relativePath": "books_documents/OpenStax - Introductory Statistics.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Introductory Statistics.zip",
+          "sizeBytes": 25014328,
+          "sha256": "d8add9ee3172c52b7efb4837eae275da4eb5b1fd8d6240279932f2059bf364a9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Microbiology.zip",
+      "itemID": "title-4eccc183530b46268cc43d4b",
+      "revisionID": "bytes-9fd630fd1bd68cbbd4b3ed5c39c2274d",
+      "groupID": "title-4eccc183530b46268cc43d4b.payload",
+      "files": [
+        {
+          "fileID": "file-3eba60039ca193c8eacbef551f79ff7a",
+          "relativePath": "books_documents/OpenStax - Microbiology.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Microbiology.zip",
+          "sizeBytes": 320364622,
+          "sha256": "f9116494bd415e3b2ac6f15f97026b8a9f3cd114b3371f80639b3ec6963ec4bb"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Physics.zip",
+      "itemID": "title-8f2b1c130526a6725c6890d9",
+      "revisionID": "bytes-f34397ca752ab4f79866d3835b04a3fc",
+      "groupID": "title-8f2b1c130526a6725c6890d9.payload",
+      "files": [
+        {
+          "fileID": "file-1b75a0108c2162aeb660ebb0493797c1",
+          "relativePath": "books_documents/OpenStax - Physics.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Physics.zip",
+          "sizeBytes": 50360076,
+          "sha256": "23807dbccdfd153ac758280ff6f690d5075a98e45721e5a2ce6bada6bda0ed64"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Prealgebra.zip",
+      "itemID": "title-fd0ba4d55b0291d6e895fc99",
+      "revisionID": "bytes-f543d7ad668254d13abb8ccc5328c1bf",
+      "groupID": "title-fd0ba4d55b0291d6e895fc99.payload",
+      "files": [
+        {
+          "fileID": "file-537b4e99ab3eeb6d2fa8359a066c7503",
+          "relativePath": "books_documents/OpenStax - Prealgebra.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Prealgebra.zip",
+          "sizeBytes": 61574328,
+          "sha256": "45fcaad2cf65442ae234fc45f556dd0ae88889b5af2dea3054ed479718650c80"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Precalculus.zip",
+      "itemID": "title-d40f517d1f0f640d1be33440",
+      "revisionID": "bytes-58d56fffa03e85d518cb471dde1d0c3a",
+      "groupID": "title-d40f517d1f0f640d1be33440.payload",
+      "files": [
+        {
+          "fileID": "file-9d06a6180c2aebd4849400a837b25ab2",
+          "relativePath": "books_documents/OpenStax - Precalculus.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Precalculus.zip",
+          "sizeBytes": 101938283,
+          "sha256": "1755a09ecfa1677e7f2bfee1b5b1838ceea271c1f0f4ccfa470b8d0864e29125"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Principles of Economics 2e.zip",
+      "itemID": "title-99aba513f68088309b95230a",
+      "revisionID": "bytes-3c71f8867d08244043d743d94b90824b",
+      "groupID": "title-99aba513f68088309b95230a.payload",
+      "files": [
+        {
+          "fileID": "file-ca316c26ec2a051ec1b566b8541b2d42",
+          "relativePath": "books_documents/OpenStax - Principles of Economics 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Principles of Economics 2e.zip",
+          "sizeBytes": 77966494,
+          "sha256": "a30a5e967c9cee1b50b57cb252164183836ba42f04f355fd5f8c7986c99b34d2"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Principles of Macroeconomics 2e.zip",
+      "itemID": "title-2f27e90391b997834e009f6c",
+      "revisionID": "bytes-2c19f3db6df8af1e06a621b61a10612e",
+      "groupID": "title-2f27e90391b997834e009f6c.payload",
+      "files": [
+        {
+          "fileID": "file-435839283262262a52a726e1efdfa075",
+          "relativePath": "books_documents/OpenStax - Principles of Macroeconomics 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Principles of Macroeconomics 2e.zip",
+          "sizeBytes": 56470785,
+          "sha256": "6feac2d4a27f4a1cb98ec801c6303f7c66371b9a27dc3907a4391e8648f17e77"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Principles of Microeconomics 2e.zip",
+      "itemID": "title-56c0c74f9d88f6e8f8ea8c8d",
+      "revisionID": "bytes-f6e9abd43a84163decd306cbd5a89963",
+      "groupID": "title-56c0c74f9d88f6e8f8ea8c8d.payload",
+      "files": [
+        {
+          "fileID": "file-22d60fdb3676063560d30e31e1a2ecf9",
+          "relativePath": "books_documents/OpenStax - Principles of Microeconomics 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Principles of Microeconomics 2e.zip",
+          "sizeBytes": 42469205,
+          "sha256": "8ac67545a452b8386620e248b7d06f64def13c763a1c6b99da6e8ba30b096e78"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Principles of Microeconomics for AP Courses.zip",
+      "itemID": "title-4e36d2c5f315f716d2db0335",
+      "revisionID": "bytes-bd9ef5e92c30a1073779d44a000ca98a",
+      "groupID": "title-4e36d2c5f315f716d2db0335.payload",
+      "files": [
+        {
+          "fileID": "file-d8997caac0a4fd718e5b0528c3b2bb15",
+          "relativePath": "books_documents/OpenStax - Principles of Microeconomics for AP Courses.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Principles of Microeconomics for AP Courses.zip",
+          "sizeBytes": 43291365,
+          "sha256": "cca276f38bf14af5a5a9427d42a6c5601aea6b3c96dcf9c9d3d43678b7aa907a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Psychology 2e.zip",
+      "itemID": "title-abfb17bcfa87593a61b4a152",
+      "revisionID": "bytes-a30cc83aa070a5083c11fe0b6251dd70",
+      "groupID": "title-abfb17bcfa87593a61b4a152.payload",
+      "files": [
+        {
+          "fileID": "file-6e56cd2f4f242e446b3d347ea7bb709a",
+          "relativePath": "books_documents/OpenStax - Psychology 2e.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Psychology 2e.zip",
+          "sizeBytes": 67139094,
+          "sha256": "7408234222d6aa08662ca0c7c0219dd7f4f537abdd7a3ca90f5f48020dd96197"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - Statistics.zip",
+      "itemID": "title-642ac1429d33dc6a80cb1049",
+      "revisionID": "bytes-e94d0f6c01a955bb4c765908b02dd554",
+      "groupID": "title-642ac1429d33dc6a80cb1049.payload",
+      "files": [
+        {
+          "fileID": "file-414b360262918731ddbeec909e7bd29c",
+          "relativePath": "books_documents/OpenStax - Statistics.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - Statistics.zip",
+          "sizeBytes": 26856309,
+          "sha256": "e61eef80ad331d0e93db6a0272ee624156de0d6c28d64f10459ecfa63991d056"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/OpenStax - University Physics.zip",
+      "itemID": "title-1aaa1511e3d896666a070d3b",
+      "revisionID": "bytes-db074212de32da9bae06bf3951154f8c",
+      "groupID": "title-1aaa1511e3d896666a070d3b.payload",
+      "files": [
+        {
+          "fileID": "file-4374eeb5ff2fc309ef86ca5b443b6109",
+          "relativePath": "books_documents/OpenStax - University Physics.zip",
+          "objectKey": "content-packs/manifests/complete-from-lite/files/books_documents/OpenStax - University Physics.zip",
+          "sizeBytes": 173706872,
+          "sha256": "1af49bff8aabdd10ea8ac3f54b8c32b67ff5831a8695bab3d146500218e0b24b"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Book of Mormon.zip",
+      "itemID": "title-b76c19f76a17ef85db8467e6",
+      "revisionID": "bytes-2d51f830e4f970ffbb4f3c1477f86e8e",
+      "groupID": "title-b76c19f76a17ef85db8467e6.payload",
+      "files": [
+        {
+          "fileID": "file-2c53e16fb3ab860e35cae90c0c9ded1b",
+          "relativePath": "books_documents/Book of Mormon.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Book of Mormon.zip",
+          "sizeBytes": 705609,
+          "sha256": "cf58ff6e14fec439b112879a436bf9b1d492f34481465b5806f03369abfabad3"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/King James Bible.zip",
+      "itemID": "title-50b9c488a1359d24394d5300",
+      "revisionID": "bytes-51fb757793356485bb210b2ecf98bea4",
+      "groupID": "title-50b9c488a1359d24394d5300.payload",
+      "files": [
+        {
+          "fileID": "file-b0d4ce2cab25d326333b280ae3654fbb",
+          "relativePath": "books_documents/King James Bible.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/King James Bible.zip",
+          "sizeBytes": 2332480,
+          "sha256": "9313f84b5e078500cc41564fea698e9a5da10a9b22f1c726f4d5fd3e323bd593"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/THE CHILDREN'S BIBLE.zip",
+      "itemID": "title-c1ea8e9ac0a0adf286d428ea",
+      "revisionID": "bytes-6907b3f5acf489363839a41429e53008",
+      "groupID": "title-c1ea8e9ac0a0adf286d428ea.payload",
+      "files": [
+        {
+          "fileID": "file-1290a753a2537f5c1ce9c9c199718d9f",
+          "relativePath": "books_documents/THE CHILDREN'S BIBLE.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/THE CHILDREN'S BIBLE.zip",
+          "sizeBytes": 1543903,
+          "sha256": "8e9a539341234180e96862bb393c625b048bda5e21915846e7562c75a2fdbcb5"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Confessions of St. Augustine.zip",
+      "itemID": "title-cfa650277c9eb968664f3fc3",
+      "revisionID": "bytes-e738adc0d08d90a7d2cf0dc23a44cfcb",
+      "groupID": "title-cfa650277c9eb968664f3fc3.payload",
+      "files": [
+        {
+          "fileID": "file-7e5177d66d941ae5b4f44f3c650eeb4e",
+          "relativePath": "books_documents/The Confessions of St. Augustine.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Confessions of St. Augustine.zip",
+          "sizeBytes": 311117,
+          "sha256": "a4bb4b4448c66f1c6554a6f70ccf4f7d8690c33b77f456691ab6be1acb53b833"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Koran (Al-Qur'an).zip",
+      "itemID": "title-606133fb74326c565b9dd8f3",
+      "revisionID": "bytes-7285e09ace1b4eb7525cfd61c34a7cb4",
+      "groupID": "title-606133fb74326c565b9dd8f3.payload",
+      "files": [
+        {
+          "fileID": "file-194d011f73db6ac2511141caaba5d99c",
+          "relativePath": "books_documents/The Koran (Al-Qur'an).zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Koran (Al-Qur'an).zip",
+          "sizeBytes": 949847,
+          "sha256": "7bd392586387766a266e362468898bf11642c8f2dcdefb4819353ac19a0da446"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Life of Buddha and Its Lessons by Henry Steel Olcott.zip",
+      "itemID": "title-b63763ff7d15a367286166c4",
+      "revisionID": "bytes-721781baec19d45e9ff0465daf4a63ad",
+      "groupID": "title-b63763ff7d15a367286166c4.payload",
+      "files": [
+        {
+          "fileID": "file-48f8ee12d79cc193d8085cd6a075d018",
+          "relativePath": "books_documents/The Life of Buddha and Its Lessons by Henry Steel Olcott.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Life of Buddha and Its Lessons by Henry Steel Olcott.zip",
+          "sizeBytes": 85978,
+          "sha256": "326169c0ee1c4a19d698e23a9cb9579bdfe09aa8e8c26ec98700cc5c3d7f9a3a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Pilgrim's Progress by John Bunyan.zip",
+      "itemID": "title-5d92d7d18f189a705fe121b0",
+      "revisionID": "bytes-0b06c8bd7e4fdf793ce1c74b655936c7",
+      "groupID": "title-5d92d7d18f189a705fe121b0.payload",
+      "files": [
+        {
+          "fileID": "file-7cedc0c446bdfdac96bc7c0f42855b55",
+          "relativePath": "books_documents/The Pilgrim's Progress by John Bunyan.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Pilgrim's Progress by John Bunyan.zip",
+          "sizeBytes": 205629,
+          "sha256": "cdf7cbf88b3b8bc270907e741ceb48ccfeeaf8ad69335b3b1666c4971f79f641"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Apology by Plato.zip",
+      "itemID": "title-9759a0857010abeb8a2af54d",
+      "revisionID": "bytes-dbbaccd43173a44c131d3fd8f3134618",
+      "groupID": "title-9759a0857010abeb8a2af54d.payload",
+      "files": [
+        {
+          "fileID": "file-8e8a925cacac3d5c9549d3bfa6c47105",
+          "relativePath": "books_documents/Apology by Plato.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Apology by Plato.zip",
+          "sizeBytes": 82999,
+          "sha256": "678583cfde8d2053f3c01be0613b5c18378a607145c907f012ba2526dc32f42c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/As a man thinketh by James Allen.zip",
+      "itemID": "title-9ae9aad3b67bb73ae39d8099",
+      "revisionID": "bytes-6dcf859daf21d9e3644f09771e5ddb4e",
+      "groupID": "title-9ae9aad3b67bb73ae39d8099.payload",
+      "files": [
+        {
+          "fileID": "file-2b3f41793edd26f50ce9a27398c60ce5",
+          "relativePath": "books_documents/As a man thinketh by James Allen.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/As a man thinketh by James Allen.zip",
+          "sizeBytes": 89074,
+          "sha256": "a6250e66a230ff0e3d91cb812ee3ad6b63fbe7366fee2a2b468843b356189066"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Beyond Good and Evil by Nietzsche.zip",
+      "itemID": "title-0c3c2a0b3980110f694e2e9f",
+      "revisionID": "bytes-595eeb5e960e65dda4e8e61781472bc8",
+      "groupID": "title-0c3c2a0b3980110f694e2e9f.payload",
+      "files": [
+        {
+          "fileID": "file-1fb26de57ae715962502ed0dbc68ff95",
+          "relativePath": "books_documents/Beyond Good and Evil by Nietzsche.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Beyond Good and Evil by Nietzsche.zip",
+          "sizeBytes": 225793,
+          "sha256": "c904c88ef68e6952e7d0819e0f46720948998418374066dbb5ca18fb174fbbd0"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Mysticism and Logic and Other Essays by Bertrand Russell.zip",
+      "itemID": "title-45d0a4b2552b76fe46a9e36f",
+      "revisionID": "bytes-013a49676b3b5810729ef6de96c0e93c",
+      "groupID": "title-45d0a4b2552b76fe46a9e36f.payload",
+      "files": [
+        {
+          "fileID": "file-36510f79b251d2b90763194dcee61ac1",
+          "relativePath": "books_documents/Mysticism and Logic and Other Essays by Bertrand Russell.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Mysticism and Logic and Other Essays by Bertrand Russell.zip",
+          "sizeBytes": 268141,
+          "sha256": "a0b1f9ab33dd67d784ef0d2c5a3244b8d95af2c9ca6f68778fb7c755e2540029"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/On Liberty by John Stuart Mill.zip",
+      "itemID": "title-eee348a9709a4422069a67da",
+      "revisionID": "bytes-d7874c19f4ee2a40499eb737e49df22c",
+      "groupID": "title-eee348a9709a4422069a67da.payload",
+      "files": [
+        {
+          "fileID": "file-d64de9c8af727bfb1b8a2b79cbeb3bc3",
+          "relativePath": "books_documents/On Liberty by John Stuart Mill.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/On Liberty by John Stuart Mill.zip",
+          "sizeBytes": 179839,
+          "sha256": "05b9d83ae6b9bccdf4ae1e3946f763ad6fd306d3f218a47098a77602df43dab9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Pascal's Pensées by Blaise Pascal.zip",
+      "itemID": "title-8bd7b7802f4880ff5b231391",
+      "revisionID": "bytes-ba553f17e8c583e7188d260afe479fef",
+      "groupID": "title-8bd7b7802f4880ff5b231391.payload",
+      "files": [
+        {
+          "fileID": "file-2f8cca265a8fb11a0f5247c250016de6",
+          "relativePath": "books_documents/Pascal's Pensées by Blaise Pascal.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Pascal's Pensées by Blaise Pascal.zip",
+          "sizeBytes": 329552,
+          "sha256": "578dece95d37ce672cab69fc8e059a31da01beafc550a54ab7dc443fd3bb7114"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Politics,A Treatise on Government by Aristotle.zip",
+      "itemID": "title-d88bf2dac13cf5efea727d63",
+      "revisionID": "bytes-e58535529278c233382aa4f344087ea7",
+      "groupID": "title-d88bf2dac13cf5efea727d63.payload",
+      "files": [
+        {
+          "fileID": "file-d56a88ccee871dcac748b2d23b2f932a",
+          "relativePath": "books_documents/Politics,A Treatise on Government by Aristotle.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Politics,A Treatise on Government by Aristotle.zip",
+          "sizeBytes": 272578,
+          "sha256": "832b5453ecabdfa859c5ebb2690b006a59d16243ae3b5c140b15bf6c8bfc6540"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Communist Manifesto by Karl Marx and Friedrich Engels.zip",
+      "itemID": "title-775abf28b43f4229e5b592b3",
+      "revisionID": "bytes-d6e76f94039d50b82097974f60547cb6",
+      "groupID": "title-775abf28b43f4229e5b592b3.payload",
+      "files": [
+        {
+          "fileID": "file-67cbae487a3c8e3a81c66a63281820e5",
+          "relativePath": "books_documents/The Communist Manifesto by Karl Marx and Friedrich Engels.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Communist Manifesto by Karl Marx and Friedrich Engels.zip",
+          "sizeBytes": 108974,
+          "sha256": "d519988fc12971a0f8e6fb9d09946ec15d026883ff35251620e003d5ec7386ba"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Critique of Pure Reason by Immanuel Kant.zip",
+      "itemID": "title-52bc8cfeb9d131360a57ad57",
+      "revisionID": "bytes-c02529a1f5281a8564a8f2d00d6742c3",
+      "groupID": "title-52bc8cfeb9d131360a57ad57.payload",
+      "files": [
+        {
+          "fileID": "file-aa01a738fd41d113c2fb75521901d5fe",
+          "relativePath": "books_documents/The Critique of Pure Reason by Immanuel Kant.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Critique of Pure Reason by Immanuel Kant.zip",
+          "sizeBytes": 592180,
+          "sha256": "565a9f82cb3cf5294f5178944a5a510017f8828d61500a416ba1c91404fdcb47"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Ethics of Aristotle by Aristotle.zip",
+      "itemID": "title-517a815c997cd09fc936fe83",
+      "revisionID": "bytes-b0557c6e444644adc55f912fa2b08c89",
+      "groupID": "title-517a815c997cd09fc936fe83.payload",
+      "files": [
+        {
+          "fileID": "file-fc686658d25f0a44929a40450764367b",
+          "relativePath": "books_documents/The Ethics of Aristotle by Aristotle.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Ethics of Aristotle by Aristotle.zip",
+          "sizeBytes": 403590,
+          "sha256": "84640b06c897b4694c34ebb05247a287136f7fbecd5f03da56b53701c4fb8f9e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Republic by Plato.zip",
+      "itemID": "title-2c52256f8f4aa36f347904f5",
+      "revisionID": "bytes-c01782a31a86b4dfd3e8bfd92b413bd3",
+      "groupID": "title-2c52256f8f4aa36f347904f5.payload",
+      "files": [
+        {
+          "fileID": "file-ccd58c122782610f782dd91374b1013f",
+          "relativePath": "books_documents/The Republic by Plato.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Republic by Plato.zip",
+          "sizeBytes": 495173,
+          "sha256": "e0273af410335c725175c2a5213b500ca5118786871a3fab632d9fba7367dac7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Simple Life by Charles Wagner.zip",
+      "itemID": "title-c3fbcf152596d40f02b1b1ca",
+      "revisionID": "bytes-79c1843d41b7cdb989013debfdfc41db",
+      "groupID": "title-c3fbcf152596d40f02b1b1ca.payload",
+      "files": [
+        {
+          "fileID": "file-7b0450080c3afcbd53e7a0e7ab3eca11",
+          "relativePath": "books_documents/The Simple Life by Charles Wagner.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Simple Life by Charles Wagner.zip",
+          "sizeBytes": 160260,
+          "sha256": "ffd79c3b8f8f54129eba93b32983f26b79b90e97114fb7c19e54563ad2cb3bd2"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Lincoln's Gettysburg Address.zip",
+      "itemID": "title-e481d916398eb6938fb39b0c",
+      "revisionID": "bytes-4309fb93135c58c3dc661121fcb6d9b1",
+      "groupID": "title-e481d916398eb6938fb39b0c.payload",
+      "files": [
+        {
+          "fileID": "file-a614b07a99120c73e67f38875556cd4d",
+          "relativePath": "books_documents/Lincoln's Gettysburg Address.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Lincoln's Gettysburg Address.zip",
+          "sizeBytes": 585475,
+          "sha256": "c08d204b5986d54b0bc6f706cf5af8124612482527acffefae70e903f473fe71"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Declaration of Independence.zip",
+      "itemID": "title-4c9186e77a662e0da23a2e2d",
+      "revisionID": "bytes-9c3070929aa3f927438ac5122dd9884d",
+      "groupID": "title-4c9186e77a662e0da23a2e2d.payload",
+      "files": [
+        {
+          "fileID": "file-0b21b4c9f9b308a4306fc2d1559a14bc",
+          "relativePath": "books_documents/The Declaration of Independence.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Declaration of Independence.zip",
+          "sizeBytes": 2410135,
+          "sha256": "b9e2ef131f6b45afd5b09e9c53361590b2f2ee8763f8f60e0f4b500e64c9aa83"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Federalist Papers.zip",
+      "itemID": "title-721d74d5ce96a3d07c0b0035",
+      "revisionID": "bytes-e9cca2b1d0a7c7277792fa260f55734e",
+      "groupID": "title-721d74d5ce96a3d07c0b0035.payload",
+      "files": [
+        {
+          "fileID": "file-34966c14efb3e4eae8af003bbb7f8148",
+          "relativePath": "books_documents/The Federalist Papers.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Federalist Papers.zip",
+          "sizeBytes": 660952,
+          "sha256": "cc8901d28f389cf802ca6c3b7367a958113a223c4fbf2a5340d05a28ca0b085f"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The United States Bill of Rights.zip",
+      "itemID": "title-d4c7f8395357cc9f09e58292",
+      "revisionID": "bytes-23d968f87af424bd842ae4095c4a297f",
+      "groupID": "title-d4c7f8395357cc9f09e58292.payload",
+      "files": [
+        {
+          "fileID": "file-56352662c6fc79f2f7f1d8c0f43366e4",
+          "relativePath": "books_documents/The United States Bill of Rights.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The United States Bill of Rights.zip",
+          "sizeBytes": 810804,
+          "sha256": "3554e144eb1e7a269ef047c5a135a431aeb16a8025abc9b796d1f0929473d596"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The United States Constitution.zip",
+      "itemID": "title-4e800b0dd85a6b0d90e62552",
+      "revisionID": "bytes-351841692be90901851d57b4f36611ef",
+      "groupID": "title-4e800b0dd85a6b0d90e62552.payload",
+      "files": [
+        {
+          "fileID": "file-0a90865ef6de1e9cbb18815cfa93e543",
+          "relativePath": "books_documents/The United States Constitution.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The United States Constitution.zip",
+          "sizeBytes": 536360,
+          "sha256": "2bdd565d5f00aebc3c14cc338fb72b55a00108f598592c70e9f6a22f10e2590e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Writings of Thomas Paine.zip",
+      "itemID": "title-2401c62dfc67acbebf1237cf",
+      "revisionID": "bytes-71b9ef0f70b420174e55577c18a3e83e",
+      "groupID": "title-2401c62dfc67acbebf1237cf.payload",
+      "files": [
+        {
+          "fileID": "file-38b064fb1672d2211f663a1eb7592ed5",
+          "relativePath": "books_documents/The Writings of Thomas Paine.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Writings of Thomas Paine.zip",
+          "sizeBytes": 3832744,
+          "sha256": "2dbe237a81c4a06bf2b9ad6d797e7400a52e1148c3f1092a2c0c4b03f3b1aa72"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Paradise Lost.zip",
+      "itemID": "title-8ad3775b3bd9e2cd44a6a1d2",
+      "revisionID": "bytes-510a76d300c6f3a61196b7330da2a872",
+      "groupID": "title-8ad3775b3bd9e2cd44a6a1d2.payload",
+      "files": [
+        {
+          "fileID": "file-6eb968c4a0aec96fdbb81f765fa41429",
+          "relativePath": "books_documents/Paradise Lost.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Paradise Lost.zip",
+          "sizeBytes": 468094,
+          "sha256": "798bd62a33e68fedec6cb6738969037202d0c93c6fe294882fdb7ce093823f4c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Aeneid by Virgil.zip",
+      "itemID": "title-86b9d751cdf0783790bac043",
+      "revisionID": "bytes-d456df6582e9c2b490a55d8f8d8baf5d",
+      "groupID": "title-86b9d751cdf0783790bac043.payload",
+      "files": [
+        {
+          "fileID": "file-bb18105836383dd4420e026e6d7659bf",
+          "relativePath": "books_documents/The Aeneid by Virgil.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Aeneid by Virgil.zip",
+          "sizeBytes": 315896,
+          "sha256": "b90f773d59a46dc7bd75ce4be1c306768cc61ee0c9297ee9333eaa676af5fec9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Iliad.zip",
+      "itemID": "title-ccc930f11b6f759597a5a336",
+      "revisionID": "bytes-b1ca96f6684afecadf21ad7d0474a2c5",
+      "groupID": "title-ccc930f11b6f759597a5a336.payload",
+      "files": [
+        {
+          "fileID": "file-f2a9004ef14e4755ac65738d0d241c65",
+          "relativePath": "books_documents/The Iliad.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Iliad.zip",
+          "sizeBytes": 2023782,
+          "sha256": "b25715ffd96d0405fc1178bf75f671f0f8f4560362129aca0e1889bf49ca6b83"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Odyssey.zip",
+      "itemID": "title-31bd0ff5ee0ca429d210b429",
+      "revisionID": "bytes-05d8a1cbe1b094aa1499cd1b55e01002",
+      "groupID": "title-31bd0ff5ee0ca429d210b429.payload",
+      "files": [
+        {
+          "fileID": "file-2a2653c6e7c91bee5b56dcedd5f68834",
+          "relativePath": "books_documents/The Odyssey.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Odyssey.zip",
+          "sizeBytes": 553177,
+          "sha256": "3d7efad4ad6d6b4f9bfded57a89131d237fca6da09f63d6a4df52615b57d9946"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Adventures of Huckleberry Finn.zip",
+      "itemID": "title-fdbbf34cacebc5141ff118a5",
+      "revisionID": "bytes-40c4df93b00c4a7c76041eed0ca40a48",
+      "groupID": "title-fdbbf34cacebc5141ff118a5.payload",
+      "files": [
+        {
+          "fileID": "file-870541c3fad3293c8d67a2f7a66b1021",
+          "relativePath": "books_documents/Adventures of Huckleberry Finn.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Adventures of Huckleberry Finn.zip",
+          "sizeBytes": 15593927,
+          "sha256": "a0e483f5d998537cee905bf8aaec7b0204ff433991904ce2f4feabf7e4abb455"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Moby-Dick.zip",
+      "itemID": "title-8988a8ac84e09dfe38252e0b",
+      "revisionID": "bytes-460bc418912b7cc9cb84764579e6aa7f",
+      "groupID": "title-8988a8ac84e09dfe38252e0b.payload",
+      "files": [
+        {
+          "fileID": "file-ce5fd3c2100c43acbd560e337458a218",
+          "relativePath": "books_documents/Moby-Dick.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Moby-Dick.zip",
+          "sizeBytes": 804416,
+          "sha256": "ec888654741a4a8915eae8e132a9b18d459a01635d882e4860d8dc8360a5d675"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The call of the wild by Jack London.zip",
+      "itemID": "title-d193cde2bd398fa662f21351",
+      "revisionID": "bytes-2618906ef0312a9005366bbf498f70bc",
+      "groupID": "title-d193cde2bd398fa662f21351.payload",
+      "files": [
+        {
+          "fileID": "file-22a940ca242ef9ea243e67a67eaa70f7",
+          "relativePath": "books_documents/The call of the wild by Jack London.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The call of the wild by Jack London.zip",
+          "sizeBytes": 420455,
+          "sha256": "431f968bb825b68fc0ae44b60e8df59213e102c9cecb2a556a3dfab52a7ba15d"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Great Gatsby.zip",
+      "itemID": "title-41249a7cb69f95e852377958",
+      "revisionID": "bytes-37bd3c058116ac31732235b79c125f59",
+      "groupID": "title-41249a7cb69f95e852377958.payload",
+      "files": [
+        {
+          "fileID": "file-0ea56708c7ab8a3f6dd01c794bdc12f6",
+          "relativePath": "books_documents/The Great Gatsby.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Great Gatsby.zip",
+          "sizeBytes": 892761,
+          "sha256": "b0702f817b04f3d42359f3642412908d7e0aa5df93e2b6149dc29ef594322d57"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Jungle by Upton Sinclair.zip",
+      "itemID": "title-e4d4cdd3ee1bd75abc56380b",
+      "revisionID": "bytes-f445ab93250b534c9567893bf1899f91",
+      "groupID": "title-e4d4cdd3ee1bd75abc56380b.payload",
+      "files": [
+        {
+          "fileID": "file-a7b6375fd02716cb33a50c1475d2f1d3",
+          "relativePath": "books_documents/The Jungle by Upton Sinclair.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Jungle by Upton Sinclair.zip",
+          "sizeBytes": 625639,
+          "sha256": "f66503242fbdb40bc04f5c5e2c641a9df2c4c9c5ac172d8f52c3b82119633a4e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Life of Frederick Douglass.zip",
+      "itemID": "title-072dcede23cfd92e162e360d",
+      "revisionID": "bytes-51969b4f5858229ce3d3de493d093397",
+      "groupID": "title-072dcede23cfd92e162e360d.payload",
+      "files": [
+        {
+          "fileID": "file-e33d0fadf77728a6b4585de3b6598f37",
+          "relativePath": "books_documents/The Life of Frederick Douglass.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Life of Frederick Douglass.zip",
+          "sizeBytes": 190046,
+          "sha256": "ed42563d4694f91fcde1ae6f44d9756b3a23def3cb5189d8c1f9e85762aceb14"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Works of Edgar Allan Poe.zip",
+      "itemID": "title-2c5beb6a6b883c7c1c63ea4d",
+      "revisionID": "bytes-fe76935c44911293689e7c8dc37a55f5",
+      "groupID": "title-2c5beb6a6b883c7c1c63ea4d.payload",
+      "files": [
+        {
+          "fileID": "file-e1d88488d7fd72550f58bffd7636bf4f",
+          "relativePath": "books_documents/The Works of Edgar Allan Poe.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Works of Edgar Allan Poe.zip",
+          "sizeBytes": 1680066,
+          "sha256": "4c07f1c4f6c68161f9ba1c139882105efaa4d9ce0149aab2ad3a2727cdbeba47"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Walden, and On The Duty Of Civil Disobedience.zip",
+      "itemID": "title-3596e557525c0ecf1e81b74f",
+      "revisionID": "bytes-97106597c3b05a86a1e4965c74777ee8",
+      "groupID": "title-3596e557525c0ecf1e81b74f.payload",
+      "files": [
+        {
+          "fileID": "file-7348b13d5779800a9ec79a2f02e6a5da",
+          "relativePath": "books_documents/Walden, and On The Duty Of Civil Disobedience.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Walden, and On The Duty Of Civil Disobedience.zip",
+          "sizeBytes": 928950,
+          "sha256": "2d9017a6a6127780f159f5fda529c3b8133f6583540323a8b2d2eb5b624c6abf"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/White Fang by Jack London.zip",
+      "itemID": "title-0c2618f12bb1a04c04be41c1",
+      "revisionID": "bytes-6f000eea35a147ea0d5838ab01cf2876",
+      "groupID": "title-0c2618f12bb1a04c04be41c1.payload",
+      "files": [
+        {
+          "fileID": "file-b5ede3727f531718b4c58e2cc676dee2",
+          "relativePath": "books_documents/White Fang by Jack London.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/White Fang by Jack London.zip",
+          "sizeBytes": 739414,
+          "sha256": "323df54b6113ec000567f4ee42fe1b8f7a0d9bb6b5e8c968c6867bf05d5cef47"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Aesop’s fables.zip",
+      "itemID": "title-1b958f758eab7b6b2d14017d",
+      "revisionID": "bytes-fcc2d667fa8e79693ebb3a133b3928d1",
+      "groupID": "title-1b958f758eab7b6b2d14017d.payload",
+      "files": [
+        {
+          "fileID": "file-c291cc6a19b11d5627ff5d09732cf599",
+          "relativePath": "books_documents/Aesop’s fables.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Aesop’s fables.zip",
+          "sizeBytes": 352771,
+          "sha256": "8dc375d6ad04a6d85e2587d2212f882ab1a41d2419b54a218cfbbfbe098d1e10"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Anna Karenina by Leo Tolstoy.zip",
+      "itemID": "title-26ee19ff7c42cfda6ee6ce15",
+      "revisionID": "bytes-2748b15af5dd3cc6b8e98df9457fe9a4",
+      "groupID": "title-26ee19ff7c42cfda6ee6ce15.payload",
+      "files": [
+        {
+          "fileID": "file-0452aeebf5b8ea07e1c4e0f6a639d37a",
+          "relativePath": "books_documents/Anna Karenina by Leo Tolstoy.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Anna Karenina by Leo Tolstoy.zip",
+          "sizeBytes": 1004084,
+          "sha256": "a8bf36d335990afb0c26768d88be023017b38c2c2100bbc2a0605a91044a4477"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Crime and Punishment, Dostoyevsky.zip",
+      "itemID": "title-23ed72623d58ae5412c62649",
+      "revisionID": "bytes-00486cd189fc5b8c7f1b83de6bc67f0c",
+      "groupID": "title-23ed72623d58ae5412c62649.payload",
+      "files": [
+        {
+          "fileID": "file-ef4229c6c14b4e273ab00376a9f15db8",
+          "relativePath": "books_documents/Crime and Punishment, Dostoyevsky.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Crime and Punishment, Dostoyevsky.zip",
+          "sizeBytes": 698948,
+          "sha256": "b59a31488a4e1798570fc7f67fe9c8f620443918d74cafc8ec3e2fbd9a9f7e92"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Complete Works of William Shakespeare.zip",
+      "itemID": "title-be30ee72208aed76661b4cb5",
+      "revisionID": "bytes-1862510cb92238cfbcad85ac3ceb7969",
+      "groupID": "title-be30ee72208aed76661b4cb5.payload",
+      "files": [
+        {
+          "fileID": "file-43b990190c370e1d93d81d77960b71d0",
+          "relativePath": "books_documents/The Complete Works of William Shakespeare.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Complete Works of William Shakespeare.zip",
+          "sizeBytes": 2798445,
+          "sha256": "8647534e5e2702c957489c45817bb799403557e551ea8cd12a018df0ca176a98"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Count of Monte Cristo.zip",
+      "itemID": "title-56175118eeb75840c25fab36",
+      "revisionID": "bytes-5610e8f2a2bcf805ad6c6177fe21b0fd",
+      "groupID": "title-56175118eeb75840c25fab36.payload",
+      "files": [
+        {
+          "fileID": "file-c08d671a5cd47c304ec89e75d73b34ce",
+          "relativePath": "books_documents/The Count of Monte Cristo.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Count of Monte Cristo.zip",
+          "sizeBytes": 106278875,
+          "sha256": "83f329603aab5c0e363a316dabe256e7a7c718cb51ce3004cee8094002e98741"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Mysterious Island by Jules Verne.zip",
+      "itemID": "title-6f9e3bd1828f1cf6f79697e9",
+      "revisionID": "bytes-fcaa08714e67f8174e5ca419aeaca2f4",
+      "groupID": "title-6f9e3bd1828f1cf6f79697e9.payload",
+      "files": [
+        {
+          "fileID": "file-77b86318a6f37a214ee5b84a44d90a45",
+          "relativePath": "books_documents/The Mysterious Island by Jules Verne.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Mysterious Island by Jules Verne.zip",
+          "sizeBytes": 489935,
+          "sha256": "a71b2009c5df444d2139e9ee43fc70470496df2ff4e2f79b853ecad2f5a29b05"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Ulysses by James Joyce.zip",
+      "itemID": "title-b8620705d5f51668133d3f57",
+      "revisionID": "bytes-a9b70bd19d758f5ceb250e4eb36caca7",
+      "groupID": "title-b8620705d5f51668133d3f57.payload",
+      "files": [
+        {
+          "fileID": "file-43bd222741b5fb8ef2824eafbb3b602d",
+          "relativePath": "books_documents/Ulysses by James Joyce.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Ulysses by James Joyce.zip",
+          "sizeBytes": 2895011,
+          "sha256": "6f5758007762649ad8feab756775596c02ea694fc249ef1235c05212afe6c57e"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Autobiography of Benjamin Franklin.zip",
+      "itemID": "title-d3f72ffb16f2ab964261d709",
+      "revisionID": "bytes-5b93b9cef91fd8b4687233f177e9d2d8",
+      "groupID": "title-d3f72ffb16f2ab964261d709.payload",
+      "files": [
+        {
+          "fileID": "file-00185fb15816f309283c5bdd09ebe47e",
+          "relativePath": "books_documents/Autobiography of Benjamin Franklin.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Autobiography of Benjamin Franklin.zip",
+          "sizeBytes": 4619396,
+          "sha256": "29d1b79ccc0f574b05a42c683c7fa5ff65c78afebbdc46a63fe7f76abbbfbad7"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Art of War by Sun Tzu.zip",
+      "itemID": "title-cb070cfe39efddf8fe856f26",
+      "revisionID": "bytes-38cfdc301bceb8182499f081cb9eedc3",
+      "groupID": "title-cb070cfe39efddf8fe856f26.payload",
+      "files": [
+        {
+          "fileID": "file-8730b80174ca5640959ce18a0fc00d0c",
+          "relativePath": "books_documents/The Art of War by Sun Tzu.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Art of War by Sun Tzu.zip",
+          "sizeBytes": 192469,
+          "sha256": "31f19d8fc3e174dacf7a9c7de3f2356859d2f3bf7ff705f3d277ce58fb2a15aa"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The History of the Decline and Fall of the Roman Empire by Edward Gibbon.zip",
+      "itemID": "title-f4b45dd79437aca6a5301280",
+      "revisionID": "bytes-423f66f2f14ee01f980cd66e1a0e08b1",
+      "groupID": "title-f4b45dd79437aca6a5301280.payload",
+      "files": [
+        {
+          "fileID": "file-3c869cd8210715ab198641171330703a",
+          "relativePath": "books_documents/The History of the Decline and Fall of the Roman Empire by Edward Gibbon.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The History of the Decline and Fall of the Roman Empire by Edward Gibbon.zip",
+          "sizeBytes": 20543764,
+          "sha256": "9db4f1e3830aaa96c514e2b46153e966cdf15fd8e299e63eb9cf3240d3d2348c"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/How it Works by Archibald Williams.zip",
+      "itemID": "title-ccdea5361e0d6e22e7685c73",
+      "revisionID": "bytes-a938401ed397e44fc701082b54ed8454",
+      "groupID": "title-ccdea5361e0d6e22e7685c73.payload",
+      "files": [
+        {
+          "fileID": "file-f3e1a734a90a8be2a5cadbdd05c8357e",
+          "relativePath": "books_documents/How it Works by Archibald Williams.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/How it Works by Archibald Williams.zip",
+          "sizeBytes": 9613518,
+          "sha256": "ef0bf9dcd5527dc9403634f7b5c188e2f83506ec903b96179670742bc1b070a9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/On the Origin of Species By Means of Natural Selection by Charles Darwin.zip",
+      "itemID": "title-69299c50d2ee71786027b7df",
+      "revisionID": "bytes-653c67c881aad75be29a9de681e7d09a",
+      "groupID": "title-69299c50d2ee71786027b7df.payload",
+      "files": [
+        {
+          "fileID": "file-9c962f06aa5f021736c5a821031868fa",
+          "relativePath": "books_documents/On the Origin of Species By Means of Natural Selection by Charles Darwin.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/On the Origin of Species By Means of Natural Selection by Charles Darwin.zip",
+          "sizeBytes": 415825,
+          "sha256": "10d7839a1c55a27eb13a16fac28549c9756f628c306bd4aec2b320a34195d4ff"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Age of Invention - A Chronicle of Mechanical Conquest.zip",
+      "itemID": "title-8af21cfe21b2ad43f7a89331",
+      "revisionID": "bytes-5802b924dbe404bdc36107085d83544a",
+      "groupID": "title-8af21cfe21b2ad43f7a89331.payload",
+      "files": [
+        {
+          "fileID": "file-a26d9338f5ce83cc63b394b40540759c",
+          "relativePath": "books_documents/The Age of Invention - A Chronicle of Mechanical Conquest.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Age of Invention - A Chronicle of Mechanical Conquest.zip",
+          "sizeBytes": 216712,
+          "sha256": "200beab5a8d8bde7d29044d17d296dffabc4dd92f62e04748e5e01c06667d4b9"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Mechanical Properties of Wood by Samuel J. Record.zip",
+      "itemID": "title-bf15bdd187707e808923bdbd",
+      "revisionID": "bytes-0189fc869c8a716310b38e5a47c20735",
+      "groupID": "title-bf15bdd187707e808923bdbd.payload",
+      "files": [
+        {
+          "fileID": "file-c475ebcd9bb1b420db6fed3fbe62df3d",
+          "relativePath": "books_documents/The Mechanical Properties of Wood by Samuel J. Record.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/The Mechanical Properties of Wood by Samuel J. Record.zip",
+          "sizeBytes": 2632105,
+          "sha256": "d1c234324d1677a56136925da8b4b3c63ea28fcfe29cc9fa56dccedff47f06e0"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/The Wealth of Nations by Adam Smith.zip",
+      "itemID": "title-9586e0912b377548d523af40",
+      "revisionID": "bytes-c803d894e92e2664d84c119722073c1b",
+      "groupID": "title-9586e0912b377548d523af40.payload",
+      "files": [
+        {
+          "fileID": "file-33a7fc3e4786158a0ec0e34d0a6d0324",
+          "relativePath": "books_documents/The Wealth of Nations by Adam Smith.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/The Wealth of Nations by Adam Smith.zip",
+          "sizeBytes": 1811910,
+          "sha256": "0a3d075df1de49097e91a8f3a46c5ea89b0054b4127fea20ff75d20de6ac3156"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Anecdotes for boys by Harvey Newcomb.zip",
+      "itemID": "title-f575a8beb64082da5319b932",
+      "revisionID": "bytes-ffc78d994ee57f0e755e7946d7f0d223",
+      "groupID": "title-f575a8beb64082da5319b932.payload",
+      "files": [
+        {
+          "fileID": "file-b0fb52e8b41df50e466cfd318cd36c66",
+          "relativePath": "books_documents/Anecdotes for boys by Harvey Newcomb.zip",
+          "objectKey": "content-packs/manifests/standard-from-lite/files/books_documents/Anecdotes for boys by Harvey Newcomb.zip",
+          "sizeBytes": 765041,
+          "sha256": "ef6ade631ad53d5667fbbf4c70c678dd3ae87f06f5fafc1910a478bd31ec6004"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Boy Scouts Handbook (1911).zip",
+      "itemID": "title-c780aeabf177c50dc6a6bcd5",
+      "revisionID": "bytes-10a715afa76032831779e1fd99b914c5",
+      "groupID": "title-c780aeabf177c50dc6a6bcd5.payload",
+      "files": [
+        {
+          "fileID": "file-b229a5db80f29ad331df563cb98ed78d",
+          "relativePath": "books_documents/Boy Scouts Handbook (1911).zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Boy Scouts Handbook (1911).zip",
+          "sizeBytes": 8392969,
+          "sha256": "ffce2472c440387a5e188d6a0ca291442e796f4379bfa44bf11708d09160a8ff"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Grimms' Fairy Tales.zip",
+      "itemID": "title-3211241fd4215da0dbd1ef1c",
+      "revisionID": "bytes-4ced37d95d5be45c657af430eb08b8ad",
+      "groupID": "title-3211241fd4215da0dbd1ef1c.payload",
+      "files": [
+        {
+          "fileID": "file-33775d4a8d6880dda9160d519618102f",
+          "relativePath": "books_documents/Grimms' Fairy Tales.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Grimms' Fairy Tales.zip",
+          "sizeBytes": 265445,
+          "sha256": "9586691184f4ff74a6705357aaf2d655859bca8d1c3ab29fb0abcac2a9c9e70a"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "books_documents/Peter Pan.zip",
+      "itemID": "title-e29388474a68f3a6e2be2c7b",
+      "revisionID": "bytes-2612ecfaca5b0a737502791b54919dbf",
+      "groupID": "title-e29388474a68f3a6e2be2c7b.payload",
+      "files": [
+        {
+          "fileID": "file-520739b91698ecb01ae96303b1690fed",
+          "relativePath": "books_documents/Peter Pan.zip",
+          "objectKey": "content-packs/manifests/lite-full/files/books_documents/Peter Pan.zip",
+          "sizeBytes": 356181,
+          "sha256": "3b87ee3f2037f954ab77814d2e367f4069dd9926b0c27e0bb094b24b359d4c70"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "421e4055b7275cc5aa2a9fa102c5f129577b6dd2e65e652c2a8901bfec175b9c",
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "ac5ef05e7d8530eca82efa755cdde52a146ebe89d369ab156eefded51487851a"
+      ]
+    },
+    {
+      "legacyRelativePath": "maps/detail/north_america.pmtiles",
+      "itemID": "maps.north-america-foundation",
+      "revisionID": "bytes-e8b34d6fb9340709d61f8f0fa4cfd936",
+      "groupID": "map-core",
+      "files": [
+        {
+          "fileID": "file-2a1e97ea33cfed7d28b2b0966057481d",
+          "relativePath": "maps/detail/manifest.json",
+          "objectKey": "content-packs/objects/maps/detail/manifest-20260707-9ed160668116.json",
+          "sizeBytes": 820,
+          "sha256": "9ed1606681161db3c86109dd7d7bbc3a710c0cb61f984d54398b69cd903592ac"
+        },
+        {
+          "fileID": "file-f19109e628544c07db1ee6ec60950e05",
+          "relativePath": "maps/detail/north_america.pmtiles",
+          "objectKey": "content-packs/objects/maps/detail/north_america-20260707-f2e0e0e1268d.pmtiles",
+          "sizeBytes": 973913069,
+          "sha256": "f2e0e0e1268d3a880528bc7a6e77ca2c848f782b5bb2ea72347c488aeaa07352"
+        },
+        {
+          "fileID": "file-4979e99d17c1523fb559bb8b65b0ab46",
+          "relativePath": "maps/poi/manifest.json",
+          "objectKey": "content-packs/objects/maps/poi/manifest-20260708-b83ce2b683cd.json",
+          "sizeBytes": 1391,
+          "sha256": "b83ce2b683cddfcd3e12ca1b8f771441c4e972de44de1d67111878642c45fd55"
+        },
+        {
+          "fileID": "file-76b1cab8edf813a4a7c336cfdc3057db",
+          "relativePath": "maps/poi/us_critical_places.sqlite",
+          "objectKey": "content-packs/objects/maps/poi/us_critical_places-20260708-8b43a44e0bf7.sqlite",
+          "sizeBytes": 62357504,
+          "sha256": "8b43a44e0bf7e0cc30fc7b826d0329b342caf2e5e219c284ac0eb11a8d6fd488"
+        }
+      ],
+      "legacyManifestFingerprints": [
+        "55516f4e1c28f8f9b21ed0fed58fdbe4527f4a4f26d510073b8ee4b43c9c918b",
+        "08f6efcc8e2746485306eea9f35945298d1850ea3e66351ce4c6a255cf84fd91",
+        "d8494338268761209810e4d759912f9f3cbb85777da7cd312232872baf48dd9f"
+      ]
+    }
+  ]
+}

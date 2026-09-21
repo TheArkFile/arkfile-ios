@@ -11,7 +11,7 @@ struct ArkFileTitleDetailView: View {
     let actionSystemImage: String
     let isActionEnabled: Bool
     let licenseEntry: ArkFileContentLicenseEntry?
-    let ledgerVersion: String
+    var publicNotice: ArkFileContentPublicNotice? = nil
     let primaryAction: () -> Void
     let restoreAction: () -> Void
     var removeAction: (() -> Void)?
@@ -89,9 +89,15 @@ struct ArkFileTitleDetailView: View {
                     }
                 }
 
-                if let licenseEntry {
+                if let publicNotice {
                     NavigationLink {
-                        ArkFileContentLicenseDetailView(entry: licenseEntry, ledgerVersion: ledgerVersion)
+                        ArkFilePublicContentNoticeView(notice: publicNotice)
+                    } label: {
+                        Label("Source & Notice", systemImage: "info.circle").frame(minHeight: 44)
+                    }
+                } else if let licenseEntry {
+                    NavigationLink {
+                        ArkFileContentLicenseDetailView(entry: licenseEntry)
                     } label: {
                         Label("Source & License", systemImage: "info.circle")
                             .frame(minHeight: 44)

@@ -284,6 +284,12 @@ struct Kiwix: App {
         // reconcile acquisition state. Purchased and committed offline content
         // must remain usable even when commerce services are unavailable.
         ArkFileInstalledContentAccess.bootstrap()
+        if !Self.isRunningTests {
+            ArkFileAdMeasurement.shared.start(
+                hasReadableContent: ArkFileContentPackInstaller
+                    .managedContentRootWithAnyReadableContentIfAvailable() != nil
+            )
+        }
         // Upgrade existing content, partial downloads, and Core Data sidecars
         // in the app's private Application Support tree. The versioned pass
         // records completion only after every item verifies successfully.
@@ -322,8 +328,10 @@ struct Kiwix: App {
                     guard !Self.isRunningTests else { return }
                     switch newValue {
                     case .inactive:
+                        ArkFileAdMeasurement.shared.appWillResignActive()
                         try? Database.shared.viewContext.save()
                     case .active:
+                        ArkFileAdMeasurement.shared.appDidBecomeActive()
                         // A background launch can occur before protected files
                         // are readable. Retry any journal recovery before the
                         // foreground access refresh; unavailable protected data
@@ -362,6 +370,7 @@ struct Kiwix: App {
                             }
                         }
                     case .background:
+                        ArkFileAdMeasurement.shared.appWillResignActive()
                         Task {
                             await HotspotObservable.shared.stopForAppBackground()
                         }

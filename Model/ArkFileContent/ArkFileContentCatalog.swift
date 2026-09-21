@@ -122,9 +122,7 @@ struct ArkFileContentCatalog: Decodable, Sendable {
     }
 
     struct ContentLicenses: Decodable, Hashable, Sendable {
-        let ledgerVersion: String
         let projectionHash: String
-        let coverageComplete: Bool
     }
 }
 
@@ -150,9 +148,7 @@ struct ArkFileContentCatalogItem: Decodable, Identifiable, Hashable, Sendable {
     let sourceUrl: String?
     let attributionText: String?
     let changesMade: String?
-    let contentLicenseLedgerVersion: String?
     let contentLicenseProjectionHash: String?
-    let contentLicenseDecisionStatus: String?
 
     var isAvailableInEssentials: Bool {
         isAvailable(in: .lite)
@@ -250,9 +246,7 @@ struct ArkFileContentCatalogItem: Decodable, Identifiable, Hashable, Sendable {
         sourceUrl = try container.decodeIfPresent(String.self, forKey: .sourceUrl)
         attributionText = try container.decodeIfPresent(String.self, forKey: .attributionText)
         changesMade = try container.decodeIfPresent(String.self, forKey: .changesMade)
-        contentLicenseLedgerVersion = try container.decodeIfPresent(String.self, forKey: .contentLicenseLedgerVersion)
         contentLicenseProjectionHash = try container.decodeIfPresent(String.self, forKey: .contentLicenseProjectionHash)
-        contentLicenseDecisionStatus = try container.decodeIfPresent(String.self, forKey: .contentLicenseDecisionStatus)
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -278,9 +272,7 @@ struct ArkFileContentCatalogItem: Decodable, Identifiable, Hashable, Sendable {
         case sourceUrl
         case attributionText
         case changesMade
-        case contentLicenseLedgerVersion
         case contentLicenseProjectionHash
-        case contentLicenseDecisionStatus
     }
 }
 

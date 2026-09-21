@@ -90,8 +90,10 @@ final class ArkFileEssentialsUpdateChecker: ObservableObject {
     private var isChecking = false
 
     private init() {
-        availableNewContent = Self.loadPersistedSummary()
-        revalidateLocally()
+        // V1 service manifests are immutable. Retire old cached notifications;
+        // signed v2 discovery is an explicit Content Updates action.
+        availableNewContent = nil
+        UserDefaults.standard.removeObject(forKey: Self.summaryKey)
     }
 
     /// Cheap, offline-safe pass: discard summaries from older app builds if
@@ -164,134 +166,13 @@ final class ArkFileEssentialsUpdateChecker: ObservableObject {
         )
     }
 
-    func checkOnForegroundIfNeeded() async {
-        revalidateLocally()
-        await check(notifyUser: false)
-    }
+    func checkOnForegroundIfNeeded() async { revalidateLocally() }
+    func checkFromBackgroundRefresh() async { revalidateLocally() }
 
-    func checkFromBackgroundRefresh() async {
-        await check(notifyUser: true)
-    }
-
-    /// User tapped the update call to action. Keep the summary until the
-    /// repaired manifest proves the new or replaced files arrived.
-    func downloadNewContent() {
-        let tier = availableNewContent?.tier
-            ?? ArkFileContentPackInstaller.shared.installedTier
-            ?? .lite
-        if tier == .complete {
-            ArkFileContentPackInstaller.shared.repairComplete()
-        } else {
-            ArkFileContentPackInstaller.shared.repairLite()
-        }
-    }
-
-    private func check(notifyUser: Bool) async {
-        guard !isChecking else { return }
-        let installer = ArkFileContentPackInstaller.shared
-        let installedTier = installer.installedTier?.isIOSInstallable == true
-            ? installer.installedTier ?? .lite
-            : .lite
-        // Discovery only makes sense once a pack is installed and entitled;
-        // fresh installs and repairs already download everything selected.
-        guard installer.state.phase == .installed,
-              !installer.isBusy,
-              Self.hasSavedAccess(for: installedTier, installer: installer),
-              Self.canCheckAccess(for: installedTier) else {
-            return
-        }
-        let now = Date()
-        guard Self.shouldStartCheck(
-            now: now,
-            lastSuccessfulCheckAt: Self.lastSuccessfulCheckAt(for: installedTier),
-            lastFailedCheckAt: Self.lastFailedCheckAt(for: installedTier)
-        ) else {
-            return
-        }
-        isChecking = true
-        defer { isChecking = false }
-        guard await ArkFileUpdateNetworkProbe.isNetworkAvailable() else {
-            if !Task.isCancelled {
-                Self.recordFailedCheck(at: Date(), for: installedTier)
-            }
-            return
-        }
-
-        do {
-            let authorization = try await ArkFileLitePurchaseManager.shared
-                .authorization(for: installedTier, allowPurchase: false)
-            guard let siteURL = URL(string: Brand.arkFileSiteURL) else {
-                throw ArkFileContentError.invalidSiteURL
-            }
-            let api = try ArkFileContentAPI(siteURL: siteURL)
-            let downloadInfo = try await api.requestDownloadInfo(
-                tier: installedTier,
-                installedTier: installedTier,
-                authorization: authorization
-            )
-            guard (downloadInfo.installMode?.lowercased() ?? "manifest-v1") == "manifest-v1",
-                  let manifestObjectKey = downloadInfo.manifestObjectKey,
-                  !manifestObjectKey.isEmpty else {
-                throw ArkFileContentError.invalidResponse
-            }
-            let manifest = try await api.packageManifest(
-                objectKey: manifestObjectKey,
-                authorization: authorization
-            )
-            // Discovery must apply the same safety gate as installation. An
-            // outdated manifest must not advertise retired titles as "new"
-            // content and then fail only after the user confirms a download.
-            try manifest.validateForInstall(tier: installedTier)
-            guard !Task.isCancelled,
-                  installer.state.phase == .installed,
-                  installer.installedTier == installedTier,
-                  Self.hasSavedAccess(for: installedTier, installer: installer),
-                  Self.canCheckAccess(for: installedTier) else {
-                return
-            }
-            guard let activeRoot = ArkFileContentPackInstaller.installedContentRootIfAvailable() else {
-                Self.recordFailedCheck(at: Date(), for: installedTier)
-                Log.ContentPack.info(
-                    "\(Self.packName(for: installedTier)) new-content check skipped: installed content root is unavailable"
-                )
-                return
-            }
-            let checkedAt = Date()
-            let summary = Self.newContentSummary(
-                manifest: manifest,
-                catalog: try? ArkFileContentCatalog.loadBundled(),
-                excludedItemKeys: installer.excludedItemKeys(for: installedTier),
-                activeRoot: activeRoot,
-                tier: installedTier,
-                now: checkedAt
-            )
-            setSummary(summary)
-            Self.recordSuccessfulCheck(at: checkedAt, for: installedTier)
-            if notifyUser,
-               let summary,
-               Self.lastNotifiedSignature(for: installedTier) != summary.signature {
-                Self.recordNotifiedSignature(summary.signature, for: installedTier)
-                let sizeText = ByteCountFormatter.string(
-                    fromByteCount: summary.totalBytes,
-                    countStyle: .file
-                )
-                let packName = Self.packName(for: installedTier)
-                ArkFileEssentialsDownloadNotifier.notifyNewContentAvailable(
-                    summary.itemCount == 1
-                        ? "1 new or updated title (\(sizeText)) is available for \(packName). Open ArkFile to download it."
-                        : "\(summary.itemCount) new or updated titles (\(sizeText)) are available for \(packName). Open ArkFile to download them.",
-                    tier: installedTier
-                )
-            }
-        } catch {
-            guard !Task.isCancelled else { return }
-            Self.recordFailedCheck(at: Date(), for: installedTier)
-            let packName = Self.packName(for: installedTier)
-            Log.ContentPack.info(
-                "\(packName) new-content check skipped: \(error.localizedDescription, privacy: .public)"
-            )
-        }
-    }
+    /// Compatibility for previously persisted UI state. New downloads require
+    /// the exact-edition review in Content Updates and cannot start from a v1
+    /// background summary.
+    func downloadNewContent() { setSummary(nil) }
 
     static func newContentSummary(
         manifest: ArkFilePackageManifest,
@@ -442,9 +323,7 @@ final class ArkFileEssentialsUpdateChecker: ObservableObject {
     }
 
     nonisolated static func scheduleBackgroundRefresh() {
-        let request = BGAppRefreshTaskRequest(identifier: backgroundTaskIdentifier)
-        request.earliestBeginDate = Date(timeIntervalSinceNow: minimumCheckInterval)
-        try? BGTaskScheduler.shared.submit(request)
+        BGTaskScheduler.shared.cancel(taskRequestWithIdentifier: backgroundTaskIdentifier)
     }
 
     /// BGAppRefreshTask is not Sendable; this box carries it into the

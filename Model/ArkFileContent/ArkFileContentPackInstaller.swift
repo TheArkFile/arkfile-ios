@@ -886,7 +886,9 @@ final class ArkFileContentPackInstaller: ObservableObject {
     private var pendingAccessMintEvent: ArkFileStoreKitAccessMintEvent?
     private var downloadProgressCheckpoint: DownloadProgressCheckpoint?
     private var downloadRateSamples: [(sampledAt: Date, completedBytes: Int64)] = []
-    private static let statusCatalog = try? ArkFileContentCatalog.loadBundled()
+    private static var statusCatalog: ArkFileContentCatalog? {
+        ArkFileContentReleaseProvider.shared.discoveryCatalog ?? (try? ArkFileContentCatalog.loadBundled())
+    }
     private static let progressPersistenceMinimumBytes: Int64 = 128 * 1024 * 1024
     private static let progressPersistenceMinimumInterval: TimeInterval = 30
     // A rejected package-file request gets one re-mint. If StoreKit no longer
@@ -989,7 +991,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
     }
 
     var isBusy: Bool {
-        installTask != nil
+        ArkFileContentUpdateCoordinator.shared.isBusy || installTask != nil
             || state.phase.isBusy
             || isRestoringPurchases
             || isPurchasingWithoutDownload
@@ -2568,6 +2570,11 @@ final class ArkFileContentPackInstaller: ObservableObject {
         allowsCellularDownload: Bool = false,
         forceFullDownload: Bool = false
     ) async -> Bool {
+        guard !ArkFileContentUpdateCoordinator.shared.isBusy,
+              !ArkFileContentUpdateCoordinator.shared.canResume else {
+            downloadFailureMessage = "Resume or cancel the selected content update before starting another download."
+            return false
+        }
         // A pre-download failure (declined purchase, server rejection, storage
         // check) must not clobber a pack that is already installed: nothing on
         // disk has changed yet, so the installed state stays authoritative.
@@ -2679,7 +2686,8 @@ final class ArkFileContentPackInstaller: ObservableObject {
                     .trustedPackageManifest(
                         for: manifest,
                         expectedTier: tier
-                    )
+                    ).includingVerifiedReleases(Set(ArkFileContentReleaseProvider.shared.snapshot.installed.values.map(\.binding))
+                        .compactMap { try? ArkFileContentReleaseProvider.shared.verifiedRelease($0) })
             } catch {
                 throw ArkFileContentError.appUpdateRequired(
                     "This app build does not recognize the content manifest selected by the service. Update ArkFile before retrying this download."
@@ -2691,7 +2699,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
                 in: state,
                 for: tier
             )
-            let selectedManifest = try Self.manifestFilteringDownloadRequest(
+            let requestedManifest = try Self.manifestFilteringDownloadRequest(
                 manifest,
                 catalog: catalog,
                 tier: tier,
@@ -2699,6 +2707,8 @@ final class ArkFileContentPackInstaller: ObservableObject {
                 explicitRequestedItemKeys: explicitRequest,
                 includesMapFoundation: Self.includesMapFoundationForActiveRequest(state)
             )
+            let selectedManifest = try Self.manifestPreservingSignedInstalledGroups(
+                requestedManifest, activeRoot: Self.activeContentRoot())
             try Self.validateSelectedManifestSubset(
                 selectedManifest,
                 of: manifest
@@ -3463,7 +3473,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
         }
     }
 
-    private nonisolated static func isAuthorizationExpiredOrRejected(_ error: Error) -> Bool {
+    nonisolated static func isAuthorizationExpiredOrRejected(_ error: Error) -> Bool {
         switch error {
         case ArkFileContentError.httpStatus(401):
             return true
@@ -3553,6 +3563,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
             )
             try validateAcquisitionLease(acquisitionLease)
             var activationCandidates: [ArkFileContentActivationCandidate] = []
+            var groupDownloadedBytes = false
             for member in group.members {
                 try validateAcquisitionLease(acquisitionLease)
                 let entry = member.entry
@@ -3714,6 +3725,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
                         throw ArkFileContentActivationError.missingVerifiedReplacement(relativePath)
                     }
                     try validateAcquisitionLease(acquisitionLease)
+                    groupDownloadedBytes = true
                 }
                 if let entryTransferProgress {
                     completedBytes = ArkFileContentStoragePreflight.addingWithoutOverflow(
@@ -3781,6 +3793,11 @@ final class ArkFileContentPackInstaller: ObservableObject {
                     )
                 }
             )
+#if os(iOS)
+            if groupDownloadedBytes {
+                ArkFileAdMeasurement.shared.recordFirstContentReady()
+            }
+#endif
             // Activation has committed the new group before this purge. Close
             // unpinned CoreKiwix archives so replaced inode blocks can be
             // reclaimed; active searches remain pinned and the next live
@@ -4186,6 +4203,28 @@ final class ArkFileContentPackInstaller: ObservableObject {
         )
     }
 
+    /// Frozen v1 repair/install may fill missing legacy content, but cannot
+    /// roll a separately installed signed revision back to the bundled edition.
+    nonisolated static func manifestPreservingSignedInstalledGroups(
+        _ manifest: ArkFilePackageManifest, activeRoot: URL
+    ) throws -> ArkFilePackageManifest {
+        guard let commit = ArkFileInstalledContentAccess.currentCommitRecord(at: activeRoot) else { return manifest }
+        let protectedGroups = Set(commit.payload.entries.compactMap { entry -> ArkFileContentCompatibilityGroupID? in
+            guard entry.manifestProvenance?.manifestID.hasPrefix("v2-") == true else { return nil }
+            return ArkFileContentCompatibilityPlanner.groupID(for: entry.relativePath)
+        })
+        guard !protectedGroups.isEmpty else { return manifest }
+        let files = manifest.files.filter { !protectedGroups.contains(ArkFileContentCompatibilityPlanner.groupID(for: $0.normalizedRelativePath)) }
+        guard !files.isEmpty else {
+            throw ArkFileContentReleaseError.invalid("These titles use signed content editions. Open Content Updates to review or redownload them.")
+        }
+        return ArkFilePackageManifest(format: manifest.format, tier: manifest.tier, baselineTier: manifest.baselineTier,
+            deliveryMode: manifest.deliveryMode, installedBytes: files.reduce(0) { $0 + $1.sizeBytes }, files: files,
+            compat: manifest.compat, deletedPaths: manifest.deletedPaths, product: manifest.product, variant: manifest.variant,
+            sourceEdition: manifest.sourceEdition, baselineEdition: manifest.baselineEdition, installMode: manifest.installMode,
+            filesIncluded: files.count, declaredBytesIncluded: files.reduce(0) { $0 + $1.sizeBytes }, generatedAt: manifest.generatedAt)
+    }
+
     /// A filtered request may only remove exact entries from the already
     /// authenticated full manifest. It must never synthesize or rewrite
     /// download authority after the release projection match.
@@ -4408,7 +4447,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
         }
     }
 
-    private func ensureLargeDownloadNetworkIsReady(allowsCellularDownload: Bool) async throws {
+    func ensureLargeDownloadNetworkIsReady(allowsCellularDownload: Bool) async throws {
         let monitor = NWPathMonitor()
         let state = ArkFileNetworkPreflightState()
         try await withTaskCancellationHandler {

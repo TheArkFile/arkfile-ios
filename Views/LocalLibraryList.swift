@@ -166,6 +166,7 @@ struct ArkFileLibraryDashboard: View {
     @State private var accountEmail = ""
     @State private var accountPassword = ""
     @State private var sheet: ArkFileHomeSheet?
+    @State private var contentUpdateTargetPath: String?
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dismiss) private var dismiss
@@ -308,6 +309,8 @@ struct ArkFileLibraryDashboard: View {
                 toolSheet {
                     ArkFileHomeLibrarySheet()
                 }
+            case .contentUpdates:
+                toolSheet { ArkFileContentUpdatesView(initialTargetRelativePath: contentUpdateTargetPath) }
             case .localSharing:
                 toolSheet {
                     HotspotZimFilesSelection()
@@ -359,7 +362,15 @@ struct ArkFileLibraryDashboard: View {
                 handleLockedRestoreAction(route)
             },
             downloadOnlyAction: { item, tier in
-                liteInstaller.includeItemAndDownload(key: item.id, tier: tier)
+                if ArkFileContentReleaseProvider.shared.snapshot.available?.release.items.contains(where: {
+                    ArkFileContentReleaseVerifier.canonicalPath($0.catalog.relativePath)
+                        == ArkFileContentReleaseVerifier.canonicalPath(item.relativePath)
+                }) == true {
+                    contentUpdateTargetPath = item.relativePath
+                    DispatchQueue.main.async { sheet = .contentUpdates }
+                } else {
+                    liteInstaller.includeItemAndDownload(key: item.id, tier: tier)
+                }
             }
         )
         .arkFileRestoreOutcomePrompt(
@@ -563,6 +574,10 @@ struct ArkFileLibraryDashboard: View {
         }
         .onChange(of: contentLibrary.libraryCategories) { _, _ in
             pruneSelections()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .arkFileContentReleaseChanged)) { _ in
+            contentCatalog = ArkFileContentReleaseProvider.shared.discoveryCatalog
+            Task { await contentLibrary.refresh() }
         }
         .onDisappear {
             ArkFileDownloadRuntimeGuard.keepScreenAwake(false)
@@ -1767,9 +1782,8 @@ struct ArkFileLibraryDashboard: View {
 
     private func refresh() async {
         isRefreshing = true
-        contentCatalog = await Task.detached(priority: .utility) {
-            try? ArkFileContentCatalog.loadBundled()
-        }.value
+        contentCatalog = ArkFileContentReleaseProvider.shared.discoveryCatalog
+            ?? (try? ArkFileContentCatalog.loadBundled())
         await contentLibrary.refresh()
         pruneSelections()
         isRefreshing = false
@@ -1821,8 +1835,8 @@ struct ArkFileLibraryDashboard: View {
 
     private func openBookmark(_ bookmark: ArkFileContentBookmark) {
         openingItemID = nil
-        guard let item = contentLibrary.allItems.first(where: { $0.relativePath == bookmark.relativePath }) else {
-            openError = "ArkFile could not find \(bookmark.fileName) in the local library."
+        guard let item = ArkFileSavedContentIdentity.item(for: bookmark, in: contentLibrary.allItems) else {
+            openError = "\(bookmark.fileName) is not currently downloaded. Its Saved entry is kept; use Content Updates to download it again."
             return
         }
         if let openSceneContent {

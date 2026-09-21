@@ -18,7 +18,6 @@ import SwiftUI
 
 struct ArkFileContentLicenseDetailView: View {
     let entry: ArkFileContentLicenseEntry
-    let ledgerVersion: String
 
     @Environment(\.dismiss) private var dismiss
 
@@ -52,7 +51,6 @@ struct ArkFileContentLicenseDetailView: View {
                 detailRow("Redistribution", value: displayPermission(entry.license.redistribution))
                 detailRow("Modification", value: displayPermission(entry.license.modification))
                 detailRow("Share alike", value: entry.license.shareAlike ? "Required" : "Not required")
-                detailRow("Review status", value: entry.decision.status.localizedCapitalized)
             }
 
             Section("Attribution & Changes") {
@@ -69,7 +67,7 @@ struct ArkFileContentLicenseDetailView: View {
             } header: {
                 Text("Downstream Rights")
             } footer: {
-                Text("Title-level content record \(ledgerVersion). App and third-party software licenses are listed separately in Settings > Licenses.")
+                Text("App and third-party software licenses are listed separately in Settings > Licenses.")
             }
         }
         .listStyle(.insetGrouped)

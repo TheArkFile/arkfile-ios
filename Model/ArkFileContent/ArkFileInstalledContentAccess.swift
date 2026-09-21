@@ -493,11 +493,19 @@ enum ArkFileInstalledContentAccess {
     private static let cacheLock = NSLock()
     private nonisolated(unsafe) static var cachedRoots: [RootSnapshot] = []
     private nonisolated(unsafe) static var didBootstrap = false
+    private nonisolated(unsafe) static var authorityGeneration: UInt64 = 0
+    static var localAuthorityGeneration: UInt64 {
+        cacheLock.lock(); defer { cacheLock.unlock() }
+        return authorityGeneration
+    }
 
     /// Loads and caches the local access inventory. This is intentionally
     /// synchronous so startup can establish local-read truth before StoreKit
     /// reconciliation starts.
     static func bootstrap() {
+        if let root = try? ArkFileContentPackInstaller.protectedActiveContentRoot() {
+            ArkFileContentReplacementStore.loadRecoveryBarrier(at: root)
+        }
         installSnapshot(from: defaultCandidates())
     }
 
@@ -545,6 +553,7 @@ enum ArkFileInstalledContentAccess {
             $0.isValid && !refreshedRoots.contains($0.lexicalRootPath)
         })
         cachedRoots = merged
+        authorityGeneration &+= 1
         didBootstrap = true
         cacheLock.unlock()
     }
@@ -567,6 +576,7 @@ enum ArkFileInstalledContentAccess {
     }
 
     static func decision(for url: URL) -> Decision {
+        guard !ArkFileContentReplacementStore.blocksRead(url) else { return .uncommittedManagedContent }
         ensureBootstrapped()
         cacheLock.lock()
         let roots = cachedRoots
@@ -694,6 +704,7 @@ enum ArkFileInstalledContentAccess {
     /// it points at the preserved all-old snapshot until the new checksummed
     /// commit becomes current.
     static func resolvedURLForReading(_ url: URL) -> URL? {
+        guard !ArkFileContentReplacementStore.blocksRead(url) else { return nil }
         ensureBootstrapped()
         cacheLock.lock()
         let roots = cachedRoots
@@ -709,6 +720,7 @@ enum ArkFileInstalledContentAccess {
     }
 
     static func acquireReadLease(for url: URL) -> ArkFileAuthoritativeReadLease? {
+        guard !ArkFileContentReplacementStore.blocksRead(url) else { return nil }
         ensureBootstrapped()
         cacheLock.lock()
         let roots = cachedRoots
@@ -728,6 +740,7 @@ enum ArkFileInstalledContentAccess {
     /// access decision and a lazy reader's first/last physical read. Unmanaged
     /// user imports do not unnecessarily block ArkFile pack activation.
     static func acquireDirectReadLease(for url: URL) -> ArkFileDirectReadLease? {
+        guard !ArkFileContentReplacementStore.blocksRead(url) else { return nil }
         let managedReaderToken: ArkFileManagedContentReaderToken?
         if isManaged(url) {
             guard let token = ArkFileManagedContentConcurrencyGate
@@ -1017,6 +1030,7 @@ enum ArkFileInstalledContentAccess {
     static func resetCachedSnapshotsForTesting() {
         cacheLock.lock()
         cachedRoots = []
+        authorityGeneration &+= 1
         didBootstrap = false
         cacheLock.unlock()
     }
@@ -1070,6 +1084,7 @@ enum ArkFileInstalledContentAccess {
         let snapshots = candidates.compactMap(loadSnapshot)
         cacheLock.lock()
         cachedRoots = snapshots
+        authorityGeneration &+= 1
         didBootstrap = true
         cacheLock.unlock()
     }

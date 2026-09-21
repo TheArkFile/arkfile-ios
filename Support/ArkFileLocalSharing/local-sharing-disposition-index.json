@@ -1,18 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "policyVersion": "local-sharing-v1",
-  "projectionHash": "aae21eb84616bfa70a55e6ac39cdde39221317a2d424fc873d068d4fc4030670",
-  "ownerAcceptance": {
-    "id": "arkfile-local-sharing-2026-07-25",
-    "acceptedAt": "2026-07-25",
-    "acceptedArtifactCount": 147,
-    "acceptedIdentityCount": 147,
-    "acceptedArtifactSetSHA256": "3f047b34aa28e16da856607faa089b4d6d6acee924bf350dc6f87d689da7efff"
-  },
+  "projectionHash": "781789e88573f124d48b6aa9f3681818696bf0fe3395fa8b90d530a8478ec4c1",
   "source": {
-    "catalogSHA256": "1d837a22975becb43ec85188501c57b273a5cdc962ac63f089649bff89c73a5e",
-    "ledgerVersion": "2026-07-10.1",
-    "ledgerSHA256": "e6ad0731aac9320c445ebcb7bf23a7ee835041a5111fec7e2e29988a690fabaf",
+    "catalogSHA256": "72b0e31e41127f66a11191936e584e2c9fcb7a58ad5ea12868cc7cc719eff4e7",
     "currentManifestSHA256s": {
       "liteFull": "12873704cd5280c87623dbaa330551f46b3139b1f87238c72f18f42775322fe2",
       "completeFull": "b8c8d786c3c22a33d1e8d0d1b6ff9ec1b16cdaae0021fe96ff10dab894dde067",
@@ -22,7 +13,6 @@
       "complete20260708": "8b3cd172c6eb218ec7185bb0fa13edcb01c4ee958392c3a259e29487e39d6266",
       "completeTextbooks20260704": "cbd8949c2e47a0d42317ee4efb7958754502608b15fe75640364df2f831ea131"
     },
-    "sampleEvidenceSHA256": "8a7656c08125cbc5c3a3fc834c5faf64ca4c82a59892a6227e252a994abc21b3",
     "manifests": [
       {
         "id": "current-lite-full",
@@ -79,10 +69,6 @@
   "coverage": {
     "managedCatalogEntries": 180,
     "bundledSampleEntries": 5,
-    "greenManagedEntries": 38,
-    "ownerAcceptedYellowManagedEntries": 142,
-    "ownerAcceptedYellowBundledSamples": 5,
-    "ownerAcceptedYellowEntries": 147,
     "allowedEntries": 185
   },
   "entries": [
@@ -93,7 +79,6 @@
       "canonicalPath": "books_documents/adventures of huckleberry finn.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -126,7 +111,6 @@
       "canonicalPath": "books_documents/aesop’s fables.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -159,7 +143,6 @@
       "canonicalPath": "books_documents/anecdotes for boys by harvey newcomb.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -192,7 +175,6 @@
       "canonicalPath": "books_documents/anna karenina by leo tolstoy.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -225,7 +207,6 @@
       "canonicalPath": "books_documents/apology by plato.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -258,7 +239,6 @@
       "canonicalPath": "books_documents/as a man thinketh by james allen.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -291,7 +271,6 @@
       "canonicalPath": "books_documents/autobiography of benjamin franklin.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -324,7 +303,6 @@
       "canonicalPath": "books_documents/beyond good and evil by nietzsche.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -357,7 +335,6 @@
       "canonicalPath": "books_documents/book of mormon.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -391,7 +368,6 @@
       "canonicalPath": "books_documents/boy scouts handbook (1911).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -424,7 +400,6 @@
       "canonicalPath": "books_documents/crime and punishment, dostoyevsky.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -457,7 +432,6 @@
       "canonicalPath": "books_documents/grimms' fairy tales.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -491,7 +465,6 @@
       "canonicalPath": "books_documents/how it works by archibald williams.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -524,7 +497,6 @@
       "canonicalPath": "books_documents/king james bible.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -555,7 +527,6 @@
       "canonicalPath": "books_documents/lincoln's gettysburg address.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -588,7 +559,6 @@
       "canonicalPath": "books_documents/meditations by marcus aurelius.zip",
       "type": "htmlbook",
       "managed": false,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -614,7 +584,6 @@
       "canonicalPath": "books_documents/moby-dick.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -647,7 +616,6 @@
       "canonicalPath": "books_documents/mysticism and logic and other essays by bertrand russell.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -680,7 +648,6 @@
       "canonicalPath": "books_documents/on liberty by john stuart mill.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -713,7 +680,6 @@
       "canonicalPath": "books_documents/on the origin of species by means of natural selection by charles darwin.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -746,7 +712,6 @@
       "canonicalPath": "books_documents/openstax - algebra and trigonometry.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -779,7 +744,6 @@
       "canonicalPath": "books_documents/openstax - american government.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -812,7 +776,6 @@
       "canonicalPath": "books_documents/openstax - biology 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -845,7 +808,6 @@
       "canonicalPath": "books_documents/openstax - biology for ap courses.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -878,7 +840,6 @@
       "canonicalPath": "books_documents/openstax - chemistry - atoms first.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -911,7 +872,6 @@
       "canonicalPath": "books_documents/openstax - chemistry.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -944,7 +904,6 @@
       "canonicalPath": "books_documents/openstax - college algebra.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -977,7 +936,6 @@
       "canonicalPath": "books_documents/openstax - college physics.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1010,7 +968,6 @@
       "canonicalPath": "books_documents/openstax - college success.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1043,7 +1000,6 @@
       "canonicalPath": "books_documents/openstax - elementary algebra 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1076,7 +1032,6 @@
       "canonicalPath": "books_documents/openstax - entrepreneurship.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1109,7 +1064,6 @@
       "canonicalPath": "books_documents/openstax - intermediate algebra 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1142,7 +1096,6 @@
       "canonicalPath": "books_documents/openstax - introduction to business.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1175,7 +1128,6 @@
       "canonicalPath": "books_documents/openstax - introduction to sociology 3e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1208,7 +1160,6 @@
       "canonicalPath": "books_documents/openstax - introductory business statistics.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1241,7 +1192,6 @@
       "canonicalPath": "books_documents/openstax - introductory statistics.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1274,7 +1224,6 @@
       "canonicalPath": "books_documents/openstax - microbiology.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1307,7 +1256,6 @@
       "canonicalPath": "books_documents/openstax - physics.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1340,7 +1288,6 @@
       "canonicalPath": "books_documents/openstax - prealgebra.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1373,7 +1320,6 @@
       "canonicalPath": "books_documents/openstax - precalculus.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1406,7 +1352,6 @@
       "canonicalPath": "books_documents/openstax - principles of economics 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1439,7 +1384,6 @@
       "canonicalPath": "books_documents/openstax - principles of macroeconomics 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1472,7 +1416,6 @@
       "canonicalPath": "books_documents/openstax - principles of microeconomics 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1505,7 +1448,6 @@
       "canonicalPath": "books_documents/openstax - principles of microeconomics for ap courses.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1538,7 +1480,6 @@
       "canonicalPath": "books_documents/openstax - psychology 2e.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1571,7 +1512,6 @@
       "canonicalPath": "books_documents/openstax - statistics.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1604,7 +1544,6 @@
       "canonicalPath": "books_documents/openstax - university physics.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1637,7 +1576,6 @@
       "canonicalPath": "books_documents/paradise lost.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1670,7 +1608,6 @@
       "canonicalPath": "books_documents/pascal's pensées by blaise pascal.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1703,7 +1640,6 @@
       "canonicalPath": "books_documents/peter pan.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1736,7 +1672,6 @@
       "canonicalPath": "books_documents/politics,a treatise on government by aristotle.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1769,7 +1704,6 @@
       "canonicalPath": "books_documents/the aeneid by virgil.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1802,7 +1736,6 @@
       "canonicalPath": "books_documents/the age of invention - a chronicle of mechanical conquest.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1835,7 +1768,6 @@
       "canonicalPath": "books_documents/the art of war by sun tzu.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1868,7 +1800,6 @@
       "canonicalPath": "books_documents/the call of the wild by jack london.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1901,7 +1832,6 @@
       "canonicalPath": "books_documents/the children's bible.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1935,7 +1865,6 @@
       "canonicalPath": "books_documents/the communist manifesto by karl marx and friedrich engels.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -1969,7 +1898,6 @@
       "canonicalPath": "books_documents/the complete works of william shakespeare.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2002,7 +1930,6 @@
       "canonicalPath": "books_documents/the confessions of st. augustine.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2035,7 +1962,6 @@
       "canonicalPath": "books_documents/the count of monte cristo.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2069,7 +1995,6 @@
       "canonicalPath": "books_documents/the critique of pure reason by immanuel kant.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2102,7 +2027,6 @@
       "canonicalPath": "books_documents/the declaration of independence.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2135,7 +2059,6 @@
       "canonicalPath": "books_documents/the ethics of aristotle by aristotle.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2168,7 +2091,6 @@
       "canonicalPath": "books_documents/the federalist papers.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2203,7 +2125,6 @@
       "canonicalPath": "books_documents/the great gatsby.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2236,7 +2157,6 @@
       "canonicalPath": "books_documents/the history of the decline and fall of the roman empire by edward gibbon.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2269,7 +2189,6 @@
       "canonicalPath": "books_documents/the iliad.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2302,7 +2221,6 @@
       "canonicalPath": "books_documents/the jungle by upton sinclair.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2335,7 +2253,6 @@
       "canonicalPath": "books_documents/the koran (al-qur'an).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2366,7 +2283,6 @@
       "canonicalPath": "books_documents/the life of buddha and its lessons by henry steel olcott.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2399,7 +2315,6 @@
       "canonicalPath": "books_documents/the life of frederick douglass.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2432,7 +2347,6 @@
       "canonicalPath": "books_documents/the mechanical properties of wood by samuel j. record.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2465,7 +2379,6 @@
       "canonicalPath": "books_documents/the mysterious island by jules verne.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2498,7 +2411,6 @@
       "canonicalPath": "books_documents/the odyssey.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2531,7 +2443,6 @@
       "canonicalPath": "books_documents/the pilgrim's progress by john bunyan.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2564,7 +2475,6 @@
       "canonicalPath": "books_documents/the republic by plato.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2597,7 +2507,6 @@
       "canonicalPath": "books_documents/the simple life by charles wagner.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2630,7 +2539,6 @@
       "canonicalPath": "books_documents/the united states bill of rights.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2663,7 +2571,6 @@
       "canonicalPath": "books_documents/the united states constitution.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2696,7 +2603,6 @@
       "canonicalPath": "books_documents/the wealth of nations by adam smith.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2729,7 +2635,6 @@
       "canonicalPath": "books_documents/the works of edgar allan poe.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2762,7 +2667,6 @@
       "canonicalPath": "books_documents/the writings of thomas paine.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2795,7 +2699,6 @@
       "canonicalPath": "books_documents/ulysses by james joyce.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2828,7 +2731,6 @@
       "canonicalPath": "books_documents/walden, and on the duty of civil disobedience.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2861,7 +2763,6 @@
       "canonicalPath": "books_documents/white fang by jack london.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2894,7 +2795,6 @@
       "canonicalPath": "food-preparation/food/arkfile - wild game safety and preservation (2026-07).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2927,7 +2827,6 @@
       "canonicalPath": "food-preparation/food/beef slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2964,7 +2863,6 @@
       "canonicalPath": "food-preparation/food/camp life in the woods and the tricks of trapping and trap making by gibson.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -2997,7 +2895,6 @@
       "canonicalPath": "food-preparation/food/canning, freezing, storing garden produce.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3030,7 +2927,6 @@
       "canonicalPath": "food-preparation/food/canoe and camp cookery by seneca.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3063,7 +2959,6 @@
       "canonicalPath": "food-preparation/food/coffee - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3096,7 +2991,6 @@
       "canonicalPath": "food-preparation/food/deadfalls and snares by a. r. harding.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3129,7 +3023,6 @@
       "canonicalPath": "food-preparation/food/fifty years a hunter and trapper by e. n. woodcock.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3162,7 +3055,6 @@
       "canonicalPath": "food-preparation/food/home_canning_usda.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3193,7 +3085,6 @@
       "canonicalPath": "food-preparation/food/homebrew - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3226,7 +3117,6 @@
       "canonicalPath": "food-preparation/food/how to make sweet potato flour.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3259,7 +3149,6 @@
       "canonicalPath": "food-preparation/food/hunting with the bow & arrow.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3292,7 +3181,6 @@
       "canonicalPath": "food-preparation/food/lamb slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3329,7 +3217,6 @@
       "canonicalPath": "food-preparation/food/meat on the farm - butchering, curing, and keeping.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3360,7 +3247,6 @@
       "canonicalPath": "food-preparation/food/miss leslie's new cookery book by eliza leslie.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3393,7 +3279,6 @@
       "canonicalPath": "food-preparation/food/our edible toadstools and mushrooms and how to distinguish them by gibson.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3426,7 +3311,6 @@
       "canonicalPath": "food-preparation/food/pork slaughtering, cutting, preserving, and cooking on the farm by h. russell cross et al.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3463,7 +3347,6 @@
       "canonicalPath": "food-preparation/food/science in the kitchen by e. e. kellogg.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3496,7 +3379,6 @@
       "canonicalPath": "food-preparation/food/the theory and practice of archery.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3530,7 +3412,6 @@
       "canonicalPath": "food-preparation/food/usda - bison from farm to table.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3561,7 +3442,6 @@
       "canonicalPath": "food-preparation/food/usda - goat from farm to table.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3592,7 +3472,6 @@
       "canonicalPath": "food-preparation/food/usda fsis - chicken from farm to table (arkfile offline 2026-07).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3623,7 +3502,6 @@
       "canonicalPath": "food-preparation/food/usda fsis - duck and goose from farm to table (arkfile offline 2026-07).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3654,7 +3532,6 @@
       "canonicalPath": "food-preparation/food/usda fsis - fresh pork from farm to table (arkfile offline 2026-07).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3685,7 +3562,6 @@
       "canonicalPath": "food-preparation/food/usda fsis - lamb from farm to table (arkfile offline 2026-07).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3716,7 +3592,6 @@
       "canonicalPath": "food-preparation/food/usda fsis - turkey from farm to table (arkfile offline 2026-07).zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3747,7 +3622,6 @@
       "canonicalPath": "food-preparation/water/epa - emergency disinfection of drinking water (2017).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3778,7 +3652,6 @@
       "canonicalPath": "food-preparation/water/epa - giardia - fact sheet (2002).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3809,7 +3682,6 @@
       "canonicalPath": "food-preparation/water/rainwater harvesting for army installations  (2010).pdf",
       "type": "pdf",
       "managed": false,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3835,7 +3707,6 @@
       "canonicalPath": "general/encyclopedias/simple wikipedia.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3868,7 +3739,6 @@
       "canonicalPath": "general/encyclopedias/wikipedia - no images, august 2025.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3901,7 +3771,6 @@
       "canonicalPath": "general/encyclopedias/wikipedia - with images, august 2025.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3934,7 +3803,6 @@
       "canonicalPath": "general/encyclopedias/wikipedia_en_100_nopic_2026-04.zim",
       "type": "zim",
       "managed": false,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3960,7 +3828,6 @@
       "canonicalPath": "general/practical-skills/diy - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -3993,7 +3860,6 @@
       "canonicalPath": "general/practical-skills/electonics and electrical engineering - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4026,7 +3892,6 @@
       "canonicalPath": "general/practical-skills/gardening - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4059,7 +3924,6 @@
       "canonicalPath": "general/practical-skills/great outdoors - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4092,7 +3956,6 @@
       "canonicalPath": "general/practical-skills/ham radio - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4125,7 +3988,6 @@
       "canonicalPath": "general/practical-skills/motor vehicle mechanics - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4158,7 +4020,6 @@
       "canonicalPath": "general/practical-skills/woodworking - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4191,7 +4052,6 @@
       "canonicalPath": "general/survival/atp 3-50.21 - survival (2018).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4222,7 +4082,6 @@
       "canonicalPath": "general/survival/fm 21-26 map reading and land navigation (1993).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4253,7 +4112,6 @@
       "canonicalPath": "general/survival/fm 21-60 visual signals (1987).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4284,7 +4142,6 @@
       "canonicalPath": "general/survival/fm 21-76-1 survival evasion and recovery (1999).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4317,7 +4174,6 @@
       "canonicalPath": "general/survival/fm 3-97.6  mountain operations manual (2000).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4348,7 +4204,6 @@
       "canonicalPath": "general/survival/fm 34-52 intelligence interrogation (1992).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4379,7 +4234,6 @@
       "canonicalPath": "general/survival/fm 4-25.11  first aid (2002).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4410,7 +4264,6 @@
       "canonicalPath": "general/survival/fm 5-426  carpentry (1995).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4441,7 +4294,6 @@
       "canonicalPath": "general/survival/in time of emergency by united states. office of civil defense.zip",
       "type": "htmlbook",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4474,7 +4326,6 @@
       "canonicalPath": "general/survival/navy marine corps sere handbook (1999).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4505,7 +4356,6 @@
       "canonicalPath": "general/survival/usmc combat water survival (2003).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4536,7 +4386,6 @@
       "canonicalPath": "general/survival/usmc summer survival course (2002).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4567,7 +4416,6 @@
       "canonicalPath": "general/survival/usmc winter survival course (2002).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4598,7 +4446,6 @@
       "canonicalPath": "maps/regions/alaska-hawaii/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4653,7 +4500,6 @@
       "canonicalPath": "maps/regions/california/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4708,7 +4554,6 @@
       "canonicalPath": "maps/regions/florida-gulf/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4763,7 +4608,6 @@
       "canonicalPath": "maps/regions/great-lakes/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4818,7 +4662,6 @@
       "canonicalPath": "maps/regions/mid-atlantic/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4873,7 +4716,6 @@
       "canonicalPath": "maps/regions/mountain-west/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4928,7 +4770,6 @@
       "canonicalPath": "maps/regions/northeast/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -4983,7 +4824,6 @@
       "canonicalPath": "maps/regions/pacific-northwest/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5038,7 +4878,6 @@
       "canonicalPath": "maps/regions/plains/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5093,7 +4932,6 @@
       "canonicalPath": "maps/regions/southeast/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5148,7 +4986,6 @@
       "canonicalPath": "maps/regions/southwest/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5203,7 +5040,6 @@
       "canonicalPath": "maps/regions/texas-south-central/region.pmtiles",
       "type": "map",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5258,7 +5094,6 @@
       "canonicalPath": "medical/field-guides/atp 4-02.11 - casualty response and first aid (2026).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5289,7 +5124,6 @@
       "canonicalPath": "medical/field-guides/breastfeeding guide.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5320,7 +5154,6 @@
       "canonicalPath": "medical/field-guides/fema cert basic training participant manual (2019).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5351,7 +5184,6 @@
       "canonicalPath": "medical/field-guides/infant feeding guide.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5382,7 +5214,6 @@
       "canonicalPath": "medical/reference/atp 4-02.83 - treatment of nuclear and radiological casualties (2014).pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "green",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5413,7 +5244,6 @@
       "canonicalPath": "medical/reference/emergency childbirth by us office of civil defense.zip",
       "type": "htmlbook",
       "managed": false,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5439,7 +5269,6 @@
       "canonicalPath": "medical/reference/medical sciences - stack exchange.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5472,7 +5301,6 @@
       "canonicalPath": "medical/reference/wikimed - sept 2025.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5505,7 +5333,6 @@
       "canonicalPath": "travel/guides/wikivoyage - dec 2025.zim",
       "type": "zim",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5538,7 +5365,6 @@
       "canonicalPath": "travel/maps-alaska/aleutian islands.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5569,7 +5395,6 @@
       "canonicalPath": "travel/maps-alaska/central alaska.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5600,7 +5425,6 @@
       "canonicalPath": "travel/maps-alaska/northern alaska.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5631,7 +5455,6 @@
       "canonicalPath": "travel/maps-alaska/southeastern alaska.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5662,7 +5485,6 @@
       "canonicalPath": "travel/maps-alaska/southwestern alaska.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5693,7 +5515,6 @@
       "canonicalPath": "travel/maps-east/florida.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5724,7 +5545,6 @@
       "canonicalPath": "travel/maps-east/middle atlantic states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5755,7 +5575,6 @@
       "canonicalPath": "travel/maps-east/northeastern states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5786,7 +5605,6 @@
       "canonicalPath": "travel/maps-east/southeastern states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5817,7 +5635,6 @@
       "canonicalPath": "travel/maps-hawaii/hawaiian islands.jpg",
       "type": "image",
       "managed": false,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5843,7 +5660,6 @@
       "canonicalPath": "travel/maps-midwest/central mississippi valley states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5874,7 +5690,6 @@
       "canonicalPath": "travel/maps-midwest/northern great lakes states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5905,7 +5720,6 @@
       "canonicalPath": "travel/maps-midwest/southern mississippi valley states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5936,7 +5750,6 @@
       "canonicalPath": "travel/maps-national/national atlas 2003 - united states general reference.pdf",
       "type": "pdf",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5967,7 +5780,6 @@
       "canonicalPath": "travel/maps-national/united states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -5998,7 +5810,6 @@
       "canonicalPath": "travel/maps-plains/central plains states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6029,7 +5840,6 @@
       "canonicalPath": "travel/maps-plains/northern plains states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6060,7 +5870,6 @@
       "canonicalPath": "travel/maps-plains/southern plains states .jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6091,7 +5900,6 @@
       "canonicalPath": "travel/maps-urban/urban areas - atlanta, boston, buffalo, chicago, cincinatti, cleveland, detroit, miami, milwaukee, new orleans and pittsburgh.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6122,7 +5930,6 @@
       "canonicalPath": "travel/maps-urban/urban areas - dallas, denver, houston, kansas, los angeles, minneapolis, san francisco, san diego and st. louis.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6153,7 +5960,6 @@
       "canonicalPath": "travel/maps-urban/urban areas - new york and washington d.c..jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6184,7 +5990,6 @@
       "canonicalPath": "travel/maps-west/arizona and new mexico.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6215,7 +6020,6 @@
       "canonicalPath": "travel/maps-west/central pacific states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6246,7 +6050,6 @@
       "canonicalPath": "travel/maps-west/northwestern states.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6277,7 +6080,6 @@
       "canonicalPath": "travel/maps-west/southern california.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {
@@ -6308,7 +6110,6 @@
       "canonicalPath": "travel/maps-west/southern texas.jpg",
       "type": "image",
       "managed": true,
-      "evidenceStatus": "yellow",
       "disposition": "allow",
       "acceptedIdentities": [
         {

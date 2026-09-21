@@ -98,6 +98,55 @@ actor ArkFileContentAPI {
         return url
     }
 
+    func contentPublication() async throws -> Data {
+        try await publicReleaseData(leaf: "publication", query: [.init(name: "channel", value: "stable")])
+    }
+
+    func contentRelease(_ binding: ArkFileContentReleaseBinding) async throws -> Data {
+        try await publicReleaseData(leaf: "release", query: bindingQuery(binding))
+    }
+
+    func releaseFileURL(_ file: ArkFileContentRelease.File,
+                        binding: ArkFileContentReleaseBinding) throws -> URL {
+        try releaseURL(leaf: "file", query: bindingQuery(binding) + [.init(name: "fileID", value: file.fileID)])
+    }
+
+    /// HEAD proves the pinned edition is still deliverable before delete-first.
+    func preflightReleaseFile(_ file: ArkFileContentRelease.File,
+                              binding: ArkFileContentReleaseBinding,
+                              authorization: ArkFileContentAuthorization) async throws {
+        var request = URLRequest(url: try releaseFileURL(file, binding: binding), timeoutInterval: 30)
+        request.httpMethod = "HEAD"
+        authorization.headers.forEach { request.setValue($1, forHTTPHeaderField: $0) }
+        let (_, response) = try await urlSession.data(for: request)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200,
+              http.expectedContentLength == file.sizeBytes else {
+            throw ArkFileContentReleaseError.releaseUnavailable
+        }
+    }
+
+    private func bindingQuery(_ binding: ArkFileContentReleaseBinding) -> [URLQueryItem] {
+        [.init(name: "releaseID", value: binding.releaseID), .init(name: "releaseSHA256", value: binding.releaseSHA256)]
+    }
+    private func releaseURL(leaf: String, query: [URLQueryItem]) throws -> URL {
+        var components = URLComponents(url: siteURL.appendingPathComponent("api/content/v2/" + leaf),
+                                       resolvingAgainstBaseURL: false)
+        components?.queryItems = query
+        guard let url = components?.url else { throw ArkFileContentError.invalidSiteURL }
+        return url
+    }
+    private func publicReleaseData(leaf: String, query: [URLQueryItem]) async throws -> Data {
+        let url = try releaseURL(leaf: leaf, query: query)
+        var request = URLRequest(url: url, timeoutInterval: 30)
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        let (data, response) = try await urlSession.data(for: request)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200,
+              data.count <= ArkFileContentReleaseVerifier.maximumPayloadBytes * 2 else {
+            throw ArkFileContentReleaseError.releaseUnavailable
+        }
+        return data
+    }
+
     private func requestData(url: URL, authorization: ArkFileContentAuthorization) async throws -> Data {
         var request = URLRequest(url: url, timeoutInterval: 30)
         authorization.headers.forEach { key, value in
@@ -198,7 +247,10 @@ actor ArkFileContentAPI {
             return false
         }
         switch url.path {
-        case "/api/content/v1/request-download",
+        case "/api/content/v2/file",
+             "/api/storekit/ios-content-access-v2",
+             "/api/storekit/testflight-ios-content-access-v2",
+             "/api/content/v1/request-download",
              "/api/content/v1/package-manifest",
              "/api/content/v1/package-file",
              "/api/storekit/ios-content-access",

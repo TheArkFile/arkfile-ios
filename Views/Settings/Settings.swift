@@ -177,6 +177,14 @@ struct Settings: View {
         Group {
             ScrollViewReader { proxy in
                 List {
+                    Section("Offline Content") {
+                        NavigationLink {
+                            ArkFileContentUpdatesView()
+                        } label: {
+                            Label("Content Updates & Editions", systemImage: "arrow.down.circle")
+                        }
+                        .accessibilityIdentifier("arkfile_settings_content_updates")
+                    }
                     if FeatureFlags.hasLibrary {
                         readingSettings
                         if FeatureFlags.hasCatalog {
@@ -197,10 +205,16 @@ struct Settings: View {
                             )
                         }
                         hotspot.id("hotspot")
+                        if ArkFileAdMeasurement.shared.isConfigured {
+                            ArkFileAdMeasurementSettingsSection()
+                        }
                         miscellaneous
                     } else {
                         readingSettings
                         hotspot.id("hotspot")
+                        if ArkFileAdMeasurement.shared.isConfigured {
+                            ArkFileAdMeasurementSettingsSection()
+                        }
                         miscellaneous
                     }
                 }

@@ -838,10 +838,7 @@ final class ArkFileContentBackgroundDownloadRecordStore: @unchecked Sendable {
         _ record: ArkFileContentBackgroundDownloadRecord,
         downloadRoot: URL
     ) -> Bool {
-        guard let tier = ArkFileContentTier.iOSInstallableTier(
-            named: record.manifest.tier
-        ),
-        (try? record.manifest.validateForInstall(tier: tier)) != nil,
+        guard ArkFileContentReleaseResumeValidation.accepts(record),
         record.manifest.files.contains(record.entry),
         record.id.lowercased()
             == ArkFileContentBackgroundDownloadRecord.id(for: record.entry).lowercased(),
@@ -2365,7 +2362,7 @@ final class ArkFileContentBackgroundDownloadService {
         #endif
         return scheme == "https"
             && ArkFileContentAPI.isAllowed(host: host)
-            && url.path == "/api/content/v1/package-file"
+            && ["/api/content/v1/package-file", "/api/content/v2/file"].contains(url.path)
     }
 
     nonisolated static func authorizedRedirectRequest(
@@ -2378,7 +2375,9 @@ final class ArkFileContentBackgroundDownloadService {
               isAuthorizedContentSourceURL(proposedURL),
               originalURL.scheme?.lowercased() == proposedURL.scheme?.lowercased(),
               originalURL.host?.lowercased() == proposedURL.host?.lowercased(),
-              originalURL.port == proposedURL.port else {
+              originalURL.port == proposedURL.port,
+              originalURL.path == proposedURL.path,
+              (originalURL.path != "/api/content/v2/file" || originalURL.query == proposedURL.query) else {
             return nil
         }
         return proposedRequest
@@ -2919,10 +2918,7 @@ final class ArkFileContentBackgroundDownloadService {
             $0.phase == .scheduled || $0.phase == .downloading
         }
         guard let firstRecord = activeRecords.first,
-              let tier = ArkFileContentTier.iOSInstallableTier(
-                  named: firstRecord.manifest.tier
-              ),
-              (try? firstRecord.manifest.validateForInstall(tier: tier)) != nil,
+              ArkFileContentReleaseResumeValidation.accepts(firstRecord, allowInactive: false),
               let owners = selectedRecordOwners(
                   for: firstRecord.manifest,
                   downloadRoot: downloadRoot
@@ -2934,7 +2930,8 @@ final class ArkFileContentBackgroundDownloadService {
         var activeRecordIDs = Set<String>()
         var activeDestinationPaths = Set<String>()
         for record in activeRecords {
-            guard selectedRecordOwners(
+            guard ArkFileContentReleaseResumeValidation.accepts(record, allowInactive: false),
+            selectedRecordOwners(
                 for: record.manifest,
                 downloadRoot: downloadRoot
             ) == owners,

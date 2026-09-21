@@ -13,8 +13,7 @@ corresponding source, build inputs, notices, and relink material; it is bound to
 the source lock, build manifest, SPDX SBOM, and object map. For external
 TestFlight or App Store distribution, that archive is published once per exact
 native build in TheArkFile/arkfile-ios and recorded by URL and SHA-256 in each
-matching app source release. This engineering inventory does not claim owner or
-counsel approval of legal sufficiency.
+matching app source release.
 
 The ArkFile app and its Kiwix-derived application code are distributed under
 the GNU General Public License version 3 or later. The complete GPL version 3

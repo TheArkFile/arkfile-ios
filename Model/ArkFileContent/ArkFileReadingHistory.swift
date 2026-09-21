@@ -144,9 +144,7 @@ final class ArkFileReadingHistory: ObservableObject {
         entries.filter { entry in
             guard entry.contentType != .map,
                   entry.contentType != .zim || entry.hasUsableZIMArticleRoute,
-                  let item = items.first(where: {
-                      $0.relativePath == entry.relativePath && $0.type == entry.contentType
-                  }) else {
+                  let item = ArkFileSavedContentIdentity.item(for: entry, in: items) else {
                 return false
             }
             return Self.isCurrentlyAvailable(item)

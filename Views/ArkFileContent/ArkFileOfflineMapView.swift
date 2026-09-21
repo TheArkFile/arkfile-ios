@@ -71,7 +71,7 @@ enum ArkFileMapOverlayBudget {
 enum ArkFileMapLocationAccessAction: Hashable {
     case acquireLiveUpdates
     case releaseLiveUpdates
-    case stopAndSaveRecording
+    case interruptRecording
 }
 
 enum ArkFileMapLocationAccessPolicy {
@@ -84,7 +84,7 @@ enum ArkFileMapLocationAccessPolicy {
         var actions: Set<ArkFileMapLocationAccessAction> = []
         if isAccessBlocked {
             if isRecording {
-                actions.insert(.stopAndSaveRecording)
+                actions.insert(.interruptRecording)
             }
             if ownsLiveUpdateRequest {
                 actions.insert(.releaseLiveUpdates)
@@ -303,6 +303,7 @@ struct ArkFileOfflineMapView: View {
     let onSelectCoordinate: ((ArkFileMapCoordinate) -> Void)?
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
     @State private var managedContentReadToken: ArkFileManagedContentReaderToken?
     @State private var resources: ArkFileOfflineMapResources
     @State private var regionIndex: ArkFileMapRegionIndex?
@@ -338,6 +339,7 @@ struct ArkFileOfflineMapView: View {
     @State private var measurePoints: [ArkFileMapCoordinate] = []
     @StateObject private var trackRecorder = ArkFileMapTrackRecorder.shared
     @State private var isNamingTrack = false
+    @State private var showsTrailUnavailable = false
     @State private var pendingTrackName = ""
     @State private var selectedTrackIDs: Set<String> = []
     @State private var isAddingCoordinateWaypoint = false
@@ -454,6 +456,7 @@ struct ArkFileOfflineMapView: View {
                 }
             }
             .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16))
+            if trackRecorder.showsRecordingStatus { recordingPill }
             topContextualPill
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -526,7 +529,7 @@ struct ArkFileOfflineMapView: View {
                     measurePoints: measurePoints,
                     showsUserLocation: isMapVisible && !isCoordinateSelectionMode
                         && !trackRecorder.isAuthorizationDenied,
-                    activeTrackPoints: !isCoordinateSelectionMode && trackRecorder.isRecording
+                    activeTrackPoints: !isCoordinateSelectionMode && trackRecorder.hasDraft
                         ? trackRecorder.activePoints
                         : [],
                     selectedTracks: isCoordinateSelectionMode ? [] : selectedTracks,
@@ -583,7 +586,7 @@ struct ArkFileOfflineMapView: View {
             if !isShowingMapPacks, !isAccessBlocked, !isCoordinateSelectionMode {
                 mapStatusOverlay
             } else if !isShowingMapPacks, isAccessBlocked, !isCoordinateSelectionMode,
-                      trackRecorder.isRecording {
+                      trackRecorder.showsRecordingStatus {
                 recordingPill
                     .padding(.horizontal, 14)
                     .padding(.top, 10)
@@ -654,6 +657,11 @@ struct ArkFileOfflineMapView: View {
             // for the title and dismissal even on a narrow iPhone.
             ToolbarItemGroup(placement: .primaryAction) {
                 if !isCoordinateSelectionMode {
+                    Button(action: handleTrailAction) {
+                        Label(trailActionTitle, systemImage: trackRecorder.isSessionActive ? "stop.circle.fill" : "record.circle")
+                    }
+                    .labelStyle(.titleAndIcon)
+                    .accessibilityIdentifier("arkfile_map_trail_action")
                     Menu {
                         Button {
                             isShowingWaypointList = true
@@ -695,20 +703,9 @@ struct ArkFileOfflineMapView: View {
                             )
                         }
                         .disabled(isAccessBlocked || !resources.hasVectorMap)
-                        Button {
-                            if trackRecorder.isRecording {
-                                pendingTrackName = ""
-                                isNamingTrack = true
-                            } else {
-                                trackRecorder.startRecording()
-                            }
-                        } label: {
-                            Label(
-                                trackRecorder.isRecording ? "Stop Trail" : "Record Trail",
-                                systemImage: trackRecorder.isRecording ? "stop.circle.fill" : "record.circle"
-                            )
+                        Button(action: handleTrailAction) {
+                            Label(trailActionTitle, systemImage: trackRecorder.isSessionActive ? "stop.circle.fill" : "record.circle")
                         }
-                        .disabled((isAccessBlocked || !resources.hasVectorMap) && !trackRecorder.isRecording)
                     } label: {
                         Label("More Map Tools", systemImage: "ellipsis.circle")
                     }
@@ -748,14 +745,25 @@ struct ArkFileOfflineMapView: View {
         .alert("Save Trail", isPresented: $isNamingTrack) {
             TextField("Name (e.g. Route to camp)", text: $pendingTrackName)
             Button("Save Trail") {
-                trackRecorder.stopRecordingAndSave(name: pendingTrackName)
+                if trackRecorder.stopRecordingAndSave(name: pendingTrackName) {
+                    if let saved = trackRecorder.savedTracks.first { selectedTrackIDs.insert(saved.id) }
+                    mapNotice = "Trail saved on this device. Find it under Waypoints & Trails."
+                }
             }
+            .disabled(!trackRecorder.canSaveDraft)
             Button("Discard", role: .destructive) {
                 trackRecorder.discardRecording()
             }
-            Button("Keep Recording", role: .cancel) {}
+            Button("Keep Draft", role: .cancel) {}
         } message: {
-            Text("Saved trails stay on this device and can be viewed on the map anytime.")
+            Text("Location recording is stopped. Saved trails stay on this device. You can keep up to 20 trails; no older trail is deleted automatically.")
+        }
+        .alert("Trail recording unavailable", isPresented: $showsTrailUnavailable) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(isAccessBlocked
+                ? "The map is temporarily unavailable while local content is being updated or repaired. Wait for it to reopen before recording a trail."
+                : "A usable offline map is needed to record a trail. Open Map Downloads to check or repair the map.")
         }
         .sheet(isPresented: $isAddingCoordinateWaypoint, onDismiss: presentPendingGPXAction) {
             ArkFileCoordinateWaypointSheet { name, coordinate, kind in
@@ -1229,7 +1237,7 @@ struct ArkFileOfflineMapView: View {
             hasError: mapError != nil,
             hasNotice: mapNotice != nil,
             isMeasuring: isMeasuring,
-            isRecording: trackRecorder.isRecording,
+            isRecording: false, // The trail panel remains visible independently of notices.
             hasCriticalPlacesHint: criticalPlacesHintMessage != nil,
             isCriticalPlacesStoreAvailable: placesController.isStoreAvailable
         )
@@ -1865,21 +1873,48 @@ struct ArkFileOfflineMapView: View {
         )
     }
 
+    private var trailActionTitle: String {
+        trackRecorder.isSessionActive ? "Stop Trail" : trackRecorder.hasDraft ? "Save Trail" : "Record Trail"
+    }
+
+    private func handleTrailAction() {
+        if trackRecorder.hasDraft {
+            trackRecorder.stopRecording()
+            pendingTrackName = ""
+            isNamingTrack = true
+        } else if isAccessBlocked || !resources.hasVectorMap {
+            showsTrailUnavailable = true
+        } else {
+            trackRecorder.startRecording()
+        }
+    }
+
     private var recordingPill: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(spacing: 8) {
-                Image(systemName: "record.circle")
-                    .foregroundStyle(.red)
-                Text(recordingSummary)
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                Spacer(minLength: 0)
-            }
-            if let backToStart = trackRecorder.backToStartSummary {
-                Text(backToStart)
+        VStack(alignment: .leading, spacing: 6) {
+            Label(recordingSummary, systemImage: trackRecorder.isRecording ? "record.circle" : "location.circle")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(trackRecorder.isRecording ? Color.red : Color.arkTextPrimary)
+                .accessibilityIdentifier("arkfile_map_trail_status")
+            if let message = trackRecorder.statusMessage {
+                Text(message)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
+            if let error = trackRecorder.persistenceError {
+                Text(error)
+                    .font(.caption2.weight(.semibold))
+                    .foregroundStyle(Color.red)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            if trackRecorder.isRecording, let backToStart = trackRecorder.backToStartSummary {
+                Text(backToStart).font(.caption2)
+            }
+            ViewThatFits(in: .horizontal) {
+                HStack { recordingActions }
+                VStack(alignment: .leading) { recordingActions }
+            }
+            .font(.caption.weight(.semibold))
+            .buttonStyle(.bordered)
         }
         .foregroundStyle(Color.arkTextPrimary)
         .padding(.horizontal, 12)
@@ -1887,11 +1922,30 @@ struct ArkFileOfflineMapView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 8, style: .continuous)
-                .stroke(Color.red.opacity(0.4), lineWidth: 1)
+    }
+
+    @ViewBuilder
+    private var recordingActions: some View {
+        if trackRecorder.isSessionActive {
+            Button("Stop Trail", action: handleTrailAction)
+                .accessibilityIdentifier("arkfile_map_stop_trail")
+        } else if trackRecorder.hasDraft {
+            Button("Save Trail", action: handleTrailAction)
+                .disabled(!trackRecorder.canSaveDraft)
+                .accessibilityIdentifier("arkfile_map_save_trail")
+            Button("Discard", role: .destructive) {
+                pendingTrackName = ""
+                isNamingTrack = true
+            }
+            .accessibilityIdentifier("arkfile_map_discard_trail")
+        } else {
+            Button("Dismiss") { trackRecorder.dismissStatus() }
         }
-        .accessibilityLabel("Recording trail. \(recordingSummary)")
+        if trackRecorder.isAuthorizationDenied || trackRecorder.recordingState == .locating {
+            Button("Location Settings") {
+                if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+            }
+        }
     }
 
     private var recordingSummary: String {
@@ -1899,7 +1953,7 @@ struct ArkFileOfflineMapView: View {
         let distanceText = miles < 0.19
             ? String(format: "%.0f ft", trackRecorder.activeDistanceMeters * 3.28084)
             : String(format: "%.1f mi", miles)
-        return "Recording trail · \(distanceText) · \(trackRecorder.activePoints.count) points"
+        return "\(trackRecorder.recordingState.title) · \(distanceText) · \(trackRecorder.activePoints.count) points"
     }
 
     private var measureSummary: String {
@@ -2033,11 +2087,13 @@ struct ArkFileOfflineMapView: View {
             isAccessBlocked: isAccessBlocked,
             isMapVisible: isMapVisible && !isShowingMapPacks,
             ownsLiveUpdateRequest: ownsLiveUpdateRequest,
-            isRecording: trackRecorder.isRecording
+            isRecording: trackRecorder.isSessionActive
         )
-        if actions.contains(.stopAndSaveRecording) {
+        if actions.contains(.interruptRecording) {
             isNamingTrack = false
-            trackRecorder.stopRecordingAndSave(name: "")
+            trackRecorder.interruptRecording(
+                message: "The map became unavailable while local content was changing. Location recording stopped; your trail draft is kept for you to save or discard."
+            )
         }
         if actions.contains(.releaseLiveUpdates) {
             ownsLiveUpdateRequest = false

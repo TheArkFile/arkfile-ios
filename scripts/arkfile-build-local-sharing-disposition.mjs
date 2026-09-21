@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
+import { catalogRuntimeIdentity } from './arkfile-public-runtime-metadata.mjs';
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(SCRIPT_DIR, '..');
@@ -26,6 +27,8 @@ const DEFAULT_OWNER_ACCEPTANCE_PATH = path.join(
   'ReleaseInputs',
   'local-sharing-owner-acceptance.json',
 );
+const DEFAULT_APPROVED_CATALOG_PATH = path.join(ROOT_DIR, 'ReleaseInputs/local-sharing-approved-catalog.json');
+const DEFAULT_PRIVATE_RECEIPT_PATH = path.join(ROOT_DIR, 'ReleaseInputs', 'local-sharing-projection-receipt.json');
 const DEFAULT_PUBLIC_NOTICES_PATH = path.join(
   ROOT_DIR, 'Support', 'ArkFileLocalSharing', 'local-sharing-public-notices.json',
 );
@@ -128,6 +131,8 @@ function parseArgs(argv) {
     sampleEvidence: '',
     sampleRoot: '',
     ownerAcceptance: '',
+    privateReceipt: DEFAULT_PRIVATE_RECEIPT_PATH,
+    approvalCatalog: DEFAULT_APPROVED_CATALOG_PATH,
     publicLicenseIndex: DEFAULT_PUBLIC_LICENSE_INDEX_PATH,
     output: DEFAULT_OUTPUT_PATH,
   };
@@ -143,6 +148,8 @@ function parseArgs(argv) {
     ['--sample-evidence', 'sampleEvidence'],
     ['--sample-root', 'sampleRoot'],
     ['--owner-acceptance', 'ownerAcceptance'],
+    ['--private-receipt', 'privateReceipt'],
+    ['--approval-catalog', 'approvalCatalog'],
     ['--public-license-index', 'publicLicenseIndex'],
     ['--public-notices', 'publicNotices'],
     ['--output', 'output'],
@@ -940,7 +947,7 @@ function buildProjection({
   };
   projection.projectionHash = projectionHashFor(projection);
 
-  const errors = validateProjection(projection, {
+  const errors = validateLegacyProjection(projection, {
     catalog,
     ownerAcceptance,
     publicLicenseIndex,
@@ -1160,17 +1167,18 @@ function validateBundledSampleRoot(
   return errors;
 }
 
-function validateProjection(projection, options = {}) {
+function validateLegacyProjection(projection, options = {}) {
   const errors = [];
+  const runtime = options.runtimeOnly === true;
   const entries = Array.isArray(projection?.entries) ? projection.entries : [];
-  onlyKeys(projection, ['schemaVersion', 'policyVersion', 'projectionHash', 'ownerAcceptance', 'source', 'coverage', 'entries'], 'projection', errors);
-  onlyKeys(projection?.ownerAcceptance, ['id', 'acceptedAt', 'acceptedArtifactCount', 'acceptedIdentityCount', 'acceptedArtifactSetSHA256'], 'projection ownerAcceptance', errors);
-  onlyKeys(projection?.source, ['catalogSHA256', 'ledgerVersion', 'ledgerSHA256', 'currentManifestSHA256s', 'retainedManifestSHA256s', 'sampleEvidenceSHA256', 'manifests'], 'projection source', errors);
-  onlyKeys(projection?.coverage, ['managedCatalogEntries', 'bundledSampleEntries', 'greenManagedEntries', 'ownerAcceptedYellowManagedEntries', 'ownerAcceptedYellowBundledSamples', 'ownerAcceptedYellowEntries', 'allowedEntries'], 'projection coverage', errors);
+  onlyKeys(projection, ['schemaVersion', 'policyVersion', 'projectionHash', ...(!runtime ? ['ownerAcceptance'] : []), 'source', 'coverage', 'entries'], 'projection', errors);
+  if (!runtime) onlyKeys(projection?.ownerAcceptance, ['id', 'acceptedAt', 'acceptedArtifactCount', 'acceptedIdentityCount', 'acceptedArtifactSetSHA256'], 'projection ownerAcceptance', errors);
+  onlyKeys(projection?.source, ['catalogSHA256', ...(!runtime ? ['ledgerVersion', 'ledgerSHA256', 'sampleEvidenceSHA256'] : []), 'currentManifestSHA256s', 'retainedManifestSHA256s', 'manifests'], 'projection source', errors);
+  onlyKeys(projection?.coverage, ['managedCatalogEntries', 'bundledSampleEntries', ...(!runtime ? ['greenManagedEntries', 'ownerAcceptedYellowManagedEntries', 'ownerAcceptedYellowBundledSamples', 'ownerAcceptedYellowEntries'] : []), 'allowedEntries'], 'projection coverage', errors);
   for (const manifest of projection?.source?.manifests || []) {
     onlyKeys(manifest, ['id', 'role', 'variant', 'tier', 'sourceEdition', 'generatedAt', 'sha256', 'semanticFingerprint'], 'projection manifest', errors);
   }
-  if (projection?.schemaVersion !== 1) errors.push('projection schemaVersion must be 1');
+  if (projection?.schemaVersion !== (runtime ? 2 : 1)) errors.push(`projection schemaVersion must be ${runtime ? 2 : 1}`);
   if (projection?.policyVersion !== POLICY_VERSION) {
     errors.push(`projection policyVersion must be ${POLICY_VERSION}`);
   }
@@ -1184,7 +1192,7 @@ function validateProjection(projection, options = {}) {
   const contentIDs = new Set();
   const canonicalPaths = new Set();
   for (const entry of entries) {
-    onlyKeys(entry, ['contentId', 'displayName', 'relativePath', 'canonicalPath', 'type', 'managed', 'evidenceStatus', 'disposition', 'blockReason', 'acceptedIdentities', 'compatibilityGroupMembers', 'receiverNotice'], 'projection entry', errors);
+    onlyKeys(entry, ['contentId', 'displayName', 'relativePath', 'canonicalPath', 'type', 'managed', ...(!runtime ? ['evidenceStatus'] : []), 'disposition', 'blockReason', 'acceptedIdentities', 'compatibilityGroupMembers', 'receiverNotice'], 'projection entry', errors);
     for (const identity of entry.acceptedIdentities || []) {
       onlyKeys(identity, ['sizeBytes', 'sha256', 'manifestIDs'], 'accepted identity', errors);
     }
@@ -1205,7 +1213,7 @@ function validateProjection(projection, options = {}) {
     canonicalPaths.add(entry.canonicalPath);
     if (!ALLOWED_TYPES.has(entry.type)) errors.push(`invalid type for ${entry.relativePath}`);
     if (typeof entry.managed !== 'boolean') errors.push(`managed must be boolean for ${entry.relativePath}`);
-    if (!EVIDENCE_STATUSES.has(entry.evidenceStatus)) {
+    if (!runtime && !EVIDENCE_STATUSES.has(entry.evidenceStatus)) {
       errors.push(`invalid evidenceStatus for ${entry.relativePath}`);
     }
     if (!DISPOSITIONS.has(entry.disposition)) {
@@ -1327,7 +1335,7 @@ function validateProjection(projection, options = {}) {
       publicMap = new Map();
     }
     const projectedGreen = entries.filter(
-      (entry) => entry.managed && entry.evidenceStatus === 'green',
+      (entry) => entry.managed && (runtime ? publicMap.has(entry.canonicalPath) : entry.evidenceStatus === 'green'),
     );
     if (projectedGreen.length !== publicMap.size) {
       errors.push(
@@ -1353,6 +1361,7 @@ function validateProjection(projection, options = {}) {
     }
   }
 
+  if (!runtime) {
   const binding = acceptedArtifactBinding(entries);
   for (const field of [
     'acceptedArtifactCount',
@@ -1377,6 +1386,7 @@ function validateProjection(projection, options = {}) {
     }
   }
 
+  }
   const managed = entries.filter((entry) => entry.managed);
   const samples = entries.filter((entry) => !entry.managed);
   if (options.sampleRoot !== undefined) {
@@ -1387,6 +1397,7 @@ function validateProjection(projection, options = {}) {
   const expectedCoverage = {
     managedCatalogEntries: managed.length,
     bundledSampleEntries: samples.length,
+    ...(!runtime ? {
     greenManagedEntries: managed.filter((entry) => entry.evidenceStatus === 'green').length,
     ownerAcceptedYellowManagedEntries: managed.filter(
       (entry) => entry.evidenceStatus === 'yellow',
@@ -1397,6 +1408,7 @@ function validateProjection(projection, options = {}) {
     ownerAcceptedYellowEntries: entries.filter(
       (entry) => entry.evidenceStatus === 'yellow',
     ).length,
+    } : {}),
     allowedEntries: entries.filter((entry) => entry.disposition === 'allow').length,
   };
   for (const [field, expected] of Object.entries(expectedCoverage)) {
@@ -1408,9 +1420,9 @@ function validateProjection(projection, options = {}) {
   const source = projection?.source || {};
   if (
     !SHA256_PATTERN.test(source.catalogSHA256 || '')
-    || !SHA256_PATTERN.test(source.ledgerSHA256 || '')
-    || !SHA256_PATTERN.test(source.sampleEvidenceSHA256 || '')
-    || !source.ledgerVersion
+    || (!runtime && (!SHA256_PATTERN.test(source.ledgerSHA256 || '')
+      || !SHA256_PATTERN.test(source.sampleEvidenceSHA256 || '')
+      || !source.ledgerVersion))
   ) {
     errors.push('projection source bindings are incomplete');
   }
@@ -1500,6 +1512,88 @@ function validateProjection(projection, options = {}) {
   return errors;
 }
 
+// Only this build-time receipt contains approval evidence. It never enters
+// Support/, the app bundle, or a public source export.
+function runtimeProjection(legacy, catalog) {
+  const projection = structuredClone(legacy);
+  projection.schemaVersion = 2;
+  delete projection.ownerAcceptance;
+  for (const key of ['ledgerVersion', 'ledgerSHA256', 'sampleEvidenceSHA256']) delete projection.source[key];
+  projection.source.catalogSHA256 = sha256String(`${JSON.stringify(catalog, null, 2)}\n`);
+  projection.coverage = {
+    managedCatalogEntries: legacy.coverage.managedCatalogEntries,
+    bundledSampleEntries: legacy.coverage.bundledSampleEntries,
+    allowedEntries: legacy.coverage.allowedEntries,
+  };
+  for (const entry of projection.entries) delete entry.evidenceStatus;
+  projection.projectionHash = projectionHashFor(projection);
+  return projection;
+}
+
+function privateReceiptFor(legacy, projection, catalog, ownerAcceptance, approvedCatalog = catalog) {
+  const errors = validateOwnerAcceptanceRecord(ownerAcceptance, {
+    binding: acceptedArtifactBinding(legacy.entries), source: legacy.source,
+  });
+  if (errors.length) throw new Error(errors.join('; '));
+  if (legacy.projectionHash !== projectionHashFor(legacy)) throw new Error('legacy projection hash is stale');
+  if (stableStringify(projection) !== stableStringify(runtimeProjection(legacy, catalog))) throw new Error('runtime projection differs from the validated private source');
+  if (catalogRuntimeIdentity(approvedCatalog) !== catalogRuntimeIdentity(catalog)) throw new Error('runtime catalog differs from the owner-approved catalog');
+  if (sha256String(`${JSON.stringify(approvedCatalog, null, 2)}\n`) !== ownerAcceptance.sourceBinding.catalogSHA256) throw new Error('approved catalog bytes do not match owner acceptance');
+  const receipt = {
+    schemaVersion: 1,
+    projectionHash: projection.projectionHash,
+    projectionFileSHA256: sha256String(`${JSON.stringify(projection, null, 2)}\n`),
+    catalogRuntimeIdentitySHA256: catalogRuntimeIdentity(catalog),
+    ownerAcceptanceSHA256: sha256String(stableStringify(ownerAcceptance)),
+    ownerAcceptance: structuredClone(legacy.ownerAcceptance),
+    sourceBinding: structuredClone(ownerAcceptance.sourceBinding),
+    evidenceStatuses: Object.fromEntries(legacy.entries.map(entry => [entry.contentId, entry.evidenceStatus])),
+  };
+  receipt.receiptHash = sha256String(stableStringify(receipt));
+  return receipt;
+}
+
+function validatePrivateReceipt(projection, receipt, ownerAcceptance, catalog, approvedCatalog = catalog) {
+  const errors = [];
+  if (!receipt || receipt.schemaVersion !== 1) return ['private projection receipt is missing or unsupported'];
+  const {receiptHash, ...core} = receipt;
+  if (receiptHash !== sha256String(stableStringify(core))) errors.push('private receipt hash is stale');
+  if (receipt.projectionHash !== projection.projectionHash
+      || receipt.projectionFileSHA256 !== sha256String(`${JSON.stringify(projection, null, 2)}\n`)) {
+    errors.push('private receipt is bound to different public projection bytes');
+  }
+  if (!ownerAcceptance || receipt.ownerAcceptanceSHA256 !== sha256String(stableStringify(ownerAcceptance))) {
+    errors.push('private receipt owner acceptance record differs');
+  }
+  if (catalog && receipt.catalogRuntimeIdentitySHA256 !== catalogRuntimeIdentity(catalog)) {
+    errors.push('private receipt catalog runtime identity differs');
+  }
+  if (!approvedCatalog || sha256String(`${JSON.stringify(approvedCatalog, null, 2)}\n`) !== receipt.sourceBinding?.catalogSHA256
+      || catalogRuntimeIdentity(approvedCatalog) !== receipt.catalogRuntimeIdentitySHA256) {
+    errors.push('private receipt is not bound to the unchanged owner-approved catalog');
+  }
+  const entries = (projection.entries || []).map(entry => ({...entry, evidenceStatus: receipt.evidenceStatuses?.[entry.contentId]}));
+  if (Object.keys(receipt.evidenceStatuses || {}).length !== entries.length
+      || entries.some(entry => !EVIDENCE_STATUSES.has(entry.evidenceStatus))) {
+    errors.push('private receipt evidence set does not exactly match projection');
+  }
+  const binding = acceptedArtifactBinding(entries);
+  errors.push(...validateOwnerAcceptanceRecord(ownerAcceptance, {binding, source: receipt.sourceBinding || {}}));
+  for (const field of ['id', 'acceptedAt', 'acceptedArtifactCount', 'acceptedIdentityCount', 'acceptedArtifactSetSHA256']) {
+    if (receipt.ownerAcceptance?.[field] !== ownerAcceptance?.[field]) errors.push(`private receipt ownerAcceptance.${field} differs`);
+  }
+  return errors;
+}
+
+function validateProjection(projection, options = {}) {
+  const {ownerAcceptance, privateReceipt, approvedCatalog, ...publicOptions} = options;
+  const errors = validateLegacyProjection(projection, {...publicOptions, runtimeOnly: true});
+  if (ownerAcceptance || privateReceipt) {
+    errors.push(...validatePrivateReceipt(projection, privateReceipt, ownerAcceptance, options.catalog, approvedCatalog));
+  }
+  return errors;
+}
+
 function requireGenerationPaths(args) {
   const required = [
     ['catalog', '--catalog'],
@@ -1526,18 +1620,25 @@ function main() {
       const catalog = readRequired(args.catalog, 'Catalog');
       const ownerAcceptance = args.publicBuild
         ? undefined : readRequired(args.ownerAcceptance, 'Owner acceptance');
+      const privateReceipt = args.publicBuild ? undefined : readRequired(args.privateReceipt, 'Private projection receipt');
+      const approvedCatalog = args.publicBuild ? undefined :
+        (ownerAcceptance.sourceBinding.catalogSHA256 === sha256File(args.catalog)
+          ? catalog : readRequired(args.approvalCatalog, 'Owner-approved source catalog'));
       const publicLicenseIndex = readRequired(args.publicLicenseIndex, 'Public license index');
       const publicNotices = readRequired(args.publicNotices, 'Public receiver notices');
       const projection = readRequired(args.output, 'Disposition projection');
       const errors = validateProjection(projection, {
         catalog,
         ownerAcceptance,
+        privateReceipt,
+        approvedCatalog,
         publicLicenseIndex,
         publicNotices,
         catalogSHA256: sha256File(args.catalog),
         sampleRoot: args.sampleRoot,
         publicBuild: args.publicBuild,
       });
+      if (privateReceipt && privateReceipt.projectionFileSHA256 !== sha256File(args.output)) errors.push('private receipt differs from exact public projection file bytes');
       if (errors.length) throw new Error(errors.join('; '));
       log(
         `Validated ${projection.coverage.managedCatalogEntries} managed titles and `
@@ -1553,6 +1654,9 @@ function main() {
     const ledger = readRequired(args.ledger, 'Private ledger');
     const sampleEvidence = readRequired(args.sampleEvidence, 'Sample evidence');
     const ownerAcceptance = readRequired(args.ownerAcceptance, 'Owner acceptance');
+    const approvedCatalog = ownerAcceptance.sourceBinding.catalogSHA256 === sha256File(args.catalog)
+      ? catalog : readRequired(args.approvalCatalog, 'Owner-approved source catalog');
+    if (catalogRuntimeIdentity(approvedCatalog) !== catalogRuntimeIdentity(catalog)) throw new Error('runtime catalog differs from the owner-approved catalog');
     const publicLicenseIndex = readRequired(args.publicLicenseIndex, 'Public license index');
     const publicNotices = readRequired(args.publicNotices, 'Public receiver notices');
     const manifestSources = MANIFEST_SPECS.map((spec) => ({
@@ -1560,20 +1664,24 @@ function main() {
       manifest: readRequired(args[spec.argument], `Manifest ${spec.id}`),
       sha256: sha256File(args[spec.argument]),
     }));
-    const projection = buildProjection({
-      catalog,
+    const legacy = buildProjection({
+      catalog: approvedCatalog,
       ledger,
       ownerAcceptance,
       sampleEvidence,
       manifestSources,
       sourceHashes: {
-        catalogSHA256: sha256File(args.catalog),
+        catalogSHA256: sha256String(`${JSON.stringify(approvedCatalog, null, 2)}\n`),
         ledgerSHA256: sha256File(args.ledger),
         sampleEvidenceSHA256: sha256File(args.sampleEvidence),
       },
       publicLicenseIndex,
       publicNotices,
     });
+    const projection = runtimeProjection(legacy, catalog);
+    const receipt = privateReceiptFor(legacy, projection, catalog, ownerAcceptance, approvedCatalog);
+    fs.mkdirSync(path.dirname(args.privateReceipt), { recursive: true });
+    fs.writeFileSync(args.privateReceipt, `${JSON.stringify(receipt, null, 2)}\n`, 'utf8');
     fs.mkdirSync(path.dirname(args.output), { recursive: true });
     fs.writeFileSync(args.output, `${JSON.stringify(projection, null, 2)}\n`, 'utf8');
     log(
@@ -1592,6 +1700,10 @@ if (process.argv[1] && fs.existsSync(process.argv[1])
 }
 
 export {
+  runtimeProjection,
+  privateReceiptFor,
+  validatePrivateReceipt,
+  validateLegacyProjection,
   POLICY_VERSION,
   MANIFEST_SPECS,
   acceptedArtifactBinding,

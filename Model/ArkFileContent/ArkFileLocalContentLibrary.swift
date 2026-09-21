@@ -1514,6 +1514,7 @@ final class ArkFileLocalContentLibrary: ObservableObject {
     }
 
     nonisolated private static func loadBundledCatalog() -> ArkFileContentCatalog? {
+        if let catalog = ArkFileContentReleaseProvider.shared.discoveryCatalog { return catalog }
         do {
             return try ArkFileContentCatalog.loadBundled()
         } catch {
@@ -1812,12 +1813,14 @@ final class ArkFileContentFavorites: ObservableObject {
     }
 
     func isFavorite(_ item: ArkFileLocalContentItem) -> Bool {
-        relativePaths.contains(item.relativePath)
+        relativePaths.contains { ArkFileSavedContentIdentity.matches(savedPath: $0, currentPath: item.relativePath) }
     }
 
     func toggle(_ item: ArkFileLocalContentItem) {
         if isFavorite(item) {
-            relativePaths.remove(item.relativePath)
+            relativePaths = Set(relativePaths.filter {
+                !ArkFileSavedContentIdentity.matches(savedPath: $0, currentPath: item.relativePath)
+            })
         } else {
             relativePaths.insert(item.relativePath)
         }
@@ -1827,7 +1830,7 @@ final class ArkFileContentFavorites: ObservableObject {
     func favoriteItems(in categories: [ArkFileLocalContentCategory]) -> [ArkFileLocalContentItem] {
         categories
             .flatMap(\.items)
-            .filter { relativePaths.contains($0.relativePath) }
+            .filter { isFavorite($0) }
             .sorted { left, right in
                 if left.category != right.category {
                     return left.category.displayName.localizedCaseInsensitiveCompare(right.category.displayName) == .orderedAscending
@@ -2419,7 +2422,10 @@ final class ArkFileContentBookmarks: ObservableObject {
     }
 
     func bookmarks(for item: ArkFileLocalContentItem) -> [ArkFileContentBookmark] {
-        bookmarks.filter { $0.relativePath == item.relativePath }
+        bookmarks.filter {
+            $0.contentType == item.type
+                && ArkFileSavedContentIdentity.matches(savedPath: $0.relativePath, currentPath: item.relativePath)
+        }
     }
 
     func filteredBookmarks(searchText: String, tag: String?) -> [ArkFileContentBookmark] {

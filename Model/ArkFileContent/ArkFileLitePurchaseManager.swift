@@ -382,10 +382,47 @@ struct ArkFileStoreKitContentAccessResponse: Equatable, Sendable {
     let expiresAt: Date
 }
 
+struct ArkFileStoreKitReleaseAccessResponse: Decodable, Sendable {
+    let contentAccessToken: String
+    let tier: String
+    let expiresAt: String
+    let releaseID: String
+    let releaseSHA256: String
+    let success: Bool?
+}
+
+enum ArkFileStoreKitReleaseAccessValidator {
+    static func validate(_ response: ArkFileStoreKitReleaseAccessResponse,
+                         binding: ArkFileContentReleaseBinding, tier: ArkFileContentTier,
+                         now: Date = Date()) throws -> ArkFileValidatedStoreKitContentAccess {
+        guard response.releaseID == binding.releaseID, response.releaseSHA256 == binding.releaseSHA256 else {
+            throw ArkFileContentReleaseError.staleSelection
+        }
+        let validated = try ArkFileStoreKitContentAccessValidator.validate(
+            contentAccessToken: response.contentAccessToken, tier: response.tier,
+            expiresAt: response.expiresAt, success: response.success)
+        guard tier.isIOSInstallable, validated.tier == "complete" || tier == .lite,
+              validated.expiresAt > now else { throw ArkFileContentError.purchaseRequired }
+        return validated
+    }
+}
+
 protocol ArkFileStoreKitContentAccessServing: Sendable {
+    func releaseAccess(plan: ArkFileStoreKitContentAccessRequestPlan,
+                       binding: ArkFileContentReleaseBinding,
+                       previousContentAccessToken: String?) async throws -> ArkFileStoreKitReleaseAccessResponse
+
     func contentAccess(
         plan: ArkFileStoreKitContentAccessRequestPlan
     ) async throws -> ArkFileStoreKitContentAccessResponse
+}
+
+extension ArkFileStoreKitContentAccessServing {
+    func releaseAccess(plan: ArkFileStoreKitContentAccessRequestPlan,
+                       binding: ArkFileContentReleaseBinding,
+                       previousContentAccessToken: String?) async throws -> ArkFileStoreKitReleaseAccessResponse {
+        throw ArkFileContentReleaseError.releaseUnavailable
+    }
 }
 
 struct ArkFileStoreKitAccessMintEvent: Equatable, Sendable {
@@ -825,6 +862,25 @@ actor ArkFileStoreKitContentAccessAPI: ArkFileStoreKitContentAccessServing {
         )
     }
 
+    func releaseAccess(plan: ArkFileStoreKitContentAccessRequestPlan,
+                       binding: ArkFileContentReleaseBinding,
+                       previousContentAccessToken: String?) async throws -> ArkFileStoreKitReleaseAccessResponse {
+        struct Request: Encodable {
+            let protocolVersion = 2
+            let releaseID: String
+            let releaseSHA256: String
+            let signedTransactionInfo: String
+            let additionalSignedTransactionInfos: [String]
+            let previousContentAccessToken: String?
+        }
+        return try await request(path: Bundle.main.usesSandboxAppStoreReceipt
+            ? "storekit/testflight-ios-content-access-v2" : "storekit/ios-content-access-v2",
+            body: Request(releaseID: binding.releaseID, releaseSHA256: binding.releaseSHA256,
+                signedTransactionInfo: plan.primary.signedTransactionInfo,
+                additionalSignedTransactionInfos: plan.additionalSignedTransactionInfos,
+                previousContentAccessToken: previousContentAccessToken))
+    }
+
     private func request<Response: Decodable, Body: Encodable>(
         path: String,
         body: Body
@@ -1058,6 +1114,27 @@ final class ArkFileLitePurchaseManager: ObservableObject {
                 ArkFileContentTier.standard.rawValue
             )
         }
+    }
+
+    /// A release token is minted directly from verified StoreKit proofs. Never
+    /// downgrade to a v1 token or retarget a persisted request during renewal.
+    func releaseAuthorization(for request: ArkFileContentReleaseRequest,
+                              allowsCellular: Bool = false,
+                              previousContentAccessToken: String? = nil) async throws -> ArkFileContentAuthorization {
+        guard let plan = try await currentStoreKitContentAccessPlan(),
+              plan.requestedTier == .complete || request.tier == .lite else {
+            throw ArkFileContentError.purchaseRequired
+        }
+        let generation = entitlementGeneration
+        let response = try await contentAccessAPI.releaseAccess(plan: plan, binding: request.binding,
+                                                                previousContentAccessToken: previousContentAccessToken)
+        guard generation == entitlementGeneration else {
+            throw ArkFileStoreKitMintError.supersededByEntitlementChange
+        }
+        let validated = try ArkFileStoreKitReleaseAccessValidator.validate(response, binding: request.binding, tier: request.tier)
+        return .iOSContentToken(validated.contentAccessToken, expiresAt: validated.expiresAt,
+                                storeKitTransactionJWS: plan.primary.signedTransactionInfo)
+            .allowingCellularDownload(allowsCellular)
     }
 
     func authorizationForLite(allowPurchase: Bool) async throws -> ArkFileContentAuthorization {
@@ -1535,6 +1612,7 @@ final class ArkFileLitePurchaseManager: ObservableObject {
             expectedProductID: productID,
             isNonConsumable: product.type == .nonConsumable
         )
+        let purchaseStartedAt = now()
         let result = try await product.purchase()
         switch result {
         case let .success(verification):
@@ -1548,6 +1626,13 @@ final class ArkFileLitePurchaseManager: ObservableObject {
                 contentAuthorizationReadiness = .unavailable
                 throw ArkFileContentError.unverifiedPurchase
             }
+#if os(iOS)
+            ArkFileAdMeasurement.shared.recordPaidPurchase(
+                transaction: transaction,
+                signedTransactionInfo: verification.jwsRepresentation,
+                purchaseStartedAt: purchaseStartedAt
+            )
+#endif
             let primary = ArkFileStoreKitContentAccessProof(
                 productID: transaction.productID,
                 signedTransactionInfo: verification.jwsRepresentation,

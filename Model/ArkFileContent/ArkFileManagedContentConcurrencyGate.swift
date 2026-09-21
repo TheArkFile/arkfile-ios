@@ -162,6 +162,23 @@ enum ArkFileManagedContentConcurrencyGate {
         UUID: Set<ArkFileContentCompatibilityGroupID>
     ] = [:]
     private nonisolated(unsafe) static var activeWriter: UUID?
+    private nonisolated(unsafe) static var quiescing: [UUID: Set<ArkFileContentCompatibilityGroupID>] = [:]
+
+    /// Reserves reader admission before draining existing leases. Holding a
+    /// writer token alone deliberately does not stop readers.
+    static func beginQuiescing(id: UUID, groups: Set<ArkFileContentCompatibilityGroupID>) {
+        stateLock.lock(); quiescing[id] = groups; stateLock.unlock()
+    }
+    static func endQuiescing(id: UUID) {
+        stateLock.lock(); quiescing.removeValue(forKey: id); stateLock.unlock()
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .arkFileManagedContentMutationDidEnd, object: nil)
+        }
+    }
+    static func hasReaders(overlapping groups: Set<ArkFileContentCompatibilityGroupID>) -> Bool {
+        stateLock.lock(); defer { stateLock.unlock() }
+        return readers.values.contains { $0.overlaps(groups) }
+    }
 
     /// Reserves the single install commit, activation journal, and global
     /// overlay for one durable transaction. Readers remain unaffected.
@@ -254,7 +271,8 @@ enum ArkFileManagedContentConcurrencyGate {
         scope: ReaderScope
     ) -> ArkFileManagedContentReaderToken? {
         stateLock.lock()
-        guard !mutations.values.contains(where: scope.overlaps) else {
+        guard !mutations.values.contains(where: scope.overlaps),
+              !quiescing.values.contains(where: scope.overlaps) else {
             stateLock.unlock()
             return nil
         }
@@ -319,6 +337,7 @@ enum ArkFileManagedContentConcurrencyGate {
         stateLock.lock()
         readers.removeAll()
         mutations.removeAll()
+        quiescing.removeAll()
         activeWriter = nil
         stateLock.unlock()
     }

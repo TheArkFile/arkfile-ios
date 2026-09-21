@@ -12,9 +12,7 @@
     "desktopCommit": "ca0e8cd5b699fb259d1b532e9cb90c1bc38f918d"
   },
   "contentLicenses": {
-    "ledgerVersion": "2026-07-10.1",
-    "projectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-    "coverageComplete": false
+    "projectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
   },
   "categories": {
     "general": [
@@ -224,9 +222,7 @@
         "sourceUrl": "https://www.trngcmd.marines.mil/Portals/207/Docs/TBS/MCRP%203-02H%20Survival%2C%20Evasion%2C%20and%20Recovery.pdf",
         "attributionText": "Survival, Evasion, and Recovery, FM 21-76-1 and multiservice equivalents, June 1999.",
         "changesMade": "None.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "general/survival/fm 3-97.6  mountain operations manual (2000).pdf",
@@ -393,9 +389,7 @@
         "sourceUrl": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/13BC7D8D-AD46-433D-9C0B-F3A1D1405259-1537466238381/atp3_50x21.pdf",
         "attributionText": "ATP 3-50.21 - Survival, Headquarters, Department of the Army, September 2018.",
         "changesMade": "None.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       }
     ],
     "medical": [
@@ -420,9 +414,7 @@
         "sourceUrl": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/2C9DF500-FE70-4DFC-A915-D01FE6A8BCE2-1399482805293/atp_4-02x83.pdf",
         "attributionText": "ATP 4-02.83 - Treatment of Nuclear and Radiological Casualties, Headquarters, Department of the Army, May 2014.",
         "changesMade": "None.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "medical/reference/medical sciences - stack exchange.zim",
@@ -507,9 +499,7 @@
         "sourceUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
         "attributionText": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid, Headquarters, Department of the Army, March 2026.",
         "changesMade": "None.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "medical/field-guides/fema cert basic training participant manual (2019).pdf",
@@ -532,9 +522,7 @@
         "sourceUrl": "https://www.govinfo.gov/app/details/GOVPUB-HS5_100-PURL-gpo185734",
         "attributionText": "CERT Basic Training Participant Manual, U.S. Government Publishing Office, 2019 Update.",
         "changesMade": "None.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       }
     ],
     "food-preparation": [
@@ -909,9 +897,7 @@
         "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/roasting-those-other-holiday-meats",
         "attributionText": "Official federal source text from USDA Food Safety and Inspection Service; Centers for Disease Control and Prevention; USDA Animal and Plant Health Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
         "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "food-preparation/food/usda fsis - chicken from farm to table (arkfile offline 2026-07).zip",
@@ -934,9 +920,7 @@
         "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/chicken-farm-table",
         "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
         "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "food-preparation/food/usda fsis - duck and goose from farm to table (arkfile offline 2026-07).zip",
@@ -959,9 +943,7 @@
         "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/duck-and-goose-farm-table",
         "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
         "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "food-preparation/food/usda fsis - fresh pork from farm to table (arkfile offline 2026-07).zip",
@@ -984,9 +966,7 @@
         "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/fresh-pork-farm-table",
         "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
         "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "food-preparation/food/usda fsis - lamb from farm to table (arkfile offline 2026-07).zip",
@@ -1009,9 +989,7 @@
         "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/lamb-farm-table",
         "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
         "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "food-preparation/food/usda fsis - turkey from farm to table (arkfile offline 2026-07).zip",
@@ -1034,9 +1012,7 @@
         "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/turkey-farm-table",
         "attributionText": "Official federal source text from USDA Food Safety and Inspection Service. Exact source URLs and snapshot hashes are listed in sources.json.",
         "changesMade": "Converted saved official article snapshots to semantic, text-only HTML; source images, logos, seals, scripts, remote styles, fonts, and third-party visual assets were omitted.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       }
     ],
     "travel": [
@@ -1631,9 +1607,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11758/algebra-and-trigonometry.epub",
         "attributionText": "Algebra and Trigonometry by OpenStax CAT is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - american government.zip",
@@ -1654,9 +1628,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11995/american-government.epub",
         "attributionText": "American Government by OpenStax American Government is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - biology 2e.zip",
@@ -1677,9 +1649,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col24361/biology-2e.epub",
         "attributionText": "Biology 2e by OpenStax Biology 2nd Edition is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - biology for ap courses.zip",
@@ -1700,9 +1670,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12078/biology-for-ap-r-courses.epub",
         "attributionText": "Biology for AP Courses by OpenStax Biology for AP Courses is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - chemistry - atoms first.zip",
@@ -1723,9 +1691,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12012/chemistry-atoms-first.epub",
         "attributionText": "Chemistry: Atoms First by OpenStax Chemistry: Atom First is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - chemistry.zip",
@@ -1746,9 +1712,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11760/chemistry.epub",
         "attributionText": "Chemistry by OpenStax Chemistry is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - college algebra.zip",
@@ -1769,9 +1733,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11759/college-algebra.epub",
         "attributionText": "College Algebra by OpenStax College Algebra is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - college physics.zip",
@@ -1792,9 +1754,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11406/college-physics.epub",
         "attributionText": "College Physics by OpenStax / OSC Physics Maintainer is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - college success.zip",
@@ -1815,9 +1775,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col30990/cosu.epub",
         "attributionText": "College Success by OpenStax College Success is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - elementary algebra 2e.zip",
@@ -1838,9 +1796,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col31130/elementary-algebra-2e-draft.epub",
         "attributionText": "Elementary Algebra 2e by OpenStax Elementary Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - entrepreneurship.zip",
@@ -1861,9 +1817,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col29104/entrepreneurship-draft.epub",
         "attributionText": "Entrepreneurship by OpenStax Entrepreneurship ,OpenStax is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - intermediate algebra 2e.zip",
@@ -1884,9 +1838,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col31234/intermediate-algebra-2e.epub",
         "attributionText": "Intermediate Algebra 2e by OpenStax Intermediate Algebra 2e is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - introduction to business.zip",
@@ -1907,9 +1859,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col25734/introduction-to-business.epub",
         "attributionText": "Introduction to Business by OpenStax Introduction to Business is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - introduction to sociology 3e.zip",
@@ -1930,9 +1880,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col32649/introduction-to-sociology-3e.epub",
         "attributionText": "Introduction to Sociology 3e by OpenStax ,First Last is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - introductory business statistics.zip",
@@ -1953,9 +1901,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11776/introductory-statistics.epub",
         "attributionText": "Introductory Business Statistics by OpenStax Business Statistics is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - introductory statistics.zip",
@@ -1976,9 +1922,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11562/collaborative-statistics.epub",
         "attributionText": "Introductory Statistics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - microbiology.zip",
@@ -1999,9 +1943,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12087/microbiology.epub",
         "attributionText": "Microbiology by OpenStax College Microbiology is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - physics.zip",
@@ -2022,9 +1964,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12081/hs-physics.epub",
         "attributionText": "Physics by OpenStax College is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - prealgebra.zip",
@@ -2045,9 +1985,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12157/prealgebra.epub",
         "attributionText": "Prealgebra by OpenStax Developmental Math is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - precalculus.zip",
@@ -2068,9 +2006,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11667/precalculus.epub",
         "attributionText": "Precalculus by OpenStax College Precalculus is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - principles of economics 2e.zip",
@@ -2091,9 +2027,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12122/principles-of-economics-2e-draft.epub",
         "attributionText": "Principles of Economics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - principles of macroeconomics 2e.zip",
@@ -2114,9 +2048,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12190/principles-of-macroeconomics-2e-draft.epub",
         "attributionText": "Principles of Macroeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - principles of microeconomics 2e.zip",
@@ -2137,9 +2069,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12170/principles-of-microeconomics-2e-draft.epub",
         "attributionText": "Principles of Microeconomics 2e by OpenStax Economics is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - principles of microeconomics for ap courses.zip",
@@ -2160,9 +2090,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col11858/apecon.epub",
         "attributionText": "Principles of Microeconomics for AP Courses by OpenStax College Principles of Economics for AP® Courses is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - psychology 2e.zip",
@@ -2183,9 +2111,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col31502/psychology-2e.epub",
         "attributionText": "Psychology 2e by OpenStax Psychology is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - statistics.zip",
@@ -2206,9 +2132,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col30309/hs-statistics.epub",
         "attributionText": "Statistics by OpenStax Statistics is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/openstax - university physics.zip",
@@ -2229,9 +2153,7 @@
         "sourceUrl": "https://archive.org/download/cnx-org-col12105/openstax-university-physics-all-volumes.epub",
         "attributionText": "University Physics by OpenStax University Physics is licensed under Creative Commons Attribution 4.0 International.",
         "changesMade": "Converted from EPUB to an ArkFile static HTML book package.",
-        "contentLicenseLedgerVersion": "2026-07-10.1",
-        "contentLicenseProjectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39",
-        "contentLicenseDecisionStatus": "green"
+        "contentLicenseProjectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
       },
       {
         "id": "books_documents/book of mormon.zip",

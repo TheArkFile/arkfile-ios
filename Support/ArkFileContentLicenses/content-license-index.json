@@ -1,13 +1,5 @@
 {
-  "schemaVersion": 1,
-  "ledgerVersion": "2026-07-10.1",
-  "coverage": {
-    "expectedArtifacts": 195,
-    "greenArtifacts": 38,
-    "retiredArtifacts": 13,
-    "incompleteArtifacts": 144,
-    "complete": false
-  },
+  "schemaVersion": 2,
   "entries": [
     {
       "contentId": "books-documents/openstax-algebra-and-trigonometry.zip",
@@ -60,10 +52,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -117,10 +105,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -174,10 +158,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -231,10 +211,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -288,10 +264,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -345,10 +317,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -402,10 +370,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -459,10 +423,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -516,10 +476,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -573,10 +529,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -630,10 +582,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -687,10 +635,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -744,10 +688,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -801,10 +741,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -858,10 +794,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -915,10 +847,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -972,10 +900,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1029,10 +953,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1086,10 +1006,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1143,10 +1059,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1200,10 +1112,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1257,10 +1165,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1314,10 +1218,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1371,10 +1271,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1428,10 +1324,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1485,10 +1377,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1542,10 +1430,6 @@
           "public-preview",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-09"
       }
     },
     {
@@ -1600,10 +1484,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1656,10 +1536,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1712,10 +1588,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1768,10 +1640,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1824,10 +1692,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1880,10 +1744,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1935,10 +1795,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -1989,10 +1845,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -2044,10 +1896,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -2099,10 +1947,6 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     },
     {
@@ -2154,12 +1998,8 @@
           "local-sharing",
           "future-updates"
         ]
-      },
-      "decision": {
-        "status": "green",
-        "reviewedAt": "2026-07-10"
       }
     }
   ],
-  "projectionHash": "c2c75074cc949b545485ef10bdfc42bfa14cbddbdc1c4e77d36d681426e4ea39"
+  "projectionHash": "13e63ae07ab9cdccc0e75690e7fba96f3df7ebfce5140d07bfcee71c8c97a3e7"
 }

@@ -14,7 +14,7 @@ settings:
     GENERATE_INFOPLIST_FILE: YES
     # Build 359 is quarantined because it predates the controlled native-source
     # binding. Production archives, source releases, and uploads start at 360.
-    CURRENT_PROJECT_VERSION: 373
+    CURRENT_PROJECT_VERSION: 374
     ENABLE_USER_SCRIPT_SANDBOXING: NO
     ENABLE_MODULE_VERIFIER: YES
     MODULE_VERIFIER_SUPPORTED_LANGUAGES: "objective-c objective-c++"
@@ -158,6 +158,10 @@ targets:
       - path: Support/Kiwix-Bridging-Header.h
       - path: Support/LocalString.swift
       - path: Support/injection.js
+      - path: Support/ArkFileContentRelease/content-signing-keys.json
+      - path: Support/ArkFileContentRelease/baseline-release.json
+      - path: Support/ArkFileContentRelease/baseline-publication.json
+      - path: Support/ArkFileContentRelease/baseline-migration.json
       - path: Support/ArkFileContentCatalog/content-catalog.json
       - path: Support/ArkFileContentLicenses/content-license-index.json
       - path: Support/ArkFileLocalSharing/local-sharing-disposition-index.json

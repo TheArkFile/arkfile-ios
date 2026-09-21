@@ -61,7 +61,7 @@ enum ArkFileSavedZIMResolver {
     ) async -> Result<Destination, Failure> {
         guard bookmark.contentType == .zim,
               item.type == .zim,
-              bookmark.relativePath == item.relativePath else {
+              ArkFileSavedContentIdentity.matches(savedPath: bookmark.relativePath, currentPath: item.relativePath) else {
             return .failure(.wrongContent)
         }
         guard bookmark.hasUsableZIMArticleRoute else {
