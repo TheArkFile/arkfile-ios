@@ -991,8 +991,13 @@ final class ArkFileContentPackInstaller: ObservableObject {
     }
 
     var isBusy: Bool {
-        ArkFileContentUpdateCoordinator.shared.isBusy || installTask != nil
-            || state.phase.isBusy
+        ArkFileContentUpdateCoordinator.shared.isBusy || isPerformingOtherOperation
+    }
+
+    /// Work that conflicts with the separate content-update coordinator. Its
+    /// own running update must not disable that update's Pause/Cancel controls.
+    var isPerformingOtherOperation: Bool {
+        installTask != nil || state.phase.isBusy
             || isRestoringPurchases
             || isPurchasingWithoutDownload
     }
@@ -2679,6 +2684,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
                 acquisitionLease: &acquisitionLease
             )
             try validateAcquisitionLease(acquisitionLease)
+            let installedCommit = ArkFileInstalledContentAccess.currentCommitRecord(at: try Self.activeContentRoot())
             let trustedManifest: ArkFileTrustedPackageManifest
             do {
                 trustedManifest = try ArkFileLocalSharingDispositionIndex
@@ -2686,8 +2692,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
                     .trustedPackageManifest(
                         for: manifest,
                         expectedTier: tier
-                    ).includingVerifiedReleases(Set(ArkFileContentReleaseProvider.shared.snapshot.installed.values.map(\.binding))
-                        .compactMap { try? ArkFileContentReleaseProvider.shared.verifiedRelease($0) })
+                    ).includingVerifiedReleases(Self.verifiedReleasesForInstalledContent(commit: installedCommit))
             } catch {
                 throw ArkFileContentError.appUpdateRequired(
                     "This app build does not recognize the content manifest selected by the service. Update ArkFile before retrying this download."
@@ -2708,7 +2713,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
                 includesMapFoundation: Self.includesMapFoundationForActiveRequest(state)
             )
             let selectedManifest = try Self.manifestPreservingSignedInstalledGroups(
-                requestedManifest, activeRoot: Self.activeContentRoot())
+                requestedManifest, commit: installedCommit)
             try Self.validateSelectedManifestSubset(
                 selectedManifest,
                 of: manifest
@@ -4203,12 +4208,51 @@ final class ArkFileContentPackInstaller: ObservableObject {
         )
     }
 
+    /// A dependency group may commit before its selected item completes. Its
+    /// retained provenance still needs recognition on later unrelated installs.
+    /// Only verified envelopes and exact committed file identities contribute;
+    /// this neither creates item receipts nor grants download/payload authority.
+    nonisolated static func verifiedReleasesForInstalledContent(
+        commit: ArkFileInstalledContentAccess.CommitRecord?,
+        provider: ArkFileContentReleaseProvider = .shared
+    ) -> [ArkFileVerifiedContentRelease] {
+        var verified: [ArkFileContentReleaseBinding: ArkFileVerifiedContentRelease] = [:]
+        for binding in Set(provider.snapshot.installed.values.map(\.binding)) {
+            if let release = try? provider.verifiedRelease(binding) { verified[binding] = release }
+        }
+        var retained: [ArkFileContentReleaseBinding: [ArkFileInstalledContentAccess.CommitEntry]] = [:]
+        for entry in commit?.payload.entries ?? [] {
+            guard let provenance = entry.manifestProvenance,
+                  let binding = ArkFileTrustedPackageManifest.releaseBinding(from: provenance) else { continue }
+            retained[binding, default: []].append(entry)
+        }
+        for (binding, entries) in retained where verified[binding] == nil {
+            guard let release = try? provider.verifiedRelease(binding) else { continue }
+            let files = Dictionary(uniqueKeysWithValues: release.release.files.map { ($0.relativePath, $0) })
+            guard entries.allSatisfy({ entry in
+                guard let file = files[entry.relativePath] else { return false }
+                return entry.byteCount == file.sizeBytes && entry.sha256 == file.sha256
+            }) else { continue }
+            verified[binding] = release
+        }
+        return verified.values.sorted {
+            ($0.binding.releaseID, $0.binding.releaseSHA256) < ($1.binding.releaseID, $1.binding.releaseSHA256)
+        }
+    }
+
     /// Frozen v1 repair/install may fill missing legacy content, but cannot
     /// roll a separately installed signed revision back to the bundled edition.
     nonisolated static func manifestPreservingSignedInstalledGroups(
         _ manifest: ArkFilePackageManifest, activeRoot: URL
     ) throws -> ArkFilePackageManifest {
-        guard let commit = ArkFileInstalledContentAccess.currentCommitRecord(at: activeRoot) else { return manifest }
+        try manifestPreservingSignedInstalledGroups(manifest,
+            commit: ArkFileInstalledContentAccess.currentCommitRecord(at: activeRoot))
+    }
+
+    nonisolated static func manifestPreservingSignedInstalledGroups(
+        _ manifest: ArkFilePackageManifest, commit: ArkFileInstalledContentAccess.CommitRecord?
+    ) throws -> ArkFilePackageManifest {
+        guard let commit else { return manifest }
         let protectedGroups = Set(commit.payload.entries.compactMap { entry -> ArkFileContentCompatibilityGroupID? in
             guard entry.manifestProvenance?.manifestID.hasPrefix("v2-") == true else { return nil }
             return ArkFileContentCompatibilityPlanner.groupID(for: entry.relativePath)

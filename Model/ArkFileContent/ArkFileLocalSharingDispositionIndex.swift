@@ -60,6 +60,19 @@ struct ArkFileTrustedPackageManifest: Sendable {
                     recognizedIdentities: recognizedIdentities.union(additional))
     }
 
+    /// A retained label can identify a release to verify, but cannot itself
+    /// authorize content. Normalize the digest just as recognizes() does.
+    static func releaseBinding(
+        from provenance: ArkFileInstalledContentAccess.ManifestProvenance
+    ) -> ArkFileContentReleaseBinding? {
+        guard provenance.manifestID.hasPrefix("v2-") else { return nil }
+        let releaseID = String(provenance.manifestID.dropFirst(3))
+        let digest = provenance.semanticFingerprint.lowercased()
+        guard ArkFileContentReleaseVerifier.validID(releaseID),
+              ArkFileContentReleaseVerifier.validHash(digest) else { return nil }
+        return .init(releaseID: releaseID, releaseSHA256: digest)
+    }
+
     func recognizes(
         _ provenance: ArkFileInstalledContentAccess.ManifestProvenance
     ) -> Bool {

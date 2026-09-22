@@ -355,6 +355,7 @@ struct ArkFileOfflineMapView: View {
     @State private var isWaitingForContentMutation: Bool
     @State private var isMapVisible = false
     @State private var ownsLiveUpdateRequest = false
+    @State private var locationActionTask: Task<Void, Never>?
     @State private var selectedCoordinateCandidate: ArkFileMapCoordinate?
     @State private var coordinateSelectionCenter: ArkFileMapCoordinate?
 
@@ -727,6 +728,7 @@ struct ArkFileOfflineMapView: View {
             }
         }
         .onDisappear {
+            cancelPendingLocationAction()
             isMapVisible = false
             reconcileLocationAccess()
         }
@@ -1634,44 +1636,52 @@ struct ArkFileOfflineMapView: View {
     private func locateMe() {
         isMapVisible = true
         reconcileLocationAccess()
-        trackRecorder.beginLiveUpdates()
-        trackRecorder.endLiveUpdates()
-        if let location = trackRecorder.currentLocation {
+        withFreshLocation { location in
             focusRequest = ArkFileMapFocusRequest(nonce: UUID(), coordinate: location)
-        } else if trackRecorder.isAuthorizationDenied {
-            mapError = "Location access is off. Allow it in Settings to see your position on the offline map."
-        } else {
-            // First fix can take a few seconds; try again shortly.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                if let location = trackRecorder.currentLocation {
-                    focusRequest = ArkFileMapFocusRequest(nonce: UUID(), coordinate: location)
-                }
-            }
         }
     }
 
     private func shareMyLocation() {
-        trackRecorder.beginLiveUpdates()
-        if let location = trackRecorder.currentLocation {
+        withFreshLocation { location in
             presentShareForMyLocation(location)
+        }
+    }
+
+    private func withFreshLocation(_ action: @escaping (ArkFileMapCoordinate) -> Void) {
+        cancelPendingLocationAction()
+        guard !isAccessBlocked, !isShowingMapPacks, resources.hasVectorMap else { return }
+        trackRecorder.beginLiveUpdates()
+        if let message = trackRecorder.locationUnavailableMessage {
+            mapError = message
             trackRecorder.endLiveUpdates()
             return
         }
-        if trackRecorder.isAuthorizationDenied {
-            mapError = "Location access is off. Allow it in Settings to share your position from the offline map."
+        if let location = trackRecorder.currentLocation {
             trackRecorder.endLiveUpdates()
+            action(location)
             return
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            if let location = trackRecorder.currentLocation {
-                presentShareForMyLocation(location)
-            } else if trackRecorder.isAuthorizationDenied {
-                mapError = "Location access is off. Allow it in Settings to share your position from the offline map."
+
+        // Keep this request alive while waiting for a fresh fix. Cancellation
+        // releases only this request and cannot restart a stopped trail.
+        locationActionTask = Task { @MainActor in
+            defer { trackRecorder.endLiveUpdates() }
+            do { try await Task.sleep(nanoseconds: 2_500_000_000) }
+            catch { return }
+            guard !Task.isCancelled, !isAccessBlocked, !isShowingMapPacks, resources.hasVectorMap else { return }
+            if let message = trackRecorder.locationUnavailableMessage {
+                mapError = message
+            } else if let location = trackRecorder.currentLocation {
+                action(location)
             } else {
-                mapError = "ArkFile could not get your location yet. Try again in a moment."
+                mapError = "ArkFile could not get a fresh, accurate location yet. Move outdoors and try again."
             }
-            trackRecorder.endLiveUpdates()
         }
+    }
+
+    private func cancelPendingLocationAction() {
+        locationActionTask?.cancel()
+        locationActionTask = nil
     }
 
     private func presentShareForMyLocation(_ location: ArkFileMapCoordinate) {
@@ -2083,6 +2093,9 @@ struct ArkFileOfflineMapView: View {
     }
 
     private func reconcileLocationAccess() {
+        if isAccessBlocked || isShowingMapPacks || !resources.hasVectorMap {
+            cancelPendingLocationAction()
+        }
         let actions = ArkFileMapLocationAccessPolicy.actions(
             isAccessBlocked: isAccessBlocked,
             isMapVisible: isMapVisible && !isShowingMapPacks,

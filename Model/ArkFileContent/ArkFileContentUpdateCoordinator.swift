@@ -7,7 +7,8 @@ import Foundation
 @MainActor
 final class ArkFileContentUpdateCoordinator: ObservableObject {
     static let shared = ArkFileContentUpdateCoordinator()
-    @Published private(set) var isBusy = false
+    @Published private var isRunning = false
+    @Published private var isCancelling = false
     @Published private(set) var isChecking = false
     @Published private(set) var journal: ArkFileContentReplacementJournal?
     @Published private(set) var message: String?
@@ -33,7 +34,25 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
     }
     var available: ArkFileVerifiedContentRelease? { provider.snapshot.available }
     var installed: [String: ArkFileContentReleaseProvider.InstalledRevision] { provider.snapshot.installed }
+    var isBusy: Bool { isRunning || isCancelling }
     var canResume: Bool { journal.map { !$0.isTerminal } == true && !isBusy }
+    var canPause: Bool { isRunning && canCancel }
+    var canCancel: Bool {
+        !isCancelling && Self.allowsInterruption(phase: journal?.phase, isRunning: isRunning)
+    }
+
+    /// An activation already launched on its worker must finish its atomic
+    /// commit. A stopped activation can still be resumed or cancelled later.
+    nonisolated static func allowsInterruption(
+        phase: ArkFileContentReplacementJournal.Phase?, isRunning: Bool
+    ) -> Bool {
+        guard let phase else { return false }
+        switch phase {
+        case .removing, .recoveryPending, .installed, .cancelled: return false
+        case .activating: return !isRunning
+        default: return true
+        }
+    }
 
     func checkForUpdates() async {
         guard !isChecking else { return }
@@ -146,7 +165,7 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
     /// Pausing retains verified parts and the old-removal journal. It never
     /// pretends a deleted title is usable while its replacement is incomplete.
     func pause() {
-        guard isBusy else { return }
+        guard canPause else { return }
         task?.cancel()
         if let journal, let release = try? provider.verifiedRelease(journal.request.binding),
            let files = try? release.selectedFiles(for: journal.request) {
@@ -157,8 +176,14 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
     }
 
     func cancel() async {
+        guard canCancel else { return }
         pause()
+        // Keep new work and repeated cancellation out until discard finishes,
+        // including the interval after the running transfer has stopped.
+        isCancelling = true
+        defer { isCancelling = false }
         await task?.value
+        guard journal?.isTerminal == false else { return }
         guard var journal, !journal.requiresRecoveryBarrier else {
             message = "Finish interrupted removal before cancelling this update."; return
         }
@@ -185,10 +210,10 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
         run(journal, allowsCellular: allowsCellular)
     }
     private func run(_ initial: ArkFileContentReplacementJournal, allowsCellular: Bool) {
-        isBusy = true; message = nil
+        isRunning = true; message = nil
         task = Task { [weak self] in
             guard let self else { return }
-            defer { self.isBusy = false; self.task = nil }
+            defer { self.isRunning = false; self.task = nil }
             do { try await self.perform(initial, allowsCellular: allowsCellular) }
             catch {
                 var failed = self.journal ?? initial
@@ -245,7 +270,8 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
             try save(work); message = work.message; return
         }
         try Task.checkCancellation()
-        let priorReleases = Set(installed.values.map(\.binding)).compactMap { try? provider.verifiedRelease($0) }
+        let priorReleases = ArkFileContentPackInstaller.verifiedReleasesForInstalledContent(
+            commit: ArkFileInstalledContentAccess.currentCommitRecord(at: root), provider: provider)
         let trust = try ArkFileTrustedPackageManifest(verifiedRelease: verified, request: work.request,
                                                        previousVerifiedReleases: priorReleases)
         let selectedGroupIDs = Set(work.request.selections.flatMap { verified.release.item($0.itemID)?.groupIDs ?? [] })
@@ -257,6 +283,9 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
             try ArkFileLitePurchaseManager.shared.validateAcquisitionLease(lease!)
             let members = group.fileIDs.compactMap(verified.release.file)
             try checkCapacity(members, root: root, downloads: downloads)
+            // A preceding dependency may already be committed. Verification of
+            // the next group is interruptible again until activation starts.
+            work.phase = .verifying; try save(work)
             var candidates: [ArkFileContentActivationCandidate] = []
             for file in members {
                 let beforeFile = completedBytes
@@ -314,11 +343,16 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
             let nativeGroups = Dictionary(grouping: candidates) { ArkFileContentCompatibilityPlanner.groupID(for: $0.relativePath) }
             for (nativeID, candidates) in nativeGroups.sorted(by: { $0.key.rawValue < $1.key.rawValue }) {
                 try Task.checkCancellation()
-                try ArkFileLitePurchaseManager.shared.validateAcquisitionLease(lease!)
                 let installedTier: ArkFileContentTier = ArkFileInstalledContentAccess.currentCommitRecord(at: root)?.payload.installedTier == "complete"
                     ? .complete : work.request.tier
-                try ArkFileContentActivationCoordinator.activate(groupID: nativeID.rawValue, candidates: candidates,
-                    activeRoot: root, downloadRoot: downloads, installedTier: installedTier, trustedManifest: trust)
+                try await ArkFileContentPackInstaller.activateAfterValidatingAcquisitionLease(
+                    { try ArkFileLitePurchaseManager.shared.validateAcquisitionLease(lease!) },
+                    activation: {
+                        try ArkFileContentActivationCoordinator.activate(
+                            groupID: nativeID.rawValue, candidates: candidates,
+                            activeRoot: root, downloadRoot: downloads,
+                            installedTier: installedTier, trustedManifest: trust)
+                    })
             }
             await ZimFileService.shared.purgeUnpinnedArchives()
             ArkFileManagedContentConcurrencyGate.endQuiescing(id: work.request.id)
@@ -523,10 +557,10 @@ final class ArkFileContentUpdateCoordinator: ObservableObject {
     /// legacy; this is never inferred from a filename alone.
     func verifyLegacy(itemID: String) {
         guard !isBusy, !ArkFileContentPackInstaller.shared.isBusy else { return }
-        isBusy = true; message = "Verifying the installed edition on this device…"
+        isRunning = true; message = "Verifying the installed edition on this device…"
         task = Task { [weak self] in
             guard let self else { return }
-            defer { self.isBusy = false; self.task = nil }
+            defer { self.isRunning = false; self.task = nil }
             do {
                 let root = try ArkFileContentPackInstaller.protectedActiveContentRoot()
                 guard let prior = ArkFileInstalledContentAccess.currentCommitRecord(at: root) else {

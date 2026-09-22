@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
-  "baselineReleaseID": "library-2026-09-baseline",
-  "baselineReleaseSHA256": "32f694a0bd08d9bfdac0586ffe6b8be16125b5ec83eb30f1fc790a49dde33aec",
+  "baselineReleaseID": "library-2026-09-baseline-r2",
+  "baselineReleaseSHA256": "bf5c550b554477e07e8982194cc994d8ee604def9c53a9bb71c59df90ede7cf5",
   "entries": [
     {
       "legacyRelativePath": "general/encyclopedias/Simple Wikipedia.zim",

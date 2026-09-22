@@ -307,6 +307,7 @@ final class ArkFileMapTrackRecorder: ObservableObject {
     static let shared = ArkFileMapTrackRecorder(persistenceURL: tracksFileURL())
     static let minimumPointSpacingMeters: CLLocationDistance = 15
     static let maximumHorizontalAccuracyMeters: CLLocationAccuracy = 60
+    static let maximumLiveHorizontalAccuracyMeters: CLLocationAccuracy = 100
     static let maximumPointsPerTrack = 20_000
     nonisolated static let maximumSavedTracks = 20
     static let maximumFixAge: TimeInterval = 30
@@ -317,7 +318,7 @@ final class ArkFileMapTrackRecorder: ObservableObject {
     @Published private(set) var isAuthorizationDenied = false
     @Published private(set) var statusMessage: String?
     @Published private(set) var persistenceError: String?
-    private(set) var currentLocation: ArkFileMapCoordinate?
+    private var latestLocation: CLLocation?
     private let driver: any ArkFileMapLocationDriving
     private let storage: ArkFileMapTrailStorage
     private let now: () -> Date
@@ -353,6 +354,34 @@ final class ArkFileMapTrackRecorder: ObservableObject {
     var canSaveDraft: Bool { hasDraft && activePoints.count >= 2 }
     var activeDistanceMeters: Double { activeDistanceAccumulator }
     var isSavedTrackCapacityReached: Bool { savedTracks.count >= Self.maximumSavedTracks }
+
+    /// A cached coordinate is usable only while its fix and current permission
+    /// remain suitable. Stopping a trail must not make an old fix timeless.
+    var currentLocation: ArkFileMapCoordinate? {
+        let currentTime = now()
+        guard driver.servicesEnabled,
+              driver.authorizationStatus == .authorizedAlways || driver.authorizationStatus == .authorizedWhenInUse,
+              driver.accuracyAuthorization == .fullAccuracy,
+              let location = latestLocation,
+              location.horizontalAccuracy <= Self.maximumLiveHorizontalAccuracyMeters,
+              location.timestamp >= currentTime.addingTimeInterval(-Self.maximumFixAge),
+              location.timestamp <= currentTime.addingTimeInterval(5) else { return nil }
+        return ArkFileMapCoordinate(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    }
+
+    var locationUnavailableMessage: String? {
+        if !driver.servicesEnabled { return "Turn on Location Services in Settings to use your current position." }
+        if driver.authorizationStatus == .denied || driver.authorizationStatus == .restricted {
+            return "Location access is off. Allow it in Settings to use your current position."
+        }
+        if driver.authorizationStatus == .notDetermined {
+            return "Allow location access when prompted, then try again."
+        }
+        if driver.accuracyAuthorization == .reducedAccuracy {
+            return "Enable Precise Location in Settings to use an accurate current position."
+        }
+        return nil
+    }
 
     var backToStartSummary: String? {
         guard let start = activePoints.first, let here = currentLocation else { return nil }
@@ -412,7 +441,8 @@ final class ArkFileMapTrackRecorder: ObservableObject {
         }
     }
 
-    /// Stops GPS immediately, retaining a draft while the user names or reviews it.
+    /// Stops trail/background recording immediately. A visible map may continue
+    /// foreground updates without adding to the retained, stopped draft.
     func stopRecording() {
         guard hasDraft, isSessionActive else { return }
         driver.stop()
@@ -422,6 +452,7 @@ final class ArkFileMapTrackRecorder: ObservableObject {
             ? "Not enough location points to save a trail. Your draft is stopped; discard it when ready."
             : "Location recording has stopped. Save or discard this trail."
         checkpointNow()
+        startPassiveUpdatesIfAllowed()
     }
 
     /// Content mutation and authorization loss must not implicitly save or discard.
@@ -551,6 +582,9 @@ final class ArkFileMapTrackRecorder: ObservableObject {
 
     private func handleAuthorizationChange() {
         isAuthorizationDenied = !driver.servicesEnabled || driver.authorizationStatus == .denied || driver.authorizationStatus == .restricted
+        if isAuthorizationDenied || driver.authorizationStatus == .notDetermined || driver.accuracyAuthorization == .reducedAccuracy {
+            latestLocation = nil
+        }
         if isSessionActive {
             if isAuthorizationDenied || driver.authorizationStatus == .notDetermined {
                 interruptRecording(message: "Location permission is unavailable. The trail is stopped and its draft is kept. Allow location in Settings before starting another trail.")
@@ -561,11 +595,16 @@ final class ArkFileMapTrackRecorder: ObservableObject {
                 statusMessage = "Enable Precise Location in Settings to capture accurate trail points."
             }
         } else {
-            startPassiveUpdatesIfAllowed()
+            if isAuthorizationDenied || driver.authorizationStatus == .notDetermined {
+                driver.stop()
+            } else {
+                startPassiveUpdatesIfAllowed()
+            }
         }
     }
 
     private func handleLocationError(_ error: Error) {
+        latestLocation = nil
         guard isSessionActive else { return }
         if let locationError = error as? CLError, locationError.code == .locationUnknown {
             recordingState = .locating
@@ -585,8 +624,9 @@ final class ArkFileMapTrackRecorder: ObservableObject {
                 && $0.timestamp >= currentTime.addingTimeInterval(-Self.maximumFixAge)
                 && $0.timestamp <= currentTime.addingTimeInterval(5)
         }
-        if let latest = valid.last {
-            currentLocation = ArkFileMapCoordinate(latitude: latest.coordinate.latitude, longitude: latest.coordinate.longitude)
+        if let latest = valid.max(by: { $0.timestamp < $1.timestamp }),
+           latest.timestamp >= (latestLocation?.timestamp ?? .distantPast) {
+            latestLocation = latest
         }
         guard isSessionActive, recordingState != .awaitingPermission else { return }
         if !valid.isEmpty, valid.allSatisfy({ $0.horizontalAccuracy > Self.maximumHorizontalAccuracyMeters }) {

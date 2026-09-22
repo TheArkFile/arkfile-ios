@@ -79,6 +79,10 @@ final class ArkFileContentReleaseProvider: @unchecked Sendable {
             } catch { errorMessage = error.localizedDescription }
         }
         validateInstalledReceipts()
+        if let baseline {
+            do { try refreshInstalledNotices(from: baseline) }
+            catch { errorMessage = error.localizedDescription }
+        }
     }
 
     init(root: URL, keys: [String: Data], bundledCatalog: ArkFileContentCatalog? = nil,
@@ -122,6 +126,42 @@ final class ArkFileContentReleaseProvider: @unchecked Sendable {
                     && item.catalog == receipt.catalog
             }
         }
+    }
+
+    /// A new bundled baseline can correct notices for the exact same edition.
+    /// Keep this centralized in receipts so discovery, detail and sharing agree.
+    /// No new item or changed file can become installed through this operation.
+    func refreshInstalledNotices(from baseline: ArkFileVerifiedContentRelease) throws {
+        lock.lock(); defer { lock.unlock() }
+        let verified = try ArkFileContentReleaseVerifier.verifyRelease(
+            baseline.envelope, keys: keys, expected: baseline.binding)
+        var next = installed
+        for (id, receipt) in installed {
+            guard id == receipt.itemID,
+                  let previous = try? readRelease(receipt.binding),
+                  let oldItem = previous.release.item(id),
+                  oldItem.revisionID == receipt.revisionID,
+                  oldItem.catalog == receipt.catalog, oldItem.publicNotice == receipt.publicNotice,
+                  previous.release.files(for: [oldItem.primaryGroupID]) == receipt.files,
+                  let item = verified.release.item(id), item.revisionID == receipt.revisionID,
+                  item.catalog == receipt.catalog,
+                  verified.release.files(for: [item.primaryGroupID]) == receipt.files,
+                  item.minimumTier == oldItem.minimumTier,
+                  item.primaryGroupID == oldItem.primaryGroupID, item.groupIDs == oldItem.groupIDs,
+                  item.requiredCapabilities == oldItem.requiredCapabilities, item.availability == oldItem.availability,
+                  verified.release.files(for: Set(item.groupIDs)) == previous.release.files(for: Set(oldItem.groupIDs)),
+                  item.publicNotice != receipt.publicNotice else { continue }
+            next[id] = InstalledRevision(itemID: id, revisionID: receipt.revisionID, binding: verified.binding,
+                catalog: receipt.catalog, publicNotice: item.publicNotice,
+                files: receipt.files, legacyPaths: receipt.legacyPaths)
+        }
+        guard next != installed else { return }
+        // Persist the signed source first and publish the rebound receipts only
+        // after their durable write succeeds. A failure retains the old receipt
+        // in memory and retries this correction on the next launch.
+        try persist(verified.envelope, at: releaseURL(verified.binding))
+        try persist(JSONEncoder().encode(InstalledStore(formatVersion: 1, revisions: next)), at: installedURL)
+        installed = next; changed()
     }
 
     var snapshot: Snapshot {

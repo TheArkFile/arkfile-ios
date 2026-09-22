@@ -239,6 +239,7 @@ struct ArkFileContentUpdatesView: View {
             HStack {
                 if coordinator.isBusy {
                     Button("Pause") { coordinator.pause() }
+                        .disabled(!coordinator.canPause)
                 } else {
                     Button(journal.requiresRecoveryBarrier ? "Finish Recovery" : journal.removeOnly ? "Finish Removal" : "Resume on Wi-Fi") { coordinator.resume() }
                     if !journal.removeOnly && !journal.requiresRecoveryBarrier {
@@ -247,9 +248,9 @@ struct ArkFileContentUpdatesView: View {
                 }
                 Spacer()
                 Button("Cancel", role: .destructive) { showCancel = true }
-                    .disabled(journal.requiresRecoveryBarrier)
+                    .disabled(!coordinator.canCancel)
             }
-            .disabled(installer.isBusy)
+            .disabled(installer.isPerformingOtherOperation)
         }
         .accessibilityIdentifier("arkfile_content_update_progress")
     }
@@ -346,6 +347,13 @@ struct ArkFileContentUpdatesView: View {
         @State private var confirmedRemoval = false
         private var supportsDeleteFirst: Bool { review.row.item.catalog.type == "zim" }
         private var removesFirst: Bool { supportsDeleteFirst && (review.switchesVariant || mode == .deleteFirst) }
+        private var additionalFreeBytes: Int64? {
+            guard let availableBytes else { return nil }
+            let reclaimable = removesFirst ? review.replaced.flatMap(\.files).reduce(Int64(0)) { $0 + $1.sizeBytes } : 0
+            let required = ArkFileContentReplacementStoragePolicy.requiredFreeBytes(
+                remainingBytes: review.row.downloadBytes, reclaimableBytes: reclaimable)
+            return max(0, required - max(0, availableBytes))
+        }
         var body: some View {
             NavigationStack {
                 Form {
@@ -358,6 +366,12 @@ struct ArkFileContentUpdatesView: View {
                             LabeledContent("Catalog published", value: date.formatted(date: .abbreviated, time: .omitted))
                         }
                         if let availableBytes { LabeledContent("Free storage", value: bytes(availableBytes)) }
+                        if let additionalFreeBytes {
+                            LabeledContent("Additional free space needed",
+                                           value: additionalFreeBytes == 0 ? "None estimated" : "Up to \(bytes(additionalFreeBytes))")
+                            Text("This estimate includes a download buffer. ArkFile checks available space again before downloading.")
+                                .font(.caption).foregroundStyle(.secondary)
+                        }
                     }
                     if !review.replaced.isEmpty {
                         Section("Downloaded content") {
