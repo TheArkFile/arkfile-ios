@@ -64,7 +64,7 @@ struct ArkFileOnboardingView: View {
         Page(
             systemImage: "externaldrive.badge.plus",
             title: "Choose Essentials or Complete",
-            message: "Essentials and Complete are one-time purchases. Essentials adds a practical offline library. Complete includes Essentials plus more reference works, textbooks, Wikipedia choices, and optional regional maps. After purchase, choose only what you want on this device and add more later.",
+            message: "Buy once through Apple—no ArkFile account needed. Essentials covers practical preparedness. Complete includes Essentials plus full Wikipedia, textbooks and regional maps. After buying, download only what you want.",
             accent: Color.arkReef
         )
     ]
@@ -129,9 +129,9 @@ struct ArkFileOnboardingView: View {
     private var finalActions: some View {
         VStack(spacing: 12) {
             Button {
-                finish(.includedSamples)
+                finish(.packs)
             } label: {
-                Text("Explore 5 Included Samples")
+                Text("See Prices & Buy")
                     .font(.headline)
                     .foregroundStyle(Color.arkSurface)
                     .multilineTextAlignment(.center)
@@ -142,12 +142,12 @@ struct ArkFileOnboardingView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             }
             .buttonStyle(.plain)
-            .accessibilityIdentifier("arkfile_onboarding_explore_samples")
+            .accessibilityIdentifier("arkfile_onboarding_compare_packs")
 
             Button {
-                finish(.packs)
+                finish(.includedSamples)
             } label: {
-                Text("Compare Essentials and Complete")
+                Text("Explore 5 Included Samples")
                     .font(.headline)
                     .foregroundStyle(Color.arkTeal)
                     .multilineTextAlignment(.center)
@@ -162,7 +162,7 @@ struct ArkFileOnboardingView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             }
             .buttonStyle(.plain)
-            .accessibilityIdentifier("arkfile_onboarding_compare_packs")
+            .accessibilityIdentifier("arkfile_onboarding_explore_samples")
         }
     }
 

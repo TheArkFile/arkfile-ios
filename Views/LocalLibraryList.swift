@@ -177,6 +177,7 @@ struct ArkFileLibraryDashboard: View {
     @State private var showEssentialsSelectionReview = false
     @State private var showCompleteSelectionReview = false
     @State private var showPackComparison = false
+    @State private var comparisonFocus: ArkFilePackComparisonFocus = .general
     @State private var isAwaitingRestoreOutcome = false
     @State private var pendingPackComparisonTierAfterRestore: ArkFileContentTier?
     @State private var showEssentialsManage = false
@@ -437,7 +438,8 @@ struct ArkFileLibraryDashboard: View {
                         DispatchQueue.main.async {
                             beginRestore()
                         }
-                    }
+                    },
+                    focus: comparisonFocus
                 )
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
@@ -627,6 +629,7 @@ struct ArkFileLibraryDashboard: View {
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: .arkFileOpenPackComparison)) { _ in
+            comparisonFocus = .general
             showPackComparison = true
         }
     }
@@ -1008,16 +1011,17 @@ struct ArkFileLibraryDashboard: View {
 
     private var comparePacksButton: some View {
         Button {
+            comparisonFocus = .general
             showPackComparison = true
         } label: {
             HStack(spacing: 12) {
                 Image(systemName: "rectangle.2.swap")
                     .foregroundStyle(Color.arkAccent)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Compare Essentials and Complete")
+                    Text(hasEssentialsAccess ? "Upgrade to Complete" : "Buy Essentials or Complete")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text("Compare one-time prices, catalog scope, and download choices.")
+                    Text("See one-time prices and what each pack includes.")
                         .font(.caption)
                         .foregroundStyle(Color.arkTextMuted)
                 }
@@ -2011,7 +2015,8 @@ struct ArkFileLibraryDashboard: View {
         }
         if !liteInstaller.hasSavedLiteAccess {
             guard !blocksForAppleAccountCheck else { return }
-            beginPurchaseWithoutDownload(tier: .lite)
+            comparisonFocus = .tier(.lite)
+            showPackComparison = true
             return
         }
         if liteInstaller.hasResolvedCurrentStoreKitProof,
@@ -2045,7 +2050,8 @@ struct ArkFileLibraryDashboard: View {
                !liteInstaller.hasCurrentStoreKitProof(for: .lite) {
                 beginRestoreForCompletePurchase()
             } else {
-                beginPurchaseWithoutDownload(tier: .complete)
+                comparisonFocus = .tier(.complete)
+                showPackComparison = true
             }
         }
     }

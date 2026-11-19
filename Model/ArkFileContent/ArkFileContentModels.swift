@@ -708,13 +708,13 @@ enum ArkFileContentError: LocalizedError {
         case .productNotConfigured:
             "The ArkFile Essentials product is not configured for this build."
         case .productUnavailable(_):
-            "ArkFile Essentials is not available from the App Store right now. Try again in a moment."
+            "This content pack is not available from the App Store right now. Try again in a moment."
         case .productMisconfigured:
             "The ArkFile Essentials product is not configured as a one-time App Store purchase."
         case .purchaseCancelled:
             "Purchase cancelled. You were not charged."
         case .purchasePending:
-            "The purchase is pending approval. ArkFile will unlock Essentials after Apple approves it."
+            "The purchase is pending approval. ArkFile will unlock your content pack after Apple approves it."
         case .unverifiedPurchase:
             "The App Store could not verify this purchase. Try again, or contact ArkFile support if this keeps happening."
         case .noStoreKitPurchaseFound:

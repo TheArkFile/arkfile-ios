@@ -14,7 +14,7 @@ settings:
     GENERATE_INFOPLIST_FILE: YES
     # Build 359 is quarantined because it predates the controlled native-source
     # binding. Production archives, source releases, and uploads start at 360.
-    CURRENT_PROJECT_VERSION: 375
+    CURRENT_PROJECT_VERSION: 376
     ENABLE_USER_SCRIPT_SANDBOXING: NO
     ENABLE_MODULE_VERIFIER: YES
     MODULE_VERIFIER_SUPPORTED_LANGUAGES: "objective-c objective-c++"
@@ -137,7 +137,7 @@ targets:
         com.apple.security.files.downloads.read-write: true
     settings:
       base:
-        MARKETING_VERSION: "3.15.0"
+        MARKETING_VERSION: "3.15.1"
         # One universal purchase and native adaptive experience on iPhone/iPad.
         TARGETED_DEVICE_FAMILY: 1,2
         PRODUCT_NAME: ArkFile
@@ -204,7 +204,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: app.arkfile.ios.widgets
         PRODUCT_NAME: ArkFileWidgets
         INFOPLIST_FILE: WidgetsArkFile/Info.plist
-        MARKETING_VERSION: "3.15.0"
+        MARKETING_VERSION: "3.15.1"
         DEVELOPMENT_TEAM: ""
         CODE_SIGN_STYLE: Automatic
         TARGETED_DEVICE_FAMILY: 1,2

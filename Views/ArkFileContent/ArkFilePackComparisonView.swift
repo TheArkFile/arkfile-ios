@@ -98,6 +98,38 @@ enum ArkFilePackComparisonLayout {
     }
 }
 
+enum ArkFilePackComparisonFocus: Equatable {
+    case general
+    case tier(ArkFileContentTier)
+    case mapRegion
+
+    var initialTier: ArkFileContentTier? {
+        switch self {
+        case .general: nil
+        case .tier(let tier): tier
+        case .mapRegion: .complete
+        }
+    }
+
+    func title(hasEssentialsAccess: Bool, hasCompleteAccess: Bool) -> String {
+        if hasCompleteAccess { return "Your content packs" }
+        if hasEssentialsAccess { return "Upgrade to Complete" }
+        switch self {
+        case .general: return "Buy Essentials or Complete"
+        case .tier(.lite): return "Buy ArkFile Essentials"
+        case .tier, .mapRegion: return "Buy ArkFile Complete"
+        }
+    }
+
+    var subtitle: String {
+        switch self {
+        case .mapRegion: "Regional maps are included with Complete. Essentials is included too."
+        case .tier(.lite): "One-time purchase. You can upgrade to Complete later."
+        case .general, .tier: "One-time purchase. Complete includes everything in Essentials."
+        }
+    }
+}
+
 enum ArkFilePurchasePresentation {
     static func shouldBlockForAppleAccountCheck(
         isCheckingApplePurchases: Bool,
@@ -278,7 +310,7 @@ struct ArkFilePackComparisonView: View {
     let chooseComplete: (Bool) -> Void
     let manageDownloads: () -> Void
     let restorePurchases: () -> Void
-    var initialTier: ArkFileContentTier? = nil
+    var focus: ArkFilePackComparisonFocus = .general
 
     @ObservedObject private var merchandisingStore = ArkFileStoreKitMerchandisingStore.shared
     @ObservedObject private var purchaseManager = ArkFileLitePurchaseManager.shared
@@ -342,12 +374,10 @@ struct ArkFilePackComparisonView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 14) {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(hasCompleteAccess ? "Your content packs" : hasEssentialsAccess ? "Explore your upgrade" : "Choose your pack")
+                    Text(focus.title(hasEssentialsAccess: hasEssentialsAccess, hasCompleteAccess: hasCompleteAccess))
                         .font(.title2.bold())
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text(initialTier == .complete
-                        ? "Regional maps are included with Complete. Essentials is included too."
-                        : "One-time purchase. Complete includes everything in Essentials.")
+                    Text(focus.subtitle)
                         .font(.subheadline)
                         .foregroundStyle(Color.arkTextMuted)
                         .fixedSize(horizontal: false, vertical: true)
@@ -361,7 +391,7 @@ struct ArkFilePackComparisonView: View {
                 }
 
                 ForEach(ArkFilePackComparisonLayout.orderedTiers(
-                    initialTier: initialTier,
+                    initialTier: focus.initialTier,
                     hasEssentialsAccess: hasEssentialsAccess,
                     hasCompleteAccess: hasCompleteAccess
                 ), id: \.self) { tier in
@@ -376,18 +406,6 @@ struct ArkFilePackComparisonView: View {
                     .font(.caption)
                     .foregroundStyle(Color.arkTextMuted)
                     .fixedSize(horizontal: false, vertical: true)
-
-                if priceLoadNeedsRetry {
-                    Button {
-                        Task {
-                            await merchandisingStore.retry()
-                        }
-                    } label: {
-                        Label("Retry Prices", systemImage: "arrow.clockwise")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.bordered)
-                }
 
                 Button {
                     redemption.present()
@@ -425,7 +443,7 @@ struct ArkFilePackComparisonView: View {
             .padding(18)
         }
         .background(Color.arkAppBackground.ignoresSafeArea())
-        .navigationTitle("Compare Packs")
+        .navigationTitle("Content Packs")
         .navigationBarTitleDisplayMode(.inline)
         .offerCodeRedemption(isPresented: $redemption.isPresented) { result in
             Task { await redemption.sheetCompleted(result) }
@@ -437,7 +455,7 @@ struct ArkFilePackComparisonView: View {
             // Transaction.updates can arrive after the native sheet has closed.
             redemption.observeVerifiedOwnership(snapshot)
         }
-        .task { await merchandisingStore.loadIfNeeded() }
+        .task { await merchandisingStore.loadForPurchasePresentation() }
         .task(id: purchaseManager.ownershipSnapshot) { await refreshUpgradeEligibility() }
         .task(id: redemption.refreshGeneration) {
             if redemption.refreshGeneration > 0 { await refreshUpgradeEligibility() }
@@ -626,12 +644,30 @@ struct ArkFilePackComparisonView: View {
 
             Button(action: primaryAction) {
                 Label(primaryTitle, systemImage: primarySystemImage)
-                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, minHeight: 44)
             }
             .buttonStyle(.borderedProminent)
             .tint(tint)
             .disabled(isBusy || redemption.isRefreshing || redemption.isPresented || isPrimaryDisabled)
             .accessibilityIdentifier(primaryAccessibilityID)
+            .accessibilityLabel(Text(primaryTitle.replacingOccurrences(of: " · ", with: ", ")
+                + (primaryTitle.contains(" · ") ? ", one-time purchase" : "")))
+
+            if isPrimaryDisabled && displayPrice(for: artworkRole) == nil && priceLoadNeedsRetry {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Can’t load the App Store price. Connect to the internet and try again.")
+                        .font(.caption)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Button("Retry Prices") {
+                        Task { await merchandisingStore.retry() }
+                    }
+                    .frame(minHeight: 44)
+                    .disabled(isBusy)
+                }
+                .foregroundStyle(Color.arkInteractiveForeground)
+            }
 
             DisclosureGroup("What’s included") {
                 VStack(alignment: .leading, spacing: 8) {

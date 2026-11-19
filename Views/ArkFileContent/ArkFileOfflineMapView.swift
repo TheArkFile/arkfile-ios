@@ -2126,7 +2126,7 @@ struct ArkFileOfflineMapView: View {
     }
 
     private var criticalPlacesActionTitle: String {
-        hasCriticalPlacesAccess ? "View Map Downloads" : "Compare Packs"
+        hasCriticalPlacesAccess ? "View Map Downloads" : "Buy Essentials"
     }
 
     private func openCriticalPlacesDownloads() {
@@ -2689,8 +2689,8 @@ private struct ArkFileMapDownloadControl: View {
     }
 
     private var upgradeTitle: String {
-        guard tier == .complete else { return "View Content Packs" }
-        return installer.hasSavedLiteAccess ? "Upgrade to Complete" : "View Complete"
+        guard tier == .complete else { return "Buy Essentials" }
+        return installer.hasSavedLiteAccess ? "Upgrade to Complete" : "Buy Complete"
     }
 
     @ViewBuilder

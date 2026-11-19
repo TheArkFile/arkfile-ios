@@ -40,6 +40,7 @@ struct ArkFileContentBrowserView: View {
     @State private var selectedGroup: ArkFileContentDisplayGroup?
     @State private var detailItem: ArkFileLibraryContentItem?
     @State private var showPackComparison = false
+    @State private var comparisonFocus: ArkFilePackComparisonFocus = .general
     @State private var releaseDownloadTarget: ReleaseDownloadTarget?
     private struct ReleaseDownloadTarget: Identifiable {
         let path: String
@@ -758,9 +759,10 @@ struct ArkFileContentBrowserView: View {
                     .accessibilityLabel(rowDownloadAccessibilityLabel(for: rowState, item: item))
             }
         } else {
-            Button(presentation.resolvedTier == .complete && hasEssentialsAccess ? "Upgrade" : "View pack") {
+            Button("Details") {
                 showDetails(for: item)
             }
+            .accessibilityLabel("Requires \(presentation.fullPackName). Details")
             .buttonStyle(.borderless)
             .frame(minHeight: 44)
             .foregroundStyle(Color.arkLockedForeground)
@@ -971,6 +973,7 @@ struct ArkFileContentBrowserView: View {
                         if let route = presentation.primaryRestoreRoute {
                             handleLockedRestoreAction(route)
                         } else {
+                            comparisonFocus = .tier(presentation.resolvedTier)
                             showPackComparison = true
                         }
                     } else if let request = liteInstaller.stoppedDownloadCellularRequest {
@@ -983,6 +986,7 @@ struct ArkFileContentBrowserView: View {
                 } else if let route = presentation.primaryRestoreRoute {
                     handleLockedRestoreAction(route)
                 } else {
+                    comparisonFocus = .tier(presentation.resolvedTier)
                     showPackComparison = true
                 }
             },
@@ -1034,7 +1038,8 @@ struct ArkFileContentBrowserView: View {
                     // A generic Restore Purchases action restores the highest
                     // owned pack rather than requiring a Complete purchase.
                     beginRestore(tier: .lite)
-                }
+                },
+                focus: comparisonFocus
             )
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

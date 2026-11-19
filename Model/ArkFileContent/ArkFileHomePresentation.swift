@@ -13,6 +13,39 @@ enum ArkFileHomeOwnershipMode: Equatable, Sendable {
     case completeOwner
 }
 
+enum ArkFileHomeFirstDownloadAction: Equatable {
+    case checkingPurchases
+    case restorePurchases
+    case chooseDownloads
+
+    static func resolve(
+        blocksForAppleAccountCheck: Bool,
+        needsPurchaseRecovery: Bool,
+        hasResolvedCurrentProof: Bool,
+        hasCurrentProof: Bool
+    ) -> Self {
+        if blocksForAppleAccountCheck || !hasResolvedCurrentProof { return .checkingPurchases }
+        if needsPurchaseRecovery || !hasCurrentProof { return .restorePurchases }
+        return .chooseDownloads
+    }
+
+    var title: String {
+        switch self {
+        case .checkingPurchases: "Checking Apple Purchases…"
+        case .restorePurchases: "Restore Purchases"
+        case .chooseDownloads: "Choose Downloads"
+        }
+    }
+
+    var message: String {
+        switch self {
+        case .checkingPurchases: "Checking which pack is available with this Apple Account."
+        case .restorePurchases: "Restore your purchase before choosing downloads. You won’t be charged again."
+        case .chooseDownloads: "Your purchase is ready. Choose titles to keep offline on this device."
+        }
+    }
+}
+
 /// Keeps acquisition copy out of an existing owner's Home experience.
 ///
 /// This state describes confirmed access, not local file authority. Downloaded
@@ -54,7 +87,7 @@ struct ArkFileHomePresentation: Equatable, Sendable {
     var heroCopy: String {
         switch mode {
         case .prospective:
-            "Choose Essentials or Complete to build your offline library. Download only the titles and maps you want."
+            "Essentials covers practical preparedness. Complete adds full Wikipedia, textbooks and regional maps. Buy once, then download what you want."
         case .essentialsOwner:
             "ArkFile Essentials is yours. Manage what stays on this device, or upgrade to Complete when you need the full library."
         case .completeOwner:

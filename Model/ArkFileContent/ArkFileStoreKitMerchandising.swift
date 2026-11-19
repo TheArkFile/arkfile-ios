@@ -92,8 +92,8 @@ enum ArkFileStoreKitMerchandisingState: Equatable, Sendable {
 }
 
 /// Loads product metadata only when a comparison surface explicitly invokes
-/// `loadIfNeeded()`. Construction does not contact StoreKit, and failed or
-/// partial loads retry only through the explicit `retry()` action.
+/// `loadIfNeeded()`. Construction does not contact StoreKit. Failed or partial
+/// loads retry when the user reopens the purchase screen or taps Retry Prices.
 @MainActor
 final class ArkFileStoreKitMerchandisingStore: ObservableObject {
     static let shared = ArkFileStoreKitMerchandisingStore()
@@ -127,6 +127,17 @@ final class ArkFileStoreKitMerchandisingStore: ObservableObject {
 
     func retry() async {
         await load(force: true)
+    }
+
+    /// Reopening the purchase screen is an explicit request to see current
+    /// offers. Recover a prior offline/partial attempt without launch polling.
+    func loadForPurchasePresentation() async {
+        switch state {
+        case .failed, .partial:
+            await retry()
+        case .idle, .loading, .loaded:
+            await loadIfNeeded()
+        }
     }
 
     private func load(force: Bool) async {

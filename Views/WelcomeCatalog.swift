@@ -541,6 +541,7 @@ private struct ArkFileHomeWelcome: View {
     @State private var preservesMapContextAfterComparison = false
     @State private var isAwaitingRestoreOutcome = false
     @State private var pendingPackComparisonTierAfterRestore: ArkFileContentTier?
+    @State private var comparisonFocus: ArkFilePackComparisonFocus = .general
     @State private var showEssentialsSelectionReview = false
     @State private var showCompleteSelectionReview = false
     @State private var showEssentialsManage = false
@@ -645,7 +646,7 @@ private struct ArkFileHomeWelcome: View {
                 },
                 manageDownloads: closeComparisonAndShowDownloads,
                 restorePurchases: closeComparisonAndRestore,
-                initialTier: mapPurchaseContext?.relativePath != nil ? .complete : nil
+                focus: mapPurchaseContext?.relativePath != nil ? .mapRegion : comparisonFocus
             )
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -1100,15 +1101,40 @@ private struct ArkFileHomeWelcome: View {
 
     private var libraryBrowseActions: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Button(action: browseAllLibrary) {
-                Label("Browse Library", systemImage: "books.vertical")
+            Button {
+                if needsFirstPaidDownload {
+                    switch firstPaidDownloadAction {
+                    case .checkingPurchases:
+                        break
+                    case .restorePurchases:
+                        beginRestore(tier: liteInstaller.hasSavedCompleteAccess ? .complete : .lite)
+                    case .chooseDownloads:
+                        if liteInstaller.hasSavedCompleteAccess {
+                            showCompleteSelectionReview = true
+                        } else {
+                            showEssentialsSelectionReview = true
+                        }
+                    }
+                } else {
+                    browseAllLibrary()
+                }
+            } label: {
+                Label(needsFirstPaidDownload ? firstPaidDownloadAction.title : "Browse Library",
+                      systemImage: needsFirstPaidDownload ? "arrow.down.circle" : "books.vertical")
                     .font(.headline)
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity, minHeight: 36)
             }
             .buttonStyle(.borderedProminent)
             .tint(Color.arkPrimary)
-            .accessibilityIdentifier("arkfile_home_browse_library")
+            .disabled(needsFirstPaidDownload && firstPaidDownloadAction == .checkingPurchases)
+            .accessibilityIdentifier(needsFirstPaidDownload ? "arkfile_home_choose_downloads" : "arkfile_home_browse_library")
+            if needsFirstPaidDownload {
+                Text(firstPaidDownloadAction.message)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.arkTextMuted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
             Group {
                 if dynamicTypeSize.isAccessibilitySize {
                     VStack(alignment: .leading, spacing: 4) {
@@ -1135,8 +1161,8 @@ private struct ArkFileHomeWelcome: View {
             .foregroundStyle(Color.arkInteractiveForeground)
             .accessibilityIdentifier("arkfile_home_content_updates")
             if !liteInstaller.hasSavedCompleteAccess {
-                Button(hasEssentialsAccess ? "View Upgrade" : "View Packs") {
-                    presentGeneralPackComparison()
+                Button(hasEssentialsAccess ? "Upgrade to Complete" : "Buy or Restore a Pack") {
+                    presentPackComparison(focus: hasEssentialsAccess ? .tier(.complete) : .general)
                 }
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(Color.arkInteractiveForeground)
@@ -1152,6 +1178,21 @@ private struct ArkFileHomeWelcome: View {
                 .contentShape(Rectangle())
         }
         .accessibilityIdentifier("arkfile_home_manage_downloads")
+    }
+
+    private var needsFirstPaidDownload: Bool {
+        (hasEssentialsAccess || liteInstaller.hasSavedCompleteAccess)
+            && !hasLocalPaidContent
+            && !liteInstaller.isBusy
+    }
+
+    private var firstPaidDownloadAction: ArkFileHomeFirstDownloadAction {
+        ArkFileHomeFirstDownloadAction.resolve(
+            blocksForAppleAccountCheck: blocksForAppleAccountCheck,
+            needsPurchaseRecovery: shouldUseRestoreForEssentialsAction,
+            hasResolvedCurrentProof: liteInstaller.hasResolvedCurrentStoreKitProof,
+            hasCurrentProof: liteInstaller.hasCurrentStoreKitProof(for: liteInstaller.hasSavedCompleteAccess ? .complete : .lite)
+        )
     }
 
     private var downloadMapsButton: some View {
@@ -1265,16 +1306,51 @@ private struct ArkFileHomeWelcome: View {
             }
             .accessibilityIdentifier(homePresentation.heroAccessibilityIdentifier)
 
-            Button(action: presentGeneralPackComparison) {
-                Text("Compare Essentials & Complete")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, minHeight: 44)
+            if shouldUseRestoreForEssentialsAction {
+                Button { beginRestore() } label: {
+                    Text("Check Purchase Status")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color.arkPrimary)
+                .disabled(liteInstaller.isBusy)
+                .accessibilityIdentifier("arkfile_home_check_purchase")
+            } else if dynamicTypeSize.isAccessibilitySize {
+                VStack(spacing: 8) {
+                    homeBuyButton(tier: .lite)
+                    homeBuyButton(tier: .complete)
+                }
+            } else {
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: 8) {
+                        homeBuyButton(tier: .lite)
+                        homeBuyButton(tier: .complete)
+                    }
+                    VStack(spacing: 8) {
+                        homeBuyButton(tier: .lite)
+                        homeBuyButton(tier: .complete)
+                    }
+                }
             }
-            .buttonStyle(.borderedProminent)
-            .tint(Color.arkPrimary)
-            .accessibilityIdentifier("arkfile_compare_packs_action")
+
+            Text(shouldUseRestoreForEssentialsAction
+                ? purchaseRecoveryMessage
+                : "One-time purchase through Apple. See prices before you pay. No ArkFile account needed.")
+                .font(.caption)
+                .foregroundStyle(Color.arkTextMuted)
+                .fixedSize(horizontal: false, vertical: true)
+
+            if !shouldUseRestoreForEssentialsAction {
+                Button("Restore Purchases") { beginRestore() }
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Color.arkInteractiveForeground)
+                    .frame(minHeight: 44)
+                    .disabled(liteInstaller.isBusy)
+                    .accessibilityIdentifier("arkfile_home_restore_purchases")
+            }
 
             VStack(alignment: .leading, spacing: 4) {
                 Button(action: showIncludedSamples) {
@@ -1311,6 +1387,28 @@ private struct ArkFileHomeWelcome: View {
             RoundedRectangle(cornerRadius: 14)
                 .stroke(Color.arkAppBorder, lineWidth: 1)
         }
+    }
+
+    private var purchaseRecoveryMessage: String {
+        if liteInstaller.entitlementFailureAction == .pendingApproval
+            || liteInstaller.state.errorMessage?.localizedCaseInsensitiveContains("purchase is pending") == true {
+            return "Apple is waiting for approval. You don’t need to buy again. Check the status after approval."
+        }
+        return "Check this Apple Account to recover your purchase. You won’t be charged again, and nothing downloads automatically."
+    }
+
+    private func homeBuyButton(tier: ArkFileContentTier) -> some View {
+        Button { presentPackComparison(focus: .tier(tier)) } label: {
+            Text(tier == .complete ? "Buy Complete" : "Buy Essentials")
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: !dynamicTypeSize.isAccessibilitySize, vertical: true)
+                .frame(maxWidth: .infinity, minHeight: 44)
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(Color.arkPrimary)
+        .accessibilityHint("Shows the price and what’s included before you confirm with Apple.")
+        .accessibilityIdentifier(tier == .complete ? "arkfile_home_buy_complete" : "arkfile_home_buy_essentials")
     }
 
     private var browseAllLibraryButton: some View {
@@ -2990,7 +3088,7 @@ private struct ArkFileHomeWelcome: View {
 
     private func handleLockedPrimaryAction(tier: ArkFileContentTier) {
         if !(tier == .complete ? liteInstaller.hasSavedCompleteAccess : hasEssentialsAccess) {
-            presentGeneralPackComparison()
+            presentPackComparison(focus: .tier(tier))
             return
         }
         if tier == .complete {
@@ -3010,11 +3108,17 @@ private struct ArkFileHomeWelcome: View {
     }
 
     private func presentGeneralPackComparison() {
+        presentPackComparison(focus: .general)
+    }
+
+    private func presentPackComparison(focus: ArkFilePackComparisonFocus) {
         mapPurchaseContext = nil
+        comparisonFocus = focus
         showPackComparison = true
     }
 
     private func comparisonDismissed() {
+        comparisonFocus = .general
         let returnContext = preservesMapContextAfterComparison ? nil : mapPurchaseContext
         if !preservesMapContextAfterComparison { mapPurchaseContext = nil }
         preservesMapContextAfterComparison = false

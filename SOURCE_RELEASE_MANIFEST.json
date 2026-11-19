@@ -1,19 +1,19 @@
 {
   "manifestFormat": 4,
   "project": "arkfile-ios",
-  "version": "3.15.0",
-  "build": "375",
-  "commit": "5023d8b84cd8a1f5f653fdc6f661bce42e792f16",
-  "sourceReleaseCreatedAt": "2026-09-22T03:04:12Z",
+  "version": "3.15.1",
+  "build": "376",
+  "commit": "45248baeed3000e765832175c59cd71a379e95a0",
+  "sourceReleaseCreatedAt": "2026-11-19T03:13:28Z",
   "publicRepo": "https://github.com/TheArkFile/arkfile-ios",
-  "releaseURL": "https://github.com/TheArkFile/arkfile-ios/releases/tag/ios-v3.15.0-build375-source",
+  "releaseURL": "https://github.com/TheArkFile/arkfile-ios/releases/tag/ios-v3.15.1-build376-source",
   "license": "GPL-3.0-or-later",
   "binaryReleaseIdentity": {
     "boundToExportedBinary": true,
     "releaseIdentityFormat": 6,
-    "releaseIdentitySHA256": "e0ad0c07f34ea01df29e11bce3d751074bd37b5371671363f8c4da60da8a3c20",
-    "ipaSHA256": "34ad0ddbe673d9b4ce657867e549a6d7ea5f656401409fb1b5953e2f5ae2980d",
-    "archiveInfoSHA256": "f2c1901310afed72fcb697a40cb73bf6c9241be9bd76c19d59275cfc1c1f1755",
+    "releaseIdentitySHA256": "ad20fa6be3210a864d1d9690156b8be914de437d30394be88ee61c26ff2f3fcf",
+    "ipaSHA256": "483c65df47508f39fb18529e317c98d44730e9fbd57d220a1a8b8496a5468a58",
+    "archiveInfoSHA256": "0bbbeac71efbe10a85180d80ce5348cf90d7e47d328c50d765cf6a5f228e14d0",
     "swiftPackageLockSHA256": "5a0074895cf5ac9c6112f6045421edb3d08ab4b62e91e929bfe74a9f55b149a3"
   },
   "upstream": [

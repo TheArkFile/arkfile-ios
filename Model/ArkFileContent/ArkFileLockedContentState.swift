@@ -304,7 +304,7 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
             if input.hasAuthoritativeNoPurchase {
                 // A completed empty restore opens shopping without restoring
                 // acquisition flags or changing readable installed content.
-                return .regular(title: "Compare Packs")
+                return .regular(title: tier == .complete ? "Buy Complete" : "Buy Essentials")
             }
             return .restore(
                 title: tier == .complete ? "Restore Complete Purchase" : "Restore Purchases",
@@ -316,10 +316,10 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
         }
         if tier == .complete {
             return .regular(
-                title: input.hasSavedLiteAccess ? "Upgrade to Complete" : "View Complete"
+                title: input.hasSavedLiteAccess ? "Upgrade to Complete" : "Buy Complete"
             )
         }
-        return .regular(title: "View Essentials")
+        return .regular(title: "Buy Essentials")
     }
 
     private static func canDownloadOnlyThisTitle(
