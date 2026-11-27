@@ -391,6 +391,7 @@ struct SplitViewForiPad: View { // swiftlint:disable:this type_body_length
                 packComparisonPresentation: $showPackComparison,
                 mapPurchaseContext: $mapPurchaseContext
             )
+            .environment(\.arkFileOnboardingRequest, $adaptiveNavigation.homeOnboardingRequest)
         case .library:
             ArkFileLibraryDashboard(
                 load: nil,
@@ -638,8 +639,9 @@ struct SplitViewForiPad: View { // swiftlint:disable:this type_body_length
         switch destination {
         case .home:
             showHome()
-        case .includedSamples:
-            adaptiveNavigation.select(.library)
+        case .includedSamples, .restore:
+            adaptiveNavigation.homeOnboardingRequest = destination
+            showHome()
         case .packs:
             mapPurchaseContext = nil
             showHome()

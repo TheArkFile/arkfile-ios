@@ -39,11 +39,16 @@ enum ArkFileHomeFirstDownloadAction: Equatable {
 
     var message: String {
         switch self {
-        case .checkingPurchases: "Checking which pack is available with this Apple Account."
+        case .checkingPurchases: "Checking which library is available with this Apple Account."
         case .restorePurchases: "Restore your purchase before choosing downloads. You won’t be charged again."
         case .chooseDownloads: "Your purchase is ready. Choose titles to keep offline on this device."
         }
     }
+}
+
+enum ArkFileLibraryBenefits {
+    static let textbookCollection = "27 offline educational textbooks"
+    static let fullLibraryAdditions = "full Wikipedia, \(textbookCollection) and regional street maps"
 }
 
 /// Keeps acquisition copy out of an existing owner's Home experience.
@@ -73,25 +78,28 @@ struct ArkFileHomePresentation: Equatable, Sendable {
         mode == .prospective && !hasLocalPaidContent
     }
 
+    static let essentialsDescription = "Essentials Library includes first aid, food preservation, travel guides and Simple Wikipedia."
+    static let fullDescription = "Full Library includes everything in Essentials Library, plus \(ArkFileLibraryBenefits.fullLibraryAdditions)."
+
     var heroTitle: String {
         switch mode {
         case .prospective:
-            "Your Offline Library"
+            "Free with ArkFile"
         case .essentialsOwner:
-            "Your Essentials Library"
+            "You own Essentials Library"
         case .completeOwner:
-            "Your Complete Library"
+            "You own Full Library"
         }
     }
 
     var heroCopy: String {
         switch mode {
         case .prospective:
-            "Essentials covers practical preparedness. Complete adds full Wikipedia, textbooks and regional maps. Buy once, then download what you want."
+            Self.essentialsDescription + "\n\n" + Self.fullDescription
         case .essentialsOwner:
-            "ArkFile Essentials is yours. Manage what stays on this device, or upgrade to Complete when you need the full library."
+            "Full Library adds \(ArkFileLibraryBenefits.fullLibraryAdditions)."
         case .completeOwner:
-            "ArkFile Complete is yours. Manage which titles and regional maps stay on this device for offline use."
+            "Manage which titles and regional maps stay on this device for offline use."
         }
     }
 

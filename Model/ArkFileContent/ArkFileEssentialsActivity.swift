@@ -21,7 +21,7 @@ import Foundation
 /// download Live Activity shown on the Lock Screen and in the Dynamic Island.
 struct ArkFileEssentialsDownloadActivityAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
-        var packName: String = "Essentials"
+        var packName: String = "Essentials Library"
         var completedBytes: Int64
         var totalBytes: Int64
         var completedFiles: Int

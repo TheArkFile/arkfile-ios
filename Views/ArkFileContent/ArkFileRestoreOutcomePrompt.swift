@@ -34,20 +34,23 @@ enum ArkFileRestoreOutcomeCopy {
             )
         }
 
+        let essentialsName = ArkFileContentPackDisplayName.libraryName(for: .lite)
+        let fullName = ArkFileContentPackDisplayName.libraryName(for: .complete)
+
         if failureMessage != nil,
            let outcome,
            outcome.action == .restored,
            outcome.requestedTier == .complete,
            outcome.tier != .complete {
             return ArkFileRestoreOutcomePresentation(
-                title: "Complete Was Not Restored",
-                message: "Essentials is still available. Complete remains locked.",
+                title: "\(fullName) Was Not Restored",
+                message: "Your \(essentialsName) is still available. \(fullName) remains locked.",
                 primaryActionTitle: "Review Upgrade Price"
             )
         }
 
         if failureMessage != nil, let outcome {
-            let packName = ArkFileContentPackDisplayName.name(for: outcome.tier)
+            let packName = ArkFileContentPackDisplayName.libraryName(for: outcome.tier)
             let title = switch outcome.action {
             case .restored:
                 "Access Restored"
@@ -76,17 +79,17 @@ enum ArkFileRestoreOutcomeCopy {
 
         guard let outcome else {
             return ArkFileRestoreOutcomePresentation(
-                title: "Pack Access Updated",
-                message: "Pack access updated.",
+                title: "Library access updated",
+                message: "Library access updated.",
                 primaryActionTitle: nil
             )
         }
-        let packName = ArkFileContentPackDisplayName.name(for: outcome.tier)
+        let packName = ArkFileContentPackDisplayName.libraryName(for: outcome.tier)
         let title = switch outcome.action {
         case .restored:
             "\(packName) Restored"
         case .purchased:
-            "\(packName) Purchase Confirmed"
+            "You own \(packName)"
         case .accessConfirmed:
             "\(packName) Access Confirmed"
         case .pendingApproval:

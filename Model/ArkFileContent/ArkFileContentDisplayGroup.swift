@@ -347,11 +347,11 @@ struct ArkFileHomePackCardMetrics: Equatable, Sendable {
         if availableStreetMapCount > 0 {
             parts.append(Self.pluralized(availableStreetMapCount, singular: "street map", plural: "street maps") + " available")
         }
-        return "Complete is ready on this device — \(parts.joined(separator: ", "))."
+        return "Full Library is ready on this device — \(parts.joined(separator: ", "))."
     }
 
     var essentialsReadyLine: String {
-        "Essentials is ready offline on this device — \(Self.pluralized(installedEssentialsTitleCount, singular: "title", plural: "titles")) offline."
+        "Essentials Library is ready offline on this device — \(Self.pluralized(installedEssentialsTitleCount, singular: "title", plural: "titles")) offline."
     }
 
     static func make(items: [ArkFileLibraryContentItem]) -> ArkFileHomePackCardMetrics {

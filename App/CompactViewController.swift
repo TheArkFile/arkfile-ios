@@ -823,8 +823,8 @@ private struct Content<LaunchModel>: View where LaunchModel: LaunchProtocol {
         )
         guard let destination = replayOnboardingDestination else { return }
         replayOnboardingDestination = nil
-        guard destination != .home else { return }
         browser.clearForHome()
+        guard destination != .home else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             NotificationCenter.default.post(
                 name: .arkFileOnboardingDestination,

@@ -647,20 +647,16 @@ struct ArkFileLibraryDashboard: View {
 
     private var lockedPreviewPrimaryActionTitle: String {
         guard let lockedPreviewItem else {
-            return "Buy Essentials"
+            return "See Essentials Library and price"
         }
         return lockedActionTitle(for: lockedPreviewItem)
     }
 
     private var lockedPreviewAlertTitle: String {
         guard let lockedPreviewItem else {
-            return "Essentials Access"
+            return "Essentials Library Access"
         }
         return "\(lockedPreviewItem.requiredPackName) Access"
-    }
-
-    private var lockedPreviewRestoreTitle: String {
-        lockedPreviewItem?.requiredTier == .complete ? "Restore Complete Purchase" : "Restore Purchases"
     }
 
     private var lockedPreviewRestoreAvailable: Bool {
@@ -698,28 +694,9 @@ struct ArkFileLibraryDashboard: View {
             return tier == .complete ? "Manage Downloads" : "Choose Downloads"
         }
         if tier == .complete {
-            return hasEssentialsAccess ? "Upgrade to Complete" : "Buy Complete"
+            return hasEssentialsAccess ? "See what Full Library adds" : "See Full Library and price"
         }
-        return "Buy Essentials"
-    }
-
-    private var lockedPreviewMessage: String {
-        let title = lockedPreviewItem?.displayName ?? "This title"
-        let packName = lockedPreviewItem?.requiredPackName ?? "ArkFile Essentials"
-        let tier = downloadTier(for: lockedPreviewItem)
-        if installNeedsRepair(for: tier) {
-            return "\(title) is part of \(packName), but \(packShortName(for: tier)) did not finish downloading. Continue Download to pick up where it left off."
-        }
-        if liteInstaller.isLiteAccessRevoked || (tier == .complete && liteInstaller.isCompleteAccessRevoked) {
-            return "\(title) is part of \(packName), but ArkFile could not confirm active \(packShortName(for: tier)) access for future downloads. Restore Purchases to re-check access. Valid content already installed on this device remains readable."
-        }
-        if hasSavedAccess(for: tier) {
-            return "\(title) is part of \(packName), but this title is not downloaded on this device yet. \(lockedDownloadVerb(for: tier)) to make it available offline."
-        }
-        if tier == .complete {
-            return "\(title) is locked Complete content. Buy ArkFile Complete with your Apple Account, or restore purchases if you already bought it."
-        }
-        return "\(title) is locked Essentials content. Buy ArkFile Essentials with your Apple Account, or restore purchases if you already bought it."
+        return "See Essentials Library and price"
     }
 
     private var lockedSelectorNoticeTitle: String {
@@ -767,7 +744,7 @@ struct ArkFileLibraryDashboard: View {
     }
 
     private func packShortName(for tier: ArkFileContentTier) -> String {
-        ArkFileContentPackDisplayName.name(for: tier)
+        ArkFileContentPackDisplayName.libraryName(for: tier)
     }
 
     private func lockedDownloadVerb(for tier: ArkFileContentTier) -> String {
@@ -832,11 +809,11 @@ struct ArkFileLibraryDashboard: View {
         let notDownloadedCount = accessTotals.notDownloaded
         let lockedCount = accessTotals.locked
         if installedCount == 0 && notDownloadedCount == 0 && lockedCount == 0 {
-            return "Buy or restore ArkFile Essentials, or open local content, to browse ArkFile categories."
+            return "Buy or restore ArkFile Essentials Library, or open local content, to browse ArkFile categories."
         }
         if essentialsInstallNeedsRepair {
             return installedCount > 0
-                ? "\(installedCount) Essentials title\(installedCount == 1 ? "" : "s") already available. Continue Download to finish the rest."
+                ? "\(installedCount) Essentials Library title\(installedCount == 1 ? "" : "s") already available. Continue Download to finish the rest."
                 : incompleteEssentialsCopy
         }
         if installedCount == 0 {
@@ -867,7 +844,7 @@ struct ArkFileLibraryDashboard: View {
             LazyVGrid(columns: toolColumns, alignment: .leading, spacing: 10) {
                 ArkFileHomeToolButton(
                     title: "Library",
-                    copy: "Browse Essentials content and local files.",
+                    copy: "Browse Essentials Library content and local files.",
                     systemImage: "books.vertical",
                     tint: Color.arkPrimary
                 ) {
@@ -886,7 +863,7 @@ struct ArkFileLibraryDashboard: View {
                 }
                 ArkFileHomeToolButton(
                     title: "Map",
-                    copy: "Open the offline vector map and installed Essentials map detail.",
+                    copy: "Open the offline vector map and installed Essentials Library map detail.",
                     systemImage: "map",
                     tint: Color.arkPrimaryHover
                 ) {
@@ -990,7 +967,7 @@ struct ArkFileLibraryDashboard: View {
     private var essentialsInstallSection: some View {
         if shouldShowPackInstallSection {
             VStack(alignment: .leading, spacing: 12) {
-                sectionTitle("ArkFile Packs")
+                sectionTitle("ArkFile Libraries")
                 if blocksForAppleAccountCheck {
                     ArkFileApplePurchaseCheckingView(
                         isBusy: liteInstaller.isBusy,
@@ -1018,10 +995,10 @@ struct ArkFileLibraryDashboard: View {
                 Image(systemName: "rectangle.2.swap")
                     .foregroundStyle(Color.arkAccent)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(hasEssentialsAccess ? "Upgrade to Complete" : "Buy Essentials or Complete")
+                    Text(hasEssentialsAccess ? "See what Full Library adds" : "See libraries and prices")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text("See one-time prices and what each pack includes.")
+                    Text("See one-time prices and what each library includes.")
                         .font(.caption)
                         .foregroundStyle(Color.arkTextMuted)
                 }
@@ -1136,8 +1113,8 @@ struct ArkFileLibraryDashboard: View {
                     } label: {
                         Label(
                             shouldRestoreEssentialsToUpgrade
-                                ? "Restore Essentials to Upgrade"
-                                : "Upgrade Content Pack",
+                                ? "Restore Purchases"
+                                : "See what Full Library adds",
                             systemImage: shouldRestoreEssentialsToUpgrade
                                 ? "arrow.clockwise.circle"
                                 : "books.vertical"
@@ -1338,7 +1315,7 @@ struct ArkFileLibraryDashboard: View {
             return incompleteEssentialsCopy
         }
         if shouldUseRestoreForEssentialsAction {
-            return "App Store purchase confirmed. Restore Purchases re-checks access without downloading; you choose Essentials downloads afterward."
+            return "App Store purchase confirmed. Restore Purchases re-checks access without downloading; you choose Essentials Library downloads afterward."
         }
         if liteInstaller.state.phase == .installed {
             return packMetrics.essentialsReadyLine
@@ -1347,22 +1324,22 @@ struct ArkFileLibraryDashboard: View {
             return resumableInstallCopy
         }
         if liteInstaller.state.phase.isBusy {
-            return "Essentials is downloading. ArkFile will keep the files already downloaded if this is interrupted."
+            return "Essentials Library is downloading. ArkFile will keep the files already downloaded if this is interrupted."
         }
         if hasEssentialsAccess {
-            return "Essentials is unlocked. Choose the titles you want on this device and add more whenever you need them."
+            return "You own Essentials Library. Choose the titles you want on this device and add more whenever you need them."
         }
         if blocksForAppleAccountCheck, !hasEssentialsAccess {
             return "ArkFile is checking this Apple Account before showing purchase or download choices."
         }
         if contentLibrary.sampleLibraryItemCount > 0 {
-            return "Sample content is included with the app. Buy Essentials once with your Apple Account to unlock the full ArkFile pack."
+            return "Sample content is included with the app. Buy Essentials Library once with your Apple Account to download its titles."
         }
-        return "Unlock Essentials with one purchase. Download only what you need, when you need it."
+        return "Unlock Essentials Library with one purchase. Download only what you need, when you need it."
     }
 
     private var incompleteEssentialsCopy: String {
-        "Essentials download did not finish. Continue Download to pick up where it left off."
+        "Essentials Library download did not finish. Continue Download to pick up where it left off."
     }
 
     private var essentialsInstallTitle: String {
@@ -1370,41 +1347,41 @@ struct ArkFileLibraryDashboard: View {
             return "Continue Download"
         }
         if liteInstaller.state.phase == .installed {
-            return "\(installedEssentialsTitleCount) Essentials title\(installedEssentialsTitleCount == 1 ? "" : "s") available offline"
+            return "\(installedEssentialsTitleCount) Essentials Library title\(installedEssentialsTitleCount == 1 ? "" : "s") available offline"
         }
         if blocksForAppleAccountCheck, !hasEssentialsAccess {
             return "Checking Apple purchases…"
         }
         let lockedCount = contentLibrary.lockedLibraryItemCount
         if lockedCount > 0 {
-            return "\(lockedCount) Essentials title\(lockedCount == 1 ? "" : "s") available in the ArkFile pack"
+            return "\(lockedCount) Essentials Library title\(lockedCount == 1 ? "" : "s") available with purchase"
         }
         if liteInstaller.hasInstalledOrPartialContent {
-            return "Essentials is on this device"
+            return "Essentials Library is on this device"
         }
-        return "ArkFile Essentials"
+        return "ArkFile Essentials Library"
     }
 
     private var completeInstallTitle: String {
         if liteInstaller.hasSavedCompleteAccess {
-            return "ArkFile Complete"
+            return "ArkFile Full Library"
         }
         if completeInstallNeedsRepair {
-            return "Continue Complete Download"
+            return "Continue Full Library Download"
         }
         if liteInstaller.installedTier == .complete {
-            return "ArkFile Complete"
+            return "ArkFile Full Library"
         }
         if liteInstaller.hasSavedCompleteAccess {
-            return "ArkFile Complete"
+            return "ArkFile Full Library"
         }
         if hasEssentialsAccess {
-            return "Upgrade to ArkFile Complete"
+            return "See what Full Library adds"
         }
         if blocksForAppleAccountCheck, !hasEssentialsAccess {
             return "Checking Apple purchases…"
         }
-        return "Buy ArkFile Complete"
+        return "See Full Library and price"
     }
 
     private var completeInstallCopy: String {
@@ -1415,27 +1392,27 @@ struct ArkFileLibraryDashboard: View {
                 : summary
         }
         if completeInstallNeedsRepair {
-            return "Complete download did not finish. Continue Download to pick up where it left off."
+            return "Full Library download did not finish. Continue Download to pick up where it left off."
         }
         if liteInstaller.state.tier == .complete, let resumableInstallCopy = liteInstaller.resumableInstallCopy {
             return resumableInstallCopy
         }
         if liteInstaller.state.tier == .complete, liteInstaller.state.phase.isBusy {
-            return "Complete is downloading. ArkFile will keep the files already downloaded if this is interrupted."
+            return "Full Library is downloading. ArkFile will keep the files already downloaded if this is interrupted."
         }
         if liteInstaller.installedTier == .complete {
             return packMetrics.completeReadyLine
         }
         if liteInstaller.hasSavedCompleteAccess {
-            return "Complete is unlocked on this device. Download the titles you want, and choose one full-Wikipedia variant."
+            return "You own Full Library. Download the titles you want, and choose one full-Wikipedia variant."
         }
         if hasEssentialsAccess {
-            return "Adds full Wikipedia (your choice of text-only or with images), 27 college and AP textbooks, expanded expert references, and more classics. Apple shows the upgrade price before charging."
+            return "Adds full Wikipedia (your choice of text-only or with images), \(ArkFileLibraryBenefits.textbookCollection), expanded expert references, and more classics. Apple shows the upgrade price before charging."
         }
         if blocksForAppleAccountCheck {
-            return "ArkFile is checking whether this Apple Account already owns Complete."
+            return "ArkFile is checking whether this Apple Account already owns Full Library."
         }
-        return "Includes Essentials plus full Wikipedia options, 27 college and AP textbooks, and the rest of the Complete library. Apple shows the price before charging."
+        return "Includes Essentials Library plus full Wikipedia options, \(ArkFileLibraryBenefits.textbookCollection), and regional street maps. Apple shows the price before charging."
     }
 
     private var installedEssentialsTitleCount: Int {
@@ -1772,7 +1749,7 @@ struct ArkFileLibraryDashboard: View {
         ContentUnavailableView(
             "No local library installed",
             systemImage: "books.vertical",
-            description: Text("Buy or restore Essentials, download the pack, or open a local file to start reading.")
+            description: Text("Buy or restore Essentials Library, choose your downloads, or open a local file to start reading.")
         )
         .frame(maxWidth: .infinity)
         .padding(.top, 36)
@@ -2186,7 +2163,8 @@ struct ArkFileLibraryDashboard: View {
             if essentialsInstallNeedsRepair {
                 liteInstaller.repairLite()
             } else {
-                liteInstaller.installLite()
+                comparisonFocus = .tier(.lite)
+                showPackComparison = true
             }
         case .none:
             break
@@ -2459,7 +2437,7 @@ struct ArkFileContentSelectorCard: View {
     let selectedItem: ArkFileLibraryContentItem?
     let emptyMessage: String
     let isOpening: Bool
-    var resolutionInput: ArkFileLockedContentResolutionInput?
+    let resolutionInput: ArkFileLockedContentResolutionInput
     let lockedNoticeTitle: String
     let lockedSelectedMessage: (ArkFileLibraryContentItem) -> String
     let lockedButtonTitle: (ArkFileLibraryContentItem) -> String
@@ -2497,7 +2475,7 @@ struct ArkFileContentSelectorCard: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.vertical, 8)
             } else {
-                Label(countSummary, systemImage: countSummaryIcon)
+                ArkFileAvailabilitySummary(counts: ArkFileTitleAvailability.counts(for: items, input: resolutionInput))
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.arkTextMuted)
@@ -2569,7 +2547,7 @@ struct ArkFileContentSelectorCard: View {
                         }
                     }
                     if hasLockedItems {
-                        Section("Locked") {
+                        Section("Library access") {
                             ForEach(lockedItems) { item in
                                 Button {
                                     onSelect(item)
@@ -2666,43 +2644,6 @@ struct ArkFileContentSelectorCard: View {
         }
     }
 
-    private var countSummary: String {
-        let installedCount = items.filter { accessState(for: $0) == .installed }.count
-        let sampleCount = items.filter { accessState(for: $0) == .sample }.count
-        let notDownloadedCount = items.filter { accessState(for: $0) == .downloadable }.count
-        let lockedCount = items.filter { accessState(for: $0) == .locked }.count
-        let missingParts = missingSummaryParts(
-            lockedCount: lockedCount,
-            notDownloadedCount: notDownloadedCount
-        )
-        if sampleCount > 0 && installedCount == 0 && !missingParts.isEmpty {
-            return "\(sampleCount) sample\(sampleCount == 1 ? "" : "s") included - \(missingParts.joined(separator: " - "))"
-        }
-        if installedCount > 0 && !missingParts.isEmpty {
-            return "\(installedCount) available - \(missingParts.joined(separator: " - "))"
-        }
-        if sampleCount > 0 {
-            return "\(sampleCount) sample content item\(sampleCount == 1 ? "" : "s")"
-        }
-        if !missingParts.isEmpty {
-            return missingParts.joined(separator: " - ")
-        }
-        return "\(installedCount) item\(installedCount == 1 ? "" : "s")"
-    }
-
-    private var countSummaryIcon: String {
-        if hasLockedItems {
-            return "lock"
-        }
-        if !readyToDownloadItems.isEmpty {
-            return "arrow.down.circle"
-        }
-        if items.contains(where: { accessState(for: $0) == .sample }) {
-            return "lock.open"
-        }
-        return "checkmark.circle"
-    }
-
     private var featuredItems: [ArkFileLibraryContentItem] {
         let downloaded = items.filter { accessState(for: $0) == .installed }
         return Array((downloaded + items.filter(\.isSampleContent)).prefix(2))
@@ -2710,22 +2651,7 @@ struct ArkFileContentSelectorCard: View {
 
     private var selectedItemStatusLine: String {
         guard let selectedItem else { return "" }
-        let access: String
-        if selectedItem.isSampleContent {
-            access = "Sample Content"
-        } else {
-            switch accessState(for: selectedItem) {
-            case .sample:
-                access = "Sample Content"
-            case .installed:
-                access = "Available offline"
-            case .downloadable:
-                access = "Not downloaded"
-            case .locked:
-                access = "Locked \(packShortName(for: selectedItem))"
-            }
-        }
-        return "\(selectedItem.type.displayLabel) - \(access)"
+        return "\(selectedItem.type.displayLabel) · \(presentation(for: selectedItem).statusTitle)"
     }
 
     private func itemPreviewRow(_ item: ArkFileLibraryContentItem) -> some View {
@@ -2750,7 +2676,7 @@ struct ArkFileContentSelectorCard: View {
                     .lineLimit(1)
             }
             Spacer(minLength: 0)
-            Image(systemName: trailingIconName(for: item))
+            Image(systemName: presentation(for: item).statusSystemImage)
                 .font(.subheadline)
                 .foregroundStyle(Color.arkTextMuted)
         }
@@ -2762,22 +2688,7 @@ struct ArkFileContentSelectorCard: View {
         let subcategory = item.isSampleContent
             ? item.sampleOriginalSubcategory ?? item.type.displayLabel
             : item.subcategory
-        let access: String
-        if item.isSampleContent {
-            access = "Sample Content"
-        } else {
-            switch accessState(for: item) {
-            case .sample:
-                access = "Sample Content"
-            case .installed:
-                access = "Ready offline"
-            case .downloadable:
-                access = "Not downloaded"
-            case .locked:
-                access = "Locked \(packShortName(for: item))"
-            }
-        }
-        return "\(subcategory) - \(access)"
+        return "\(subcategory) · \(presentation(for: item).statusTitle)"
     }
 
     private func buttonTitle(for item: ArkFileLibraryContentItem) -> String {
@@ -2794,20 +2705,9 @@ struct ArkFileContentSelectorCard: View {
         return "Open selected content"
     }
 
-    private func packShortName(for item: ArkFileLibraryContentItem) -> String {
-        item.requiredPackName.replacingOccurrences(of: "ArkFile ", with: "")
-    }
-
-    private func menuTitle(for item: ArkFileLibraryContentItem) -> String {
-        if item.isSampleContent {
-            return "\(item.displayName) - Sample Content"
-        }
-        return item.displayName
-    }
-
     private func menuLabel(for item: ArkFileLibraryContentItem) -> some View {
         Label {
-            Text(menuTitle(for: item))
+            Text("\(item.displayName) · \(presentation(for: item).statusTitle)")
                 .foregroundStyle(itemTitleColor(for: item))
         } icon: {
             Image(systemName: iconName(for: item))
@@ -2832,17 +2732,6 @@ struct ArkFileContentSelectorCard: View {
             return "icloud.and.arrow.down"
         case .locked:
             return "lock"
-        }
-    }
-
-    private func trailingIconName(for item: ArkFileLibraryContentItem) -> String {
-        switch accessState(for: item) {
-        case .sample, .installed:
-            return "arrow.forward.circle"
-        case .downloadable:
-            return "arrow.down.circle"
-        case .locked:
-            return "lock.open"
         }
     }
 
@@ -2881,31 +2770,12 @@ struct ArkFileContentSelectorCard: View {
         items.filter { accessState(for: $0) == .locked }
     }
 
-    private func accessState(for item: ArkFileLibraryContentItem) -> ArkFileLockedContentAccessState {
-        if let resolutionInput {
-            return ArkFileLockedContentPresentation.resolve(
-                item: item,
-                input: resolutionInput
-            ).accessState
-        }
-        if item.isSampleContent {
-            return .sample
-        }
-        return item.isInstalled ? .installed : .locked
+    private func presentation(for item: ArkFileLibraryContentItem) -> ArkFileLockedContentPresentation {
+        .resolve(item: item, input: resolutionInput)
     }
 
-    private func missingSummaryParts(
-        lockedCount: Int,
-        notDownloadedCount: Int
-    ) -> [String] {
-        var parts: [String] = []
-        if lockedCount > 0 {
-            parts.append("\(lockedCount) locked")
-        }
-        if notDownloadedCount > 0 {
-            parts.append("\(notDownloadedCount) not downloaded")
-        }
-        return parts
+    private func accessState(for item: ArkFileLibraryContentItem) -> ArkFileLockedContentAccessState {
+        presentation(for: item).accessState
     }
 
     private func buttonSystemImage(

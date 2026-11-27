@@ -431,9 +431,9 @@ struct Settings: View {
                 .disabled(liteInstaller.isBusy)
             }
         } header: {
-            Text("ArkFile Packs")
+            Text("ArkFile Libraries")
         } footer: {
-            Text("Restore Purchases checks the Apple Account that bought ArkFile Essentials or Complete and will not charge you again. Restoring access never starts a download; ArkFile asks what you want afterward. Removing packs clears only the downloaded offline content from this device.")
+            Text("Restore Purchases checks the Apple Account that bought ArkFile Essentials Library or Full Library and will not charge you again. Restoring access never starts a download; ArkFile asks what you want afterward. Removing packs clears only the downloaded offline content from this device.")
         }
     }
 

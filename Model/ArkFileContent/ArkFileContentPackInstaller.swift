@@ -3055,31 +3055,43 @@ final class ArkFileContentPackInstaller: ObservableObject {
         case ArkFileContentError.noStoreKitPurchaseFound:
             if authorizationMode == .restoreHighestOwnedEntitlement {
                 if Bundle.main.usesSandboxAppStoreReceipt {
-                    return "No Essentials or Complete purchase was found for the Apple Account currently signed into the App Store sandbox. To test a fresh purchase, use a new Sandbox Apple Account or clear that sandbox tester's purchase history."
+                    return "No Essentials Library or Full Library purchase was found for the Apple Account currently signed into the App Store sandbox. To test a fresh purchase, use a new Sandbox Apple Account or clear that sandbox tester's purchase history."
                 }
-                return "No Essentials or Complete purchase was found for this Apple Account. Use the same Apple Account that bought an ArkFile pack, or review pack purchase options in the App Store."
+                return "No Essentials Library or Full Library purchase was found for this Apple Account. Use the Apple Account that bought your library, or see libraries and prices in ArkFile."
             }
-            let packName = ArkFileContentPackDisplayName.name(for: tier)
+            // Purchase help is presented in memory only, so it can use the
+            // customer-facing library name without affecting saved messages.
+            let libraryName = ArkFileContentPackDisplayName.libraryName(for: tier)
             if Bundle.main.usesSandboxAppStoreReceipt {
-                return "No \(packName) purchase was found for the Apple Account currently signed into the App Store sandbox. To test a fresh purchase, use a new Sandbox Apple Account or clear that sandbox tester's purchase history."
+                return "No \(libraryName) purchase was found for the Apple Account currently signed into the App Store sandbox. To test a fresh purchase, use a new Sandbox Apple Account or clear that sandbox tester's purchase history."
             }
-            return "No \(packName) purchase was found for this Apple Account. Use the same Apple Account that bought \(packName), or review \(packName) purchase options in the App Store."
+            return "No \(libraryName) purchase was found for this Apple Account. Use the same Apple Account that bought \(libraryName), or see \(libraryName) and its price in ArkFile."
         case ArkFileContentError.ownershipVerificationRequired:
-            return "We couldn’t confirm which pack this Apple Account owns. Restore Purchases before buying again."
+            return "We couldn’t confirm which library this Apple Account owns. Restore Purchases before buying again."
         default:
             return nil
         }
     }
 
     private nonisolated static func packName(for tier: ArkFileContentTier?) -> String {
-        ArkFileContentPackDisplayName.name(for: tier)
+        ArkFileContentPackDisplayName.libraryName(for: tier)
     }
 
     private nonisolated static func displayMessage(_ message: String?, for tier: ArkFileContentTier) -> String? {
         guard let message else { return nil }
+        if isInterruptedInstallMessage(message) { return LocalString.arkfile_lite_status_interrupted }
         let sanitizedMessage = sanitizedLegacyManifestFailureMessage(message, tier: tier)
-        guard tier == .complete else { return sanitizedMessage }
-        return sanitizedMessage.replacingOccurrences(of: "Essentials", with: "Complete")
+        // Older installers stored short product names in these status messages.
+        // Only translate a known status prefix. An arbitrary error may contain a book title or filename.
+        for oldName in ["Essentials", "Complete"] {
+            for suffix in [" needs repair.", " download did not finish.", " content is temporarily unavailable."] {
+                let oldPrefix = oldName + suffix
+                if sanitizedMessage.hasPrefix(oldPrefix) {
+                    return Self.packName(for: tier) + suffix + sanitizedMessage.dropFirst(oldPrefix.count)
+                }
+            }
+        }
+        return sanitizedMessage
     }
 
     nonisolated static func safeManifestRejectionMessage(for tier: ArkFileContentTier) -> String {
@@ -3121,7 +3133,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
         case ArkFileContentError.noStoreKitPurchaseFound:
             "No \(packName) purchase was found for this Apple Account. Buy \(packName) with the App Store, or restore with the Apple Account that bought it."
         case ArkFileContentError.ownershipVerificationRequired:
-            "We couldn’t confirm which pack this Apple Account owns. Restore Purchases before buying again."
+            "We couldn’t confirm which library this Apple Account owns. Restore Purchases before buying again."
         case ArkFileContentError.purchaseCancelled:
             "The App Store purchase was cancelled."
         case ArkFileContentError.purchasePending:
@@ -3135,7 +3147,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
         case ArkFileStoreKitMintError.supersededByEntitlementChange:
             "App Store access changed while ArkFile was checking this purchase. Restore Purchases to re-check \(packName) access."
         case ArkFileContentError.liteAccessRevoked:
-            "ArkFile could not confirm an active Essentials purchase for this Apple Account. Restore Purchases if you already bought it, or remove ArkFile Essentials from this device."
+            "ArkFile could not confirm an active Essentials Library purchase for this Apple Account. Restore Purchases if you already bought it, or manage downloaded titles on this device."
         case ArkFileContentError.confirmedStoreKitRefund:
             "This purchase was refunded. Buy again, or restore if the refund was reversed."
         case ArkFileContentError.purchaseLinkingFailed(_):
@@ -3209,6 +3221,7 @@ final class ArkFileContentPackInstaller: ObservableObject {
 
     private nonisolated static func isInterruptedInstallMessage(_ message: String?) -> Bool {
         message == LocalString.arkfile_lite_status_interrupted
+            || message == "Essentials download stopped before it finished. Continue Download to pick up where it left off."
     }
 
     nonisolated static func incompleteInstallMessage(
@@ -3225,10 +3238,13 @@ final class ArkFileContentPackInstaller: ObservableObject {
 
     private nonisolated static func isIncompleteInstallMessage(_ message: String?) -> Bool {
         guard let message else { return false }
-        return message.hasPrefix("Essentials needs repair.")
-            || message.hasPrefix("Essentials download did not finish.")
-            || message.hasPrefix("Complete needs repair.")
-            || message.hasPrefix("Complete download did not finish.")
+        // Saved state may carry either the legacy short tier word or the
+        // customer-facing library name, depending on the build that wrote it.
+        let names = ["Essentials", "Complete", "Essentials Library", "Full Library"]
+        return names.contains { name in
+            message.hasPrefix("\(name) needs repair.")
+                || message.hasPrefix("\(name) download did not finish.")
+        }
     }
 
     nonisolated static func canPauseLiteDownload(phase: ArkFileContentInstallPhase) -> Bool {

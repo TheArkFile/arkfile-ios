@@ -200,7 +200,7 @@ struct ArkFileContentUpdatesView: View {
                 .disabled(blocksNewOperation || !hasAccess(row))
                 .accessibilityIdentifier("arkfile_review_content_\(row.id)")
                 if !hasAccess(row) {
-                    Text(row.item.minimumTier == "complete" ? "ArkFile Complete purchase required" : "ArkFile Essentials or Complete purchase required")
+                    Text(row.item.minimumTier == "complete" ? "ArkFile Full Library purchase required" : "ArkFile Essentials Library or Full Library purchase required")
                         .font(.caption).foregroundStyle(.secondary)
                 }
             }

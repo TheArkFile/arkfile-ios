@@ -630,8 +630,7 @@ struct ArkFileContentBrowserView: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Label(section.group.displayName, systemImage: section.group.systemImage)
                         .font(.subheadline.weight(.semibold))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.9)
+                        .fixedSize(horizontal: false, vertical: true)
                     sectionSummary(section)
                 }
                 Spacer(minLength: 0)
@@ -644,10 +643,9 @@ struct ArkFileContentBrowserView: View {
     }
 
     private func sectionSummary(_ section: ArkFileContentDisplayLibrarySection) -> some View {
-        let items = visibleItems(in: section)
-        let readyCount = items.filter { $0.isInstalled || $0.isSampleContent }.count
-        let titleCount = items.count == 1 ? "1 title" : "\(items.count) titles"
-        return Text("\(titleCount) · \(readyCount) ready offline")
+        ArkFileAvailabilitySummary(counts: ArkFileTitleAvailability.counts(
+            for: visibleItems(in: section), input: lockedResolutionInput
+        ))
             .font(.caption)
             .foregroundStyle(Color.arkTextMuted)
             .fixedSize(horizontal: false, vertical: true)
@@ -762,7 +760,7 @@ struct ArkFileContentBrowserView: View {
             Button("Details") {
                 showDetails(for: item)
             }
-            .accessibilityLabel("Requires \(presentation.fullPackName). Details")
+            .accessibilityLabel("\(presentation.statusTitle). Details")
             .buttonStyle(.borderless)
             .frame(minHeight: 44)
             .foregroundStyle(Color.arkLockedForeground)
@@ -943,6 +941,11 @@ struct ArkFileContentBrowserView: View {
             actionTitle = "Downloading"
             actionIcon = "arrow.down.circle"
             transferStatus = liteInstaller.statusText
+            isEnabled = false
+        case .none where presentation.isCheckingAccess:
+            actionTitle = presentation.statusTitle
+            actionIcon = presentation.statusSystemImage
+            transferStatus = nil
             isEnabled = false
         case .none:
             actionTitle = isOffline ? "Open" : presentation.accessState == .downloadable
@@ -1364,34 +1367,6 @@ struct ArkFileContentBrowserView: View {
         return normalized.lowercased()
     }
 
-    private func sectionAccessBadges(
-        for section: ArkFileContentDisplayLibrarySection
-    ) -> [(title: String, color: Color)] {
-        let lockedPresentations = section.items.compactMap { item -> ArkFileLockedContentPresentation? in
-            let presentation = ArkFileLockedContentPresentation.resolve(
-                item: item,
-                input: lockedResolutionInput
-            )
-            return presentation.accessState == .locked ? presentation : nil
-        }
-        let completeLockedCount = lockedPresentations.filter { $0.resolvedTier == .complete }.count
-        let otherLockedCount = lockedPresentations.count - completeLockedCount
-        var badges: [(title: String, color: Color)] = []
-        if completeLockedCount > 0 {
-            let title = hasEssentialsAccess
-                ? "\(completeLockedCount) with Complete"
-                : "\(completeLockedCount) Complete"
-            badges.append((title, Color.arkLockedForeground))
-        }
-        if otherLockedCount > 0 {
-            badges.append(("\(otherLockedCount) locked", Color.arkLockedForeground))
-        }
-        if section.summary.notDownloadedCount > 0 {
-            badges.append(("\(section.summary.notDownloadedCount) not downloaded", Color.arkTextMuted))
-        }
-        return badges
-    }
-
     private var cancelCurrentDownloadMessage: String {
         let remainingCount = max(
             0,
@@ -1427,16 +1402,16 @@ struct ArkFileContentBrowserView: View {
     private var packStateLine: String {
         let essentialsState: String
         if hasEssentialsAccess {
-            essentialsState = "Essentials unlocked"
+            essentialsState = "You own Essentials Library"
         } else {
-            essentialsState = "Essentials locked"
+            essentialsState = "Requires Essentials Library"
         }
 
         let completeState: String
         if liteInstaller.hasSavedCompleteAccess {
-            completeState = "Complete unlocked"
+            completeState = "You own Full Library"
         } else {
-            completeState = "Complete locked"
+            completeState = "Requires Full Library"
         }
         return "\(essentialsState) · \(completeState)"
     }
@@ -1557,7 +1532,8 @@ struct ArkFileContentBrowserView: View {
             case .chooseDownloads:
                 if detailItem == nil { showEssentialsSelectionReview = true }
             case .continueCompletePurchase:
-                beginPurchaseWithoutDownload(tier: .complete)
+                comparisonFocus = .tier(.complete)
+                showPackComparison = true
             }
         }
     }

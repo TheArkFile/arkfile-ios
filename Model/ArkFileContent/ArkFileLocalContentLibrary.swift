@@ -327,7 +327,7 @@ struct ArkFileLibraryContentItem: Identifiable, Hashable, Sendable {
 
     init(
         installed item: ArkFileLocalContentItem,
-        requiredPackName: String = "ArkFile Essentials",
+        requiredPackName: String = "ArkFile Essentials Library",
         requiredTier: ArkFileContentTier? = nil,
         variantGroup: String? = nil,
         variantLabel: String? = nil,
@@ -343,7 +343,7 @@ struct ArkFileLibraryContentItem: Identifiable, Hashable, Sendable {
             subcategory: item.subcategory,
             sizeBytes: item.sizeBytes,
             isInstalled: true,
-            requiredTier: requiredTier ?? (requiredPackName == "ArkFile Complete" ? .complete : .lite),
+            requiredTier: requiredTier ?? (["ArkFile Complete", "ArkFile Full Library"].contains(requiredPackName) ? .complete : .lite),
             requiredPackName: requiredPackName,
             isSampleContent: item.isSampleContent,
             sampleOriginalSubcategory: item.sampleOriginalSubcategory,
@@ -357,7 +357,7 @@ struct ArkFileLibraryContentItem: Identifiable, Hashable, Sendable {
 
     init(catalog item: ArkFileContentCatalogItem, installedItem: ArkFileLocalContentItem?) {
         let requiredTier: ArkFileContentTier = item.isAvailableInEssentials ? .lite : .complete
-        let requiredPackName = requiredTier == .complete ? "ArkFile Complete" : "ArkFile Essentials"
+        let requiredPackName = ArkFileContentPackDisplayName.storefrontName(for: requiredTier)
         if let installedItem {
             self.init(
                 name: item.name,

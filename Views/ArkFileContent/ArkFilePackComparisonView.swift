@@ -59,6 +59,33 @@ enum ArkFilePackPurchaseCopy {
         return "\(title) · \(displayPrice)"
     }
 
+    /// Final purchase button copy. This is the only commerce copy that names a
+    /// charge; it carries Apple's localized price for the exact SKU when loaded
+    /// (the button stays disabled until it is).
+    static func purchaseTitle(
+        for role: ArkFileStoreKitProductRole,
+        displayPrice: String?
+    ) -> String {
+        let title = switch role {
+        case .lite:
+            "Buy \(ArkFileContentPackDisplayName.libraryName(for: .lite))"
+        case .complete, .completeUpgrade:
+            "Buy \(ArkFileContentPackDisplayName.libraryName(for: .complete))"
+        }
+        return pricedAction(title, displayPrice: displayPrice)
+    }
+
+    /// Card price line. A verified Essentials owner sees the upgrade SKU's
+    /// price labelled as their own, never the outright Full Library price.
+    static func priceLine(
+        for role: ArkFileStoreKitProductRole,
+        displayPrice: String
+    ) -> String {
+        role == .completeUpgrade
+            ? "Your one-time upgrade price: \(displayPrice)"
+            : "\(displayPrice) one-time"
+    }
+
     static func needsEssentialsRestoreToUpgrade(
         hasEssentialsAccess: Bool,
         hasResolvedCurrentStoreKitProof: Bool,
@@ -79,9 +106,47 @@ enum ArkFilePackPurchaseCopy {
             hasResolvedCurrentStoreKitProof: hasResolvedCurrentStoreKitProof,
             hasCurrentEssentialsProof: hasCurrentEssentialsProof
         ) {
-            return "Restore Essentials to Upgrade"
+            return "Restore \(ArkFileContentPackDisplayName.libraryName(for: .lite)) to Upgrade"
         }
-        return hasEssentialsAccess ? "Upgrade to Complete" : "Buy Complete"
+        // Review entry points only open the comparison; the priced Buy button
+        // there is the purchase.
+        return ArkFileLockedContentPresentation.browseTitle(
+            tier: .complete,
+            ownsEssentials: hasEssentialsAccess
+        )
+    }
+}
+
+/// App Store product names are edited in App Store Connect and can lag the
+/// app's copy. When Apple's localized name for the exact SKU differs from the
+/// name ArkFile now uses, say so beside the Buy button so the purchase sheet
+/// is not a surprise.
+enum ArkFilePackStorefrontName {
+    static func expected(for role: ArkFileStoreKitProductRole) -> String {
+        switch role {
+        case .lite:
+            ArkFileContentPackDisplayName.storefrontName(for: .lite)
+        case .complete:
+            ArkFileContentPackDisplayName.storefrontName(for: .complete)
+        case .completeUpgrade:
+            "\(ArkFileContentPackDisplayName.storefrontName(for: .complete)) Upgrade"
+        }
+    }
+
+    static func transitionalNotice(
+        appleDisplayName: String?,
+        role: ArkFileStoreKitProductRole
+    ) -> String? {
+        guard let appleName = appleDisplayName?
+            .trimmingCharacters(in: .whitespacesAndNewlines),
+              !appleName.isEmpty,
+              appleName.compare(
+                expected(for: role),
+                options: [.caseInsensitive, .diacriticInsensitive]
+              ) != .orderedSame else {
+            return nil
+        }
+        return "Apple’s purchase sheet may show this as “\(appleName)”."
     }
 }
 
@@ -112,20 +177,24 @@ enum ArkFilePackComparisonFocus: Equatable {
     }
 
     func title(hasEssentialsAccess: Bool, hasCompleteAccess: Bool) -> String {
-        if hasCompleteAccess { return "Your content packs" }
-        if hasEssentialsAccess { return "Upgrade to Complete" }
-        switch self {
-        case .general: return "Buy Essentials or Complete"
-        case .tier(.lite): return "Buy ArkFile Essentials"
-        case .tier, .mapRegion: return "Buy ArkFile Complete"
+        if hasCompleteAccess { return "Your library" }
+        if hasEssentialsAccess {
+            return "What Full Library adds"
         }
+        // The focused tier is ordered first; the heading stays a choice.
+        return "Choose your library"
     }
 
     var subtitle: String {
-        switch self {
-        case .mapRegion: "Regional maps are included with Complete. Essentials is included too."
-        case .tier(.lite): "One-time purchase. You can upgrade to Complete later."
-        case .general, .tier: "One-time purchase. Complete includes everything in Essentials."
+        let essentials = ArkFileContentPackDisplayName.libraryName(for: .lite)
+        let full = ArkFileContentPackDisplayName.libraryName(for: .complete)
+        return switch self {
+        case .mapRegion:
+            "Regional maps are included with \(full), along with everything in \(essentials)."
+        case .tier(.lite):
+            "One-time purchase. You can upgrade to \(full) later."
+        case .general, .tier:
+            "One-time purchase. \(full) includes everything in \(essentials)."
         }
     }
 }
@@ -271,7 +340,7 @@ final class ArkFileOfferCodeRedemptionCoordinator: ObservableObject {
             return "Apple could not complete code redemption. Try again, or use Restore Purchases if you already redeemed a code."
         }
         if let tier = snapshot?.verifiedTier {
-            let name = tier == .complete ? "Complete" : "Essentials"
+            let name = ArkFileContentPackDisplayName.libraryName(for: tier)
             return "Apple purchase found: \(name). Your download choices remain unchanged."
         }
         return "No new purchase is verified yet. If you redeemed a code, allow a moment for Apple to update your purchases or use Restore Purchases."
@@ -333,6 +402,13 @@ struct ArkFilePackComparisonView: View {
         )
     }
 
+    private var comparisonSubtitle: String {
+        if hasEssentialsAccess && !hasCompleteAccess && hasResolvedCurrentStoreKitProof && hasCurrentEssentialsStoreKitProof {
+            return "You already own Essentials Library."
+        }
+        return focus.subtitle
+    }
+
     private var effectiveCurrentEssentialsProof: Bool {
         didResolveUpgradeEligibility && hasCurrentEssentialsProof
     }
@@ -377,7 +453,7 @@ struct ArkFilePackComparisonView: View {
                     Text(focus.title(hasEssentialsAccess: hasEssentialsAccess, hasCompleteAccess: hasCompleteAccess))
                         .font(.title2.bold())
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text(focus.subtitle)
+                    Text(comparisonSubtitle)
                         .font(.subheadline)
                         .foregroundStyle(Color.arkTextMuted)
                         .fixedSize(horizontal: false, vertical: true)
@@ -443,7 +519,7 @@ struct ArkFilePackComparisonView: View {
             .padding(18)
         }
         .background(Color.arkAppBackground.ignoresSafeArea())
-        .navigationTitle("Content Packs")
+        .navigationTitle("Libraries")
         .navigationBarTitleDisplayMode(.inline)
         .offerCodeRedemption(isPresented: $redemption.isPresented) { result in
             Task { await redemption.sheetCompleted(result) }
@@ -484,9 +560,9 @@ struct ArkFilePackComparisonView: View {
             accessibilityID: "arkfile_pack_essentials_card",
             priceAccessibilityID: "arkfile_pack_essentials_price",
             primaryAccessibilityID: "arkfile_pack_essentials_primary_action",
-            title: "ArkFile Essentials",
+            title: ArkFileContentPackDisplayName.libraryName(for: .lite),
             artworkRole: .lite,
-            benefit: "Preparedness, medical, food, travel and practical reference.",
+            benefit: "Simple Wikipedia, the USDA home canning guide, and practical preparedness, medical, food and travel references.",
             price: essentialsPrice,
             ownership: essentialsOwnershipStatus,
             isOwned: hasEssentialsAccess,
@@ -510,6 +586,7 @@ struct ArkFilePackComparisonView: View {
                 hasLocalizedPrice: displayPrice(for: .lite) != nil,
                 blocksForAppleAccountCheck: blocksForAppleAccountCheck
             ),
+            storefrontNameNotice: essentialsStorefrontNotice,
             primaryAction: {
                 switch essentialsAction {
                 case .manageDownloads:
@@ -526,23 +603,25 @@ struct ArkFilePackComparisonView: View {
             accessibilityID: "arkfile_pack_complete_card",
             priceAccessibilityID: "arkfile_pack_complete_price",
             primaryAccessibilityID: "arkfile_pack_complete_primary_action",
-            title: "ArkFile Complete",
+            title: ArkFileContentPackDisplayName.libraryName(for: .complete),
             artworkRole: hasCompleteAccess ? .complete : completePurchaseRole,
-            benefit: "Essentials plus full Wikipedia choices, textbooks and regional maps.",
+            benefit: "Everything in Essentials Library plus \(ArkFileLibraryBenefits.fullLibraryAdditions).",
             price: completePrice,
             ownership: completeOwnershipStatus,
             isOwned: hasCompleteAccess,
             device: completeDeviceStatus,
             scope: completeScope,
             details: [
+                "Everything in Essentials Library, including Simple Wikipedia and the USDA home canning guide",
                 completeAdditions,
+                "Textbook subjects include algebra, biology, chemistry and physics.",
                 "Choose individual titles, maps, or entire categories after purchase",
                 "Nothing downloads until you confirm your choices",
-                hasEssentialsAccess && hasCurrentEssentialsProof
-                    ? "Upgrading keeps Essentials and everything already downloaded"
+                hasEssentialsAccess && effectiveCurrentEssentialsProof
+                    ? "Upgrading keeps Essentials Library and everything already downloaded"
                     : hasEssentialsAccess
-                        ? "Complete includes Essentials and keeps everything already downloaded"
-                        : "Buy Complete directly — Essentials is included with no separate purchase"
+                        ? "Full Library includes Essentials Library and keeps everything already downloaded"
+                        : "Buy Full Library directly — Essentials Library is included with no separate purchase"
             ],
             tint: Color.arkAccentSecondary,
             labelTint: Color.arkTextPrimary,
@@ -554,6 +633,7 @@ struct ArkFilePackComparisonView: View {
                 blocksForAppleAccountCheck: blocksForAppleAccountCheck,
                 isUpgradeEligibilityResolved: didResolveUpgradeEligibility
             ),
+            storefrontNameNotice: completeStorefrontNotice,
             primaryAction: {
                 switch completeAction {
                 case .manageDownloads:
@@ -583,6 +663,7 @@ struct ArkFilePackComparisonView: View {
         primaryTitle: String,
         primarySystemImage: String,
         isPrimaryDisabled: Bool = false,
+        storefrontNameNotice: String? = nil,
         primaryAction: @escaping () -> Void
     ) -> some View {
         VStack(alignment: .leading, spacing: 9) {
@@ -655,6 +736,14 @@ struct ArkFilePackComparisonView: View {
             .accessibilityLabel(Text(primaryTitle.replacingOccurrences(of: " · ", with: ", ")
                 + (primaryTitle.contains(" · ") ? ", one-time purchase" : "")))
 
+            if let storefrontNameNotice, !isPrimaryDisabled {
+                Text(storefrontNameNotice)
+                    .font(.caption)
+                    .foregroundStyle(Color.arkTextMuted)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("\(primaryAccessibilityID)_storefront_name")
+            }
+
             if isPrimaryDisabled && displayPrice(for: artworkRole) == nil && priceLoadNeedsRetry {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Can’t load the App Store price. Connect to the internet and try again.")
@@ -700,12 +789,12 @@ struct ArkFilePackComparisonView: View {
     }
 
     private var essentialsScope: String {
-        guard let metrics else { return "Essentials catalog" }
+        guard let metrics else { return "Essentials Library catalog" }
         return "\(metrics.essentials.titleSlotCount) titles"
     }
 
     private var completeScope: String {
-        guard let metrics else { return "Complete catalog, including optional maps" }
+        guard let metrics else { return "Full Library catalog, including optional regional maps" }
         return "\(metrics.complete.titleSlotCount) titles + \(metrics.complete.mapCount) regional maps"
     }
 
@@ -717,16 +806,16 @@ struct ArkFilePackComparisonView: View {
 
     private var completeAdditions: String {
         guard let metrics else {
-            return "Adds full Wikipedia choices, textbooks, expanded references, classics, and regional maps"
+            return "Adds full Wikipedia choices, \(ArkFileLibraryBenefits.textbookCollection), expanded references, classics, and regional street maps"
         }
-        return "Adds \(metrics.completeAdditionalTitleSlotCount) title choices and \(metrics.completeOptionalMapCount) optional regional maps beyond Essentials"
+        return "Adds \(metrics.completeAdditionalTitleSlotCount) title choices and \(metrics.completeOptionalMapCount) optional regional street maps beyond Essentials Library"
     }
 
     private var essentialsUpgradeDetail: String {
         if let upgradePrice = displayPrice(for: .completeUpgrade) {
-            return "Upgrade to Complete later for \(upgradePrice) one-time"
+            return "Upgrade to Full Library later for \(upgradePrice) one-time"
         }
-        return "Upgrade to Complete later at the App Store price shown before purchase"
+        return "Upgrade to Full Library later at the App Store price shown before purchase"
     }
 
     private var essentialsPrice: String {
@@ -748,18 +837,22 @@ struct ArkFilePackComparisonView: View {
             return "Loading price…"
         }
         if hasEssentialsAccess, !hasCurrentEssentialsProof {
-            return "Restore Essentials to see your upgrade price"
+            return "Restore Essentials Library to see your upgrade price"
         }
         return price(for: completePurchaseRole)
+    }
+
+    private var restoreEssentialsToUpgradeTitle: String {
+        "Restore \(ArkFileContentPackDisplayName.libraryName(for: .lite)) to Upgrade"
     }
 
     private var completePrimaryTitle: String {
         switch completeAction {
         case .manageDownloads:
-            return "Manage Complete Downloads"
+            return "Manage Full Library Downloads"
         case .restorePurchases:
-            return hasEssentialsAccess
-                ? "Restore Essentials to Upgrade"
+            return hasEssentialsAccess && !hasCompleteAccess
+                ? restoreEssentialsToUpgradeTitle
                 : "Restore Purchases"
         case .purchase:
             break
@@ -768,23 +861,47 @@ struct ArkFilePackComparisonView: View {
             return "Loading Purchase Options…"
         }
         guard hasEssentialsAccess else {
-            return ArkFilePackPurchaseCopy.pricedAction(
-                "Buy Complete",
+            return ArkFilePackPurchaseCopy.purchaseTitle(
+                for: .complete,
                 displayPrice: displayPrice(for: .complete)
             )
         }
         return effectiveCurrentEssentialsProof
-            ? ArkFilePackPurchaseCopy.pricedAction(
-                "Upgrade to Complete",
+            ? ArkFilePackPurchaseCopy.purchaseTitle(
+                for: .completeUpgrade,
                 displayPrice: displayPrice(for: .completeUpgrade)
             )
-            : "Restore Essentials to Upgrade"
+            : restoreEssentialsToUpgradeTitle
     }
 
     private var essentialsPurchaseTitle: String {
-        ArkFilePackPurchaseCopy.pricedAction(
-            "Buy Essentials",
+        ArkFilePackPurchaseCopy.purchaseTitle(
+            for: .lite,
             displayPrice: displayPrice(for: .lite)
+        )
+    }
+
+    /// Shown only beside a live purchase button, for the exact SKU it buys.
+    private var essentialsStorefrontNotice: String? {
+        guard case .purchase = essentialsAction,
+              !blocksForAppleAccountCheck else { return nil }
+        return ArkFilePackStorefrontName.transitionalNotice(
+            appleDisplayName: offer(for: .lite)?.displayName,
+            role: .lite
+        )
+    }
+
+    private var completeStorefrontNotice: String? {
+        guard case .purchase = completeAction,
+              didResolveUpgradeEligibility,
+              !blocksForAppleAccountCheck,
+              !hasEssentialsAccess || effectiveCurrentEssentialsProof else {
+            // An unverified Essentials owner sees a restore button, not a purchase.
+            return nil
+        }
+        return ArkFilePackStorefrontName.transitionalNotice(
+            appleDisplayName: offer(for: completePurchaseRole)?.displayName,
+            role: completePurchaseRole
         )
     }
 
@@ -793,7 +910,7 @@ struct ArkFilePackComparisonView: View {
         case .manageDownloads:
             return hasCompleteAccess
                 ? "Manage Downloads"
-                : "Choose Essentials Downloads"
+                : "Choose Essentials Library Downloads"
         case .restorePurchases:
             return "Restore Purchases"
         case .purchase:
@@ -837,11 +954,11 @@ struct ArkFilePackComparisonView: View {
             return "Access: Checking Apple purchases"
         }
         guard didResolveUpgradeEligibility else {
-            return "Access: Essentials owned — checking upgrade price"
+            return "Access: Checking upgrade eligibility"
         }
         return hasCurrentEssentialsProof
-            ? "Access: Essentials owned — upgrade available"
-            : "Access: Essentials available — restore to upgrade"
+            ? "Access: Essentials Library owned — upgrade available"
+            : "Access: Essentials Library available — restore to upgrade"
     }
 
     private var essentialsOwnershipStatus: String {
@@ -856,7 +973,7 @@ struct ArkFilePackComparisonView: View {
 
     private func price(for role: ArkFileStoreKitProductRole) -> String {
         if let value = displayPrice(for: role) {
-            return "\(value) one-time"
+            return ArkFilePackPurchaseCopy.priceLine(for: role, displayPrice: value)
         }
         switch merchandisingStore.state {
         case .idle, .loading:
@@ -867,7 +984,11 @@ struct ArkFilePackComparisonView: View {
     }
 
     private func displayPrice(for role: ArkFileStoreKitProductRole) -> String? {
-        merchandisingStore.state.snapshot?.offer(for: role)?.displayPrice
+        offer(for: role)?.displayPrice
+    }
+
+    private func offer(for role: ArkFileStoreKitProductRole) -> ArkFileStoreKitProductMetadata? {
+        merchandisingStore.state.snapshot?.offer(for: role)
     }
 
     private var priceLoadNeedsRetry: Bool {

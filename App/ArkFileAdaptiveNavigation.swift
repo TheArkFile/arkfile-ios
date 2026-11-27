@@ -352,6 +352,7 @@ struct ArkFileAdaptiveNavigationSnapshot: Equatable, Sendable {
 /// SwiftUI scene; there is intentionally no process-global singleton.
 @MainActor
 final class ArkFileAdaptiveNavigationState: ObservableObject {
+    @Published var homeOnboardingRequest: ArkFileOnboardingDestination?
     @Published private(set) var snapshot = ArkFileAdaptiveNavigationSnapshot()
 
     var route: ArkFileAdaptiveRoute {
@@ -518,17 +519,11 @@ enum ArkFileAdaptiveNotificationRoutePolicy {
         case .navigateToHotspotSettings:
             return .select(.settings(scrollToHotspot: true))
         case .arkFileOnboardingDestination:
-            guard let destination = notification.object as? ArkFileOnboardingDestination else {
+            guard notification.object is ArkFileOnboardingDestination else {
                 return nil
             }
-            switch destination {
-            case .home:
-                return .select(.home)
-            case .includedSamples:
-                return .select(.library)
-            case .packs:
-                return .select(.downloads(relativePath: nil))
-            }
+            // The mounted Home consumes the specific action after navigation.
+            return .select(.home)
         default:
             return nil
         }

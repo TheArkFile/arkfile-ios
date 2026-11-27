@@ -278,7 +278,7 @@ final class ArkFileEssentialsUpdateChecker: ObservableObject {
     }
 
     nonisolated static func packName(for tier: ArkFileContentTier?) -> String {
-        ArkFileContentPackDisplayName.name(for: tier)
+        ArkFileContentPackDisplayName.libraryName(for: tier)
     }
 
     private static func hasSavedAccess(

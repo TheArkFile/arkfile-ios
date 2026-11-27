@@ -17,41 +17,16 @@ struct ArkFileHomeCategoryMenu: View {
 
         var id: String { item.id }
 
-        var group: AvailabilityGroup {
-            switch presentation.accessState {
-            case .sample, .installed: .readyOffline
-            case .downloadable: .available
-            case .locked:
-                presentation.resolvedTier == .complete ? .requiresComplete : .requiresEssentials
-            }
-        }
-    }
-
-    private enum AvailabilityGroup: String, CaseIterable, Identifiable {
-        case readyOffline
-        case available
-        case requiresEssentials
-        case requiresComplete
-
-        var id: String { rawValue }
-
-        var title: String {
-            switch self {
-            case .readyOffline: "Ready offline"
-            case .available: "Available to download"
-            case .requiresEssentials: "Requires Essentials"
-            case .requiresComplete: "Requires Complete"
-            }
-        }
+        var group: ArkFileTitleAvailability { ArkFileTitleAvailability(presentation) }
     }
 
     var body: some View {
         let presentedItems = items.map {
             PresentedItem(item: $0, presentation: .resolve(item: $0, input: resolutionInput))
         }
-        let summary = countSummary(presentedItems)
+        let summary = ArkFileTitleAvailability.counts(presentedItems.map(\.group))
         Menu {
-            ForEach(AvailabilityGroup.allCases) { group in
+            ForEach(ArkFileTitleAvailability.allCases) { group in
                 let groupItems = presentedItems.filter { $0.group == group }
                 if !groupItems.isEmpty {
                     Section(group.title) {
@@ -81,7 +56,7 @@ struct ArkFileHomeCategoryMenu: View {
                     Text(section.group.displayName)
                         .font(.headline)
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text(summary)
+                    ArkFileAvailabilitySummary(counts: summary)
                         .font(.caption)
                         .foregroundStyle(Color.arkTextMuted)
                 }
@@ -106,20 +81,27 @@ struct ArkFileHomeCategoryMenu: View {
         .buttonStyle(.plain)
         .tint(Color.arkInteractiveForeground)
         .accessibilityLabel(section.group.displayName)
-        .accessibilityValue(summary)
+        .accessibilityValue(summary.map(\.text).joined(separator: ", "))
         .accessibilityHint("Choose a title. Downloaded titles open directly; other titles show details and download options.")
         .accessibilityIdentifier("arkfile_home_category_\(section.group.id)")
     }
 
-    private func countSummary(_ presentedItems: [PresentedItem]) -> String {
-        let ready = presentedItems.filter { $0.group == .readyOffline }.count
-        let available = presentedItems.filter { $0.group == .available }.count
-        let locked = presentedItems.count - ready - available
-        var parts: [String] = []
-        if ready > 0 { parts.append("\(ready) ready offline") }
-        if available > 0 { parts.append("\(available) available") }
-        if locked > 0 { parts.append("\(locked) locked") }
-        return parts.isEmpty ? "No matching titles" : parts.joined(separator: " · ")
+}
+
+struct ArkFileAvailabilitySummary: View {
+    let counts: [ArkFileAvailabilityCount]
+
+    var body: some View {
+        summaryText
+        .accessibilityLabel(counts.isEmpty ? "No matching titles" : counts.map(\.text).joined(separator: ", "))
+    }
+
+    private var summaryText: Text {
+        guard let first = counts.first else { return Text("No matching titles") }
+        func label(_ count: ArkFileAvailabilityCount) -> Text {
+            Text(Image(systemName: count.availability.symbol)) + Text(verbatim: " " + count.text)
+        }
+        return counts.dropFirst().reduce(label(first)) { $0 + Text(verbatim: " · ") + label($1) }
     }
 }
 #endif

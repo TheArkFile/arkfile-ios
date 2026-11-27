@@ -1226,7 +1226,7 @@ struct ArkFileOfflineMapView: View {
             Label(LocalString.arkfile_content_offline_map_title, systemImage: "map")
         } description: {
             if resources.hasLegacyTiles {
-                Text("This install has an older map format. Install the current ArkFile Essentials pack to use the offline vector map.")
+                Text("This install has an older map format. Install the current ArkFile Essentials Library to use the offline vector map.")
             } else {
                 Text(LocalString.arkfile_content_offline_map_reference_notice)
             }
@@ -1370,7 +1370,7 @@ struct ArkFileOfflineMapView: View {
         if !placesController.isStoreAvailable, !dismissedCriticalPlacesUnavailableHint {
             return hasCriticalPlacesAccess
                 ? "Download U.S. hospitals, water, fuel, food, and more for offline use."
-                : "U.S. hospitals, water, fuel, food, and more. Included with Essentials and Complete."
+                : "U.S. hospitals, water, fuel, food, and more. Included with Essentials Library and Full Library."
         }
         if placesController.isStoreAvailable,
            !effectiveCriticalPlaceKinds.isEmpty,
@@ -2126,7 +2126,7 @@ struct ArkFileOfflineMapView: View {
     }
 
     private var criticalPlacesActionTitle: String {
-        hasCriticalPlacesAccess ? "View Map Downloads" : "Buy Essentials"
+        hasCriticalPlacesAccess ? "View Map Downloads" : "See Essentials Library and price"
     }
 
     private func openCriticalPlacesDownloads() {
@@ -2420,7 +2420,7 @@ private struct ArkFileMapPacksSheet: View {
                     Text(currentCoverageDescription)
                         .font(.caption)
                         .foregroundStyle(.secondary)
-                    Text("Essentials adds North America map detail and U.S. Critical Places. Complete includes Essentials and all \(index.regions.count) U.S. street-map regions. Choose only the areas you need; there are no separate map purchases.")
+                    Text("Essentials Library adds North America map detail and U.S. Critical Places. Full Library includes Essentials Library and all \(index.regions.count) U.S. street-map regions. Choose only the areas you need; there are no separate map purchases.")
                         .font(.subheadline)
                 }
 
@@ -2556,8 +2556,8 @@ private struct ArkFileMapPacksSheet: View {
         case .paused: return "Paused · Resume download"
         case .none:
             return installer.hasSavedCompleteAccess
-                ? "Included with Complete · Not downloaded"
-                : "Requires Complete"
+                ? "Included · Download"
+                : "Requires Full Library"
         }
     }
 
@@ -2593,7 +2593,7 @@ private struct ArkFileMapPacksSheet: View {
                     Button("Manage Download", systemImage: "internaldrive") { onManage(region) }
                 }
             } footer: {
-                Text("All \(index.regions.count) U.S. street-map regions are included with Complete. Buying or upgrading unlocks them; downloads are your choice.")
+                Text("All \(index.regions.count) U.S. street-map regions are included with Full Library. Buying or upgrading unlocks them; downloads are your choice.")
             }
         }
         .navigationTitle(region.displayName)
@@ -2655,7 +2655,7 @@ private struct ArkFileMapDownloadControl: View {
                         .buttonStyle(.bordered)
                 }
             } else if !hasAccess {
-                Text(tier == .complete ? "Requires Complete" : "Included with Essentials and Complete")
+                Text(tier == .complete ? "Requires Full Library" : "Included with Essentials Library and Full Library")
                     .font(.subheadline.weight(.semibold))
                 Button(upgradeTitle, action: onUpgrade)
                     .buttonStyle(.borderedProminent)
@@ -2689,15 +2689,15 @@ private struct ArkFileMapDownloadControl: View {
     }
 
     private var upgradeTitle: String {
-        guard tier == .complete else { return "Buy Essentials" }
-        return installer.hasSavedLiteAccess ? "Upgrade to Complete" : "Buy Complete"
+        guard tier == .complete else { return "See Essentials Library and price" }
+        return installer.hasSavedLiteAccess ? "See what Full Library adds" : "See Full Library and price"
     }
 
     @ViewBuilder
     private var queueControl: some View {
         switch queueState {
         case .none:
-            Text(tier == .complete ? "Included with Complete · Not downloaded" : "Included with your purchase · Not downloaded")
+            Text(tier == .complete ? "Included · Download" : "Included · Download")
                 .font(.subheadline.weight(.semibold))
             if isPreparing {
                 ProgressView("Checking download size…")

@@ -44,7 +44,7 @@ enum ArkFileLibraryDiscovery {
         case .onDevice:
             guard item.isInstalled || item.isSampleContent else { return false }
         case .includedSamples:
-            guard item.isSampleContent else { return false }
+            guard item.isSampleContent || item.isBundledSampleAsset else { return false }
         }
         let words = query.split(whereSeparator: \.isWhitespace)
         guard !words.isEmpty else { return true }
@@ -70,5 +70,69 @@ enum ArkFileLibraryDiscovery {
         query: String
     ) -> [ArkFileLibraryContentItem] {
         items.filter { includes($0, filter: filter, query: query) }
+    }
+}
+
+enum ArkFileTitleAvailability: CaseIterable, Identifiable {
+    case readyOffline, includedDownload, needsEssentials, needsFull, checking
+
+    var id: Self { self }
+
+    init(_ presentation: ArkFileLockedContentPresentation) {
+        if presentation.isCheckingAccess {
+            self = .checking
+            return
+        }
+        switch presentation.accessState {
+        case .sample, .installed: self = .readyOffline
+        case .downloadable: self = .includedDownload
+        case .locked: self = presentation.resolvedTier == .complete ? .needsFull : .needsEssentials
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .checking: "Checking purchase…"
+        case .readyOffline: "Ready offline"
+        case .includedDownload: "Included · Download"
+        case .needsEssentials: "Requires Essentials Library"
+        case .needsFull: "Requires Full Library"
+        }
+    }
+
+    var symbol: String {
+        switch self {
+        case .checking: "clock"
+        case .readyOffline: "checkmark.circle.fill"
+        case .includedDownload: "arrow.down.circle"
+        case .needsEssentials, .needsFull: "lock.fill"
+        }
+    }
+
+    static func counts(_ states: [Self]) -> [ArkFileAvailabilityCount] {
+        let counts = states.reduce(into: [Self: Int]()) { $0[$1, default: 0] += 1 }
+        return allCases.compactMap { state in
+            counts[state].map { ArkFileAvailabilityCount(availability: state, count: $0) }
+        }
+    }
+
+    static func counts(for items: [ArkFileLibraryContentItem],
+                       input: ArkFileLockedContentResolutionInput) -> [ArkFileAvailabilityCount] {
+        counts(items.map { Self(.resolve(item: $0, input: input)) })
+    }
+}
+
+struct ArkFileAvailabilityCount {
+    let availability: ArkFileTitleAvailability
+    let count: Int
+
+    var text: String {
+        switch availability {
+        case .checking: "Checking access to \(count) \(count == 1 ? "title" : "titles")"
+        case .readyOffline: "\(count) ready offline"
+        case .includedDownload: "\(count) included to download"
+        case .needsEssentials: "\(count) \(count == 1 ? "needs" : "need") Essentials Library"
+        case .needsFull: "\(count) \(count == 1 ? "needs" : "need") Full Library"
+        }
     }
 }

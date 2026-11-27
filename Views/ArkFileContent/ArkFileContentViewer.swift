@@ -243,7 +243,7 @@ struct ArkFileContentViewer: View {
         Group {
             if isAccessBlocked {
                 ContentUnavailableView(
-                    "\(ArkFileContentPackDisplayName.name(for: blockedTier)) Content Needs Repair",
+                    "\(ArkFileContentPackDisplayName.libraryName(for: blockedTier)) Content Needs Repair",
                     systemImage: "wrench.and.screwdriver",
                     description: Text("This downloaded file is missing, incomplete, or could not be verified locally. Keep the rest of your offline library in place and use Manage Downloads to repair this item when a network is available.")
                 )

@@ -233,7 +233,7 @@ struct ArkFileMapRegionHint: Equatable, Sendable {
             }
             return "Add \(region.displayName) street-level map detail."
         case .upgradeToComplete:
-            return "Get \(region.displayName) street-level map detail with ArkFile Complete."
+            return "Get \(region.displayName) street-level map detail with ArkFile Full Library."
         }
     }
 

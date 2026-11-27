@@ -201,6 +201,7 @@ enum ArkFileCompleteManagementRoute: Equatable, Sendable {
 struct ArkFileLockedContentPresentation: Equatable, Sendable {
     let resolvedTier: ArkFileContentTier
     let accessState: ArkFileLockedContentAccessState
+    let isCheckingAccess: Bool
     let packName: String
     let fullPackName: String
     let primaryActionTitle: String
@@ -214,16 +215,17 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
     let message: String
 
     var statusTitle: String {
-        switch accessState {
-        case .sample: "Included · Ready offline"
-        case .installed: "Ready offline"
-        case .downloadable: "Included with \(packName) · Not downloaded"
+        if isCheckingAccess { return "Checking purchase…" }
+        return switch accessState {
+        case .sample, .installed: "Ready offline"
+        case .downloadable: "Included · Download"
         case .locked: "Requires \(packName)"
         }
     }
 
     var statusSystemImage: String {
-        switch accessState {
+        if isCheckingAccess { return "clock" }
+        return switch accessState {
         case .sample, .installed: "checkmark.circle.fill"
         case .downloadable: "arrow.down.circle"
         case .locked: "lock.fill"
@@ -239,8 +241,8 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
         input: ArkFileLockedContentResolutionInput
     ) -> ArkFileLockedContentPresentation {
         let resolvedTier = item.requiredTier
-        let packName = ArkFileContentPackDisplayName.name(for: resolvedTier)
-        let fullPackName = "ArkFile \(packName)"
+        let packName = ArkFileContentPackDisplayName.libraryName(for: resolvedTier)
+        let fullPackName = ArkFileContentPackDisplayName.storefrontName(for: resolvedTier)
         let hasSavedAccess = input.hasSavedAccess(for: resolvedTier)
         let accessState: ArkFileLockedContentAccessState
         if item.isSampleContent {
@@ -270,13 +272,14 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
         return ArkFileLockedContentPresentation(
             resolvedTier: resolvedTier,
             accessState: accessState,
+            isCheckingAccess: input.blocksForApplePurchaseCheck && (accessState == .locked || accessState == .downloadable),
             packName: packName,
             fullPackName: fullPackName,
             primaryActionTitle: primaryAction.title,
             isPrimaryActionEnabled: !input.blocksForApplePurchaseCheck && (!isPrimaryActionRestore || !input.isBusy),
             isPrimaryActionRestore: isPrimaryActionRestore,
             primaryRestoreRoute: primaryRestoreRoute,
-            restoreActionTitle: resolvedTier == .complete ? "Restore Complete Purchase" : "Restore Purchases",
+            restoreActionTitle: "Restore Purchases",
             isRestoreAvailable: hasSeparateRestoreAction,
             isRestoreActionEnabled: !input.isBusy,
             canDownloadOnlyThisTitle: canDownloadOnlyThisTitle(
@@ -304,22 +307,34 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
             if input.hasAuthoritativeNoPurchase {
                 // A completed empty restore opens shopping without restoring
                 // acquisition flags or changing readable installed content.
-                return .regular(title: tier == .complete ? "Buy Complete" : "Buy Essentials")
+                return .regular(title: browseTitle(tier: tier, ownsEssentials: false))
             }
             return .restore(
-                title: tier == .complete ? "Restore Complete Purchase" : "Restore Purchases",
+                title: "Restore Purchases",
                 route: .restore(tier)
             )
         }
         if input.hasSavedAccess(for: tier) {
             return .regular(title: "Choose Downloads")
         }
-        if tier == .complete {
-            return .regular(
-                title: input.hasSavedLiteAccess ? "Upgrade to Complete" : "Buy Complete"
-            )
+        return .regular(title: browseTitle(
+            tier: tier,
+            ownsEssentials: input.hasSavedLiteAccess
+        ))
+    }
+
+    /// The locked prompt only opens the library comparison; Apple's payment
+    /// sheet is reached from the priced Buy button there. Browsing copy must
+    /// therefore never read as a final purchase.
+    static func browseTitle(
+        tier: ArkFileContentTier,
+        ownsEssentials: Bool
+    ) -> String {
+        let libraryName = ArkFileContentPackDisplayName.libraryName(for: tier)
+        if tier == .complete, ownsEssentials {
+            return "See what \(libraryName) adds"
         }
-        return .regular(title: "Buy Essentials")
+        return "See \(libraryName) and price"
     }
 
     private static func canDownloadOnlyThisTitle(
@@ -346,19 +361,23 @@ struct ArkFileLockedContentPresentation: Equatable, Sendable {
                 + "showing whether \(title) is owned. No purchase will start "
                 + "while this check is in progress."
         }
+        let libraryName = ArkFileContentPackDisplayName.libraryName(for: tier)
+        let essentialsName = ArkFileContentPackDisplayName.libraryName(for: .lite)
         if input.isAccessRevoked(for: tier) {
             if input.hasAuthoritativeNoPurchase {
-                return "No purchase was found for this Apple Account. Compare the one-time pack prices to get \(title), or restore with the Apple Account that bought it. Content already installed on this device remains readable."
+                return "No purchase was found for this Apple Account. Compare the one-time library prices to get \(title), or restore with the Apple Account that bought it. Content already installed on this device remains readable."
             }
-            let packName = ArkFileContentPackDisplayName.name(for: tier)
-            return "\(title) is part of \(fullPackName), but ArkFile could not confirm active \(packName) access for future downloads. Restore Purchases to re-check access. Valid content already installed on this device remains readable."
+            return "\(title) is part of \(fullPackName), but ArkFile could not confirm active \(libraryName) access for future downloads. Restore Purchases to re-check access. Valid content already installed on this device remains readable."
         }
         if input.hasSavedAccess(for: tier) {
-            return "\(title) is included with \(fullPackName). Download this title to use it offline. You can choose other titles whenever you need them."
+            return "\(title) is included with your \(libraryName). Download this title to use it offline. You can choose other titles whenever you need them."
         }
         if tier == .complete {
-            return "\(title) is included with ArkFile Complete. Complete includes Essentials and additional books, reference works, and regional street maps. Review the one-time price and choose what to download after purchase."
+            if input.hasSavedLiteAccess {
+                return "\(title) is included with \(libraryName). Your \(essentialsName) stays as it is; \(libraryName) adds \(ArkFileLibraryBenefits.fullLibraryAdditions). See what it adds and your upgrade price before deciding."
+            }
+            return "\(title) is included with \(libraryName). \(libraryName) includes everything in \(essentialsName) plus \(ArkFileLibraryBenefits.fullLibraryAdditions). See the one-time price, then choose what to download after purchase."
         }
-        return "\(title) is included with ArkFile Essentials. Review the one-time price, then choose the titles you want on this device. Complete also includes this title."
+        return "\(title) is included with \(libraryName), alongside titles such as Simple Wikipedia and the USDA home canning guide. See the one-time price, then choose the titles you want on this device. \(ArkFileContentPackDisplayName.libraryName(for: .complete)) also includes this title."
     }
 }

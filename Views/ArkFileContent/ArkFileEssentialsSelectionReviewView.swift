@@ -136,9 +136,9 @@ struct ArkFileEssentialsSelectionReviewView: View {
     private var packName: String {
         switch tier {
         case .complete:
-            "Complete"
+            "Full Library"
         case .lite:
-            "Essentials"
+            "Essentials Library"
         case .standard:
             "ArkFile"
         }
@@ -337,7 +337,7 @@ struct ArkFileEssentialsSelectionReviewView: View {
             } else {
                 DisclosureGroup(isExpanded: $showsWikipediaOptions) {
                     ForEach(wikipediaItems) { item in itemRow(item) }
-                    Text("Choose one edition, or add it later. Both are included with Complete.")
+                    Text("Choose one edition, or add it later. Both are included with Full Library.")
                         .font(.caption)
                         .foregroundStyle(Color.arkTextMuted)
                 } label: {
@@ -437,7 +437,7 @@ struct ArkFileEssentialsSelectionReviewView: View {
         let alreadyItems = group.alreadyInEssentialsItems
         if !addedItems.isEmpty {
             subgroupLabel(
-                title: "Added with Complete",
+                title: "Added with Full Library",
                 systemImage: "plus.circle.fill",
                 items: addedItems,
                 isProminent: true
@@ -458,7 +458,7 @@ struct ArkFileEssentialsSelectionReviewView: View {
                     Image(systemName: expandedAlreadyInEssentialsIDs.contains(group.id) ? "chevron.down" : "chevron.right")
                         .font(.caption.weight(.semibold))
                     subgroupLabel(
-                        title: "Included with Essentials",
+                        title: "Included with Essentials Library",
                         systemImage: "checkmark.seal",
                         items: alreadyItems,
                         isProminent: false
@@ -710,7 +710,7 @@ struct ArkFileEssentialsSelectionReviewView: View {
                 .foregroundStyle(Color.arkTextMuted)
                 .fixedSize(horizontal: false, vertical: true)
             if group.group == .streetMaps {
-                Text("The included base offline map remains available. These optional Complete downloads add higher-detail street coverage by U.S. region.")
+                Text("The included base offline map remains available. These optional Full Library downloads add higher-detail street coverage by U.S. region.")
                     .font(.caption2)
                     .foregroundStyle(Color.arkTextMuted)
                     .fixedSize(horizontal: false, vertical: true)
@@ -1053,16 +1053,16 @@ struct ArkFileEssentialsSelectionReviewView: View {
 
     private var reviewIntro: String {
         if purpose == .manageDownloads, tier == .complete {
-            return "Complete is unlocked. Choose the titles and maps you want on this device. Add more whenever you need them."
+            return "You own Full Library. Choose the titles and maps you want on this device. Add more whenever you need them."
         }
         if purpose == .manageDownloads {
-            return "Essentials is unlocked. Choose the titles you want on this device. Add more whenever you need them."
+            return "You own Essentials Library. Choose the titles you want on this device. Add more whenever you need them."
         }
         if purpose == .downloadOwnedPack {
             return "Included with \(packName). Choose individual titles or select a category. Add more whenever you need them."
         }
         if purpose == .upgradeFromEssentials {
-            return "The one-time upgrade keeps Essentials and everything already stored on this device. It unlocks all of Complete; these checkmarks only choose what downloads now. Anything skipped stays available later at no additional charge."
+            return "The one-time upgrade keeps Essentials Library and everything already stored on this device. It unlocks all of Full Library; these checkmarks only choose what downloads now. Anything skipped stays available later at no additional charge."
         }
         if purpose == .purchase {
             return "Your one-time purchase unlocks the entire \(packName) pack. These checkmarks only choose what downloads now. Anything skipped stays available later at no additional charge."
@@ -1081,7 +1081,7 @@ struct ArkFileEssentialsSelectionReviewView: View {
             parts.append(variantLabel)
         }
         if tier == .complete, item.isAlreadyInEssentials {
-            parts.append("Included with Essentials")
+            parts.append("Included with Essentials Library")
         }
         return parts.joined(separator: " • ")
     }

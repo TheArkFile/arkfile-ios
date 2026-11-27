@@ -32,6 +32,9 @@ struct RootViewiOS: View {
                 ) else {
                     return
                 }
+                if notification.name == .arkFileOnboardingDestination {
+                    adaptiveNavigation.homeOnboardingRequest = notification.object as? ArkFileOnboardingDestination
+                }
                 adaptiveNavigation.handle(intent)
             }
             .onReceive(historyNavigationNotifications) { notification in

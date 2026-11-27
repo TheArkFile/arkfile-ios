@@ -29,174 +29,67 @@ enum ArkFileOnboardingDestination: Equatable, Sendable {
     case home
     case includedSamples
     case packs
+    case restore
 }
 
-/// One-time first-launch introduction: what ArkFile is, what is already included,
-/// and how Essentials and Complete differ before anyone spends money.
-struct ArkFileOnboardingView: View {
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
-    static let completedDefaultsKey = "arkfile.onboarding.completed.v1"
+private struct ArkFileOnboardingRequestKey: EnvironmentKey {
+    static let defaultValue: Binding<ArkFileOnboardingDestination?> = .constant(nil)
+}
 
+extension EnvironmentValues {
+    var arkFileOnboardingRequest: Binding<ArkFileOnboardingDestination?> {
+        get { self[ArkFileOnboardingRequestKey.self] }
+        set { self[ArkFileOnboardingRequestKey.self] = newValue }
+    }
+}
+
+struct ArkFileOnboardingView: View {
+    static let completedDefaultsKey = "arkfile.onboarding.completed.v1"
     let finish: (ArkFileOnboardingDestination) -> Void
 
-    @State private var pageIndex = 0
-
-    private struct Page {
-        let systemImage: String
-        let title: String
-        let message: String
-        let accent: Color
-    }
-
-    private let pages: [Page] = [
-        Page(
-            systemImage: "wifi.slash",
-            title: "Ready When Networks Are Not",
-            message: "ArkFile is an offline preparedness library. Everything you install lives on this device and keeps working with no signal or Wi-Fi. No ArkFile account is required; Apple handles content-pack purchases and restores.",
-            accent: Color.arkTeal
-        ),
-        Page(
-            systemImage: "checklist",
-            title: "5 Sample Titles Included",
-            message: "Five sample titles, the Survival Guide, preparedness calculators, and the offline base map are included with ArkFile. No purchase is required—explore them now so they feel familiar before you need them.",
-            accent: Color.arkAmber
-        ),
-        Page(
-            systemImage: "externaldrive.badge.plus",
-            title: "Choose Essentials or Complete",
-            message: "Buy once through Apple—no ArkFile account needed. Essentials covers practical preparedness. Complete includes Essentials plus full Wikipedia, textbooks and regional maps. After buying, download only what you want.",
-            accent: Color.arkReef
-        )
-    ]
-
     var body: some View {
-        VStack(spacing: 0) {
-            TabView(selection: $pageIndex) {
-                ForEach(Array(pages.enumerated()), id: \.offset) { index, page in
-                    pageView(page, index: index)
-                        .tag(index)
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .always))
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
-
-            onboardingFooter
-                .padding(.horizontal, 28)
-                .padding(.bottom, 20)
-                .frame(
-                    minHeight: dynamicTypeSize.isAccessibilitySize ? 190 : 144,
-                    alignment: .top
-                )
-        }
-        .background(Color.arkSand.ignoresSafeArea())
-        .interactiveDismissDisabled()
-    }
-
-    private func pageView(_ page: Page, index: Int) -> some View {
         ScrollView {
-            VStack(spacing: 18) {
-                Image(systemName: page.systemImage)
-                    .font(.system(size: 52, weight: .semibold))
-                    .foregroundStyle(page.accent)
-                    .frame(width: 110, height: 110)
-                    .background(page.accent.opacity(0.12))
-                    .clipShape(Circle())
-                    .accessibilityHidden(true)
-                Text(page.title)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color.arkInk)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .accessibilityIdentifier("arkfile_onboarding_title_\(index + 1)")
-                Text(page.message)
-                    .font(.body)
-                    .foregroundStyle(Color.arkTaupe)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .accessibilityIdentifier("arkfile_onboarding_message_\(index + 1)")
+            VStack(alignment: .leading, spacing: 14) {
+                Text("Free with ArkFile")
+                    .foregroundStyle(Color.arkTextPrimary)
+                    .font(.largeTitle.bold())
+                    .accessibilityAddTraits(.isHeader)
+                    .accessibilityIdentifier("arkfile_onboarding_title_1")
+                Text("Start with sample titles, the Survival Guide, preparedness tools and a base map. They work offline.")
+                    .foregroundStyle(Color.arkTextPrimary)
+                Button("Explore free titles") { finish(.includedSamples) }
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color.arkPrimary)
+                    .foregroundStyle(.white)
+                    .accessibilityIdentifier("arkfile_onboarding_explore_samples")
 
+                Divider()
+                Text("Optional libraries").foregroundStyle(Color.arkTextPrimary).font(.title2.bold()).accessibilityAddTraits(.isHeader)
+                Text(ArkFileHomePresentation.essentialsDescription)
+                    .foregroundStyle(Color.arkTextPrimary)
+                Text(ArkFileHomePresentation.fullDescription)
+                    .foregroundStyle(Color.arkTextPrimary)
+                Text("One-time purchase through Apple. Choose what to download after you buy.")
+                    .foregroundStyle(Color.arkTextPrimary)
+                    .font(.subheadline)
+                Button("See libraries and prices") { finish(.packs) }
+                    .buttonStyle(.bordered)
+                    .accessibilityIdentifier("arkfile_onboarding_compare_packs")
+                Button("Restore Purchases") { finish(.restore) }
+                    .frame(minHeight: 44)
+                    .accessibilityIdentifier("arkfile_onboarding_restore")
+                Button("Go to Home") { finish(.home) }
+                    .frame(minHeight: 44)
+                    .accessibilityIdentifier("arkfile_onboarding_skip")
             }
-            .frame(maxWidth: 560)
-            .padding(.horizontal, 28)
-            .padding(.top, 36)
-            .padding(.bottom, 64)
+            .controlSize(.large)
+            .tint(Color.arkInteractiveForeground)
+            .frame(maxWidth: 560, alignment: .leading)
+            .padding(24)
             .frame(maxWidth: .infinity)
         }
-        .accessibilityIdentifier("arkfile_onboarding_page_\(index + 1)")
-    }
-
-    private var finalActions: some View {
-        VStack(spacing: 12) {
-            Button {
-                finish(.packs)
-            } label: {
-                Text("See Prices & Buy")
-                    .font(.headline)
-                    .foregroundStyle(Color.arkSurface)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
-                    .background(Color.arkTeal)
-                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("arkfile_onboarding_compare_packs")
-
-            Button {
-                finish(.includedSamples)
-            } label: {
-                Text("Explore 5 Included Samples")
-                    .font(.headline)
-                    .foregroundStyle(Color.arkTeal)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 13)
-                    .background(Color.arkSurface)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .stroke(Color.arkTeal, lineWidth: 1.5)
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("arkfile_onboarding_explore_samples")
-        }
-    }
-
-    @ViewBuilder
-    private var onboardingFooter: some View {
-        if pageIndex < pages.count - 1 {
-            VStack(spacing: 12) {
-                Button {
-                    withAnimation(.easeInOut) {
-                        pageIndex += 1
-                    }
-                } label: {
-                    Text("Next")
-                        .font(.headline)
-                        .foregroundStyle(Color.arkSurface)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(Color.arkTeal)
-                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                }
-                .buttonStyle(.plain)
-                .accessibilityIdentifier("arkfile_onboarding_next")
-
-                Button("Skip") {
-                    finish(.home)
-                }
-                .font(.subheadline)
-                .foregroundStyle(Color.arkTaupe)
-                .accessibilityIdentifier("arkfile_onboarding_skip")
-            }
-        } else {
-            finalActions
-        }
+        .background(Color.arkAppBackground.ignoresSafeArea())
+        .interactiveDismissDisabled()
     }
 }
 #endif

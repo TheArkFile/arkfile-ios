@@ -44,8 +44,14 @@ enum ArkFileContentTier: String, Codable, Hashable, Sendable {
 }
 
 enum ArkFileContentPackDisplayName {
-    static func name(for tier: ArkFileContentTier?) -> String {
-        tier == .complete ? "Complete" : "Essentials"
+    /// Customer-facing library name for purchase, restore, and title status copy.
+    static func libraryName(for tier: ArkFileContentTier?) -> String {
+        tier == .complete ? "Full Library" : "Essentials Library"
+    }
+
+    /// Branded library name matching the App Store product display name.
+    static func storefrontName(for tier: ArkFileContentTier?) -> String {
+        "ArkFile \(libraryName(for: tier))"
     }
 }
 
@@ -118,16 +124,16 @@ struct ArkFileContentRestoreOutcome: Equatable, Sendable {
     }
 
     var statusMessage: String {
-        let packName = ArkFileContentPackDisplayName.name(for: tier)
+        let packName = ArkFileContentPackDisplayName.libraryName(for: tier)
         return switch action {
         case .restored:
-            "\(packName) restored. No content was downloaded."
+            "\(packName) is restored from your Apple Account. Nothing was downloaded."
         case .purchased:
-            "\(packName) purchased. No content was downloaded."
+            "\(packName) is yours. Nothing was downloaded yet."
         case .accessConfirmed:
-            "\(packName) access confirmed. No content was downloaded."
+            "\(packName) access is confirmed. Nothing was downloaded."
         case .pendingApproval:
-            "\(packName) purchase is pending approval. No content was downloaded."
+            "\(packName) purchase is pending approval. Nothing was downloaded."
         }
     }
 }
@@ -654,7 +660,7 @@ enum ArkFileContentError: LocalizedError {
     case purchaseRequired
     case accountSignInRequired
     case productNotConfigured
-    case productUnavailable(String)
+    case productUnavailable(ArkFileContentTier)
     case productMisconfigured
     case purchaseCancelled
     case purchasePending
@@ -700,21 +706,21 @@ enum ArkFileContentError: LocalizedError {
         case let .unsupportedHost(host):
             "ArkFile blocked an unexpected content host: \(host)."
         case .purchaseRequired:
-            "Buy ArkFile Essentials with your Apple Account, or use Restore Purchases if you already bought it."
+            "Buy ArkFile Essentials Library with your Apple Account, or use Restore Purchases if you already bought it."
         case .completeVerificationPending:
-            "The App Store confirmed your Complete upgrade, but Apple has not finished registering it for this Apple Account. Your Essentials content is unaffected. Try Restore Purchases (Settings) in a few minutes — you will not be charged again."
+            "The App Store confirmed your Full Library purchase, but Apple has not finished registering it for this Apple Account. Your Essentials Library content is unaffected. Try Restore Purchases (Settings) in a few minutes — you will not be charged again."
         case .accountSignInRequired:
-            "ArkFile account sign-in is not required for ArkFile Essentials purchases."
+            "ArkFile account sign-in is not required for ArkFile Essentials Library purchases."
         case .productNotConfigured:
-            "The ArkFile Essentials product is not configured for this build."
-        case .productUnavailable(_):
-            "This content pack is not available from the App Store right now. Try again in a moment."
+            "The ArkFile Essentials Library product is not configured for this build."
+        case .productUnavailable(let tier):
+            "\(ArkFileContentPackDisplayName.storefrontName(for: tier)) is not available from the App Store right now. Try again in a moment."
         case .productMisconfigured:
-            "The ArkFile Essentials product is not configured as a one-time App Store purchase."
+            "The ArkFile Essentials Library product is not configured as a one-time App Store purchase."
         case .purchaseCancelled:
             "Purchase cancelled. You were not charged."
         case .purchasePending:
-            "The purchase is pending approval. ArkFile will unlock your content pack after Apple approves it."
+            "The purchase is pending approval. ArkFile will unlock your library after Apple approves it."
         case .unverifiedPurchase:
             "The App Store could not verify this purchase. Try again, or contact ArkFile support if this keeps happening."
         case .noStoreKitPurchaseFound:
@@ -730,7 +736,7 @@ enum ArkFileContentError: LocalizedError {
                 "This App Store purchase was linked to another ArkFile account in an older test build. Restore Purchases in the current app, or contact ArkFile support if this keeps happening."
             }
         case .liteAccessRevoked:
-            "ArkFile could not confirm an active Essentials purchase for this Apple Account. Restore Purchases if you already bought it, or remove Essentials from this device."
+            "ArkFile could not confirm an active Essentials Library purchase for this Apple Account. Restore Purchases if you already bought it, or manage downloaded titles on this device."
         case .confirmedStoreKitRefund:
             "This ArkFile purchase was refunded. Buy again or restore if the refund was reversed."
         case .localPurchaseAccessUpdateFailed:
@@ -750,7 +756,7 @@ enum ArkFileContentError: LocalizedError {
         case let .unsupportedManifestFormat(format):
             "This iOS build supports ArkFile manifest format 1. Received: \(format)."
         case let .invalidManifestTier(tier):
-            "This iOS build can install ArkFile Essentials and ArkFile Complete. Received: \(tier)."
+            "This iOS build can install ArkFile Essentials Library and ArkFile Full Library. Received: \(tier)."
         case .emptyContentManifest:
             "ArkFile received an empty content manifest."
         case .manifestSizeOverflow:
@@ -774,25 +780,25 @@ enum ArkFileContentError: LocalizedError {
         case let .fileSizeMismatch(path):
             "Downloaded content size did not match the manifest: \(path)."
         case let .insufficientStorage(requiredBytes, availableBytes):
-            "Free up space to finish Essentials. ArkFile needs about \(Self.formattedBytes(requiredBytes)) available, and this device reports \(Self.formattedBytes(availableBytes))."
+            "Free up space to finish your download. ArkFile needs about \(Self.formattedBytes(requiredBytes)) available, and this device reports \(Self.formattedBytes(availableBytes))."
         case let .storageAvailabilityUnavailable(requiredBytes):
             "ArkFile could not confirm available storage on this device. Free at least \(Self.formattedBytes(requiredBytes)) and try again."
         case .networkUnavailable:
-            "Connect to the internet before downloading ArkFile Essentials."
+            "Connect to the internet before downloading ArkFile Essentials Library."
         case .wifiRequired:
-            "Connect to Wi-Fi to download ArkFile Essentials, or choose Use Cellular Data if you understand the data use."
+            "Connect to Wi-Fi to download ArkFile Essentials Library, or choose Use Cellular Data if you understand the data use."
         case .constrainedNetwork:
             "Turn off Low Data Mode, choose another Wi-Fi network, or use cellular data only if you understand the data use."
         case .noReadableZims:
             "The pack installed, but ArkFile did not find a readable ZIM archive."
         case let .incompleteInstalledCatalog(installedCount, expectedCount):
             if expectedCount > 0, installedCount > 0 {
-                "Essentials download did not finish. Continue Download to keep the files already here and download what is missing."
+                "Your download did not finish. Continue Download to keep the files already here and download what is missing."
             } else {
-                "Essentials download did not finish. Continue Download to pick up where it left off."
+                "Your download did not finish. Continue Download to pick up where it left off."
             }
         case let .appUpdateRequired(message):
-            "This content pack needs a newer ArkFile app. Update ArkFile, then install Essentials again. \(message)"
+            "This content pack needs a newer ArkFile app. Update ArkFile, then try the download again. \(message)"
         }
     }
 

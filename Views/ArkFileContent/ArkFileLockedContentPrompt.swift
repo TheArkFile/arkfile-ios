@@ -46,7 +46,7 @@ struct ArkFileLockedContentPromptModifier: ViewModifier {
                     input: input
                 )
                 if presentation.canDownloadOnlyThisTitle {
-                    Button("Download This Title") {
+                    Button("Download this title · \(ByteCountFormatter.string(fromByteCount: item.sizeBytes, countStyle: .file))") {
                         downloadOnlyAction(item, presentation.resolvedTier)
                     }
                 } else {
@@ -75,12 +75,14 @@ struct ArkFileLockedContentPromptModifier: ViewModifier {
     }
 
     private var alertTitle: String {
-        guard let item else { return "Essentials Content" }
+        guard let item else {
+            return ArkFileContentPackDisplayName.libraryName(for: .lite)
+        }
         let presentation = ArkFileLockedContentPresentation.resolve(
             item: item,
             input: resolutionInput()
         )
-        return "\(presentation.packName) Content"
+        return presentation.packName
     }
 
     private var alertMessage: String {

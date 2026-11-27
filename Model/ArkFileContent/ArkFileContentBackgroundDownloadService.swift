@@ -56,7 +56,7 @@ enum ArkFileEssentialsDownloadNotifier {
 
     private static func addRequest(identifier: String, body: String, tier: ArkFileContentTier?) {
         let content = UNMutableNotificationContent()
-        content.title = "ArkFile \(ArkFileContentPackDisplayName.name(for: tier))"
+        content.title = "ArkFile \(ArkFileContentPackDisplayName.libraryName(for: tier))"
         content.body = body
         let request = UNNotificationRequest(
             identifier: identifier,
@@ -401,7 +401,7 @@ struct ArkFileContentBackgroundDownloadRecord: Codable, Sendable {
     }
 
     var packName: String {
-        ArkFileContentPackDisplayName.name(for: contentTier)
+        ArkFileContentPackDisplayName.libraryName(for: contentTier)
     }
 
     var request: URLRequest {
@@ -2292,7 +2292,7 @@ final class ArkFileContentBackgroundDownloadService {
             }
             if continuations[recordID] == nil && !isUserPaused {
                 let updatedRecord = store.record(id: recordID)
-                let packName = updatedRecord?.packName ?? ArkFileContentPackDisplayName.name(for: nil)
+                let packName = updatedRecord?.packName ?? ArkFileContentPackDisplayName.libraryName(for: nil)
                 ArkFileEssentialsDownloadNotifier.notifyDownloadNeedsAttention(
                     "\(packName) download paused. Open ArkFile to continue.",
                     tier: updatedRecord?.contentTier

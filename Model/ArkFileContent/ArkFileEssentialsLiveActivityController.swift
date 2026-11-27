@@ -65,7 +65,7 @@ final class ArkFileEssentialsLiveActivityController {
         paused: Bool
     ) -> ArkFileEssentialsDownloadActivityAttributes.ContentState {
         ArkFileEssentialsDownloadActivityAttributes.ContentState(
-            packName: ArkFileContentPackDisplayName.name(for: state.tier),
+            packName: ArkFileContentPackDisplayName.libraryName(for: state.tier),
             completedBytes: state.completedBytes,
             totalBytes: state.totalBytes,
             completedFiles: state.completedFiles ?? 0,

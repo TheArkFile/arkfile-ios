@@ -311,7 +311,7 @@ struct ArkFileOfflineReadinessView: View {
             }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("ArkFile will read and verify every selected file. Large Complete libraries can take a long time; keep ArkFile open and the device powered. Locking the device may pause the check.")
+            Text("ArkFile will read and verify every selected file. Large libraries can take a long time; keep ArkFile open and the device powered. Locking the device may pause the check.")
         }
     }
 

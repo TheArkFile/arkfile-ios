@@ -1605,7 +1605,7 @@ final class ArkFileLitePurchaseManager: ObservableObject {
         let products = try await Product.products(for: [productID])
         guard let product = products.first(where: { $0.id == productID }) else {
             Log.ContentPack.error("ArkFile Essentials StoreKit product unavailable: \(productID, privacy: .public)")
-            throw ArkFileContentError.productUnavailable(productID)
+            throw ArkFileContentError.productUnavailable(requiredTier)
         }
         try ArkFileStoreKitProductValidator.validateProduct(
             productID: product.id,

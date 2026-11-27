@@ -37,7 +37,7 @@ enum ArkFileEssentialsDownloadAction: Equatable, Sendable {
 }
 
 enum ArkFileEssentialsDownloadCopy {
-    static let warningTitle = "Before Downloading Essentials"
+    static let warningTitle = "Before Downloading Essentials Library"
     private static let fallbackEssentialsContentBytes: Int64 = 10_800_000_000
 
     static func warningMessage() async -> String {
@@ -57,12 +57,12 @@ enum ArkFileEssentialsDownloadCopy {
         }
 
         return """
-        Essentials is about \(contentSize). ArkFile should have about \(requiredSize) free during installation so it can hold the remaining content, the current download chunk, and a safety buffer. \(storageCopy) Connect to Wi-Fi, plug in your device, and keep ArkFile open for the most reliable progress.
+        Essentials Library is about \(contentSize). ArkFile should have about \(requiredSize) free during installation so it can hold the remaining content, the current download chunk, and a safety buffer. \(storageCopy) Connect to Wi-Fi, plug in your device, and keep ArkFile open for the most reliable progress.
         """
     }
 
     static func warningTitle(for tier: ArkFileContentTier) -> String {
-        tier == .complete ? "Before Downloading Complete" : warningTitle
+        tier == .complete ? "Before Downloading Full Library" : warningTitle
     }
 
     static func cellularWarningMessage(
@@ -77,13 +77,13 @@ enum ArkFileEssentialsDownloadCopy {
         }
         let contentSize = formattedBytes(contentBytes)
         let sizeSubject = tier == .complete
-            ? "Your selected ArkFile Complete titles are"
-            : "ArkFile Essentials is"
+            ? "Your selected ArkFile Full Library titles are"
+            : "ArkFile Essentials Library is"
         return """
         \(sizeSubject) about \(contentSize). Downloading on cellular, hotspot, or Low Data Mode can use a large amount of data and may incur charges. Continue only if you understand the data use and want to download now.
         """
     }
-    static let removalTitle = "Remove Essentials?"
+    static let removalTitle = "Remove Essentials Library?"
     static let removalMessage = """
     This removes downloaded ArkFile content from this device. Your Apple Account purchase can be restored, but a title marked “No longer distributed by ArkFile” cannot be downloaded again after removal. Review those titles in Manage Downloads before continuing.
     """
@@ -215,6 +215,9 @@ struct WelcomeCatalog: View {
     @StateObject private var accountSession = ArkFileAccountSession.shared
     @State private var accountEmail = ""
     @State private var accountPassword = ""
+    @State private var legacyEssentialsOffer: ArkFileStoreKitProductMetadata?
+    @State private var showingLegacyOffer = false
+    @State private var loadingLegacyPrice = false
     @State private var locallyShowsPackComparison = false
     @State private var localMapPurchaseContext: ArkFileMapPurchaseContext?
     let viewState: WelcomeViewState
@@ -422,6 +425,22 @@ struct WelcomeCatalog: View {
                 Task { [weak library] in
                     await library?.start(isUserInitiated: true)
                 }
+            } else if liteInstaller.liteButtonTitle == LocalString.arkfile_lite_button_install {
+                loadingLegacyPrice = true
+                Task {
+                    let store = ArkFileStoreKitMerchandisingStore.shared
+                    await store.loadForPurchasePresentation()
+                    switch store.state {
+                    case .loaded(let snapshot), .partial(let snapshot, _):
+                        legacyEssentialsOffer = snapshot.offer(for: .lite)
+                    default:
+                        legacyEssentialsOffer = nil
+                    }
+                    loadingLegacyPrice = false
+                    showingLegacyOffer = true
+                }
+            } else if liteInstaller.hasPendingStoreKitPurchase || liteInstaller.hasTransientPurchaseStatus {
+                _ = liteInstaller.restoreOwnedPacks()
             } else {
                 liteInstaller.installLite()
             }
@@ -436,7 +455,7 @@ struct WelcomeCatalog: View {
                             Text(LocalString.welcome_button_status_fetch_catalog_text)
                         }
                     } else {
-                        Text(liteInstaller.liteButtonTitle)
+                        Text(loadingLegacyPrice ? "Loading price…" : liteInstaller.liteButtonTitle)
                     }
                     Spacer()
                 }
@@ -457,7 +476,21 @@ struct WelcomeCatalog: View {
                 }
             }.padding(6)
         }
-        .disabled(FeatureFlags.hasCatalog ? viewState == .loading : liteInstaller.isBusy)
+        .confirmationDialog("Essentials Library", isPresented: $showingLegacyOffer, titleVisibility: .visible) {
+            if let offer = legacyEssentialsOffer {
+                Button("Buy Essentials Library · \(offer.displayPrice)") {
+                    _ = liteInstaller.purchasePackWithoutDownload(tier: .lite)
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            if let offer = legacyEssentialsOffer {
+                Text("One-time purchase through Apple for \(offer.displayName). Choose what to download after you buy.")
+            } else {
+                Text("ArkFile could not load the App Store price. Check your connection and try again.")
+            }
+        }
+        .disabled(FeatureFlags.hasCatalog ? viewState == .loading : liteInstaller.isBusy || loadingLegacyPrice)
         .font(.subheadline)
         .buttonStyle(.bordered)
 
@@ -517,9 +550,12 @@ private struct ArkFileHomeWelcome: View {
     @StateObject private var contentFavorites = ArkFileContentFavorites.shared
     @StateObject private var contentBookmarks = ArkFileContentBookmarks.shared
     @StateObject private var updateChecker = ArkFileEssentialsUpdateChecker.shared
+    @Environment(\.arkFileOnboardingRequest) private var onboardingRequest
     @StateObject private var readingHistory = ArkFileReadingHistory.shared
     @ObservedObject private var readinessChecker = ArkFileOfflineReadinessChecker.shared
     @ObservedObject private var readinessCoordinator = ArkFileOfflineReadinessCoordinator.shared
+    @AppStorage("arkfile.home.continueReadingCollapsed") private var readingCollapsed = false
+    @State private var confirmClearReading = false
     @State private var showEmergencyNumbers = false
     @State private var sheet: ArkFileHomeSheet?
     @State private var contentUpdateTargetPath: String?
@@ -715,15 +751,15 @@ private struct ArkFileHomeWelcome: View {
                         if homePresentation.showsAcquisitionIntroduction {
                             acquisitionIntroduction(scrollProxy: scrollProxy)
                         }
+                        if !homePresentation.showsAcquisitionIntroduction {
+                            personalLibrarySummary
+                        }
+                        emergencySection
+                        continueReadingSection
                         if FeatureFlags.savedWeather {
                             ArkFileSavedWeatherHomeCard {
                                 presentSceneRoute(.savedWeather, fallback: .savedWeather)
                             }
-                        }
-                        continueReadingSection
-                        emergencySection
-                        if !homePresentation.showsAcquisitionIntroduction {
-                            personalLibrarySummary
                         }
                         contentPreview
                         newContentSection
@@ -824,10 +860,17 @@ private struct ArkFileHomeWelcome: View {
         .onChange(of: readinessCoordinator.presentationRequest?.id) { _, _ in
             presentReadinessRequestIfNeeded()
         }
+        .onChange(of: onboardingRequest.wrappedValue, initial: true) { _, request in
+            guard let request else { return }
+            onboardingRequest.wrappedValue = nil
+            pendingOnboardingDestination = request
+            handleCompletedOnboardingDestination()
+        }
         .onReceive(
             NotificationCenter.default.publisher(for: .arkFileOnboardingDestination)
         ) { notification in
-            guard let destination = notification.object as? ArkFileOnboardingDestination else {
+            guard Device.current != .iPad,
+                  let destination = notification.object as? ArkFileOnboardingDestination else {
                 return
             }
             pendingOnboardingDestination = destination
@@ -1119,7 +1162,7 @@ private struct ArkFileHomeWelcome: View {
                     browseAllLibrary()
                 }
             } label: {
-                Label(needsFirstPaidDownload ? firstPaidDownloadAction.title : "Browse Library",
+                Label(needsFirstPaidDownload ? firstPaidDownloadAction.title : "Browse titles",
                       systemImage: needsFirstPaidDownload ? "arrow.down.circle" : "books.vertical")
                     .font(.headline)
                     .foregroundStyle(.white)
@@ -1135,39 +1178,35 @@ private struct ArkFileHomeWelcome: View {
                     .foregroundStyle(Color.arkTextMuted)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            Group {
-                if dynamicTypeSize.isAccessibilitySize {
-                    VStack(alignment: .leading, spacing: 4) {
-                        manageDownloadsButton
-                        downloadMapsButton
-                    }
-                } else {
-                    HStack {
-                        manageDownloadsButton
-                        Spacer(minLength: 8)
-                        downloadMapsButton
-                    }
-                }
-            }
-            .font(.subheadline)
-            .buttonStyle(.plain)
-            .foregroundStyle(Color.arkInteractiveForeground)
-            .frame(minHeight: 44)
-            Button { contentUpdateTargetPath = nil; sheet = .contentUpdates } label: {
-                Label("Content Updates", systemImage: "arrow.triangle.2.circlepath")
+            if !needsFirstPaidDownload && ownerNeedsRestore {
+                Button("Restore Purchases") { beginRestore() }
                     .frame(minHeight: 44)
-            }
-            .font(.subheadline)
-            .foregroundStyle(Color.arkInteractiveForeground)
-            .accessibilityIdentifier("arkfile_home_content_updates")
-            if !liteInstaller.hasSavedCompleteAccess {
-                Button(hasEssentialsAccess ? "Upgrade to Complete" : "Buy or Restore a Pack") {
+                    .disabled(liteInstaller.isBusy)
+            } else if !liteInstaller.hasSavedCompleteAccess && !ownerNeedsRestore && !blocksForAppleAccountCheck {
+                Button(hasEssentialsAccess ? "See what Full Library adds" : "See libraries and prices") {
                     presentPackComparison(focus: hasEssentialsAccess ? .tier(.complete) : .general)
                 }
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(Color.arkInteractiveForeground)
                 .frame(minHeight: 44)
             }
+            DisclosureGroup("Manage library") {
+                VStack(alignment: .leading, spacing: 4) {
+                    manageDownloadsButton
+                    downloadMapsButton
+                    Button {
+                        contentUpdateTargetPath = nil
+                        sheet = .contentUpdates
+                    } label: {
+                        Label("Content Updates", systemImage: "arrow.triangle.2.circlepath")
+                            .frame(minHeight: 44)
+                    }
+                    .accessibilityIdentifier("arkfile_home_content_updates")
+                }
+                .buttonStyle(.plain)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .tint(Color.arkInteractiveForeground)
         }
     }
 
@@ -1206,14 +1245,33 @@ private struct ArkFileHomeWelcome: View {
         }
     }
 
+    private var ownerNeedsRestore: Bool {
+        guard hasEssentialsAccess || liteInstaller.hasSavedCompleteAccess || hasLocalPaidContent else { return false }
+        let tier: ArkFileContentTier = liteInstaller.hasSavedCompleteAccess ? .complete : .lite
+        return !liteInstaller.hasAuthoritativeNoPurchase && liteInstaller.hasResolvedCurrentStoreKitProof
+            && (shouldUseRestoreForEssentialsAction || !liteInstaller.hasCurrentStoreKitProof(for: tier))
+    }
+
+    private var libraryStatusTitle: String {
+        if blocksForAppleAccountCheck { return "Checking your purchase…" }
+        if ownerNeedsRestore || homePresentation.mode == .prospective { return "Saved on this device" }
+        return homePresentation.heroTitle
+    }
+
+    private var libraryStatusDetail: String {
+        if blocksForAppleAccountCheck { return "Downloaded titles are ready to read." }
+        if ownerNeedsRestore { return "Open your downloaded titles. Restore your purchase to check access to more downloads." }
+        return homePresentation.mode == .prospective ? "Open your downloaded titles offline." : homePresentation.heroCopy
+    }
+
     private var personalLibrarySummary: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Your library")
+                    Text(libraryStatusTitle)
                         .font(.headline)
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text(liteInstaller.hasSavedCompleteAccess ? "Complete unlocked" : (hasEssentialsAccess ? "Essentials unlocked" : "Saved on this device"))
+                    Text(libraryStatusDetail)
                         .font(.subheadline)
                         .foregroundStyle(Color.arkTextMuted)
                 }
@@ -1295,16 +1353,26 @@ private struct ArkFileHomeWelcome: View {
 
     private func acquisitionIntroduction(scrollProxy: ScrollViewProxy) -> some View {
         VStack(alignment: .leading, spacing: 12) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(homePresentation.heroTitle)
-                    .font(.title2.bold())
-                    .foregroundStyle(Color.arkTextPrimary)
-                Text(homePresentation.heroCopy)
-                    .font(.subheadline)
+            Text(homePresentation.heroTitle)
+                .font(.title2.bold())
+                .foregroundStyle(Color.arkTextPrimary)
+                .accessibilityAddTraits(.isHeader)
+                .accessibilityIdentifier(homePresentation.heroAccessibilityIdentifier)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Button(action: showIncludedSamples) {
+                    Label("Explore free titles", systemImage: "books.vertical")
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }
+                .buttonStyle(.bordered)
+                .tint(Color.arkInteractiveForeground)
+                .accessibilityIdentifier("arkfile_included_samples_action")
+                Text("The samples, Survival Guide, preparedness tools and base map are free to use offline.")
+                    .font(.caption)
                     .foregroundStyle(Color.arkTextMuted)
                     .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("arkfile_included_samples_section")
             }
-            .accessibilityIdentifier(homePresentation.heroAccessibilityIdentifier)
 
             if shouldUseRestoreForEssentialsAction {
                 Button { beginRestore() } label: {
@@ -1318,27 +1386,27 @@ private struct ArkFileHomeWelcome: View {
                 .tint(Color.arkPrimary)
                 .disabled(liteInstaller.isBusy)
                 .accessibilityIdentifier("arkfile_home_check_purchase")
-            } else if dynamicTypeSize.isAccessibilitySize {
-                VStack(spacing: 8) {
-                    homeBuyButton(tier: .lite)
-                    homeBuyButton(tier: .complete)
-                }
             } else {
-                ViewThatFits(in: .horizontal) {
-                    HStack(spacing: 8) {
-                        homeBuyButton(tier: .lite)
-                        homeBuyButton(tier: .complete)
-                    }
-                    VStack(spacing: 8) {
-                        homeBuyButton(tier: .lite)
-                        homeBuyButton(tier: .complete)
-                    }
+                Text("Optional libraries").font(.headline).accessibilityAddTraits(.isHeader)
+                Text(homePresentation.heroCopy)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.arkTextMuted)
+                    .fixedSize(horizontal: false, vertical: true)
+                Button(action: presentGeneralPackComparison) {
+                    Text("See libraries and prices")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, minHeight: 44)
                 }
+                .buttonStyle(.borderedProminent)
+                .tint(Color.arkPrimary)
+                .accessibilityIdentifier("arkfile_home_see_prices")
             }
 
             Text(shouldUseRestoreForEssentialsAction
                 ? purchaseRecoveryMessage
-                : "One-time purchase through Apple. See prices before you pay. No ArkFile account needed.")
+                : "One-time purchase through Apple.")
                 .font(.caption)
                 .foregroundStyle(Color.arkTextMuted)
                 .fixedSize(horizontal: false, vertical: true)
@@ -1350,21 +1418,6 @@ private struct ArkFileHomeWelcome: View {
                     .frame(minHeight: 44)
                     .disabled(liteInstaller.isBusy)
                     .accessibilityIdentifier("arkfile_home_restore_purchases")
-            }
-
-            VStack(alignment: .leading, spacing: 4) {
-                Button(action: showIncludedSamples) {
-                    Label("Explore \(includedSampleCount) Included Samples", systemImage: "books.vertical")
-                        .frame(maxWidth: .infinity, minHeight: 44)
-                }
-                .buttonStyle(.bordered)
-                .tint(Color.arkInteractiveForeground)
-                .accessibilityIdentifier("arkfile_included_samples_action")
-                Text("The samples, Survival Guide, preparedness tools and base map are free to use offline.")
-                    .font(.caption)
-                    .foregroundStyle(Color.arkTextMuted)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .accessibilityIdentifier("arkfile_included_samples_section")
             }
 
             ViewThatFits(in: .horizontal) {
@@ -1397,23 +1450,9 @@ private struct ArkFileHomeWelcome: View {
         return "Check this Apple Account to recover your purchase. You won’t be charged again, and nothing downloads automatically."
     }
 
-    private func homeBuyButton(tier: ArkFileContentTier) -> some View {
-        Button { presentPackComparison(focus: .tier(tier)) } label: {
-            Text(tier == .complete ? "Buy Complete" : "Buy Essentials")
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: !dynamicTypeSize.isAccessibilitySize, vertical: true)
-                .frame(maxWidth: .infinity, minHeight: 44)
-        }
-        .buttonStyle(.borderedProminent)
-        .tint(Color.arkPrimary)
-        .accessibilityHint("Shows the price and what’s included before you confirm with Apple.")
-        .accessibilityIdentifier(tier == .complete ? "arkfile_home_buy_complete" : "arkfile_home_buy_essentials")
-    }
-
     private var browseAllLibraryButton: some View {
         Button(action: browseAllLibrary) {
-            Label("Browse Library", systemImage: "books.vertical")
+            Label("Browse titles", systemImage: "books.vertical")
                 .frame(minHeight: 44)
         }
         .accessibilityIdentifier("arkfile_home_browse_library")
@@ -1425,7 +1464,7 @@ private struct ArkFileHomeWelcome: View {
                 scrollProxy.scrollTo(Self.includedToolsSectionID, anchor: .top)
             }
         } label: {
-            Label("Included Tools", systemImage: "square.grid.2x2")
+            Label("Free tools", systemImage: "square.grid.2x2")
                 .frame(minHeight: 44)
         }
         .accessibilityIdentifier("arkfile_home_included_tools_action")
@@ -1433,11 +1472,11 @@ private struct ArkFileHomeWelcome: View {
 
     private func freeTools(scrollProxy: ScrollViewProxy) -> some View {
         VStack(alignment: .leading, spacing: 12) {
-            sectionTitle("Included Tools")
+            sectionTitle("Free tools")
             LazyVGrid(columns: toolColumns, alignment: .leading, spacing: 10) {
                 ArkFileHomeToolButton(
-                    title: "Library",
-                    copy: "Explore titles and see what is ready offline.",
+                    title: "All titles",
+                    copy: "Find titles to read offline.",
                     systemImage: "books.vertical",
                     tint: Color.arkPrimary
                 ) {
@@ -1446,7 +1485,7 @@ private struct ArkFileHomeWelcome: View {
                 .accessibilityIdentifier("arkfile_home_library_tool_action")
                 ArkFileHomeToolButton(
                     title: "Map",
-                    copy: "View the offline vector map and installed Essentials map detail.",
+                    copy: "Open the free base map.",
                     systemImage: "map",
                     tint: Color.arkPrimaryHover
                 ) {
@@ -1454,7 +1493,7 @@ private struct ArkFileHomeWelcome: View {
                 }
                 ArkFileHomeToolButton(
                     title: "Preparedness",
-                    copy: "Use planning calculators and emergency checklists.",
+                    copy: "Open calculators and checklists.",
                     systemImage: "checklist",
                     tint: Color.arkAccentSecondary
                 ) {
@@ -1465,7 +1504,7 @@ private struct ArkFileHomeWelcome: View {
                 }
                 ArkFileHomeToolButton(
                     title: "Survival Guide",
-                    copy: "Search and explore offline emergency field guidance.",
+                    copy: "Read emergency field guides.",
                     systemImage: "book.closed",
                     tint: Color.arkAccent
                 ) {
@@ -1479,7 +1518,7 @@ private struct ArkFileHomeWelcome: View {
                 }
                 ArkFileHomeToolButton(
                     title: "Local Sharing",
-                    copy: "Let nearby devices read included ArkFile content from this device.",
+                    copy: "Share titles with nearby devices.",
                     systemImage: "wifi",
                     tint: Color.arkPrimary
                 ) {
@@ -1490,7 +1529,7 @@ private struct ArkFileHomeWelcome: View {
                 }
                 ArkFileHomeToolButton(
                     title: "Saved",
-                    copy: "Jump to favorites and bookmarks.",
+                    copy: "Open favorites and bookmarks.",
                     systemImage: "bookmark",
                     tint: Color.arkAccentSecondary
                 ) {
@@ -1561,9 +1600,10 @@ private struct ArkFileHomeWelcome: View {
                 emergencyButton("brain.head.profile", "Stroke") {
                     openGuide(blockID: "medical-stroke")
                 }
-                emergencyButton("phone.fill", "Emergency Phone Numbers") {
+                emergencyButton("phone.fill", "Phone numbers") {
                     showEmergencyNumbers = true
                 }
+                .accessibilityLabel("Emergency phone numbers")
             }
             Text("All guidance works fully offline.")
                 .font(.caption2)
@@ -1625,62 +1665,93 @@ private struct ArkFileHomeWelcome: View {
         let availableEntries = readingHistory.availableEntries(in: contentLibrary.allItems)
         if !availableEntries.isEmpty {
             VStack(alignment: .leading, spacing: 10) {
-                sectionTitle("Continue Reading")
-                ForEach(availableEntries.prefix(2)) { entry in
-                    let reading = ArkFileHomeReadingPresentation.make(
-                        articleTitle: entry.articleTitle,
-                        fileName: entry.fileName,
-                        relativePath: entry.relativePath,
-                        contentType: entry.contentType,
-                        pageNumber: entry.pageNumber
-                    )
-                    Button {
-                        openBookmark(entry)
-                    } label: {
-                        HStack(spacing: 12) {
-                            Image(systemName: continueReadingIcon(for: entry.contentType))
-                                .font(.headline)
-                                .foregroundStyle(Color.arkInteractiveForeground)
-                                .frame(width: 36, height: 36)
-                                .background(Color.arkPrimary.opacity(0.10))
-                                .clipShape(RoundedRectangle(cornerRadius: 9, style: .continuous))
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(reading.title)
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color.arkTextPrimary)
-                                    .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 2)
-                                    .fixedSize(horizontal: false, vertical: true)
-                                if let subtitle = reading.subtitle {
-                                    Text(subtitle)
-                                        .font(.caption2)
+                Button {
+                    readingCollapsed.toggle()
+                } label: {
+                    HStack {
+                        Text("Continue Reading").font(.title3.bold())
+                        Spacer()
+                        Text(readingCollapsed ? "Show" : "Hide")
+                        Image(systemName: readingCollapsed ? "chevron.down" : "chevron.up")
+                            .accessibilityHidden(true)
+                    }
+                    .frame(minHeight: 44)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Continue Reading")
+                .accessibilityAddTraits(.isHeader)
+                .accessibilityHint(readingCollapsed ? "Show recent titles" : "Hide recent titles")
+                .accessibilityValue(readingCollapsed ? "Collapsed" : "Expanded")
+                .accessibilityIdentifier("arkfile_continue_reading_toggle")
+                if !readingCollapsed {
+                    ForEach(availableEntries.prefix(2)) { entry in
+                        let reading = ArkFileHomeReadingPresentation.make(
+                            articleTitle: entry.articleTitle,
+                            fileName: entry.fileName,
+                            relativePath: entry.relativePath,
+                            contentType: entry.contentType,
+                            pageNumber: entry.pageNumber
+                        )
+                        HStack(spacing: 4) {
+                            Button {
+                                openBookmark(entry)
+                            } label: {
+                                HStack(spacing: 12) {
+                                    Image(systemName: continueReadingIcon(for: entry.contentType))
+                                        .font(.headline)
+                                        .foregroundStyle(Color.arkInteractiveForeground)
+                                        .frame(width: 36, height: 36)
+                                        .background(Color.arkPrimary.opacity(0.10))
+                                        .clipShape(RoundedRectangle(cornerRadius: 9, style: .continuous))
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(reading.title)
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(Color.arkTextPrimary)
+                                            .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 2)
+                                            .fixedSize(horizontal: false, vertical: true)
+                                        if let subtitle = reading.subtitle {
+                                            Text(subtitle)
+                                                .font(.caption2)
+                                                .foregroundStyle(Color.arkTextMuted)
+                                                .lineLimit(1)
+                                        }
+                                    }
+                                    Spacer(minLength: 8)
+                                    Image(systemName: "arrow.forward.circle")
                                         .foregroundStyle(Color.arkTextMuted)
-                                        .lineLimit(1)
                                 }
+                                .padding(12)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.arkAppSurface)
+                                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                        .stroke(Color.arkAppBorder, lineWidth: 1)
+                                }
+                                .contentShape(Rectangle())
                             }
-                            Spacer(minLength: 8)
-                            Image(systemName: "arrow.forward.circle")
-                                .foregroundStyle(Color.arkTextMuted)
-                        }
-                        .padding(12)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(Color.arkAppSurface)
-                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .stroke(Color.arkAppBorder, lineWidth: 1)
-                        }
-                        .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .contextMenu {
-                        Button(role: .destructive) {
-                            readingHistory.remove(relativePath: entry.relativePath)
-                        } label: {
-                            Label("Remove from Continue Reading", systemImage: "xmark.circle")
+                            .buttonStyle(.plain)
+                            .accessibilityLabel("Continue reading \(reading.title)")
+                            Menu {
+                                Button("Remove from Continue Reading", role: .destructive) {
+                                    readingHistory.remove(relativePath: entry.relativePath)
+                                }
+                            } label: {
+                                Image(systemName: "ellipsis.circle").frame(width: 44, height: 44)
+                            }
+                            .accessibilityLabel("Options for \(reading.title)")
                         }
                     }
-                    .accessibilityLabel("Continue reading \(reading.title)")
+                    Button("Clear list…") { confirmClearReading = true }
+                        .frame(minHeight: 44)
+                        .alert("Clear Continue Reading?", isPresented: $confirmClearReading) {
+                            Button("Clear list", role: .destructive) { readingHistory.clear() }
+                            Button("Cancel", role: .cancel) {}
+                        } message: {
+                            Text("This clears saved reading places from Continue Reading. Your bookmarks and downloaded titles stay on this device.")
+                        }
                 }
             }
         }
@@ -1753,54 +1824,9 @@ private struct ArkFileHomeWelcome: View {
         return LocalString.arkfile_account_copy_signed_out
     }
 
-    private var includedSamplesCallout: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .top, spacing: 12) {
-                Image(systemName: "shippingbox.fill")
-                    .font(.title2)
-                    .foregroundStyle(Color.arkPrimaryHover)
-                    .frame(width: 42, height: 42)
-                    .background(Color.arkPrimaryHover.opacity(0.12))
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Included with ArkFile")
-                        .font(.headline)
-                        .foregroundStyle(Color.arkTextPrimary)
-                    Text("\(includedSampleCount) sample titles, the Survival Guide, preparedness tools, and the offline base map are already on this device. No purchase is required.")
-                        .font(.subheadline)
-                        .foregroundStyle(Color.arkTextMuted)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-            Button(action: showIncludedSamples) {
-                Label(
-                    "Explore \(includedSampleCount) Included Samples",
-                    systemImage: "books.vertical"
-                )
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(Color.arkPrimary)
-            .accessibilityIdentifier("arkfile_included_samples_action")
-        }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.arkAppSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .stroke(Color.arkPrimaryHover.opacity(0.35), lineWidth: 1)
-        }
-        .accessibilityIdentifier("arkfile_included_samples_section")
-    }
-
-    private var includedSampleCount: Int {
-        contentLibrary.bundledSampleLibraryItemCount
-    }
-
     private var completeOwnerDashboard: some View {
         VStack(alignment: .leading, spacing: 12) {
-            sectionTitle("Your Complete Access")
+            sectionTitle("Your Full Library Access")
             completePackCard
         }
         .accessibilityIdentifier("arkfile_complete_owner_dashboard")
@@ -1867,10 +1893,10 @@ private struct ArkFileHomeWelcome: View {
                     .background(Color.arkAccent.opacity(0.12))
                     .clipShape(RoundedRectangle(cornerRadius: 9, style: .continuous))
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("Compare Essentials and Complete")
+                    Text("See libraries and prices")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Color.arkTextPrimary)
-                    Text("See both one-time prices, what each pack includes, and the download choices before buying.")
+                    Text("See both one-time prices, what each library includes, and the download choices before buying.")
                         .font(.caption)
                         .foregroundStyle(Color.arkTextMuted)
                         .fixedSize(horizontal: false, vertical: true)
@@ -2009,15 +2035,15 @@ private struct ArkFileHomeWelcome: View {
             return "Finish Purchase"
         }
         if liteInstaller.state.phase == .installed {
-            return "\(installedEssentialsTitleCount) Essentials title\(installedEssentialsTitleCount == 1 ? "" : "s") available offline"
+            return "\(installedEssentialsTitleCount) Essentials Library title\(installedEssentialsTitleCount == 1 ? "" : "s") available offline"
         }
         if hasEssentialsAccess {
-            return "Essentials unlocked"
+            return "You own Essentials Library"
         }
         if blocksForAppleAccountCheck {
             return "Checking Apple purchases…"
         }
-        return "Buy ArkFile Essentials"
+        return "See Essentials Library and price"
     }
 
     private var essentialsAccountCopy: String {
@@ -2025,7 +2051,7 @@ private struct ArkFileHomeWelcome: View {
             return incompleteEssentialsCopy
         }
         if shouldUseRestoreForEssentialsAction {
-            return "App Store purchase confirmed. Restore Purchases re-checks access without downloading; you choose Essentials downloads afterward."
+            return "App Store purchase confirmed. Restore Purchases re-checks access without downloading; you choose Essentials Library downloads afterward."
         }
         if liteInstaller.state.tier == .lite,
            liteInstaller.state.phase == .failed,
@@ -2038,43 +2064,43 @@ private struct ArkFileHomeWelcome: View {
         }
         if liteInstaller.state.tier == .lite,
            liteInstaller.state.phase.isBusy {
-            return "Essentials is downloading. ArkFile will keep the files already downloaded if this is interrupted."
+            return "Essentials Library is downloading. ArkFile will keep the files already downloaded if this is interrupted."
         }
         if liteInstaller.state.phase == .installed {
             return packMetrics.essentialsReadyLine
         }
         if hasEssentialsAccess {
-            return "Essentials is unlocked. Choose the titles you want on this device and add more whenever you need them."
+            return "You own Essentials Library. Choose the titles you want on this device and add more whenever you need them."
         }
         if blocksForAppleAccountCheck {
             return "ArkFile is checking this Apple Account before showing purchase or download choices."
         }
         if accountSession.isSignedIn {
-            return "Unlock Essentials with one purchase. Choose your downloads afterward."
+            return "Unlock Essentials Library with one purchase. Choose your downloads afterward."
         }
-        return "Unlock Essentials with one purchase. Download only what you need, when you need it."
+        return "Unlock Essentials Library with one purchase. Download only what you need, when you need it."
     }
 
     private var completeCardTitle: String {
         if liteInstaller.hasSavedCompleteAccess {
-            return "ArkFile Complete"
+            return "ArkFile Full Library"
         }
         if completeInstallNeedsRepair {
-            return "Continue Complete Download"
+            return "Continue Full Library Download"
         }
         if liteInstaller.installedTier == .complete {
-            return "ArkFile Complete"
+            return "ArkFile Full Library"
         }
         if liteInstaller.hasSavedCompleteAccess {
-            return "ArkFile Complete"
+            return "ArkFile Full Library"
         }
         if hasEssentialsAccess {
-            return "Upgrade to ArkFile Complete"
+            return "See what Full Library adds"
         }
         if blocksForAppleAccountCheck {
             return "Checking Apple purchases…"
         }
-        return "Buy ArkFile Complete"
+        return "See Full Library and price"
     }
 
     private var completeAccountCopy: String {
@@ -2085,7 +2111,7 @@ private struct ArkFileHomeWelcome: View {
                 : summary
         }
         if completeInstallNeedsRepair {
-            return "Complete download did not finish. Continue Download to pick up where it left off."
+            return "Full Library download did not finish. Continue Download to pick up where it left off."
         }
         if liteInstaller.state.tier == .complete,
            liteInstaller.state.phase == .failed,
@@ -2096,25 +2122,25 @@ private struct ArkFileHomeWelcome: View {
             return resumableInstallCopy
         }
         if liteInstaller.state.tier == .complete, liteInstaller.state.phase.isBusy {
-            return "Complete is downloading. ArkFile will keep the files already downloaded if this is interrupted."
+            return "Full Library is downloading. ArkFile will keep the files already downloaded if this is interrupted."
         }
         if liteInstaller.installedTier == .complete {
             return packMetrics.completeReadyLine
         }
         if liteInstaller.hasSavedCompleteAccess {
-            return "Complete is unlocked on this device. Download the titles you want, and choose one full-Wikipedia variant."
+            return "You own Full Library. Download the titles you want, and choose one full-Wikipedia variant."
         }
         if hasEssentialsAccess {
-            return "Adds full Wikipedia (your choice of text-only or with images), 27 college and AP textbooks, expanded expert references, and more classics. Apple shows the upgrade price before charging."
+            return "Adds full Wikipedia (your choice of text-only or with images), \(ArkFileLibraryBenefits.textbookCollection), expanded expert references, and more classics. Apple shows the upgrade price before charging."
         }
         if blocksForAppleAccountCheck {
-            return "ArkFile is checking whether this Apple Account already owns Complete."
+            return "ArkFile is checking whether this Apple Account already owns Full Library."
         }
-        return "Includes Essentials plus full Wikipedia options, 27 college and AP textbooks, and the rest of the Complete library. Apple shows the price before charging."
+        return "Includes Essentials Library plus full Wikipedia options, \(ArkFileLibraryBenefits.textbookCollection), and regional street maps. Apple shows the price before charging."
     }
 
     private var incompleteEssentialsCopy: String {
-        "Essentials download did not finish. Continue Download to pick up where it left off."
+        "Essentials Library download did not finish. Continue Download to pick up where it left off."
     }
 
     private var installControls: some View {
@@ -2143,7 +2169,7 @@ private struct ArkFileHomeWelcome: View {
                 Button {
                     presentContentDownloads()
                 } label: {
-                    Label("Browse Library", systemImage: "rectangle.grid.1x2")
+                    Label("Browse titles", systemImage: "rectangle.grid.1x2")
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
@@ -2164,8 +2190,8 @@ private struct ArkFileHomeWelcome: View {
                     } label: {
                         Label(
                             shouldRestoreEssentialsToUpgrade
-                                ? "Restore Essentials to Upgrade"
-                                : "Upgrade Content Pack",
+                                ? "Restore Purchases"
+                                : "See what Full Library adds",
                             systemImage: shouldRestoreEssentialsToUpgrade
                                 ? "arrow.clockwise.circle"
                                 : "books.vertical"
@@ -2549,7 +2575,7 @@ private struct ArkFileHomeWelcome: View {
         let matchingIDs = Set(matchingItems.map(\.id))
         return VStack(alignment: .leading, spacing: 12) {
             sectionTitle("Inside ArkFile")
-            Text(contentPreviewSummary(for: matchingItems))
+            ArkFileAvailabilitySummary(counts: ArkFileTitleAvailability.counts(for: matchingItems, input: lockedResolutionInput))
                 .accessibilityIdentifier("arkfile_home_library_summary")
                 .font(.caption)
                 .foregroundStyle(Color.arkTextMuted)
@@ -2635,19 +2661,6 @@ private struct ArkFileHomeWelcome: View {
         .overlay {
             RoundedRectangle(cornerRadius: 12).stroke(Color.arkAppBorder, lineWidth: 1)
         }
-    }
-
-    private func contentPreviewSummary(for items: [ArkFileLibraryContentItem]) -> String {
-        let presentations = items.map {
-            ArkFileLockedContentPresentation.resolve(item: $0, input: lockedResolutionInput)
-        }
-        let ready = presentations.filter { $0.accessState == .installed || $0.accessState == .sample }.count
-        let available = presentations.filter { $0.accessState == .downloadable }.count
-        let locked = presentations.filter { $0.accessState == .locked }.count
-        var parts = ["\(ready) ready offline"]
-        if available > 0 { parts.append("\(available) available to download") }
-        if locked > 0 { parts.append("\(locked) require a pack") }
-        return parts.joined(separator: " · ")
     }
 
     private func openHomeLibraryItem(_ item: ArkFileLibraryContentItem) {
@@ -2742,20 +2755,16 @@ private struct ArkFileHomeWelcome: View {
 
     private var lockedPreviewPrimaryActionTitle: String {
         guard let lockedPreviewItem else {
-            return "Buy Essentials"
+            return "See Essentials Library and price"
         }
         return lockedActionTitle(for: lockedPreviewItem)
     }
 
     private var lockedPreviewAlertTitle: String {
         guard let lockedPreviewItem else {
-            return "Essentials Access"
+            return "Essentials Library Access"
         }
         return "\(lockedPreviewItem.requiredPackName) Access"
-    }
-
-    private var lockedPreviewRestoreTitle: String {
-        lockedPreviewItem?.requiredTier == .complete ? "Restore Complete Purchase" : "Restore Purchases"
     }
 
     private var lockedPreviewRestoreAvailable: Bool {
@@ -2793,28 +2802,9 @@ private struct ArkFileHomeWelcome: View {
             return tier == .complete ? "Manage Downloads" : "Choose Downloads"
         }
         if tier == .complete {
-            return hasEssentialsAccess ? "Upgrade to Complete" : "Buy Complete"
+            return hasEssentialsAccess ? "See what Full Library adds" : "See Full Library and price"
         }
-        return "Buy Essentials"
-    }
-
-    private var lockedPreviewMessage: String {
-        let title = lockedPreviewItem?.displayName ?? "This title"
-        let packName = lockedPreviewItem?.requiredPackName ?? "ArkFile Essentials"
-        let tier = downloadTier(for: lockedPreviewItem)
-        if installNeedsRepair(for: tier) {
-            return "\(title) is part of \(packName), but \(packShortName(for: tier)) did not finish downloading. Continue Download to pick up where it left off."
-        }
-        if liteInstaller.isLiteAccessRevoked || (tier == .complete && liteInstaller.isCompleteAccessRevoked) {
-            return "\(title) is part of \(packName), but ArkFile could not confirm active \(packShortName(for: tier)) access for future downloads. Restore Purchases to re-check access. Valid content already installed on this device remains readable."
-        }
-        if hasSavedAccess(for: tier) {
-            return "\(title) is part of \(packName), but this title is not downloaded on this device yet. \(lockedDownloadVerb(for: tier)) to make it available offline."
-        }
-        if tier == .complete {
-            return "\(title) is locked Complete content. Buy ArkFile Complete with your Apple Account, or restore purchases if you already bought it."
-        }
-        return "\(title) is locked Essentials content. Buy ArkFile Essentials with your Apple Account, or restore purchases if you already bought it."
+        return "See Essentials Library and price"
     }
 
     private var lockedSelectorNoticeTitle: String {
@@ -2862,7 +2852,7 @@ private struct ArkFileHomeWelcome: View {
     }
 
     private func packShortName(for tier: ArkFileContentTier) -> String {
-        ArkFileContentPackDisplayName.name(for: tier)
+        ArkFileContentPackDisplayName.libraryName(for: tier)
     }
 
     private func lockedDownloadVerb(for tier: ArkFileContentTier) -> String {
@@ -3075,7 +3065,7 @@ private struct ArkFileHomeWelcome: View {
         }
         if !liteInstaller.hasSavedLiteAccess {
             guard !blocksForAppleAccountCheck else { return }
-            beginPurchaseWithoutDownload(tier: .lite)
+            presentPackComparison(focus: .tier(.lite))
             return
         }
         if liteInstaller.hasResolvedCurrentStoreKitProof,
@@ -3208,7 +3198,7 @@ private struct ArkFileHomeWelcome: View {
                !liteInstaller.hasCurrentStoreKitProof(for: .lite) {
                 beginRestoreForCompletePurchase()
             } else {
-                beginPurchaseWithoutDownload(tier: .complete)
+                presentPackComparison(focus: .tier(.complete))
             }
         }
     }
@@ -3293,7 +3283,7 @@ private struct ArkFileHomeWelcome: View {
             if essentialsInstallNeedsRepair {
                 liteInstaller.repairLite()
             } else {
-                liteInstaller.installLite()
+                presentPackComparison(focus: .tier(.lite))
             }
         case .none:
             break
@@ -3364,6 +3354,8 @@ private struct ArkFileHomeWelcome: View {
                 showIncludedSamples()
             case .packs:
                 presentGeneralPackComparison()
+            case .restore:
+                beginRestore()
             }
         }
     }
@@ -3558,12 +3550,11 @@ struct ArkFileHomeToolButton: View {
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundStyle(Color.arkTextPrimary)
-                    .lineLimit(1)
+                    .fixedSize(horizontal: false, vertical: true)
                     .minimumScaleFactor(0.78)
                 Text(copy)
                     .font(.caption)
                     .foregroundStyle(Color.arkTextMuted)
-                    .lineLimit(3)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(12)
@@ -3778,7 +3769,7 @@ struct ArkFileAccountSignInSheet: View {
 
                 Section("Account Info") {
                     if accountSession.hasPurchased {
-                        Text("ArkFile account access is available for desktop purchases. ArkFile Essentials and Complete purchases are restored through Apple.")
+                        Text("ArkFile account access is available for desktop purchases. ArkFile Essentials Library and Full Library purchases are restored through Apple.")
                             .foregroundStyle(.secondary)
                         if let arkFileURL = URL(string: Brand.arkFileSiteURL) {
                             Link(destination: arkFileURL) {
@@ -3786,7 +3777,7 @@ struct ArkFileAccountSignInSheet: View {
                             }
                         }
                     } else {
-                        Text("ArkFile account access is available for desktop purchases. ArkFile Essentials and Complete purchases are bought or restored through Apple.")
+                        Text("ArkFile account access is available for desktop purchases. ArkFile Essentials Library and Full Library purchases are bought or restored through Apple.")
                             .foregroundStyle(.secondary)
 
                         if Bundle.main.usesSandboxAppStoreReceipt {
@@ -3883,7 +3874,7 @@ struct ArkFileAccountSignInSheet: View {
     private var splitPurchaseInfo: some View {
         Group {
             Section {
-                Text("No ArkFile account is needed for ArkFile packs. Buy or restore Essentials or Complete in this app with your Apple Account.")
+                Text("Buy or restore your library with your Apple Account. You can use ArkFile without creating an account.")
                     .foregroundStyle(.secondary)
             }
 
@@ -3899,7 +3890,7 @@ struct ArkFileAccountSignInSheet: View {
                         dismiss()
                     }
                 } footer: {
-                    Text("ArkFile accounts are for desktop purchases. ArkFile packs restore through Apple.")
+                    Text("ArkFile accounts are for desktop purchases. Restore your iOS library through Apple.")
                 }
             }
 
